@@ -1,0 +1,5 @@
+konzultace: 25.10. v 12:30-14:30, EB 434
+
+v LateXu
+připravit tabulku srovnání nejpoužívanějších KeyValue DB systémů
+jaké jsou jejich vlastnosti, výhody/nevýhody
