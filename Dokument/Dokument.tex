@@ -6,11 +6,78 @@
 			\item serverless databáze
 			\item odezva microsekundy
 			\item web tech, IoT, mobile, gaming
+			\item plně spravovatelná multi master databáze
+			\item odhadovatelný výkon a bezproblémová škálovatelnost
 			\item unikátní primární klíč pro identifikaci jednotlivých záznamů v tabulce
 			\item sekundární index pro lepší dotazovací flexibilitu
 			\item primírní klíč je jako vtup do hash funkce, výsledný hash je fyzická pozice uloženého záznamu
 			\item silná konzistence na čtení hodnot od poslední aktualizace
 			\item atomic counters pro akutomatické změny hodnot číselných atributů
+			\item TTL pro prošlé záznamy v tabulkách
+			\item full backup pro archivaci dat
+			\item automatická správa systému
+			\item DynamoDB konzolové api pro správu db
+			\item VPC pro soukromou komunikaci bez potřeby využití internetu
+		\end{itemize}
+	\end{subsubsection}
+
+	\begin{subsubsection}{Oracle NoSql Database}
+		\begin{itemize}
+			\item vhodná pro velké objemy dat a nízkou odezvu
+			\item velký počet storage uzlů pro lepší výstup a kapacitu uložiště
+			\item díky DB Java Edirion high-availability storage engine
+			\item single master, multi replica - vysoká dostupnost a nízká chybovost
+			\item při chybě na masteru je jedna z replik automaticky prohlášena za nový master
+			\item grafová databáze
+			\item itegrace v různých Oracle a Open Source aplikacích
+			\item spolehlivá a flexibilní správa konfigurace skupiny uzlů
+			\item škálovatelná se spolehlivostí pro poskytnutí správy všech dat pro zajištění spolehlivosti
+			\item uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení
+			\item sdílený systém, uniformně alokuje data okolo ostatních částí skupin
+			\item storage uzly jsou replikované pro udržení konzistence
+			\item obsahuje SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi
+			\item Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL a Apache Hive integration
+			
+		\end{itemize}
+	\end{subsubsection}
+
+	\begin{subsubsection}{InfinityDB}
+		\begin{itemize}
+			\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
+			\item ACID pro vlákna, ACD pro bulk operace
+			\item jednoduché API, instantní produktuvita developerů
+			\item dynamický pohled dotazů (set logic views, delta views, ranges)
+			\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
+			\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
+			\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
+			\item all-Java db pro servery, procovní stanice, roční zařízení
+			\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
+			\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
+			\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
+			\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
+			\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
+			\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
+			\item přístup k datům v cachy je plně více vláknový
+			\item data která nejsou často využívaná jsou stránkována na disk
+		\end{itemize}
+	\end{subsubsection}
+
+	\begin{subsubsection}{Redis}
+		\begin{itemize}
+			\item in-memory uložiště pro datové struktury, využívaná jako db, cache nebo zprostředkovávatel zpráv
+			\item můžeme jednou za čas ukládat pravidelně data na disk, nebo provádět logování při provádění operací (nemusíme nic ukládat a mít čistě in memory db)
+			\item podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy
+			\item Keyspace notifikace dovoluje klientům odebírat Pub/Sub kanály
+			\item setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu
+			\item Geo APi pro dotazy na souřadnice nebo rádiusy
+			\item Radius hashing ukládá data jako klíč a mapu
+			\item Single-rooted replikovaný strom
+			\item API pro populární používané jazyky
+			\item obsahuje transakce, lua skripty a různé úrovně trvání na disku
+			\item atomické operace (rozšíření stringu, přídání prvku do listu atp.)
+			\item podpora trivial-to-setup master-slave asynchronního replikování
+			\item rychlá neblokující se prvotní synchronizace, automatické znovu připojování se znovu synchronizací na netsplit
+			\item skvělé využití pro Key = hash a Value = velký json objekt
 		\end{itemize}
 	\end{subsubsection}
 \end{document}
