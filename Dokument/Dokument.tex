@@ -80,4 +80,47 @@
 			\item skvělé využití pro Key = hash a Value = velký json objekt
 		\end{itemize}
 	\end{subsubsection}
+
+	\begin{subsubsection}{Aerospike}
+		\begin{itemize}
+			\item architektura hybrid memory
+			\item internet scale, odhadovatelná a vysoká výkonost
+			\item korektnost, silná konzistence, nízká cena, lineární škálovatelnost
+			\item real-time rozhodování na velké, stále aktualizované db
+			\item dynamická optimalizace pro optimální využití zdrojů
+			\item server-side clustering
+			\item bezpečnost na transportní vrstvě
+			\item banking, telekominkace, adtech, gaming
+			\item customer deployment s zero downtime
+			\item transakce v milisekundách
+			\item výběr in-memory storage (cache sessions) nebo SDD disk storage (pro trvanlivost dat) bez kompromisů ve výkonnosti
+			\item silný quesry jazyk, vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy)
+			\item schema-less, sets/bins můžou být přidány za běhu (maximální flexibilnost pro aplikace)
+		\end{itemize}
+	\end{subsubsection}
+
+	\begin{subsubsection}{Oracle Berkeley DB}
+		\begin{itemize}
+			\item knihovna pro službu key-value db
+			\item čistě in-memory db
+			\item ultra-low odezva, škálovatelná, vysoce výkonná
+			\item velice dostupná, tolerance chybovosti
+			\item B-stromy, fronty, hash data indexy
+			\item obnovitelné ACID transakce, více úrovní izolace (včetně MVCC)
+			\item rozdělení dat dle key ranges
+			\item možnost komprese záznamů
+			\item jednoduché volání API pro přístup k datům a nastavení db
+			\item stavební části pro  db od lokálního uložiště po world-wide distribuovanou db (od KiloBytů po PetaByty)
+			\item data uložená v XML, SQL (když není potřeba tak se využívá právě KeyValue uložiště), Java Objekty
+			\item podpora moderních programovacích jazyků (C++, C\#, Java, Python atp.)
+			\item Single master, multi replica, vysoce dostupná konfigurovatelnost db
+			\item repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku
+		\end{itemize}
+	\end{subsubsection}
+
+		\begin{subsubsection}{x}
+		\begin{itemize}
+			\item x
+		\end{itemize}
+	\end{subsubsection}
 \end{document}
