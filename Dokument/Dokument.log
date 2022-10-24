@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  23 OCT 2022 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  24 OCT 2022 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -66,7 +66,13 @@ Overfull \hbox (2.55632pt too wide) in paragraph at lines 97--98
 ^^Tcn^^S^^P funkce po-moc^^S^^P Lua jazyku
  []
 
-[4] (Dokument.aux) ) 
+[4]
+Overfull \hbox (13.6673pt too wide) in paragraph at lines 139--140
+[]\OT1/cmr/m/n/10 b^^Tehem ne-jvy^^Ts^^Ts^^S^^P z^^Sat^^Te^^Tze nezhor^^Tsuje z
+^^Sapis a hor-i-zont^^Saln^^S^^P ^^Tsk^^Salovatelnost, u^^Tzivatel^^Se
+ []
+
+[5] (Dokument.aux) ) 
 Here is how much of TeX's memory you used:
  437 strings out of 478552
  8359 string characters out of 2854123
@@ -78,9 +84,9 @@ Here is how much of TeX's memory you used:
  <C:\Users\Honza_PC\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
 nappen/ec/dpi600\tcrm1000.pk><D:/Skola-SW/MikTex/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on Dokument.pdf (4 pages, 51445 bytes).
+Output written on Dokument.pdf (5 pages, 54845 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

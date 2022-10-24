@@ -118,9 +118,33 @@
 		\end{itemize}
 	\end{subsubsection}
 
-		\begin{subsubsection}{x}
+	\begin{subsubsection}{Riak KV}
+		\begin{itemize}
+			\item distibuovaná kv db, pokročilé lokální a multi-cluster replikování
+			\item garance čtení a zápisu i při selhání HW nebo síťových oddílů
+			\item bez konfliktní replikované datové typy (CRDTs), flags, registry, čitače, množiny a mapy
+			\item konfigurace aktivního clusteru, poskytování dat pro klienty díky nízké latenci z nejbližšího data centra
+			\item dostupné zóny, multi claster repliky a redundance dat v geografickém regionu
+			\item flexibilní datový model bez pre definovaného schématu
+			\item vylepšené logování chyb a reporty
+			\item automatická komprese dat pomocí Snappy kompresní knihovny
+			\item vhodná pro ukládání velkého množství nestrukturovaných dat
+			\item pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí
+			\item automatický distribuce dat skrz cluster, pro robustnost, výkon
+			\item master-less architektura, vysoká dostupnost, téměř lineární škálovatelnost za využití snadného přidání HW kapacity bez nutnosti mnoha operací
+			\item nízká latence, vhodná pro chat/messaging aplikace
+			\item možnost zpracování dat pro získání užitečných závěrů a akceschopných informací
+			\item design pro horizontálůní škálovatelnost s komoditním HW, jednoduché pro rozšíření objemu dat bez potřeby vytváření komplexního sdílení
+			\item bez vnocování restrikcí na hodnoty, session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu
+			\item během nejvyšší zátěže nezhoršuje zápis a horizontální škálovatelnost, uživatelé jsou obslouženi bez problémů
+			\item dobrý pro soukromé, veřejné i hybridní cloud nasazování
+		\end{itemize}
+	\end{subsubsection}
+
+	\begin{subsubsection}{x}
 		\begin{itemize}
 			\item x
 		\end{itemize}
 	\end{subsubsection}
+	
 \end{document}
