@@ -141,9 +141,27 @@
 		\end{itemize}
 	\end{subsubsection}
 
-	\begin{subsubsection}{x}
+	\begin{subsubsection}{Project Voldemort}
 		\begin{itemize}
-			\item x
+			\item distribuovaná kv db založena na Amazon DynamoDB
+			\item automatická replikace dat skrz více serverů
+			\item automatické rozdělování dat mezi servery, každý server obsahuje pouze část z celkových dat
+			\item nastavitelná konzistenčnoust
+			\item transparentní ošetřování chyb serverů
+			\item zapojitelný storage-engine (MySQL, Read-Only) a serializace (Java Serialization, Thrift, Avro) 
+			\item verzování dat pro maximální integritu i během poruch
+			\item každý uzel je samostatný a nezávislý, žádný centrální řídící uzel nebo uzel řídící řešení chyb
+			\item dobrá výkonost na jeden uzel, 10-20 tisíc operací za sekundu (1 op. za 50 mikro sekund) dle HW, sítě, systému disku atp.
+			\item podpora zapojitelné strategie pro rozpoložení dat, pro možnost distribuce dat skrz data centra která jsou mezi sebou geologicky velice vzdálená
+			\item využívá JMX pro zlepšení viditelnosti pro interní monitorování a validaci dat
+			\item In-Memory caching pro eliminaci oddělených částí cache, jednoduché a rychlé in-memory tenstování (unit testy)
+			\item horizontální škálování čtení i zápisu
+			\item API rozhoduje o replikování a místě ukládání dat, různé strategie pro specifické aplikace
+			\item široké možnosti pro klíče i hodnoty díky serializaci, listy a tuply s pojmenovanými poli
+			\item JSON data model pro serializaci ale v kompaktním bytovém formátu, typová kontrola dat dle očekávaného schématu
+			\item hashovatelné schéma, vyhledávání dle primárního klíče a možnost modifikace jednotlivých hodnot
+			\item jednoduchá distribuce skrz stroje protože data mohou být rozdělována dle primárních klíčů
+			\item dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi
 		\end{itemize}
 	\end{subsubsection}
 	
