@@ -1,11 +1,12 @@
 \documentclass{article}
-
+\usepackage{rotating}
 \begin{document}
 	
 	\begin{section}{NoSQL Key Value databázové systémy}
 		\begin{subsection}{Amazon DynamoDB}
 			\begin{itemize}
-				\item serverless databáze
+				\item největšá a nejpoužívánější Key Value DB
+				\item serverless cloud databáze
 				\item odezva microsekundy
 				\item web tech, IoT, mobile, gaming
 				\item plně spravovatelná multi master databáze
@@ -51,7 +52,7 @@
 				\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
 				\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
 				\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
-				\item all-Java db pro servery, procovní stanice, roční zařízení
+				\item all-Java db pro servery, procovní stanice, ruční zařízení
 				\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
 				\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
 				\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
@@ -142,7 +143,7 @@
 			\end{itemize}
 		\end{subsection}
 		
-		\begin{subsection}{Project Voldemort}
+		\begin{subsection}{Voldemort}
 			\begin{itemize}
 				\item distribuovaná kv db založena na Amazon DynamoDB
 				\item automatická replikace dat skrz více serverů
@@ -166,5 +167,43 @@
 			\end{itemize}
 		\end{subsection}
 	\end{section}
-	 	 	 
+
+	\begin{section} {Porovnání KV DB}
+			\begin{tabular}{ |l||p{2cm} p{2cm} l p{4cm} | } 
+				\hline
+				Název & Správa & Škálovatelnost & Odezva & Zotavení \\
+				\hline
+				Amazon DynamoDB & automatická, plně spravovatelná & vysoká, horizontální & mikrosekundy & logy, záloha, automatické obnovení \\
+				\hline
+				Oracle NoSql DB & nízká & horizontální & milisekundy & replika je prohlášena za master\\ 
+				\hline
+				InfinityDB & jeden soubor se vším & nízká & milisekundy & bez logů, okamžité ale ztrácíme data\\ 
+				\hline
+				Redis & plná & horizontální & milisekundy & z logů (logování snižuje výkon)\\
+				\hline
+				Aerospike & plně spravovatelná & lineární & milisekundy &  logy, záloha\\
+				\hline
+				Oracle Berkeley DB & velká & horizontální & mikrosekundy & repliy \\
+				\hline
+				Riak KV & vysoká & horizontální, téměř lineární & milisekundy & multi cluster repliky, logování\\
+				\hline
+				Voldemort & vysoká & horizontální & milisekundy &  repliky \\
+				\hline
+			\end{tabular}
+	\end{section}
+
+	\begin{section} {Nezmíněné významné KV DB v 2022}
+		\begin{itemize}
+			\item MongoDB
+			\item Couchbase
+			\item Azure Cosmos DB
+		\end{itemize}
+	\end{section}
+	 
+	 \begin{section}{Necitované odkazy}
+	 	\begin{itemize}
+	 		\item https://www.predictiveanalyticstoday.com/top-sql-key-value-store-databases/
+	 		\item https://www.g2.com/categories/document-databases
+	 	\end{itemize}
+	 \end{section}
 \end{document}
