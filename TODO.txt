@@ -1,5 +1,7 @@
-konzultace: 25.10. v 12:30-14:30, EB 434
+konzultace: 17.11. v 12:00-12:15, EB 434
 
-v LateXu
 připravit tabulku srovnání nejpoužívanějších KeyValue DB systémů
-jaké jsou jejich vlastnosti, výhody/nevýhody
+jaké jsou jejich vlastnosti, výhody/nevýhody, dotazovací jazyk, datové typy, propustnost, škálovatelnost (co nejvíc pak se časem ubere), zajímavé pro uživatele, konkrétní hodnoty "ne vysoká propustnost skvělá bla bla"
+psát text ať vypadá jako DP (diploma latex)
+psát už ve větách cca 10 stran
+implmentace bude na test napříč co nejvíce KV systémama (můžná i drobné srovnání s relačníma pokud to půjde) a široké vlastnosti (inserty s updatama, dotazy atp.)
