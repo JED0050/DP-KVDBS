@@ -1,0 +1,20 @@
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Seznam použitých symbolů a zkratek}{5}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Úvod}{6}{chapter.1}%
+\contentsline {chapter}{\numberline {2}section}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Amazon DynamoDB}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Oracle NoSql Database}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}InfinityDB}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Redis}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Aerospike}{10}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Oracle Berkeley DB}{11}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Riak KV}{11}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Voldemort}{12}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Porovnání KV DB}{14}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Nezmíněné významné KV DB v 2022}{14}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Necitované odkazy}{14}{section.2.11}%

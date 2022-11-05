@@ -1,30 +1,70 @@
-\documentclass{article}
+\documentclass[czech,bachelor,dept460,male,csharp,cpdeclaration]{diploma}
+
+\usepackage[autostyle=true,czech=quotes]{csquotes} % korektni sazba uvozovek, podpora pro balik biblatex
+\usepackage[backend=bibtex, style=iso-numeric, alldates=iso]{biblatex} % bibliografie
+\usepackage{dcolumn} % sloupce tabulky s ciselnymi hodnotami
+\usepackage{subfig} % makra pro "podobrazky" a "podtabulky"
 \usepackage{rotating}
+
+\usepackage{geometry}
+\usepackage{listings}
+
+%\usepackage{mathtools} %- blokuje list obrázků a tabulek
+
+\ThesisAuthor{Bc. Jan Jedlička}
+
+\ThesisSupervisor{prof. Ing. Michal Krátký, Ph.D.}
+
+\CzechThesisTitle{Key-value databázové systémy}
+
+\EnglishThesisTitle{Key-value database systems}
+
+\SubmissionYear{2022}
+
+\Acknowledgement{Rád bych na tomto místě poděkoval vedoucímu diplomové práce panu prof. Ing. Michalovi Krátkému, za pravidelné konzultace a poskytnutí mnoha užitečných rad a nápadů pro řešení samotné práce.}
+
+\CzechAbstract{TODO}
+
+\CzechKeywords{TODO; TODO}
+
+\EnglishAbstract{TODO}
+
+\EnglishKeywords{TODO; TODO}
+
+\AddAcronym{TODO}{TODO}
+
+\addbibresource{citace.bib}
+
 \begin{document}
 	
-	\begin{section}{NoSQL Key Value databázové systémy}
-		\begin{subsection}{Amazon DynamoDB}
-			\begin{itemize}
-				\item největšá a nejpoužívánější Key Value DB
-				\item serverless cloud databáze
-				\item odezva microsekundy
-				\item web tech, IoT, mobile, gaming
-				\item plně spravovatelná multi master databáze
-				\item odhadovatelný výkon a bezproblémová škálovatelnost
-				\item unikátní primární klíč pro identifikaci jednotlivých záznamů v tabulce
-				\item sekundární index pro lepší dotazovací flexibilitu
-				\item primírní klíč je jako vstup do hash funkce, výsledný hash je fyzická pozice uloženého záznamu
-				\item silná konzistence na čtení hodnot od poslední aktualizace
-				\item atomic counters pro akutomatické změny hodnot číselných atributů
-				\item TTL pro prošlé záznamy v tabulkách
-				\item full backup pro archivaci dat
-				\item automatická správa systému
-				\item DynamoDB konzolové api pro správu db
-				\item VPC pro soukromou komunikaci bez potřeby využití internetu
-			\end{itemize}
-		\end{subsection}
+	\MakeTitlePages
+	
+	\chapter{Úvod}
+	
+	TODO
+	
+	\chapter{section}{NoSQL Key Value databázové systémy}
+	\section{Amazon DynamoDB}
+	\begin{itemize}
+		\item největšá a nejpoužívánější Key Value DB
+		\item serverless cloud databáze
+		\item odezva microsekundy
+		\item web tech, IoT, mobile, gaming
+		\item plně spravovatelná multi master databáze
+		\item odhadovatelný výkon a bezproblémová škálovatelnost
+		\item unikátní primární klíč pro identifikaci jednotlivých záznamů v tabulce
+		\item sekundární index pro lepší dotazovací flexibilitu
+		\item primírní klíč je jako vstup do hash funkce, výsledný hash je fyzická pozice uloženého záznamu
+		\item silná konzistence na čtení hodnot od poslední aktualizace
+		\item atomic counters pro akutomatické změny hodnot číselných atributů
+		\item TTL pro prošlé záznamy v tabulkách
+		\item full backup pro archivaci dat
+		\item automatická správa systému
+		\item DynamoDB konzolové api pro správu db
+		\item VPC pro soukromou komunikaci bez potřeby využití internetu
+	\end{itemize}
 		
-		\begin{subsection}{Oracle NoSql Database}
+		\section{Oracle NoSql Database}
 			\begin{itemize}
 				\item vhodná pro velké objemy dat a nízkou odezvu
 				\item velký počet storage uzlů pro lepší výstup a kapacitu uložiště
@@ -41,9 +81,9 @@
 				\item obsahuje SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi
 				\item Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL a Apache Hive integration
 			\end{itemize}
-		\end{subsection}
+
 		
-		\begin{subsection}{InfinityDB}
+		\section{InfinityDB}
 			\begin{itemize}
 				\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
 				\item ACID pro vlákna, ACD pro bulk operace
@@ -62,9 +102,8 @@
 				\item přístup k datům v cachy je plně více vláknový
 				\item data která nejsou často využívaná jsou stránkována na disk
 			\end{itemize}
-		\end{subsection}
 		
-		\begin{subsection}{Redis}
+		\section{Redis}
 			\begin{itemize}
 				\item in-memory uložiště pro datové struktury, využívaná jako db, cache nebo zprostředkovávatel zpráv
 				\item můžeme jednou za čas ukládat pravidelně data na disk, nebo provádět logování při provádění operací (nemusíme nic ukládat a mít čistě in memory db)
@@ -81,9 +120,8 @@
 				\item rychlá neblokující se prvotní synchronizace, automatické znovu připojování se znovu synchronizací na netsplit
 				\item skvělé využití pro Key = hash a Value = velký json objekt
 			\end{itemize}
-		\end{subsection}
 		
-		\begin{subsection}{Aerospike}
+		\section{Aerospike}
 			\begin{itemize}
 				\item architektura hybrid memory
 				\item internet scale, odhadovatelná a vysoká výkonost
@@ -99,9 +137,9 @@
 				\item silný quesry jazyk, vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy)
 				\item schema-less, sets/bins můžou být přidány za běhu (maximální flexibilnost pro aplikace)
 			\end{itemize}
-		\end{subsection}
+		 
 		
-		\begin{subsection}{Oracle Berkeley DB}
+		\section{Oracle Berkeley DB}
 			\begin{itemize}
 				\item knihovna pro službu key-value db
 				\item čistě in-memory db
@@ -118,9 +156,9 @@
 				\item Single master, multi replica, vysoce dostupná konfigurovatelnost db
 				\item repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku
 			\end{itemize}
-		\end{subsection}
+		 
 		
-		\begin{subsection}{Riak KV}
+		\section{Riak KV}
 			\begin{itemize}
 				\item distibuovaná kv db, pokročilé lokální a multi-cluster replikování
 				\item garance čtení a zápisu i při selhání HW nebo síťových oddílů
@@ -141,9 +179,9 @@
 				\item během nejvyšší zátěže nezhoršuje zápis a horizontální škálovatelnost, uživatelé jsou obslouženi bez problémů
 				\item dobrý pro soukromé, veřejné i hybridní cloud nasazování
 			\end{itemize}
-		\end{subsection}
+		 
 		
-		\begin{subsection}{Voldemort}
+		\section{Voldemort}
 			\begin{itemize}
 				\item distribuovaná kv db založena na Amazon DynamoDB
 				\item automatická replikace dat skrz více serverů
@@ -165,10 +203,9 @@
 				\item jednoduchá distribuce skrz stroje protože data mohou být rozdělována dle primárních klíčů
 				\item dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi
 			\end{itemize}
-		\end{subsection}
-	\end{section}
+		 
 
-	\begin{section} {Porovnání KV DB}
+	\section {Porovnání KV DB}
 			\begin{tabular}{ |l||p{2cm} p{2cm} l p{4cm} | } 
 				\hline
 				Název & Správa & Škálovatelnost & Odezva & Zotavení \\
@@ -190,20 +227,20 @@
 				Voldemort & vysoká & horizontální & milisekundy &  repliky \\
 				\hline
 			\end{tabular}
-	\end{section}
 
-	\begin{section} {Nezmíněné významné KV DB v 2022}
+
+	\section {Nezmíněné významné KV DB v 2022}
 		\begin{itemize}
 			\item MongoDB
 			\item Couchbase
 			\item Azure Cosmos DB
 		\end{itemize}
-	\end{section}
+
 	 
-	 \begin{section}{Necitované odkazy}
+	 \section{Necitované odkazy}
 	 	\begin{itemize}
 	 		\item https://www.predictiveanalyticstoday.com/top-sql-key-value-store-databases/
 	 		\item https://www.g2.com/categories/document-databases
 	 	\end{itemize}
-	 \end{section}
+
 \end{document}
