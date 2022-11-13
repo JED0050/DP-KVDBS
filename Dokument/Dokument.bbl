@@ -16,5 +16,34 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global}\enddatalist
+\datalist[entry]{none/global//global/global}
+  \entry{predictiveanalyticstoday}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{Predictiveanalyticstoday}
+    \field{title}{Top NoSQL Key Value store Databases}
+    \verb{url}
+    \verb https://www.predictiveanalyticstoday.com/top-sql-key-value-store-data
+    \verb bases/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{13}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{g2}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{G2}
+    \field{title}{Best Document Databases}
+    \verb{url}
+    \verb https://www.g2.com/categories/document-databases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{13}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+\enddatalist
 \endinput

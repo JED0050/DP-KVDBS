@@ -19,19 +19,19 @@
 
 \EnglishThesisTitle{Key-value database systems}
 
-\SubmissionYear{2022}
+\SubmissionYear{2023}
 
 \Acknowledgement{Rád bych na tomto místě poděkoval vedoucímu diplomové práce panu prof. Ing. Michalovi Krátkému, za pravidelné konzultace a poskytnutí mnoha užitečných rad a nápadů pro řešení samotné práce.}
 
-\CzechAbstract{TODO}
+\CzechAbstract{Cílem diplomové práce je popsat Key-value databázové systémy, ukázat výhodo těchto systémů a představit jedny z jejich významných představitelů. Součástí práce je návrh a implementace testovacího prostředí pro testování těchto systémů s ostatnímy SŘBD. Práce je zakončena vyhodnocením výsledků testů vybraných databázových systémů.}
 
-\CzechKeywords{TODO; TODO}
+\CzechKeywords{NoSQL; Key-value databáze}
 
-\EnglishAbstract{TODO}
+\EnglishAbstract{The aim of the diploma thesis is to describe Key-value database systems, to show the advantage of these systems and to present some of their important representatives. Part of the work is the design and implementation of a test environment for testing these systems with other DBMS. The work is finished with an evaluation of the test results of selected database systems.}
 
-\EnglishKeywords{TODO; TODO}
+\EnglishKeywords{NoSQL; Key-value database}
 
-\AddAcronym{TODO}{TODO}
+\AddAcronym{NoSQL}{No Structured Query Language}
 
 \addbibresource{citace.bib}
 
@@ -41,9 +41,12 @@
 	
 	\chapter{Úvod}
 	
-	TODO
+	TODO úvod práce
 	
-	\chapter{section}{NoSQL Key Value databázové systémy}
+	\chapter{NoSQL Key-value databázové systémy}
+	
+	TODO co jsou obecně no sql key value db systémy, výhody nevýhody obecně
+	
 	\section{Amazon DynamoDB}
 	\begin{itemize}
 		\item největšá a nejpoužívánější Key Value DB
@@ -64,124 +67,124 @@
 		\item VPC pro soukromou komunikaci bez potřeby využití internetu
 	\end{itemize}
 		
-		\section{Oracle NoSql Database}
-			\begin{itemize}
-				\item vhodná pro velké objemy dat a nízkou odezvu
-				\item velký počet storage uzlů pro lepší výstup a kapacitu uložiště
-				\item díky DB Java Edirion high-availability storage engine
-				\item single master, multi replica - vysoká dostupnost a nízká chybovost
-				\item při chybě na masteru je jedna z replik automaticky prohlášena za nový master
-				\item grafová databáze
-				\item itegrace v různých Oracle a Open Source aplikacích
-				\item spolehlivá a flexibilní správa konfigurace skupiny uzlů
-				\item škálovatelná se spolehlivostí pro poskytnutí správy všech dat pro zajištění spolehlivosti
-				\item uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení
-				\item sdílený systém, uniformně alokuje data okolo ostatních částí skupin
-				\item storage uzly jsou replikované pro udržení konzistence
-				\item obsahuje SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi
-				\item Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL a Apache Hive integration
-			\end{itemize}
+	\section{Oracle NoSql Database}
+		\begin{itemize}
+			\item vhodná pro velké objemy dat a nízkou odezvu
+			\item velký počet storage uzlů pro lepší výstup a kapacitu uložiště
+			\item díky DB Java Edirion high-availability storage engine
+			\item single master, multi replica - vysoká dostupnost a nízká chybovost
+			\item při chybě na masteru je jedna z replik automaticky prohlášena za nový master
+			\item grafová databáze
+			\item itegrace v různých Oracle a Open Source aplikacích
+			\item spolehlivá a flexibilní správa konfigurace skupiny uzlů
+			\item škálovatelná se spolehlivostí pro poskytnutí správy všech dat pro zajištění spolehlivosti
+			\item uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení
+			\item sdílený systém, uniformně alokuje data okolo ostatních částí skupin
+			\item storage uzly jsou replikované pro udržení konzistence
+			\item obsahuje SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi
+			\item Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL a Apache Hive integration
+		\end{itemize}
 
-		
-		\section{InfinityDB}
-			\begin{itemize}
-				\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
-				\item ACID pro vlákna, ACD pro bulk operace
-				\item jednoduché API, instantní produktuvita developerů
-				\item dynamický pohled dotazů (set logic views, delta views, ranges)
-				\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
-				\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
-				\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
-				\item all-Java db pro servery, procovní stanice, ruční zařízení
-				\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
-				\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
-				\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
-				\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
-				\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
-				\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
-				\item přístup k datům v cachy je plně více vláknový
-				\item data která nejsou často využívaná jsou stránkována na disk
-			\end{itemize}
-		
-		\section{Redis}
-			\begin{itemize}
-				\item in-memory uložiště pro datové struktury, využívaná jako db, cache nebo zprostředkovávatel zpráv
-				\item můžeme jednou za čas ukládat pravidelně data na disk, nebo provádět logování při provádění operací (nemusíme nic ukládat a mít čistě in memory db)
-				\item podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy
-				\item Keyspace notifikace dovoluje klientům odebírat Pub/Sub kanály
-				\item setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu
-				\item Geo APi pro dotazy na souřadnice nebo rádiusy
-				\item Radius hashing ukládá data jako klíč a mapu
-				\item Single-rooted replikovaný strom
-				\item API pro populární používané jazyky
-				\item obsahuje transakce, lua skripty a různé úrovně trvání na disku
-				\item atomické operace (rozšíření stringu, přídání prvku do listu atp.)
-				\item podpora trivial-to-setup master-slave asynchronního replikování
-				\item rychlá neblokující se prvotní synchronizace, automatické znovu připojování se znovu synchronizací na netsplit
-				\item skvělé využití pro Key = hash a Value = velký json objekt
-			\end{itemize}
-		
-		\section{Aerospike}
-			\begin{itemize}
-				\item architektura hybrid memory
-				\item internet scale, odhadovatelná a vysoká výkonost
-				\item korektnost, silná konzistence, nízká cena, lineární škálovatelnost
-				\item real-time rozhodování na velké, stále aktualizované db
-				\item dynamická optimalizace pro optimální využití zdrojů
-				\item server-side clustering
-				\item bezpečnost na transportní vrstvě
-				\item banking, telekominkace, adtech, gaming
-				\item customer deployment s zero downtime
-				\item transakce v milisekundách
-				\item výběr in-memory storage (cache sessions) nebo SDD disk storage (pro trvanlivost dat) bez kompromisů ve výkonnosti
-				\item silný quesry jazyk, vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy)
-				\item schema-less, sets/bins můžou být přidány za běhu (maximální flexibilnost pro aplikace)
-			\end{itemize}
-		 
-		
-		\section{Oracle Berkeley DB}
-			\begin{itemize}
-				\item knihovna pro službu key-value db
-				\item čistě in-memory db
-				\item ultra-low odezva, škálovatelná, vysoce výkonná
-				\item velice dostupná, tolerance chybovosti
-				\item B-stromy, fronty, hash data indexy
-				\item obnovitelné ACID transakce, více úrovní izolace (včetně MVCC)
-				\item rozdělení dat dle key ranges
-				\item možnost komprese záznamů
-				\item jednoduché volání API pro přístup k datům a nastavení db
-				\item stavební části pro  db od lokálního uložiště po world-wide distribuovanou db (od KiloBytů po PetaByty)
-				\item data uložená v XML, SQL (když není potřeba tak se využívá právě KeyValue uložiště), Java Objekty
-				\item podpora moderních programovacích jazyků (C++, C\#, Java, Python atp.)
-				\item Single master, multi replica, vysoce dostupná konfigurovatelnost db
-				\item repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku
-			\end{itemize}
-		 
-		
-		\section{Riak KV}
-			\begin{itemize}
-				\item distibuovaná kv db, pokročilé lokální a multi-cluster replikování
-				\item garance čtení a zápisu i při selhání HW nebo síťových oddílů
-				\item bez konfliktní replikované datové typy (CRDTs), flags, registry, čitače, množiny a mapy
-				\item konfigurace aktivního clusteru, poskytování dat pro klienty díky nízké latenci z nejbližšího data centra
-				\item dostupné zóny, multi claster repliky a redundance dat v geografickém regionu
-				\item flexibilní datový model bez pre definovaného schématu
-				\item vylepšené logování chyb a reporty
-				\item automatická komprese dat pomocí Snappy kompresní knihovny
-				\item vhodná pro ukládání velkého množství nestrukturovaných dat
-				\item pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí
-				\item automatický distribuce dat skrz cluster, pro robustnost, výkon
-				\item master-less architektura, vysoká dostupnost, téměř lineární škálovatelnost za využití snadného přidání HW kapacity bez nutnosti mnoha operací
-				\item nízká latence, vhodná pro chat/messaging aplikace
-				\item možnost zpracování dat pro získání užitečných závěrů a akceschopných informací
-				\item design pro horizontálůní škálovatelnost s komoditním HW, jednoduché pro rozšíření objemu dat bez potřeby vytváření komplexního sdílení
-				\item bez vnocování restrikcí na hodnoty, session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu
-				\item během nejvyšší zátěže nezhoršuje zápis a horizontální škálovatelnost, uživatelé jsou obslouženi bez problémů
-				\item dobrý pro soukromé, veřejné i hybridní cloud nasazování
-			\end{itemize}
-		 
-		
-		\section{Voldemort}
+	
+	\section{InfinityDB}
+		\begin{itemize}
+			\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
+			\item ACID pro vlákna, ACD pro bulk operace
+			\item jednoduché API, instantní produktuvita developerů
+			\item dynamický pohled dotazů (set logic views, delta views, ranges)
+			\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
+			\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
+			\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
+			\item all-Java db pro servery, procovní stanice, ruční zařízení
+			\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
+			\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
+			\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
+			\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
+			\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
+			\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
+			\item přístup k datům v cachy je plně více vláknový
+			\item data která nejsou často využívaná jsou stránkována na disk
+		\end{itemize}
+	
+	\section{Redis}
+		\begin{itemize}
+			\item in-memory uložiště pro datové struktury, využívaná jako db, cache nebo zprostředkovávatel zpráv
+			\item můžeme jednou za čas ukládat pravidelně data na disk, nebo provádět logování při provádění operací (nemusíme nic ukládat a mít čistě in memory db)
+			\item podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy
+			\item Keyspace notifikace dovoluje klientům odebírat Pub/Sub kanály
+			\item setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu
+			\item Geo APi pro dotazy na souřadnice nebo rádiusy
+			\item Radius hashing ukládá data jako klíč a mapu
+			\item Single-rooted replikovaný strom
+			\item API pro populární používané jazyky
+			\item obsahuje transakce, lua skripty a různé úrovně trvání na disku
+			\item atomické operace (rozšíření stringu, přídání prvku do listu atp.)
+			\item podpora trivial-to-setup master-slave asynchronního replikování
+			\item rychlá neblokující se prvotní synchronizace, automatické znovu připojování se znovu synchronizací na netsplit
+			\item skvělé využití pro Key = hash a Value = velký json objekt
+		\end{itemize}
+	
+	\section{Aerospike}
+		\begin{itemize}
+			\item architektura hybrid memory
+			\item internet scale, odhadovatelná a vysoká výkonost
+			\item korektnost, silná konzistence, nízká cena, lineární škálovatelnost
+			\item real-time rozhodování na velké, stále aktualizované db
+			\item dynamická optimalizace pro optimální využití zdrojů
+			\item server-side clustering
+			\item bezpečnost na transportní vrstvě
+			\item banking, telekominkace, adtech, gaming
+			\item customer deployment s zero downtime
+			\item transakce v milisekundách
+			\item výběr in-memory storage (cache sessions) nebo SDD disk storage (pro trvanlivost dat) bez kompromisů ve výkonnosti
+			\item silný quesry jazyk, vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy)
+			\item schema-less, sets/bins můžou být přidány za běhu (maximální flexibilnost pro aplikace)
+		\end{itemize}
+ 
+	
+	\section{Oracle Berkeley DB}
+		\begin{itemize}
+			\item knihovna pro službu key-value db
+			\item čistě in-memory db
+			\item ultra-low odezva, škálovatelná, vysoce výkonná
+			\item velice dostupná, tolerance chybovosti
+			\item B-stromy, fronty, hash data indexy
+			\item obnovitelné ACID transakce, více úrovní izolace (včetně MVCC)
+			\item rozdělení dat dle key ranges
+			\item možnost komprese záznamů
+			\item jednoduché volání API pro přístup k datům a nastavení db
+			\item stavební části pro  db od lokálního uložiště po world-wide distribuovanou db (od KiloBytů po PetaByty)
+			\item data uložená v XML, SQL (když není potřeba tak se využívá právě KeyValue uložiště), Java Objekty
+			\item podpora moderních programovacích jazyků (C++, C\#, Java, Python atp.)
+			\item Single master, multi replica, vysoce dostupná konfigurovatelnost db
+			\item repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku
+		\end{itemize}
+ 
+	
+	\section{Riak KV}
+		\begin{itemize}
+			\item distibuovaná kv db, pokročilé lokální a multi-cluster replikování
+			\item garance čtení a zápisu i při selhání HW nebo síťových oddílů
+			\item bez konfliktní replikované datové typy (CRDTs), flags, registry, čitače, množiny a mapy
+			\item konfigurace aktivního clusteru, poskytování dat pro klienty díky nízké latenci z nejbližšího data centra
+			\item dostupné zóny, multi claster repliky a redundance dat v geografickém regionu
+			\item flexibilní datový model bez pre definovaného schématu
+			\item vylepšené logování chyb a reporty
+			\item automatická komprese dat pomocí Snappy kompresní knihovny
+			\item vhodná pro ukládání velkého množství nestrukturovaných dat
+			\item pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí
+			\item automatický distribuce dat skrz cluster, pro robustnost, výkon
+			\item master-less architektura, vysoká dostupnost, téměř lineární škálovatelnost za využití snadného přidání HW kapacity bez nutnosti mnoha operací
+			\item nízká latence, vhodná pro chat/messaging aplikace
+			\item možnost zpracování dat pro získání užitečných závěrů a akceschopných informací
+			\item design pro horizontálůní škálovatelnost s komoditním HW, jednoduché pro rozšíření objemu dat bez potřeby vytváření komplexního sdílení
+			\item bez vnocování restrikcí na hodnoty, session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu
+			\item během nejvyšší zátěže nezhoršuje zápis a horizontální škálovatelnost, uživatelé jsou obslouženi bez problémů
+			\item dobrý pro soukromé, veřejné i hybridní cloud nasazování
+		\end{itemize}
+ 
+	
+	\section{Voldemort}
 			\begin{itemize}
 				\item distribuovaná kv db založena na Amazon DynamoDB
 				\item automatická replikace dat skrz více serverů
@@ -236,11 +239,20 @@
 			\item Azure Cosmos DB
 		\end{itemize}
 
-	 
-	 \section{Necitované odkazy}
-	 	\begin{itemize}
-	 		\item https://www.predictiveanalyticstoday.com/top-sql-key-value-store-databases/
-	 		\item https://www.g2.com/categories/document-databases
-	 	\end{itemize}
-
+	\chapter{Prostředí pro testování databázových systémů}
+	
+	TODO
+	
+	\chapter{Vyhodnocení výsledků testů}
+	
+	TODO
+	
+	\chapter{Závěr}
+	
+	TODO
+		
+	\nocite{*}
+	
+	\printbibliography[title={Literatura}, heading=bibintoc]
+	
 \end{document}
