@@ -32,6 +32,7 @@
 \EnglishKeywords{NoSQL; Key-value database}
 
 \AddAcronym{NoSQL}{No Structured Query Language}
+\AddAcronym{Key-value database}{Klíč-hodnota databáze}
 
 \addbibresource{citace.bib}
 
@@ -41,31 +42,19 @@
 	
 	\chapter{Úvod}
 	
-	TODO úvod práce
+	NoSQL Key-value (neboli Klíč-hodnota) databáze\cite{wiki-key-value-db} je jedno z paradigmat pro uložiště dat. Databáze je navržena pro ukládání, načítání a správu různých datových struktur, dnes známých jako slovníky nebo hashovací tabulky. Slovníky obsahují kolekci objektů či záznamů, které mohou opět obsahovat množinu různých polí s daty. Záznamy jsou do slovníků, či hashovacích tabulek, ukládána za pomoci klíče, který identifikuje pozici záznamu v datové struktuře a používá se k následnému vyhledávání dat v databázi.
+	
+	Key-value databáze fungují velice odlišně než tradiční relační databázové systémy. Relační databáze mají předdefinovanou datovou strukturu v databázi jako sérii tabulek s dopředu definovanými datovými typy. Díky tomuto modelu může relační databázový systém provádět řadu optimalizací. Na druhou stranu Key-value databázové systémy mohou mít pro každý záznam různě definované kolekce dat s odlišnými velikostmi a počty atributů. Tato vlastnost nabízí Key-value databázovým systémům flexibilitu a možnost přiblížení se k objektově orientovanému programování. Protože Key-value databáze nevyžaduje pevně nastavené datkové typy hodnot, jako je tomu u relační databáze, tak Key-value databáze často potřebují méně paměti k uložení stajných dat, což může vést k značnému nárůstu výkonu.
+	
+	Výkon a nedostatečná standardizace omezovaly Key-value databázové systémy pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing dochází v posledních letech k rozšíření obecné využitelnosti NoSQL databázových systémů. Například databázový systém Redis\cite{redis} je v současnosti jedním z deseti nejlépe hodnocenách\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy.
 	
 	\chapter{NoSQL Key-value databázové systémy}
 	
-	TODO co jsou obecně no sql key value db systémy, výhody nevýhody obecně
+	V současné době existuje nespočet různých Key-value databázových systémů, od malých open source projektů po velké placené cloud služby. Různé systém disponují odlišnými vlastnostmy jako je propustnost, škálovatelnost, uživatlká přívětivost skrz dotazovací jazyk a podporu aj. Dle průzkumu\cite{predictiveanalyticstoday}\cite{g2}\cite{db-engineers-ranking}  bylo vybráno 10 aktuálně významých Key-value databázových systémů se snahou o jednoduchý popis, porovnání a konešný výběr vhodnách Key-value databázových systémů se snahou otestovat vlastnosti těchto systémů.
 	
 	\section{Amazon DynamoDB}
-	\begin{itemize}
-		\item největšá a nejpoužívánější Key Value DB
-		\item serverless cloud databáze
-		\item odezva microsekundy
-		\item web tech, IoT, mobile, gaming
-		\item plně spravovatelná multi master databáze
-		\item odhadovatelný výkon a bezproblémová škálovatelnost
-		\item unikátní primární klíč pro identifikaci jednotlivých záznamů v tabulce
-		\item sekundární index pro lepší dotazovací flexibilitu
-		\item primírní klíč je jako vstup do hash funkce, výsledný hash je fyzická pozice uloženého záznamu
-		\item silná konzistence na čtení hodnot od poslední aktualizace
-		\item atomic counters pro akutomatické změny hodnot číselných atributů
-		\item TTL pro prošlé záznamy v tabulkách
-		\item full backup pro archivaci dat
-		\item automatická správa systému
-		\item DynamoDB konzolové api pro správu db
-		\item VPC pro soukromou komunikaci bez potřeby využití internetu
-	\end{itemize}
+	
+	Amazon DynamoDB\cite{dynamodb} je v současné době největší a nejvyužívanější Key-value databázový systém. Jedná se o placený serverless cloud systém s odezvou v řádu jednotek mikrosekund a využitím v oblastech jako je web tech, IoT, mobile a gaming. DynamoDB je plně a automaticky spravovatelná, multi master databáze zaměřené na vysoké využití horizontální škálovatelnosti. Unikátní primární klíče umožňují identifikaci jednotlivých záznamů v tabulkách a sekundární index zlepšuje dodazovací flexibilitu. Primární klíč je jako vstup do hashovací funkce a výsledý hash nám udává fyzickou pozici uloženého záznamu. DynamoDB poskytuje silnou konzistenci na čtení hodnot od posledních aktualizací. Atomické čitače umožňuí automatické změny hodnot číselných atribnutů. Využívá TTL pro prošlé záznamy v tabulkách. Archivace dat je umožněna díky full backupu. Konzolové API pro správu databáze. Amazon DynamoDB má i VPC pro soukromou komunikaci bez potřeby využití indernetu.
 		
 	\section{Oracle NoSql Database}
 		\begin{itemize}

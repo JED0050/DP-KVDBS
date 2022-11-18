@@ -17,6 +17,45 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{wiki-key-value-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Key–value database}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Key%E2%80%93value_database
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{redis}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Redis}
+    \verb{url}
+    \verb https://redis.io/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{db-engineers-ranking}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines Ranking}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{predictiveanalyticstoday}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{Predictiveanalyticstoday}
@@ -42,6 +81,33 @@
     \field{langid}{english}
     \field{year}{2022}
     \field{urlday}{13}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{ytb-nosql-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{youtube}
+    \field{title}{How do NoSQL databases work? Simply Explained!}
+    \verb{url}
+    \verb https://www.youtube.com/watch?v=0buKQHokLK8
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{dynamodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon DynamoDB}
+    \verb{url}
+    \verb https://aws.amazon.com/dynamodb/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry
