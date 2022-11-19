@@ -85,20 +85,6 @@
     \field{urlyear}{2022}
   \endentry
 
-  \entry{ytb-nosql-db}{online}{}
-    \field{labeltitlesource}{title}
-    \field{subtitle}{youtube}
-    \field{title}{How do NoSQL databases work? Simply Explained!}
-    \verb{url}
-    \verb https://www.youtube.com/watch?v=0buKQHokLK8
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
-  \endentry
-
   \entry{dynamodb}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Amazon DynamoDB}
@@ -107,6 +93,33 @@
     \endverb
     \field{langid}{english}
     \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{oraclenosqldb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle NoSQL Database}
+    \verb{url}
+    \verb https://www.oracle.com/database/nosql/technologies/nosql/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{19}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{ytb-nosql-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{youtube}
+    \field{title}{How do NoSQL databases work? Simply Explained!}
+    \verb{url}
+    \verb https://www.youtube.com/watch?v=0buKQHokLK8
+    \endverb
+    \field{langid}{english}
+    \field{year}{2021}
     \field{urlday}{18}
     \field{urlmonth}{11}
     \field{urlyear}{2022}

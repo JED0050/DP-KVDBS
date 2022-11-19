@@ -33,6 +33,7 @@
 
 \AddAcronym{NoSQL}{No Structured Query Language}
 \AddAcronym{Key-value database}{Klíč-hodnota databáze}
+\AddAcronym{TTL}{Time to live}
 
 \addbibresource{citace.bib}
 
@@ -54,65 +55,16 @@
 	
 	\section{Amazon DynamoDB}
 	
-	Amazon DynamoDB\cite{dynamodb} je v současné době největší a nejvyužívanější Key-value databázový systém. Jedná se o placený serverless cloud systém s odezvou v řádu jednotek mikrosekund a využitím v oblastech jako je web tech, IoT, mobile a gaming. DynamoDB je plně a automaticky spravovatelná, multi master databáze zaměřené na vysoké využití horizontální škálovatelnosti. Unikátní primární klíče umožňují identifikaci jednotlivých záznamů v tabulkách a sekundární index zlepšuje dodazovací flexibilitu. Primární klíč je jako vstup do hashovací funkce a výsledý hash nám udává fyzickou pozici uloženého záznamu. DynamoDB poskytuje silnou konzistenci na čtení hodnot od posledních aktualizací. Atomické čitače umožňuí automatické změny hodnot číselných atribnutů. Využívá TTL pro prošlé záznamy v tabulkách. Archivace dat je umožněna díky full backupu. Konzolové API pro správu databáze. Amazon DynamoDB má i VPC pro soukromou komunikaci bez potřeby využití indernetu.
+	Amazon DynamoDB\cite{dynamodb} je v současné době největší a nejvyužívanější Key-value databázový systém. Jedná se o serverless cloud systém s odezvou v řádu jednotek mikrosekund a využitím v oblastech jako je web tech, IoT, mobile a gaming. DynamoDB je plně a automaticky spravovatelná, multi master databáze zaměřené na vysoké využití horizontální škálovatelnosti. Unikátní primární klíče umožňují identifikaci jednotlivých záznamů v tabulkách a sekundární index zlepšuje dodazovací flexibilitu. Primární klíč je jako vstup do hashovací funkce a výsledý hash nám udává fyzickou pozici uloženého záznamu. DynamoDB poskytuje silnou konzistenci na čtení hodnot od posledních aktualizací. Atomické čitače umožňuí automatické změny hodnot číselných atribnutů. Využívá TTL pro prošlé záznamy v tabulkách. Archivace dat je umožněna díky full backupu. Systém má konzolové API pro správu databáze a práci s daty, systém však nabízí i možnost využití SQL jazyka. Amazon DynamoDB má i VPC pro soukromou komunikaci bez potřeby využití indernetu.
 		
-	\section{Oracle NoSql Database}
-		\begin{itemize}
-			\item vhodná pro velké objemy dat a nízkou odezvu
-			\item velký počet storage uzlů pro lepší výstup a kapacitu uložiště
-			\item díky DB Java Edirion high-availability storage engine
-			\item single master, multi replica - vysoká dostupnost a nízká chybovost
-			\item při chybě na masteru je jedna z replik automaticky prohlášena za nový master
-			\item grafová databáze
-			\item itegrace v různých Oracle a Open Source aplikacích
-			\item spolehlivá a flexibilní správa konfigurace skupiny uzlů
-			\item škálovatelná se spolehlivostí pro poskytnutí správy všech dat pro zajištění spolehlivosti
-			\item uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení
-			\item sdílený systém, uniformně alokuje data okolo ostatních částí skupin
-			\item storage uzly jsou replikované pro udržení konzistence
-			\item obsahuje SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi
-			\item Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL a Apache Hive integration
-		\end{itemize}
-
+	\section{Oracle NoSQL Database}
 	
-	\section{InfinityDB}
-		\begin{itemize}
-			\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
-			\item ACID pro vlákna, ACD pro bulk operace
-			\item jednoduché API, instantní produktuvita developerů
-			\item dynamický pohled dotazů (set logic views, delta views, ranges)
-			\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
-			\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
-			\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
-			\item all-Java db pro servery, procovní stanice, ruční zařízení
-			\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
-			\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
-			\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
-			\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
-			\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
-			\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
-			\item přístup k datům v cachy je plně více vláknový
-			\item data která nejsou často využívaná jsou stránkována na disk
-		\end{itemize}
-	
+	Oracle NoSQL Database\cite{oraclenosqldb} je databázová cloud služba vhodná pro práci s velkými objemy dat a odhadovatelnou nízkou odezvou v řádu jednotek milisekund. Služba je postavena na enginu z Oracle Berkley DB. Databáze je plně spravovatelná, flexibilní, škáluje dynamicky a dosahuje vysokých výkonů. Mimo Key-value data se jedná i o spolehlivé uložiště pro dokumenty a data s pevně daným schématem. Vzhledem k tomu že databázový systém je plně spravovaný společností Oracle, tak je pro vývojáře rychlé a snadné začít tuto službu využívat a soustředit se pouze na vývoj aplikací, neboť není potřeba se obtěžovat se správou základní infrastruktury databáze, softwaru, zabezpečení atp. Jedná se o Single Master, Multi Replica grafový systém. Pokud dojde k chybě na masteru, je master automaticky nahrazen jednou z replik. Pro Key-value ukládání s kapacitu jednotek Terabytů využívá systém velký počet Storage uzlů, které je možno skupinově konfigurovat. Pro udržení konzistence jsou Storage uzly replikovány. Uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení. Sdílený systém, uniformně alokuje data okolo ostatních částí skupin. Databáze obsahuje i SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi. Mimo jiné je zde podpora i pro Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL.
+		
 	\section{Redis}
-		\begin{itemize}
-			\item in-memory uložiště pro datové struktury, využívaná jako db, cache nebo zprostředkovávatel zpráv
-			\item můžeme jednou za čas ukládat pravidelně data na disk, nebo provádět logování při provádění operací (nemusíme nic ukládat a mít čistě in memory db)
-			\item podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy
-			\item Keyspace notifikace dovoluje klientům odebírat Pub/Sub kanály
-			\item setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu
-			\item Geo APi pro dotazy na souřadnice nebo rádiusy
-			\item Radius hashing ukládá data jako klíč a mapu
-			\item Single-rooted replikovaný strom
-			\item API pro populární používané jazyky
-			\item obsahuje transakce, lua skripty a různé úrovně trvání na disku
-			\item atomické operace (rozšíření stringu, přídání prvku do listu atp.)
-			\item podpora trivial-to-setup master-slave asynchronního replikování
-			\item rychlá neblokující se prvotní synchronizace, automatické znovu připojování se znovu synchronizací na netsplit
-			\item skvělé využití pro Key = hash a Value = velký json objekt
-		\end{itemize}
 	
+	Redis\cite{redis} je in-memory uložiště pro datové struktury, využívané jako Key-value databáze, cache, streaming engine nebo zprostředkovávatel zpráv. Toto datové uložiště má skvělé využití pro klíče v podobě hashe a hodnoty jako velký json objekt. Pro perzistenci dat můžeme ukládání dat na disk provádět po nasatvitelných pravidelných intervalech, nebo je možné data logovat vždy při vykonávání operací, pokud nemáme zájem o trvanlivost dat je možné ukládání dat vypnout úplně a datové uložioště využít čistě jako cache. Redis podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy. Nad datovými typy Redis umožňuje rychlé atomické operace jako rozšíření stringů, přídání prvků na začátek a konec listů atd. Datové uložiště také poskytuje setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu. Redis hashing ukládá data jako klíč a mapu. Keyspace notifikace dovoluje klientům odebírat Publisher-Subscriber kanály. Pro práci s dotazy na souřadnice a geometrii je možné využívat Geo API. Redis umožňuje provádět transakce, volat lua skripty a nastavovat různé úrovně TTL pro záznamy. Redis podporuje Trivial-to-setup Master-Slave asynchronního replikování, společně s rychlou neblokující se prvotní synchronizaci. Struktura pro ukládání dat je Single-rooted replikovaný strom. Redis má vlastní API pro práci s daty pro populární programovací jazyky jako C, Python, Java a Javascript.
+			
 	\section{Aerospike}
 		\begin{itemize}
 			\item architektura hybrid memory
@@ -195,7 +147,27 @@
 				\item jednoduchá distribuce skrz stroje protože data mohou být rozdělována dle primárních klíčů
 				\item dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi
 			\end{itemize}
-		 
+	
+	\section{InfinityDB}
+		
+		\begin{itemize}
+			\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
+			\item ACID pro vlákna, ACD pro bulk operace
+			\item jednoduché API, instantní produktuvita developerů
+			\item dynamický pohled dotazů (set logic views, delta views, ranges)
+			\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
+			\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
+			\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
+			\item all-Java db pro servery, procovní stanice, ruční zařízení
+			\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
+			\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
+			\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
+			\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
+			\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
+			\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
+			\item přístup k datům v cachy je plně více vláknový
+			\item data která nejsou často využívaná jsou stránkována na disk
+		\end{itemize}
 
 	\section {Porovnání KV DB}
 			\begin{tabular}{ |l||p{2cm} p{2cm} l p{4cm} | } 
@@ -204,7 +176,7 @@
 				\hline
 				Amazon DynamoDB & automatická, plně spravovatelná & vysoká, horizontální & mikrosekundy & logy, záloha, automatické obnovení \\
 				\hline
-				Oracle NoSql DB & nízká & horizontální & milisekundy & replika je prohlášena za master\\ 
+				Oracle NoSQL DB & nízká & horizontální & milisekundy & replika je prohlášena za master\\ 
 				\hline
 				InfinityDB & jeden soubor se vším & nízká & milisekundy & bez logů, okamžité ale ztrácíme data\\ 
 				\hline
