@@ -66,24 +66,11 @@
 	Redis\cite{redis} je in-memory uložiště pro datové struktury, využívané jako Key-value databáze, cache, streaming engine nebo zprostředkovávatel zpráv. Toto datové uložiště má skvělé využití pro klíče v podobě hashe a hodnoty jako velký json objekt. Pro perzistenci dat můžeme ukládání dat na disk provádět po nasatvitelných pravidelných intervalech, nebo je možné data logovat vždy při vykonávání operací, pokud nemáme zájem o trvanlivost dat je možné ukládání dat vypnout úplně a datové uložioště využít čistě jako cache. Redis podpuruje datové struktury jako stringy, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy. Nad datovými typy Redis umožňuje rychlé atomické operace jako rozšíření stringů, přídání prvků na začátek a konec listů atd. Datové uložiště také poskytuje setřízené množiny pro vytváření indexů dle ID nebo jiného číselného atributu. Redis hashing ukládá data jako klíč a mapu. Keyspace notifikace dovoluje klientům odebírat Publisher-Subscriber kanály. Pro práci s dotazy na souřadnice a geometrii je možné využívat Geo API. Redis umožňuje provádět transakce, volat lua skripty a nastavovat různé úrovně TTL pro záznamy. Redis podporuje Trivial-to-setup Master-Slave asynchronního replikování, společně s rychlou neblokující se prvotní synchronizaci. Struktura pro ukládání dat je Single-rooted replikovaný strom. Redis má vlastní API pro práci s daty pro populární programovací jazyky jako C, Python, Java a Javascript.
 			
 	\section{Aerospike}
-		\begin{itemize}
-			\item architektura hybrid memory
-			\item internet scale, odhadovatelná a vysoká výkonost
-			\item korektnost, silná konzistence, nízká cena, lineární škálovatelnost
-			\item real-time rozhodování na velké, stále aktualizované db
-			\item dynamická optimalizace pro optimální využití zdrojů
-			\item server-side clustering
-			\item bezpečnost na transportní vrstvě
-			\item banking, telekominkace, adtech, gaming
-			\item customer deployment s zero downtime
-			\item transakce v milisekundách
-			\item výběr in-memory storage (cache sessions) nebo SDD disk storage (pro trvanlivost dat) bez kompromisů ve výkonnosti
-			\item silný quesry jazyk, vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy)
-			\item schema-less, sets/bins můžou být přidány za běhu (maximální flexibilnost pro aplikace)
-		\end{itemize}
- 
+	
+	Aerospike\cite{aerospike} je Key-value databáze využívající Hybrid Memory architekturu\cite{hybmem-arch}, která umožňuje odezvu do jednotek milisekund a vysokou propustnost v řádu stovek tisíc až milionu operací za sekundu. Hybrid Memory architektura od Aeorispike je implementována tak, že index je čistě In-Memory, tím pádem není index persistentní (vhodné například pro uživatelské cache sessions), a data jsou uložena čistě persistentně na SSD disku a čtou se přímo z něj. Díky tomu že je Aerospike jako Key-value databáze naprosto Schena-less tak je možné definovat Sets a Bins za běhu pro maximální flexibilitu aplikací. Databáze škáluje lineárně a poskytuje silnou konzistenci, nízkou cenu a korektnost. Umožňuje real-time analýzu pro rychlé rozhodování a dynamickou optimalizaci pro vhodné využívání zdrojů dat, proto je databáze vhodná pro velké a stále aktualizované databáze. Poskytuje server-side clustering, bezpečnost na transportní vrstvě. Databáze také umožňuje Customer deployment s nulovým downtime. V praxy se Aerospike díky svým vlastnostem využívá například pro banking, telekominkace, adtech a gaming. Aerospike poskytuje vlastní silný dotazovací jazyk AQL\cite{aql}, který má prakticky shodnou syntaxi jako SQL (i když se o SQL nejedná). vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy).
 	
 	\section{Oracle Berkeley DB}
+	
 		\begin{itemize}
 			\item knihovna pro službu key-value db
 			\item čistě in-memory db

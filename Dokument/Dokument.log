@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  19 NOV 2022 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  20 NOV 2022 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,53 +1260,53 @@ Kapitola 1.
 Kapitola 2.
 [7
 
-]
+] [8]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 7
-0.
+4.
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [8] [9] [10] [11]
-Overfull \hbox (11.59338pt too wide) in paragraph at lines 175--175
+) [9] [10] [11]
+Overfull \hbox (11.59338pt too wide) in paragraph at lines 161--161
 []|\T1/lmr/m/n/10.95 ’kálovatelnost| 
  []
 
 
-Overfull \hbox (5.14447pt too wide) in paragraph at lines 177--177
+Overfull \hbox (5.14447pt too wide) in paragraph at lines 163--163
 []|\T1/lmr/m/n/10.95 automatická,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 \T1/lmr/m/n/10.95 pln¥ spra-
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 177--178
+Underfull \hbox (badness 3209) in paragraph at lines 163--164
 []|\T1/lmr/m/n/10.95 logy, zá-loha, au-to-ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
 []|\T1/lmr/m/n/10.95 jeden sou-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--181
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
 \T1/lmr/m/n/10.95 bor se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
 []|\T1/lmr/m/n/10.95 pln¥ spra-
  []
 
 
-Overfull \hbox (3.04553pt too wide) in paragraph at lines 189--189
+Overfull \hbox (3.04553pt too wide) in paragraph at lines 175--175
 []|\T1/lmr/m/n/10.95 horizontální,
  []
 
 
-Underfull \hbox (badness 2261) in paragraph at lines 189--189
+Underfull \hbox (badness 2261) in paragraph at lines 175--175
 \T1/lmr/m/n/10.95 tém¥° li-ne-
  []
 
@@ -1324,10 +1324,17 @@ Kapitola 5.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-17.
+03.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [17
+)
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 203--203
+[]\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
+ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
+/n/10.95 https : / / aerospike .
+ []
+
+[17
 
 ] (Dokument.aux)
 
@@ -1345,10 +1352,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27836 strings out of 478552
- 487314 string characters out of 2854123
- 1001885 words of memory out of 3000000
- 45614 multiletter control sequences out of 15000+600000
+ 27851 strings out of 478552
+ 487822 string characters out of 2854123
+ 1002027 words of memory out of 3000000
+ 45626 multiletter control sequences out of 15000+600000
  522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,8n,93p,1884b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1358,9 +1365,9 @@ Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1
 /public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/
 Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type
 1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (17 pages, 992634 bytes).
+Output written on Dokument.pdf (17 pages, 996179 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
