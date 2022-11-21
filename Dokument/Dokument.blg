@@ -26,49 +26,48 @@ Repeated entry---line 135 of file citace.bib
  : @online{redis
  :              ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "hybrid-memory-architecture"
 Biblatex version: 3.17
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 12 entries,
+You've used 15 entries,
             6399 wiz_defined-function locations,
-            1247 strings with 9947 characters,
-and the built_in function-call counts, 61235 in all, are:
-= -- 910
-> -- 8444
-< -- 417
-+ -- 7851
-- -- 7665
-* -- 1209
-:= -- 9231
+            1256 strings with 10180 characters,
+and the built_in function-call counts, 77462 in all, are:
+= -- 1138
+> -- 10724
+< -- 528
++ -- 9975
+- -- 9744
+* -- 1521
+:= -- 11643
 add.period$ -- 0
-call.type$ -- 12
-change.case$ -- 33
-chr.to.int$ -- 574
-cite$ -- 22
-duplicate$ -- 4111
-empty$ -- 3999
+call.type$ -- 15
+change.case$ -- 42
+chr.to.int$ -- 718
+cite$ -- 28
+duplicate$ -- 5224
+empty$ -- 5058
 format.name$ -- 0
-if$ -- 6567
+if$ -- 8265
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 14
 missing$ -- 0
-newline$ -- 167
+newline$ -- 206
 num.names$ -- 0
-pop$ -- 3605
+pop$ -- 4577
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 42
 quote$ -- 0
-skip$ -- 1355
+skip$ -- 1703
 stack$ -- 0
-substring$ -- 2174
-swap$ -- 1426
-text.length$ -- 359
+substring$ -- 2723
+swap$ -- 1807
+text.length$ -- 449
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 396
+type$ -- 498
 warning$ -- 0
-while$ -- 506
+while$ -- 626
 width$ -- 0
-write$ -- 156
+write$ -- 192
 (There was 1 error message)

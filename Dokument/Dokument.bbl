@@ -124,6 +124,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{hybmem-arch}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Hybrid Memory Architecture}
+    \verb{url}
+    \verb https://aerospike.com/products/features/hybrid-memory-architecture/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{20}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{aql}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Aerospike Quick Look (AQL)}
@@ -133,6 +146,32 @@
     \field{langid}{english}
     \field{year}{2022}
     \field{urlday}{20}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{mvcc}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Multiversion concurrency control}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Multiversion_concurrency_control
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{riak}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Riak KV}
+    \verb{url}
+    \verb https://riak.com/products/riak-kv/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry
@@ -151,15 +190,15 @@
     \field{urlyear}{2022}
   \endentry
 
-  \entry{hybmem-arch}{online}{}
+  \entry{berkeleydb}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Hybrid Memory Architecture}
+    \field{title}{Oracle Berkeley DB}
     \verb{url}
-    \verb https://aerospike.com/products/features/hybrid-memory-architecture/
+    \verb https://www.oracle.com/database/technologies/related/berkeleydb.html
     \endverb
     \field{langid}{english}
     \field{year}{2022}
-    \field{urlday}{20}
+    \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry
