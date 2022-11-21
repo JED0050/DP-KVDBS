@@ -150,6 +150,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{berkeleydb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle Berkeley DB}
+    \verb{url}
+    \verb https://www.oracle.com/database/technologies/related/berkeleydb.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{mvcc}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Multiversion concurrency control}
@@ -176,6 +189,32 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{crdt}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Conflict-free replicated data type}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{snappy}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Snappy}
+    \verb{url}
+    \verb https://www.solvusoft.com/cs/file-extensions/software/google/snappy/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{ytb-nosql-db}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{youtube}
@@ -186,19 +225,6 @@
     \field{langid}{english}
     \field{year}{2021}
     \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
-  \endentry
-
-  \entry{berkeleydb}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Oracle Berkeley DB}
-    \verb{url}
-    \verb https://www.oracle.com/database/technologies/related/berkeleydb.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry

@@ -75,28 +75,7 @@
 	
 	\section{Riak KV}
 	
-	Riak KV\cite{riak} je distribuovaná NoSQL Key-value databáze s pokročilou lokání a multi-cluster replikací, která garantuje čtení a zápis i v případě selhání hardwaru nebo síťových oddílů.
-	
-		\begin{itemize}
-			\item garance čtení a zápisu i při selhání HW nebo síťových oddílů
-			\item bez konfliktní replikované datové typy (CRDTs), flags, registry, čitače, množiny a mapy
-			\item konfigurace aktivního clusteru, poskytování dat pro klienty díky nízké latenci z nejbližšího data centra
-			\item dostupné zóny, multi claster repliky a redundance dat v geografickém regionu
-			\item flexibilní datový model bez pre definovaného schématu
-			\item vylepšené logování chyb a reporty
-			\item automatická komprese dat pomocí Snappy kompresní knihovny
-			\item vhodná pro ukládání velkého množství nestrukturovaných dat
-			\item pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí
-			\item automatický distribuce dat skrz cluster, pro robustnost, výkon
-			\item master-less architektura, vysoká dostupnost, téměř lineární škálovatelnost za využití snadného přidání HW kapacity bez nutnosti mnoha operací
-			\item nízká latence, vhodná pro chat/messaging aplikace
-			\item možnost zpracování dat pro získání užitečných závěrů a akceschopných informací
-			\item design pro horizontálůní škálovatelnost s komoditním HW, jednoduché pro rozšíření objemu dat bez potřeby vytváření komplexního sdílení
-			\item bez vnocování restrikcí na hodnoty, session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu
-			\item během nejvyšší zátěže nezhoršuje zápis a horizontální škálovatelnost, uživatelé jsou obslouženi bez problémů
-			\item dobrý pro soukromé, veřejné i hybridní cloud nasazování
-		\end{itemize}
- 
+	Riak KV\cite{riak} je distribuovaná NoSQL Key-value databáze s pokročilou lokání a multi-cluster replikací, která garantuje čtení a zápis i v případě selhání hardwaru nebo síťových oddílů. Riak využívá bezkonfliktní replikované datové typy (CRDT\cite{crdt}), které umožňují nezávisle a souběžně aktualizovat jakoukoliv repliku v distribuované databázi se zajištěním sjednocení hodnot pomocí algoritmu který je součásti samotného datového typu (flagy, registry, čitače, množiny a mapy). Poskytuje konfiguraci aktivního clusteru a dosahuje nízké latence v řádu jednotek milisekund díky dodávání dat z nejbližšího data centra. Databáze rozděluje data z clusterů pro své dostupné zóny, má multi claster repliky a využívá redundance dat v geografickém regionu. Riak tedy automaticky distribuuje data skrz cluster, pro robustnost a vysoký výkon. Key-value databáze poskytuje flexibilní datový model bez předem definovaného schématu. Databáze vylepšené logování chyb a reporty. Data jsou automaticky komprimována pomocí Snappy kompresní knihovny\cite{snappy}. Databáze využívá master-less architekturu, je vysokce dostupná a má design horizontální škálovatelnosti. Škálovatelnost je téměř lineární při využití snadného přidání hardwarové kapacity bez nutnosti mnoha operací. Riak KV dovoluje zpracování dat pro analýzu a vyvození závěrů pro zlepšení chodu databáze. Riak KV je navržen pro nulové restrikce na hodnoty, takže session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu. Během nejvyšší zátěže nezhoršuje databáze zápis a horizontální škálovatelnost, uživatelé jsou stále obsluhování bez problémů. Databáze je vhodná pro ukládání velkého množství nestrukturovaných dat, také pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí. Díky nízké latency je databáze vhodná i pro chat/messaging aplikace. Riak KV exceluje v soukromém, veřejném či hybridním cloud nasazování.
 	
 	\section{Voldemort}
 			\begin{itemize}
