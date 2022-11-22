@@ -21,7 +21,7 @@
 
 \SubmissionYear{2023}
 
-\Acknowledgement{Rád bych na tomto místě poděkoval vedoucímu diplomové práce panu prof. Ing. Michalovi Krátkému, za pravidelné konzultace a poskytnutí mnoha užitečných rad a nápadů pro řešení samotné práce.}
+\Acknowledgement{TODO poděkování}
 
 \CzechAbstract{Cílem diplomové práce je popsat Key-value databázové systémy, ukázat výhodo těchto systémů a představit jedny z jejich významných představitelů. Součástí práce je návrh a implementace testovacího prostředí pro testování těchto systémů s ostatnímy SŘBD. Práce je zakončena vyhodnocením výsledků testů vybraných databázových systémů.}
 
@@ -78,27 +78,8 @@
 	Riak KV\cite{riak} je distribuovaná NoSQL Key-value databáze s pokročilou lokání a multi-cluster replikací, která garantuje čtení a zápis i v případě selhání hardwaru nebo síťových oddílů. Riak využívá bezkonfliktní replikované datové typy (CRDT\cite{crdt}), které umožňují nezávisle a souběžně aktualizovat jakoukoliv repliku v distribuované databázi se zajištěním sjednocení hodnot pomocí algoritmu který je součásti samotného datového typu (flagy, registry, čitače, množiny a mapy). Poskytuje konfiguraci aktivního clusteru a dosahuje nízké latence v řádu jednotek milisekund díky dodávání dat z nejbližšího data centra. Databáze rozděluje data z clusterů pro své dostupné zóny, má multi claster repliky a využívá redundance dat v geografickém regionu. Riak tedy automaticky distribuuje data skrz cluster, pro robustnost a vysoký výkon. Key-value databáze poskytuje flexibilní datový model bez předem definovaného schématu. Databáze vylepšené logování chyb a reporty. Data jsou automaticky komprimována pomocí Snappy kompresní knihovny\cite{snappy}. Databáze využívá master-less architekturu, je vysokce dostupná a má design horizontální škálovatelnosti. Škálovatelnost je téměř lineární při využití snadného přidání hardwarové kapacity bez nutnosti mnoha operací. Riak KV dovoluje zpracování dat pro analýzu a vyvození závěrů pro zlepšení chodu databáze. Riak KV je navržen pro nulové restrikce na hodnoty, takže session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu. Během nejvyšší zátěže nezhoršuje databáze zápis a horizontální škálovatelnost, uživatelé jsou stále obsluhování bez problémů. Databáze je vhodná pro ukládání velkého množství nestrukturovaných dat, také pro big-data aplikace, ukládání dat z připojených zařáízení a replikování dat do okolí. Díky nízké latency je databáze vhodná i pro chat/messaging aplikace. Riak KV exceluje v soukromém, veřejném či hybridním cloud nasazování.
 	
 	\section{Voldemort}
-			\begin{itemize}
-				\item distribuovaná kv db založena na Amazon DynamoDB
-				\item automatická replikace dat skrz více serverů
-				\item automatické rozdělování dat mezi servery, každý server obsahuje pouze část z celkových dat
-				\item nastavitelná konzistenčnoust
-				\item transparentní ošetřování chyb serverů
-				\item zapojitelný storage-engine (MySQL, Read-Only) a serializace (Java Serialization, Thrift, Avro) 
-				\item verzování dat pro maximální integritu i během poruch
-				\item každý uzel je samostatný a nezávislý, žádný centrální řídící uzel nebo uzel řídící řešení chyb
-				\item dobrá výkonost na jeden uzel, 10-20 tisíc operací za sekundu (1 op. za 50 mikro sekund) dle HW, sítě, systému disku atp.
-				\item podpora zapojitelné strategie pro rozpoložení dat, pro možnost distribuce dat skrz data centra která jsou mezi sebou geologicky velice vzdálená
-				\item využívá JMX pro zlepšení viditelnosti pro interní monitorování a validaci dat
-				\item In-Memory caching pro eliminaci oddělených částí cache, jednoduché a rychlé in-memory tenstování (unit testy)
-				\item horizontální škálování čtení i zápisu
-				\item API rozhoduje o replikování a místě ukládání dat, různé strategie pro specifické aplikace
-				\item široké možnosti pro klíče i hodnoty díky serializaci, listy a tuply s pojmenovanými poli
-				\item JSON data model pro serializaci ale v kompaktním bytovém formátu, typová kontrola dat dle očekávaného schématu
-				\item hashovatelné schéma, vyhledávání dle primárního klíče a možnost modifikace jednotlivých hodnot
-				\item jednoduchá distribuce skrz stroje protože data mohou být rozdělována dle primárních klíčů
-				\item dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi
-			\end{itemize}
+	
+	Project Voldemort\cite{voldemort} je distribuovaná Key-value databáze založena na Amazon DynamoDB. Škáluje horizontálně pro čtení i zápisu. Umožňuje zapojení storage-enginu (MySQL, Read-Only). Databáze automaticky replikuje data napříč servery pro dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi, nicméně každý server obsahuje pouze část z celkových dat. Databáze je decentralizovaná z pohledu uzlů, každý uzel je samostatný a nezávislý, nenáchází se zde žádný centrální řídící uzel nebo uzel řídící řešení chyb. Voldemort má výkonost desítek tisíc operací za sekundu na jeden uzel (1 op. za 50 mikro sekund), samozřejmě závisí na hardwaru, síti, systému disku atp. Konzistence dat je nastavitelná (přísné kvórum nebo případná konzistence). Selhnání serverů jsou ošetřována transparentně, pro lepší viditelnost, interní monitorování a validaci dat lze využívat JMX\cite{jmx}. Data jsou verzována pro maximální integritu i během poruch. In-Memory caching pro eliminaci oddělených částí cache, jednoduché a rychlé in-memory testování (např. pro unit testy). Databáze umožňuje jednoduchou distribuci dat skrz stroje, data mohou být rozdělována například dle primárních klíčů. Databáze má hashovatelné schéma, vyhledávání dle primárního klíče a možnost modifikace jednotlivých hodnot. Voldemort poskytuje široké možnosti pro klíče i hodnoty díky serializaci včetně listů a tuplů s pojmenovanými poli. Pro serializaci (Java Serialization, Thrift, Avro) se využívá JSON datový model v kompaktním bytovém formátu, probíhá zde typová kontrola dat dle očekávaného schématu. Pomocí API je možné rozhodovat o replikování a místech ukládání dat, nastavení různé strategie pro specifické aplikace a možnost distribuce dat skrz data centra která jsou mezi sebou geologicky velice vzdálená.
 	
 	\section{InfinityDB}
 		

@@ -215,6 +215,32 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{voldemort}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Project Voldemort}
+    \verb{url}
+    \verb https://www.project-voldemort.com/voldemort/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{22}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{jmx}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Java Management Extensions}
+    \verb{url}
+    \verb https://www.oracle.com/technical-resources/articles/javase/jmx.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{22}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{ytb-nosql-db}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{youtube}
