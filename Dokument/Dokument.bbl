@@ -241,6 +241,20 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{infinitydb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{Boiler Bay Software}
+    \field{title}{InfinityDB Java NoSQL Database}
+    \verb{url}
+    \verb https://boilerbay.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{22}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{ytb-nosql-db}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{youtube}

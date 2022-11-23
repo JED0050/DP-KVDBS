@@ -51,7 +51,7 @@
 	
 	\chapter{NoSQL Key-value databázové systémy}
 	
-	V současné době existuje nespočet různých Key-value databázových systémů, od malých open source projektů po velké placené cloud služby. Různé systém disponují odlišnými vlastnostmy jako je propustnost, škálovatelnost, uživatlká přívětivost skrz dotazovací jazyk a podporu aj. Dle průzkumu\cite{predictiveanalyticstoday}\cite{g2}\cite{db-engineers-ranking} bylo vybráno 10 aktuálně významých Key-value databázových systémů se snahou o jednoduchý popis, porovnání a konešný výběr vhodnách Key-value databázových systémů se snahou otestovat vlastnosti těchto systémů.
+	V současné době existuje nespočet různých Key-value databázových systémů, od malých open source projektů po velké placené cloud služby. Různé systém disponují odlišnými vlastnostmy jako je propustnost, škálovatelnost, uživatlká přívětivost skrz dotazovací jazyk a podporu aj. Dle průzkumu\cite{predictiveanalyticstoday}\cite{g2}\cite{db-engineers-ranking} bylo vybráno 8 aktuálně významých Key-value databázových systémů se snahou o jednoduchý popis, porovnání (\ref{tab_kvdb_compare}) a konešný výběr vhodnách Key-value databázových systémů se snahou otestovat vlastnosti těchto systémů.
 	
 	\section{Amazon DynamoDB}
 	
@@ -82,55 +82,49 @@
 	Project Voldemort\cite{voldemort} je distribuovaná Key-value databáze založena na Amazon DynamoDB. Škáluje horizontálně pro čtení i zápisu. Umožňuje zapojení storage-enginu (MySQL, Read-Only). Databáze automaticky replikuje data napříč servery pro dostupnost a bezpečnost jednotlivých oddílů při vysoké propustnosi, nicméně každý server obsahuje pouze část z celkových dat. Databáze je decentralizovaná z pohledu uzlů, každý uzel je samostatný a nezávislý, nenáchází se zde žádný centrální řídící uzel nebo uzel řídící řešení chyb. Voldemort má výkonost desítek tisíc operací za sekundu na jeden uzel (1 op. za 50 mikro sekund), samozřejmě závisí na hardwaru, síti, systému disku atp. Konzistence dat je nastavitelná (přísné kvórum nebo případná konzistence). Selhnání serverů jsou ošetřována transparentně, pro lepší viditelnost, interní monitorování a validaci dat lze využívat JMX\cite{jmx}. Data jsou verzována pro maximální integritu i během poruch. In-Memory caching pro eliminaci oddělených částí cache, jednoduché a rychlé in-memory testování (např. pro unit testy). Databáze umožňuje jednoduchou distribuci dat skrz stroje, data mohou být rozdělována například dle primárních klíčů. Databáze má hashovatelné schéma, vyhledávání dle primárního klíče a možnost modifikace jednotlivých hodnot. Voldemort poskytuje široké možnosti pro klíče i hodnoty díky serializaci včetně listů a tuplů s pojmenovanými poli. Pro serializaci (Java Serialization, Thrift, Avro) se využívá JSON datový model v kompaktním bytovém formátu, probíhá zde typová kontrola dat dle očekávaného schématu. Pomocí API je možné rozhodovat o replikování a místech ukládání dat, nastavení různé strategie pro specifické aplikace a možnost distribuce dat skrz data centra která jsou mezi sebou geologicky velice vzdálená.
 	
 	\section{InfinityDB}
-		
-		\begin{itemize}
-			\item Nestable Multi-value, může reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole, tabulky
-			\item ACID pro vlákna, ACD pro bulk operace
-			\item jednoduché API, instantní produktuvita developerů
-			\item dynamický pohled dotazů (set logic views, delta views, ranges)
-			\item samostatná administrace, jeden soubor (bez konfiguračních souborů, logů, dočasných souiborů, upgrade skriptů a DBA)
-			\item není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechýny
-			\item runtime schema evolution (pro dopřednou a zpětnou kompatibilitu)
-			\item all-Java db pro servery, procovní stanice, ruční zařízení
-			\item protokol robustní vnitřní uložiště pro vytrvání na požádání nebo rozdělení cache na disk pro velké množstí dat
-			\item single data file, aktuální, bezpečný, korektní a využitelný pro každý případ (je designovaný pro použití jednoho souboru)
-			\item bez zotavení na základě logu, restart a zotavení je vždy okamžité
-			\item kombinace jednoho souboru a instantního zotavení nevyžaduje administraci db
-			\item prostor pro uložení strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání stromů, grafů apod.
-			\item možnost využít In-Memory-Only db která nechá všechna data v cachy, nebo naopak se data ukládají normálně do souboru, je možnost si vybrat bez změny kódu
-			\item přístup k datům v cachy je plně více vláknový
-			\item data která nejsou často využívaná jsou stránkována na disk
-		\end{itemize}
+	
+	InfinityDB\cite{infinitydb} je NoSQL hierarchicky tříděná Key-value databáze implementovaná v Javě. Databáze má možnost využít čistě In-Memory ukládání dat která je vhodné pro cache, nebo naopak se mohou data ukládat i perzistentně na disk do souboru, nastavení měnit bez zasahování do kódu. Přístup k datům v cachy je plně více vláknový, vužívá se většina jader, a data která nejsou často využívaná jsou stránkována na disk. Výkon v jednotkách miliónů operací za sekundu pro více vláknové operace v cachy. Veškerá data a informace o databázi jsou na disku uložena v jednom souboru, jsou proto stále aktuální, čímž je docílena maximální bezpečnost, korektnost. Databáze je designovaná právě pro použití jen jednoho kompletního souboru s okamžitým zotavením a nevyžaduje proto administraci. Databáze neobsahuje dodatečné konfigurační nebo dočasné soubory, upgrade skripty a ani logy. Zotavení je tady bez logů o transakcích okamžité ihned po restartu. V databázi není potřeba dělat čištění junk souborů po operacích když zde nejsou žádné zanechány. InfinityDB podporuje ACID pro vlákna a ACD pro bulk operace. Databáze poskytuje prostor pro ukládání strukturovaných, polostrukturovaných a nestrukturovaných dat, tento jednoduchý model umožňuje ukládání vnořených Multi-values, je možné reprezentovat stromy, grafy, Key/Value mapy, dokumenty, velká řidká pole a tabulky. Schema je možné měnit za běhu pro zpětnou i následující kompatibilitu. Data dotazů lze dynamicky sledovat (set logic views, delta views, ranges). InfinityDB poskytuje jednoduché API o deseti základních příkazech (insert, delete, delete suffixes, update, first, next, last, previous, commit, rollback). Databáze má využití pro servery, pracovní stanice a příruční zařízení.
 
-	\section {Porovnání KV DB}
-			\begin{tabular}{ |l||p{2cm} p{2cm} l p{4cm} | } 
-				\hline
-				Název & Správa & Škálovatelnost & Odezva & Zotavení \\
-				\hline
-				Amazon DynamoDB & automatická, plně spravovatelná & vysoká, horizontální & mikrosekundy & logy, záloha, automatické obnovení \\
-				\hline
-				Oracle NoSQL DB & nízká & horizontální & milisekundy & replika je prohlášena za master\\ 
-				\hline
-				InfinityDB & jeden soubor se vším & nízká & milisekundy & bez logů, okamžité ale ztrácíme data\\ 
-				\hline
-				Redis & plná & horizontální & milisekundy & z logů (logování snižuje výkon)\\
-				\hline
-				Aerospike & plně spravovatelná & lineární & milisekundy &  logy, záloha\\
-				\hline
-				Oracle Berkeley DB & velká & horizontální & mikrosekundy & repliy \\
-				\hline
-				Riak KV & vysoká & horizontální, téměř lineární & milisekundy & multi cluster repliky, logování\\
-				\hline
-				Voldemort & vysoká & horizontální & milisekundy &  repliky \\
-				\hline
-			\end{tabular}
-
-
+	\begin{table}[h]
+		\captionof{table}{Porovnání Key-value databází}
+		\label{tab_kvdb_compare}
+		\scalebox{0.8}
+		{
+		\hskip-3.0cm
+		\begin{tabular}{ l|c c c c c c c c } 
+			\toprule
+			Databáze & Amazon & Oracle & Redis & Aerospike & Oracle & Riak & Voldemort & InfinityDB \\
+			& DynamoDB & NoSQL DB & & & Berkley DB & KV & & \\
+			\midrule
+			Čistě cloud & ano & ne & ne & ne & ne & ne & ne & ne \\
+			Schéma dat & ne & ano i ne & ne & ne & ne & ne & ne & ano \\
+			Licence & komerční & open source & open source & open source & open source & open source & open source & komerční \\
+			Server OS & hostovaná & Linux, Solaris & Linux, Windows, & Linux & Linux, Windows, & Linux, OS X & Linux, Windows &  Linux, Windows, \\
+			& & & OS X, BSD & & OS X, Android ad. & & & OS X, Solaris\\
+			Napsáno v & - & Java & C & C & C, C++, Java & Erlang & Java & Java\\
+			Sekundární & ano & ano & ano & ano & ano & omezené & ne & ne \\
+			indexy & & & & & & & & \\
+			Koncept & ACID & ACID & atomické, & atomické & ACID & ne & ne & ACID \\
+			transakcí & & v rámci uzlu & izolované & & & & & \\
+			Triggery & ano & ne & pub/sub & ne & ano & ano & ne & ne \\
+			Dělící & sdílení & sdílení & sdílení & sdílení & ne & sdílení & ne & ne \\ 
+			metody \\
+			Replikační & ano & source-replica & source-replica, & volitelná & source-replica & volitelný & ne & ne \\
+			metody & & multi-region & multi-souce & faktor repl. & & faktor repl. \\
+			Administrace & vysoká & nízká & vysoká & vysoká & vysoká & vysoká & vysoká & ne\\
+			Škálovatelnost & horizontální & horizontální & horizontální & lineární & horizontální & lineární & horizontální & horizontální\\
+			Odezva & mikrosekundy & milisekundy & milisekundy & milisekundy & mikrosekundy & milisekundy & milisekundy & milisekundy \\
+			\bottomrule
+		\end{tabular}
+		}
+	\end{table}
+	
 	\section {Nezmíněné významné KV DB v 2022}
 		\begin{itemize}
-			\item MongoDB
-			\item Couchbase
-			\item Azure Cosmos DB
+			\item MongoDB (? Document DB)
+			\item Microsoft Azure Cosmos DB
+			\item Couchbase (Key-value jako sekundární model, primárně Document DB)
+			\item Cassandra (Wide column store)
 		\end{itemize}
 
 	\chapter{Prostředí pro testování databázových systémů}

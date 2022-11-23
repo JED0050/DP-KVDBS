@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.3)  23 NOV 2022 00:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.3)  24 NOV 2022 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1236,11 +1236,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] (Dokument.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 10.
+(Font)              <10.95> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 10.
+(Font)              <8> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 10.
+(Font)              <6> on input line 11.
 )
 \tf@toc=\write6
 \openout6 = `Dokument.toc'.
@@ -1251,100 +1251,70 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] [5
 
 
+] (Dokument.lot)
+\tf@lot=\write7
+\openout7 = `Dokument.lot'.
+
+ [6
+
+
 ]
 Kapitola 1.
-[6
+[7
 
 
 ]
 Kapitola 2.
-[7
+[8
 
-] [8] [9]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
-7.
- (D:\VSBProgramFiles\MiKTeX\tex/latex/lm\ts1lmr.fd
+] [9] [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (72.29599pt too wide) in paragraph at lines 119--120
+[][] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+24.
+(D:\VSBProgramFiles\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-Overfull \hbox (11.59338pt too wide) in paragraph at lines 108--108
-[]|\T1/lmr/m/n/10.95 ’kálovatelnost| 
- []
-
-
-Overfull \hbox (5.14447pt too wide) in paragraph at lines 110--110
-[]|\T1/lmr/m/n/10.95 automatická,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--110
-\T1/lmr/m/n/10.95 pln¥ spra-
- []
-
-
-Underfull \hbox (badness 3209) in paragraph at lines 110--111
-[]|\T1/lmr/m/n/10.95 logy, zá-loha, au-to-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
-[]|\T1/lmr/m/n/10.95 jeden sou-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
-\T1/lmr/m/n/10.95 bor se
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--118
-[]|\T1/lmr/m/n/10.95 pln¥ spra-
- []
-
-
-Overfull \hbox (3.04553pt too wide) in paragraph at lines 122--122
-[]|\T1/lmr/m/n/10.95 horizontální,
- []
-
-
-Underfull \hbox (badness 2261) in paragraph at lines 122--122
-\T1/lmr/m/n/10.95 tém¥° li-ne-
- []
-
-[11] [12]
+ [12]
+[13]
 Kapitola 3.
-[13
-
-]
-Kapitola 4.
 [14
 
 ]
-Kapitola 5.
+Kapitola 4.
 [15
 
 ]
+Kapitola 5.
+[16
+
+]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-50.
+44.
  (D:\VSBProgramFiles\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 150--150
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 144--144
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[16
+[17
 
-] [17] (Dokument.aux)
+] [18] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 1DE27FA6FE54278166B3B415459B61C7;2499.
+(rerunfilecheck)             Checksum: 1B54F7B8AB586530FE3B454AAF12EBF1;2474.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1355,13 +1325,13 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27864 strings out of 478582
- 490391 string characters out of 2853256
- 1003024 words of memory out of 3000000
- 45602 multiletter control sequences out of 15000+600000
+ 27885 strings out of 478582
+ 490873 string characters out of 2853256
+ 1012205 words of memory out of 3000000
+ 45617 multiletter control sequences out of 15000+600000
  522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,8n,93p,2177b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,9n,93p,2177b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/VSBProgramFiles/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{D:/VSBProgramFiles/M
 iKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<D:/VSBProgramFiles/MiKTeX/fonts/type1/publ
 ic/lm/lmbx10.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:
@@ -1369,9 +1339,9 @@ ic/lm/lmbx10.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:
 KTeX/fonts/type1/public/lm/lmss12.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/pu
 blic/lm/lmss17.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmssbx10.pf
 b><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (17 pages, 1005056 bytes).
+Output written on Dokument.pdf (18 pages, 1009285 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
