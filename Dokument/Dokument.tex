@@ -59,7 +59,7 @@
 		
 	\section{Oracle NoSQL Database}
 	
-	Oracle NoSQL Database\cite{oraclenosqldb} je databázová cloud služba vhodná pro práci s velkými objemy dat a odhadovatelnou nízkou odezvou v řádu jednotek milisekund. Služba je postavena na enginu z Oracle Berkley DB. Databáze je plně spravovatelná, flexibilní, škáluje horizontálně, dynamicky a dosahuje vysokých výkonů. Mimo Key-value data se jedná i o spolehlivé uložiště pro dokumenty a data s pevně daným schématem. Vzhledem k tomu že databázový systém je plně spravovaný společností Oracle, tak je pro vývojáře rychlé a snadné začít tuto službu využívat a soustředit se pouze na vývoj aplikací, neboť není potřeba se obtěžovat se správou základní infrastruktury databáze, softwaru, zabezpečení atp. Jedná se o Single Master, Multi Replica grafový systém. Pokud dojde k chybě na masteru, je master automaticky nahrazen jednou z replik. Pro Key-value ukládání s kapacitu jednotek terabytů využívá systém velký počet Storage uzlů, které je možno skupinově konfigurovat. Pro udržení konzistence jsou Storage uzly replikovány. Uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení. Sdílený systém, uniformně alokuje data okolo ostatních částí skupin. Databáze obsahuje i SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi. Mimo jiné je zde podpora i pro Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL.
+	Oracle NoSQL Database\cite{oraclenosqldb} je databázová cloud služba vhodná pro práci s velkými objemy dat a odhadovatelnou nízkou odezvou v řádu jednotek milisekund. Služba je postavena na enginu z Oracle Berkeley DB. Databáze je plně spravovatelná, flexibilní, škáluje horizontálně, dynamicky a dosahuje vysokých výkonů. Mimo Key-value data se jedná i o spolehlivé uložiště pro dokumenty a data s pevně daným schématem. Vzhledem k tomu že databázový systém je plně spravovaný společností Oracle, tak je pro vývojáře rychlé a snadné začít tuto službu využívat a soustředit se pouze na vývoj aplikací, neboť není potřeba se obtěžovat se správou základní infrastruktury databáze, softwaru, zabezpečení atp. Jedná se o Single Master, Multi Replica grafový systém. Pokud dojde k chybě na masteru, je master automaticky nahrazen jednou z replik. Pro Key-value ukládání s kapacitu jednotek terabytů využívá systém velký počet Storage uzlů, které je možno skupinově konfigurovat. Pro udržení konzistence jsou Storage uzly replikovány. Uzly a hrany v grafu reprezentují entity které vytvářejí vztahy a propojení. Sdílený systém, uniformně alokuje data okolo ostatních částí skupin. Databáze obsahuje i SQL Query s jazykem pro import, export a přenos dat mezi různými Oracle NoSQL databázemi. Mimo jiné je zde podpora i pro Failover, SwitchOver, Bulk Get API, Off Heap Cache a podpora Big Data SQL.
 		
 	\section{Redis}
 	
@@ -71,7 +71,7 @@
 	
 	\section{Oracle Berkeley DB}
 	
-	Oracle Berkeley DB\cite{berkeleydb} je rodina vestavěných Key-value databázových knihoven. Jedná se o čistě In-memory databázi, díky čemuž dosahuje vysokého výkonu a odezvy v jednotkách mikrosekund. Databáze škáluje horizontálně. Data jsou replikována pro vysokou dostupnost z vícero zdrují a dobrou toleranci chybovosti. Oracle Berkley DB využívá vhodné datové struktury pro práci s daty jako je B-strom, hash table indexy nebo fronta. Databáze využívá obnovitelné ACID transakce a poskytuje několik různých úrovní izolace (včetně MVCC\cite{mvcc}). Data jsou dělena do oddílů dle key ranges. Umožňuje komprimaco dat. Databáze je Single-master, Multi-replica, tedy je vysoce dostupná a umožňuje dobrou konfigurovatelnost. Repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku. Pro přístup k datům a nastavení databáze se využívá jednoduché volání funcion-call API. Spousta moderních programovacích jazyků, jako například C++, C\#, Javy, Python atp. podporuje tyto knihovny. Data mohou být ukládána v nativním formátu aplikace, XML, SQL nebo jako Java Objekty. Oracle Berkeley DB je vhodný nástroj pro vše od lokálního uložiště po world-wide distribuovanou databáze (od kilobytů po petabyty).
+	Oracle Berkeley DB\cite{berkeleydb} je rodina vestavěných Key-value databázových knihoven. Jedná se o čistě In-memory databázi, díky čemuž dosahuje vysokého výkonu a odezvy v jednotkách mikrosekund. Databáze škáluje horizontálně. Data jsou replikována pro vysokou dostupnost z vícero zdrují a dobrou toleranci chybovosti. Oracle Berkeley DB využívá vhodné datové struktury pro práci s daty jako je B-strom, hash table indexy nebo fronta. Databáze využívá obnovitelné ACID transakce a poskytuje několik různých úrovní izolace (včetně MVCC\cite{mvcc}). Data jsou dělena do oddílů dle key ranges. Umožňuje komprimaco dat. Databáze je Single-master, Multi-replica, tedy je vysoce dostupná a umožňuje dobrou konfigurovatelnost. Repliky umožňují čtecí škálovatelnost, rychlý fail-over, hot-standby a další distribuované konfigurace dodávající podnikové prostředky v málém, vestavěném balíčku. Pro přístup k datům a nastavení databáze se využívá jednoduché volání funcion-call API. Spousta moderních programovacích jazyků, jako například C++, C\#, Javy, Python atp. podporuje tyto knihovny. Data mohou být ukládána v nativním formátu aplikace, XML, SQL nebo jako Java Objekty. Oracle Berkeley DB je vhodný nástroj pro vše od lokálního uložiště po world-wide distribuovanou databáze (od kilobytů po petabyty).
 	
 	\section{Riak KV}
 	
@@ -94,7 +94,7 @@
 		\begin{tabular}{ l|c c c c c c c c } 
 			\toprule
 			Databáze & Amazon & Oracle & Redis & Aerospike & Oracle & Riak & Voldemort & InfinityDB \\
-			& DynamoDB & NoSQL DB & & & Berkley DB & KV & & \\
+			& DynamoDB & NoSQL DB & & & Berkeley DB & KV & & \\
 			\midrule
 			Čistě cloud & ano & ne & ne & ne & ne & ne & ne & ne \\
 			Schéma dat & ne & ano i ne & ne & ne & ne & ne & ne & ano \\
@@ -114,6 +114,8 @@
 			Administrace & vysoká & nízká & vysoká & vysoká & vysoká & vysoká & vysoká & ne\\
 			Škálovatelnost & horizontální & horizontální & horizontální & lineární & horizontální & lineární & horizontální & horizontální\\
 			Odezva & mikrosekundy & milisekundy & milisekundy & milisekundy & mikrosekundy & milisekundy & milisekundy & milisekundy \\
+			Dotazovací & PartiQL & Omezený SQL & Redis & AQL & SQL & SQL & Voldemort & InfinityDB \\
+			jazyk & & & query & & & & query & query \\
 			\bottomrule
 		\end{tabular}
 		}
