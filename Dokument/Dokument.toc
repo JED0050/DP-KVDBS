@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.6}Riak KV}{10}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Voldemort}{11}{section.2.7}%
 \contentsline {section}{\numberline {2.8}InfinityDB}{12}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Nezmíněné významné KV DB v 2022}{13}{section.2.9}%
+\contentsline {section}{\numberline {2.9}Nezmíněné významné KV DB v 2022}{12}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{14}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{15}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Závěr}{16}{chapter.5}%
