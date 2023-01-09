@@ -98,6 +98,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{partiql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{PartiQL}
+    \verb{url}
+    \verb https://partiql.org/docs.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{oraclenosqldb}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Oracle NoSQL Database}

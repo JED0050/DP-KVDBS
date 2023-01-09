@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.3)  6 JAN 2023 21:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.3)  9 JAN 2023 21:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1267,42 +1267,39 @@ Kapitola 1.
 Kapitola 2.
 [8
 
-] [9] [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
+] [9] [10] [11]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-26.
-
-(D:\VSBProgramFiles\MiKTeX\tex/latex/lm\ts1lmr.fd
+28.
+ (D:\VSBProgramFiles\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12] [13]
+) [12]
+[13] [14]
 Kapitola 3.
-[14
-
-]
-Kapitola 4.
 [15
 
 ]
-Kapitola 5.
+Kapitola 4.
 [16
 
 ]
+Kapitola 5.
+[17
+
+]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-46.
+48.
  (D:\VSBProgramFiles\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 146--146
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 148--148
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[17
+[18
 
-] [18] (Dokument.aux)
+] [19] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1318,10 +1315,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27887 strings out of 478582
- 490891 string characters out of 2853256
- 1009209 words of memory out of 3000000
- 45619 multiletter control sequences out of 15000+600000
+ 27892 strings out of 478582
+ 491051 string characters out of 2853256
+ 1010255 words of memory out of 3000000
+ 45622 multiletter control sequences out of 15000+600000
  522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,11n,93p,2180b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1332,9 +1329,9 @@ ic/lm/lmbx10.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:
 KTeX/fonts/type1/public/lm/lmss12.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/pu
 blic/lm/lmss17.pfb><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmssbx10.pf
 b><D:/VSBProgramFiles/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (18 pages, 1009667 bytes).
+Output written on Dokument.pdf (19 pages, 1012065 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
