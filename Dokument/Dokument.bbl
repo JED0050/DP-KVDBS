@@ -124,6 +124,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{rediscli}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Redis CLI}
+    \verb{url}
+    \verb https://redis.io/docs/manual/cli/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{14}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{aerospike}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Aerospike}
