@@ -202,6 +202,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{sqlite}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{SQLite}
+    \verb{url}
+    \verb https://www.sqlite.org/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{15}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{riak}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Riak KV}
