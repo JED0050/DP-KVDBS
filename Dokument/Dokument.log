@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  15 JAN 2023 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  19 JAN 2023 20:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1274,10 +1274,14 @@ Underfull \vbox (badness 1360) has occurred while \output is active []
 Underfull \vbox (badness 7907) has occurred while \output is active []
 
  [10]
-[11] [12] [13]
+[11] [12]
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
+ [13]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-39.
- (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
+43.
+
+(D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14] [15]
 Kapitola 3.
@@ -1293,11 +1297,11 @@ Kapitola 5.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-59.
+63.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 159--159
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 163--163
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
@@ -1334,7 +1338,7 @@ Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1
 /public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/
 Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type
 1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (20 pages, 1019100 bytes).
+Output written on Dokument.pdf (20 pages, 1020238 bytes).
 PDF statistics:
  345 PDF objects out of 1000 (max. 8388607)
  62 named destinations out of 1000 (max. 500000)
