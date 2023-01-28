@@ -294,6 +294,71 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{mongodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{MongoDB}
+    \verb{url}
+    \verb https://www.mongodb.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{couchbase}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Couchbase}
+    \verb{url}
+    \verb https://www.couchbase.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{documentdb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Document-oriented database}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Document-oriented_database
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{cassandra}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Cassandra}
+    \verb{url}
+    \verb https://cassandra.apache.org/_/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{widecolumnstore}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wide-column store}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Wide-column_store
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{ytb-nosql-db}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{youtube}

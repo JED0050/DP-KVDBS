@@ -102,49 +102,45 @@
 	
 	InfinityDB poskytuje základní jednoduché API o deseti hlavních API voláních. Funkcionalitu pro vkládání, úpravu a mazání hodnot obstarávají funkce Insert, Update, Delete. Funkce Delete je rozšířena o funkci Delete-suffixes, která umožňuje odstranit vícero hodnot v jednom volání funkce. Pro získávání hodnot se využívá kurzoru jehož pohyb v obou směrech obstarávají funkce First, Next, Last a Previous. A nakonec pro možnost využívání transakcí jsou zde i potřebné funkce Commit a Rollback.
 
-\begin{sidewaystable}
+	\begin{sidewaystable}
 		\centering
 		\caption{Porovnání Key-value databází}
 		\label{tab_kvdb_compare}
 		\scalebox{0.8}
 		{
-		\begin{tabular}{ l|c c c c c c c c } 
-			\toprule
-			Databáze & Amazon & Oracle & Redis & Aerospike & Oracle & Riak & Voldemort & InfinityDB \\
-			& DynamoDB & NoSQL DB & & & Berkeley DB & KV & & \\
-			\midrule
-			Čistě cloud & ano & ne & ne & ne & ne & ne & ne & ne \\
-			Schéma dat & ne & ano i ne & ne & ne & ne & ne & ne & ano \\
-			Licence & komerční & open source & open source & open source & open source & open source & open source & komerční \\
-			Server OS & hostovaná & Linux, Solaris & Linux, Windows, & Linux & Linux, Windows, & Linux, OS X & Linux, Windows &  Linux, Windows, \\
-			& & & OS X, BSD & & OS X, Android ad. & & & OS X, Solaris\\
-			Napsáno v & - & Java & C & C & C, C++, Java & Erlang & Java & Java\\
-			Sekundární & ano & ano & ano & ano & ano & omezené & ne & ne \\
-			indexy & & & & & & & & \\
-			Koncept & ACID & ACID & atomické, & atomické & ACID & ne & ne & ACID \\
-			transakcí & & v rámci uzlu & izolované & & & & & \\
-			Triggery & ano & ne & pub/sub & ne & ano & ano & ne & ne \\
-			Dělící & sdílení & sdílení & sdílení & sdílení & ne & sdílení & ne & ne \\ 
-			metody \\
-			Replikační & ano & source-replica & source-replica, & volitelná & source-replica & volitelný & ne & ne \\
-			metody & & multi-region & multi-source & faktor repl. & & faktor repl. \\
-			Administrace & vysoká & nízká & vysoká & vysoká & vysoká & vysoká & vysoká & ne\\
-			Škálovatelnost & horizontální & horizontální & horizontální & lineární & horizontální & lineární & horizontální & horizontální\\
-			Odezva & mikrosekundy & milisekundy & milisekundy & milisekundy & mikrosekundy & milisekundy & milisekundy & milisekundy \\
-			Dotazovací & PartiQL & Omezený SQL & Redis & AQL & SQL & Riak & Voldemort & InfinityDB \\
-			jazyk & & & query & & & query & query & query \\
-			\bottomrule
-		\end{tabular}
+			\begin{tabular}{ l|c c c c c c c c } 
+				\toprule
+				Databáze & Amazon & Oracle & Redis & Aerospike & Oracle & Riak & Voldemort & InfinityDB \\
+				& DynamoDB & NoSQL DB & & & Berkeley DB & KV & & \\
+				\midrule
+				Čistě cloud & ano & ne & ne & ne & ne & ne & ne & ne \\
+				Schéma dat & ne & ano i ne & ne & ne & ne & ne & ne & ano \\
+				Licence & komerční & open source & open source & open source & open source & open source & open source & komerční \\
+				Server OS & hostovaná & Linux, Solaris & Linux, Windows, & Linux & Linux, Windows, & Linux, OS X & Linux, Windows &  Linux, Windows, \\
+				& & & OS X, BSD & & OS X, Android ad. & & & OS X, Solaris\\
+				Napsáno v & - & Java & C & C & C, C++, Java & Erlang & Java & Java\\
+				Sekundární & ano & ano & ano & ano & ano & omezené & ne & ne \\
+				indexy & & & & & & & & \\
+				Koncept & ACID & ACID & atomické, & atomické & ACID & ne & ne & ACID \\
+				transakcí & & v rámci uzlu & izolované & & & & & \\
+				Triggery & ano & ne & pub/sub & ne & ano & ano & ne & ne \\
+				Dělící & sdílení & sdílení & sdílení & sdílení & ne & sdílení & ne & ne \\ 
+				metody \\
+				Replikační & ano & source-replica & source-replica, & volitelná & source-replica & volitelný & ne & ne \\
+				metody & & multi-region & multi-source & faktor repl. & & faktor repl. \\
+				Administrace & vysoká & nízká & vysoká & vysoká & vysoká & vysoká & vysoká & ne\\
+				Škálovatelnost & horizontální & horizontální & horizontální & lineární & horizontální & lineární & horizontální & horizontální\\
+				Odezva & mikrosekundy & milisekundy & milisekundy & milisekundy & mikrosekundy & milisekundy & milisekundy & milisekundy \\
+				Dotazovací & PartiQL & Omezený SQL & Redis & AQL & SQL & Riak & Voldemort & InfinityDB \\
+				jazyk & & & query & & & query & query & query \\
+				\bottomrule
+			\end{tabular}
 		}
-\end{sidewaystable}
+	\end{sidewaystable}
 	
-	\section {Nezmíněné významné KV DB v 2022}
-		\begin{itemize}
-			\item MongoDB (? Dokument DB)
-			\item Microsoft Azure Cosmos DB
-			\item Couchbase (Key-value jako sekundární model, primárně Dokument DB)
-			\item Cassandra (Wide column store)
-		\end{itemize}
+	\section {Nezmíněné významné NoSQL databáze}
+	
+		Do práce nebyly záměrně zahrnuty databázové systémy MongoDB a Couchbase~\cite{mongodb,couchbase}. I když se jedná o známé a hojně využívané NoSQL databáze, tak byly obě záměrné z práce vynechány protože mají key-value až jako sekundární datový model, primárně jsou určeny pro ukládání dokumentově orientovaných informací~\cite{documentdb}. Další často využívaná a nezmíněná NoSQL databáze je Cassandra~\cite{cassandra}, tato databáze udává jako datový model wide-column store~\cite{widecolumnstore} a proto ze stejného důvodu byla i tato databáze vypuštěna z pozorování.
 
 	\chapter{Prostředí pro testování databázových systémů}
 	
