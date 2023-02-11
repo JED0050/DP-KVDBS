@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  28 JAN 2023 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  11 FEB 2023 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1280,6 +1280,12 @@ Underfull \vbox (badness 1360) has occurred while \output is active []
  [13]
 [14] [15]
 Kapitola 3.
+
+Overfull \hbox (0.12636pt too wide) in paragraph at lines 148--149
+\T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou k °e-²ení jed-not-li-vých
+ pro-blém· p°i-stu-po-vat od-li²n¥. Po-kud chceme
+ []
+
 [16
 
 ]
@@ -1292,11 +1298,11 @@ Kapitola 5.
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-59.
+66.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 159--159
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 166--166
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
@@ -1320,10 +1326,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27916 strings out of 478552
- 490001 string characters out of 2854123
- 1011722 words of memory out of 3000000
- 45672 multiletter control sequences out of 15000+600000
+ 27933 strings out of 478552
+ 490493 string characters out of 2854123
+ 1010898 words of memory out of 3000000
+ 45686 multiletter control sequences out of 15000+600000
  522392 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,11n,93p,2178b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1333,9 +1339,9 @@ pe1/public/lm/lmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D
 pe1/public/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><
 D:/Skola-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts
 /type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (20 pages, 1023264 bytes).
+Output written on Dokument.pdf (20 pages, 1029240 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

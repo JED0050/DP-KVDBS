@@ -51,6 +51,7 @@
 	Výkon a nedostatečná standardizace omezovaly Key-value databázové systémy pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing dochází v posledních letech k rozšíření obecné využitelnosti NoSQL databázových systémů. Například databázový systém Redis~\cite{redis} je v současnosti jedním z deseti nejlépe hodnocených~\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy.
 	
 	\chapter{NoSQL Key-value databázové systémy}
+	\label{chapter:no-sql-ky-sys}
 	
 	V současné době existuje nespočet různých Key-value databázových systémů, od malých open source projektů po velké placené cloud služby. Různé systém disponují odlišnými vlastnostmi jako je propustnost, škálovatelnost, uživatelská přívětivost skrz dotazovací jazyk a podporu aj. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno 8 aktuálně významných Key-value databázových systémů se snahou o jednoduchý popis, porovnání (\ref{tab_kvdb_compare}) a konečný výběr vhodných Key-value databázových systémů se snahou otestovat vlastnosti těchto systémů.
 	
@@ -141,10 +142,12 @@
 	\section {Nezmíněné významné NoSQL databáze}
 	
 		Do práce nebyly záměrně zahrnuty databázové systémy MongoDB a Couchbase~\cite{mongodb,couchbase}. I když se jedná o známé a hojně využívané NoSQL databáze, tak byly obě záměrné z práce vynechány protože mají key-value až jako sekundární datový model, primárně jsou určeny pro ukládání dokumentově orientovaných informací~\cite{documentdb}. Další často využívaná a nezmíněná NoSQL databáze je Cassandra~\cite{cassandra}, tato databáze udává jako datový model wide-column store~\cite{widecolumnstore} a proto ze stejného důvodu byla i tato databáze vypuštěna z pozorování.
-
+	
 	\chapter{Prostředí pro testování databázových systémů}
 	
-	TODO
+	Různé databázové systémy mohou k řešení jednotlivých problémů přistupovat odlišně. Pokud chceme rozhodnout, který ze systémů je nejvhodnější pro určité úkoly musíme provést řadu testů a porovnání. Je prakticky nemožné najít ideální databázový systém který bude nejlepší ve všech aspektech pro všechna data a případy využití, testování nám ale odhalí který ze systémů vyniká a naopak zaostává pro konkrétní operace nad konkrétními daty. Proto je zapotřebí najít ideální prostředí pro možnost změření a porovnání vlastností vybraných NoSQL Key-value databázových systémů v Kapitole~\ref{chapter:no-sql-ky-sys}.
+	
+	Existuje celá řada nástrojů pro měření výkonu databázových systémů. Mezi dva dosti známé a dostupné nástroje se řadí právě TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC benchmarky od Transaction Processing Performance Council se dělí do mnoha kategorií, například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss} a TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíš pro typické relační databázové systémy. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání relativního výkonu NoSQL databázových systémů což je pro tuto práci zaměřenou na Key-value databáze ideální.
 	
 	\chapter{Vyhodnocení výsledků testů}
 	

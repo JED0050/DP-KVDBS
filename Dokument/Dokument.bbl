@@ -359,6 +359,46 @@
     \field{urlyear}{2023}
   \endentry
 
+  \entry{tpc}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC}
+    \verb{url}
+    \verb https://www.tpc.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{ycsb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Yahoo! Cloud Serving Benchmark (YCSB)}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/YCSB
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{dss}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Systém pro podporu rozhodování}
+    \verb{url}
+    \verb https://cs.wikipedia.org/wiki/Syst%C3%A9m_pro_podporu_rozhodov%C3%A1n
+    \verb %C3%AD
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{ytb-nosql-db}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{youtube}
