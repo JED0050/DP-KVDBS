@@ -30,6 +30,20 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{ytb-nosql-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{youtube}
+    \field{title}{How do NoSQL databases work? Simply Explained!}
+    \verb{url}
+    \verb https://www.youtube.com/watch?v=0buKQHokLK8
+    \endverb
+    \field{langid}{english}
+    \field{year}{2021}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{redis}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Redis}
@@ -399,18 +413,106 @@
     \field{urlyear}{2023}
   \endentry
 
-  \entry{ytb-nosql-db}{online}{}
+  \entry{benchmark-pdf-1}{article}{}
+    \name{author}{5}{}{%
+      {{hash=OO}{%
+         family={Ose},
+         familyi={O\bibinitperiod},
+         given={Omoruyi},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=OK}{%
+         family={Okokpujie},
+         familyi={O\bibinitperiod},
+         given={Kennedy},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=NNNC}{%
+         family={Ndujiuba},
+         familyi={N\bibinitperiod},
+         given={Nsikan Nkordeh\bibnamedelima Charles},
+         giveni={N\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+      {{hash=JS}{%
+         family={John},
+         familyi={J\bibinitperiod},
+         given={Samuel},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=UIS}{%
+         family={Uzairue},
+         familyi={U\bibinitperiod},
+         given={Idiake\bibnamedelima Stanley},
+         giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OOOKNNNCJSUIS1}
+    \strng{fullhash}{OOOKNNNCJSUIS1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{subtitle}{youtube}
-    \field{title}{How do NoSQL databases work? Simply Explained!}
+    \field{title}{Performance Benchmarking of Key-Value Store NoSQL Databases}
     \verb{url}
-    \verb https://www.youtube.com/watch?v=0buKQHokLK8
+    \verb https://www.researchgate.net/publication/330653733_Performance_Benchm
+    \verb arking_of_Key-Value_Store_NoSQL_Databases
     \endverb
     \field{langid}{english}
-    \field{year}{2021}
-    \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
+    \field{year}{2023}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{benchmark-pdf-2}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AA}{%
+         family={Ahamed},
+         familyi={A\bibinitperiod},
+         given={Athiq},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA1}
+    \strng{fullhash}{AA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Benchmarking Top NoSQL Databases}
+    \verb{url}
+    \verb https://www.researchgate.net/publication/303485422_Benchmarking_Top_N
+    \verb oSQL_Databases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{ytb-ycsb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{5| Yahoo Cloud Serving Benchmark(YCSB): Knobs and Tunes}
+    \verb{url}
+    \verb https://www.youtube.com/watch?v=ZJPTgzFXTKo&list=PL9Bv8oH2HsjyOnAOYYL
+    \verb EPUAKq-2HoUWoA&index=5
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{workloads}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Core Workloads - YCSB}
+    \verb{url}
+    \verb https://github.com/brianfrankcooper/YCSB/wiki/Core-Workloads
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
   \endentry
 \enddatalist
 \endinput

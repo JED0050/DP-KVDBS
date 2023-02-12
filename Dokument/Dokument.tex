@@ -1,5 +1,5 @@
 % !TeX spellcheck = cs_CZ
-\documentclass[czech,bachelor,dept460,male,csharp,cpdeclaration]{diploma}
+\documentclass[czech,master,dept460,male,csharp,cpdeclaration]{diploma}
 
 \usepackage[autostyle=true,czech=quotes]{csquotes} % korektni sazba uvozovek, podpora pro balik biblatex
 \usepackage[backend=bibtex, style=iso-numeric, alldates=iso]{biblatex} % bibliografie
@@ -32,9 +32,10 @@
 
 \EnglishKeywords{NoSQL; Key-value database}
 
-\AddAcronym{NoSQL}{No Structured Query Language}
+\AddAcronym{NoSQL}{Not only Structured Query Language}
 \AddAcronym{Key-value database}{Klíč-hodnota databáze}
 \AddAcronym{TTL}{Time to live}
+\AddAcronym{YCSB}{Yahoo! Cloud Serving Benchmark}
 
 \addbibresource{citace.bib}
 
@@ -44,7 +45,7 @@
 	
 	\chapter{Úvod}
 	
-	NoSQL Key-value (neboli Klíč-hodnota) databáze~\cite{wiki-key-value-db} je jedno z paradigmat pro úložiště dat. Databáze je navržena pro ukládání, načítání a správu různých datových struktur, dnes známých jako slovníky nebo hashovací tabulky. Slovníky obsahují kolekci objektů či záznamů, které mohou opět obsahovat množinu různých polí s daty. Záznamy jsou do slovníků, či hashovacích tabulek, ukládána za pomoci klíče, který identifikuje pozici záznamu v datové struktuře a používá se k následnému vyhledávání dat v databázi.
+	NoSQL Key-value (neboli Klíč-hodnota) databáze~\cite{wiki-key-value-db, ytb-nosql-db} je jedno z paradigmat pro úložiště dat. Databáze je navržena pro ukládání, načítání a správu různých datových struktur, dnes známých jako slovníky nebo hashovací tabulky. Slovníky obsahují kolekci objektů či záznamů, které mohou opět obsahovat množinu různých polí s daty. Záznamy jsou do slovníků, či hashovacích tabulek, ukládána za pomoci klíče, který identifikuje pozici záznamu v datové struktuře a používá se k následnému vyhledávání dat v databázi.
 	
 	Key-value databáze fungují velice odlišně než tradiční relační databázové systémy. Relační databáze mají předdefinovanou datovou strukturu v databázi jako sérii tabulek s dopředu definovanými datovými typy. Díky tomuto modelu může relační databázový systém provádět řadu optimalizací. Na druhou stranu Key-value databázové systémy mohou mít pro každý záznam různě definované kolekce dat s odlišnými velikostmi a počty atributů. Tato vlastnost nabízí Key-value databázovým systémům flexibilitu a možnost přiblížení se k objektově orientovanému programování. Protože Key-value databáze nevyžaduje pevně nastavené datové typy hodnot, jako je tomu u relační databáze, tak Key-value databáze často potřebují méně paměti k uložení stejných dat, což může vést k značnému nárůstu výkonu. Dále tyto databáze bývají distribuované a dosahují horizontální až lineární škálovatelnosti.
 	
@@ -147,7 +148,45 @@
 	
 	Různé databázové systémy mohou k řešení jednotlivých problémů přistupovat odlišně. Pokud chceme rozhodnout, který ze systémů je nejvhodnější pro určité úkoly musíme provést řadu testů a porovnání. Je prakticky nemožné najít ideální databázový systém který bude nejlepší ve všech aspektech pro všechna data a případy využití, testování nám ale odhalí který ze systémů vyniká a naopak zaostává pro konkrétní operace nad konkrétními daty. Proto je zapotřebí najít ideální prostředí pro možnost změření a porovnání vlastností vybraných NoSQL Key-value databázových systémů v Kapitole~\ref{chapter:no-sql-ky-sys}.
 	
-	Existuje celá řada nástrojů pro měření výkonu databázových systémů. Mezi dva dosti známé a dostupné nástroje se řadí právě TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC benchmarky od Transaction Processing Performance Council se dělí do mnoha kategorií, například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss} a TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíš pro typické relační databázové systémy. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání relativního výkonu NoSQL databázových systémů což je pro tuto práci zaměřenou na Key-value databáze ideální.
+	Existuje celá řada nástrojů pro měření výkonu databázových systémů. Mezi dva dosti známé a dostupné nástroje se řadí například TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC benchmarky od Transaction Processing Performance Council se dělí do mnoha kategorií, například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss} a TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíš pro typické relační databázové systémy. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání relativního výkonu NoSQL databázových systémů což je pro tuto práci zaměřenou na Key-value databáze ideální a proto i byla tato technologie zvolena pro měření výkonu jednotlivých databázových systémů~\cite{benchmark-pdf-1, benchmark-pdf-2}.
+	
+	\section{YCSB}
+	
+	YCSB architektura je založená na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro velkou část databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se následně skládá ze dvou částí, loading fáze zaměřená na vložení dat do databáze a running fáze ve které se spustí daný test.
+	
+	Při spouštění každého testu je možné nastavit určité parametry pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového sytému. Následně se vybírá testovaná scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
+	
+	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, odezvy a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřeny výhradně na čtení, zápis a nebo i kombinace obojího. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při sekvenčním skenování ve Workloadu E je maximální počet skenovaných záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů, takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
+	
+	\begin{itemize}
+		\item Workload A (Update heavy)
+		\begin{itemize}
+			\item 50\% operací zaměřených na čtení a 50\% operací zaměřených na vkládání
+		\end{itemize}
+		\item Workload B (Read mostly)
+		\begin{itemize}
+			\item 95\% operací zaměřených na čtení a 5\% operací zaměřených na vkládání
+		\end{itemize}
+		\item Workload C (Read only)
+		\begin{itemize}
+			\item 100\% operací zaměřených na čtení
+		\end{itemize}
+		\item Workload D (Read latest)
+		\begin{itemize}
+			\item 95\% operací zaměřených na čtení, 5\% operací zaměřených na vkládání a poslední vložené záznamy jsou čteny přednostně
+		\end{itemize}
+		\item Workload E (Short ranges)
+		\begin{itemize}
+			\item 95\% operací zaměřených na sekvenční skenování nízkého počtu záznamů a 5\% operací zaměřených na vkládání
+		\end{itemize}
+		\item Workload F (Read-modify-write)
+		\begin{itemize}
+			\item každá operace se skládá ze čtení daného záznamu, úpravy záznamu a následné vložení změněného záznamu zpět
+		\end{itemize}
+	\end{itemize}
+	
+	
+	
 	
 	\chapter{Vyhodnocení výsledků testů}
 	

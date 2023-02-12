@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  11 FEB 2023 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  12 FEB 2023 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,7 +1021,7 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 41
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 42
 .
 
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmr.fd
@@ -1029,24 +1029,24 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (Dokument.aux)
 \openout1 = `Dokument.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 (D:\Skola-SW\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1109,7 +1109,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 42.
 (D:\Skola-SW\MikTex\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1121,9 +1121,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count460
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 
 (Dokument.out) (Dokument.out)
 \@outlinefile=\write5
@@ -1174,11 +1174,11 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Dokument.bbl' found.
  (Dokument.bbl)
-Package biblatex Info: Reference section=0 on input line 41.
-Package biblatex Info: Reference segment=0 on input line 41.
+Package biblatex Info: Reference section=0 on input line 42.
+Package biblatex Info: Reference segment=0 on input line 42.
 \c@lstlisting=\count461
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
-3.
+4.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1186,40 +1186,40 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 pdfTeX warning: pdflatex.exe (file ./Figures/FEI_CZ.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<Figures/FEI_CZ.pdf, id=74, 350.70023pt x 109.21pt>
+<Figures/FEI_CZ.pdf, id=78, 350.70023pt x 109.21pt>
 File: Figures/FEI_CZ.pdf Graphic file (type pdf)
 <use Figures/FEI_CZ.pdf>
-Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 43.
+Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 44.
 (pdftex.def)             Requested size: 274.11765pt x 85.35826pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-3.
+4.
 (D:\Skola-SW\MikTex\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-3.
+4.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-43.
+44.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-43.
+44.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 43.
+(Font)              <14.4> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 43.
+(Font)              <10> on input line 44.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 44.
  [1
 
 
@@ -1281,7 +1281,7 @@ Underfull \vbox (badness 1360) has occurred while \output is active []
 [14] [15]
 Kapitola 3.
 
-Overfull \hbox (0.12636pt too wide) in paragraph at lines 148--149
+Overfull \hbox (0.12636pt too wide) in paragraph at lines 149--150
 \T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou k °e-²ení jed-not-li-vých
  pro-blém· p°i-stu-po-vat od-li²n¥. Po-kud chceme
  []
@@ -1289,33 +1289,51 @@ Overfull \hbox (0.12636pt too wide) in paragraph at lines 148--149
 [16
 
 ]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+62.
+ (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [17]
 Kapitola 4.
-[17
-
-]
-Kapitola 5.
 [18
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-66.
+Kapitola 5.
+[19
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+01.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 166--166
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 201--201
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[19
+[20
 
-] [20] (Dokument.aux)
+]
+Overfull \hbox (7.60954pt too wide) in paragraph at lines 201--201
+[]\T1/lmr/m/n/10.95 OSE, Omoruyi; OKOKPU-JIE, Kennedy; NDU-JI-UBA, Nsikan Nko-r
+deh Charles; JOHN, Samuel;
+ []
+
+[21]
+Overfull \hbox (50.44803pt too wide) in paragraph at lines 201--201
+[][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
+. youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
+[]
+ []
+
+[22] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: D74FB6EA2FCE2BB506E54F9860E85EF8;2481.
+(rerunfilecheck)             Checksum: 650BBF909F2EA61CC15B0A3D0567E97F;2556.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1326,22 +1344,22 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27933 strings out of 478552
- 490493 string characters out of 2854123
- 1010898 words of memory out of 3000000
- 45686 multiletter control sequences out of 15000+600000
- 522392 words of font info for 60 fonts, out of 8000000 for 9000
+ 27995 strings out of 478552
+ 492204 string characters out of 2854123
+ 1011183 words of memory out of 3000000
+ 45737 multiletter control sequences out of 15000+600000
+ 522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,11n,93p,2178b,4702s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ec.enc}<D:/Skola-SW/MikTex/fonts/ty
-pe1/public/lm/lmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D
-:/Skola-SW/MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/ty
-pe1/public/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><
-D:/Skola-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts
-/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (20 pages, 1029240 bytes).
+ 92i,11n,93p,2178b,4709s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/en
+c/dvips/lm/lm-ts1.enc}<D:/Skola-SW/MikTex/fonts/type1/public/lm/lmbx10.pfb><D:/
+Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1
+/public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/
+Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type
+1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Dokument.pdf (22 pages, 1042959 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
