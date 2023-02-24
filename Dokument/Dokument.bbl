@@ -514,5 +514,30 @@
     \field{urlmonth}{02}
     \field{urlyear}{2023}
   \endentry
+
+  \entry{ycsb-parallel-data-lab}{online}{}
+    \name{author}{1}{}{%
+      {{hash=GG}{%
+         family={Gibson},
+         familyi={G\bibinitperiod},
+         given={Garth},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GG1}
+    \strng{fullhash}{GG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{PARALLEL DATA LAB, CMU}
+    \field{title}{YCSB++}
+    \verb{url}
+    \verb https://www.pdl.cmu.edu/ycsb++/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{24}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
 \enddatalist
 \endinput

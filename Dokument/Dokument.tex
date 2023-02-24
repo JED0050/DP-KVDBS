@@ -142,7 +142,7 @@
 	
 	\section {Nezmíněné významné NoSQL databáze}
 	
-		Do práce nebyly záměrně zahrnuty databázové systémy MongoDB a Couchbase~\cite{mongodb,couchbase}. I když se jedná o známé a hojně využívané NoSQL databáze, tak byly obě záměrné z práce vynechány protože mají key-value až jako sekundární datový model, primárně jsou určeny pro ukládání dokumentově orientovaných informací~\cite{documentdb}. Další často využívaná a nezmíněná NoSQL databáze je Cassandra~\cite{cassandra}, tato databáze udává jako datový model wide-column store~\cite{widecolumnstore} a proto ze stejného důvodu byla i tato databáze vypuštěna z pozorování.
+		Do práce nebyly záměrně zahrnuty databázové systémy MongoDB a Couchbase~\cite{mongodb,couchbase}. I když se jedná o známé a hojně využívané NoSQL databáze, tak byly obě záměrné z práce vynechány protože mají key-value až jako sekundární datový model, primárně jsou určeny pro ukládání dokumentově orientovaných informací~\cite{documentdb}. Další často využívaná a nezmíněná NoSQL databáze je Cassandra~\cite{cassandra}, tato databáze udává jako datový model wide-column store~\cite{widecolumnstore} a proto ze stejného důvodu byla i tato databáze vyřazena z testování.
 	
 	\chapter{Prostředí pro testování databázových systémů}
 	
@@ -152,7 +152,7 @@
 	
 	\section{YCSB}
 	
-	YCSB architektura je založená na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro velkou část databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se následně skládá ze dvou částí, loading fáze zaměřená na vložení dat do databáze a running fáze ve které se spustí daný test.
+	YCSB architektura je založená na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro velkou část databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se následně skládá ze dvou částí, loading fáze zaměřená na vložení dat do databáze a running fáze ve které se spustí daný test (\ref{ycsb-blok-schema}).
 	
 	Při spouštění každého testu je možné nastavit určité parametry pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového sytému. Následně se vybírá testovaná scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
 	
@@ -184,6 +184,13 @@
 			\item každá operace se skládá ze čtení daného záznamu, úpravy záznamu a následné vložení změněného záznamu zpět
 		\end{itemize}
 	\end{itemize}
+
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.7]{Data/ycsb-1.jpg}
+		\caption{YCSB rámec testování funkčnosti \cite{ycsb-parallel-data-lab}}
+		\label{ycsb-blok-schema}
+	\end{figure}
 	
 	\chapter{Vyhodnocení výsledků testů}
 	
