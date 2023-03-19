@@ -51,8 +51,7 @@
 	
 	Výkon a nedostatečná standardizace omezovaly Key-value databázové systémy pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing dochází v posledních letech k rozšíření obecné využitelnosti NoSQL databázových systémů. Například databázový systém Redis~\cite{redis} je v současnosti jedním z deseti nejlépe hodnocených~\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy.
 	
-	\chapter{NoSQL Key-value databázové systémy}
-	\label{chapter:no-sql-ky-sys}
+	\chapter{NoSQL Key-value databázové systémy\label{chapter:no-sql-ky-sys}}
 	
 	V současné době existuje nespočet různých Key-value databázových systémů, od malých open source projektů po velké placené cloud služby. Různé systém disponují odlišnými vlastnostmi jako je propustnost, škálovatelnost, uživatelská přívětivost skrz dotazovací jazyk a podporu aj. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno 8 aktuálně významných Key-value databázových systémů se snahou o jednoduchý popis, porovnání (\ref{tab_kvdb_compare}) a konečný výběr vhodných Key-value databázových systémů se snahou otestovat vlastnosti těchto systémů.
 	
@@ -106,8 +105,7 @@
 
 	\begin{sidewaystable}
 		\centering
-		\caption{Porovnání Key-value databází}
-		\label{tab_kvdb_compare}
+		\caption{Porovnání Key-value databází\label{tab_kvdb_compare}}
 		\scalebox{0.8}
 		{
 			\begin{tabular}{ l|c c c c c c c c } 
@@ -188,9 +186,39 @@
 	\begin{figure}
 		\centering
 		\includegraphics[scale=0.7]{Data/ycsb-1.jpg}
-		\caption{YCSB rámec testování funkčnosti \cite{ycsb-parallel-data-lab}}
-		\label{ycsb-blok-schema}
+		\caption{YCSB rámec testování funkčnosti \cite{ycsb-parallel-data-lab}\label{ycsb-blok-schema}}
 	\end{figure}
+
+	\section{TPC}
+	
+	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření kvalitních benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{tpc} a i možnosti jejich následného monitoringu a porovnávání. TPC benchmarky poskytují spolehlivé testy pro velké firmy s přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
+	
+	TPC benchmarky jsou rozděleny do vícero modelů pro různě specifikované testy. Prvním z modelů pro OLTP byl TPC Benchmark A (TPC-A), který následně nahradil benchmark TPC-B a aktuálně se v tomto odvětví využívá poslední generace OLTP benchmarků TPC-C a TPC-E. Například modely TPC-DS/DI a TPC-H jsou uzpůsobeny pro benchmark pro systémy pro podporu rozhodování~\cite{dss}. TPC benchmarky jsou přizpůsobeny i pro virtualizaci, IoT~\cite{iot} a další viz tabulka TPC benchmarků (\ref{tab_tpc_modely}).
+	
+	Model TPC-C~\cite{tpc-c} simuluje velkoobchodní provoz s více sklady, známý jednoduše jako "společnost". V minimálním testu má společnost deset skladů, každý s deseti uživatelskými terminály. Každý sklad obsluhuje deset definovaných prodejních okrsků, každý s 3 000 zákazníky, kteří objednávají podle katalogu výrobků o 100 000 položkách. Nejčastějšími transakcemi jsou objednávky zákazníků, přičemž každá objednávka obsahuje v průměru 10 položek, a platby zákazníků. Méně časté požadavky se dotazují na stav objednávek a skladových zásob, expedují objednávky a doplňují zásoby, které se sníží. Pro testování výkonnosti daného systému se počet skladů zvyšuje tak, aby splňoval požadované minimum potřebné k měření cílové úrovně výkonnosti.
+	
+	Výsledky srovnávacího testu se měří v transakcích za minutu, známých jako tpmC. První výsledek tpmC byl zveřejněn v září 1992 pro IBM AS/400 a přinesl výsledek 54 tpmC. V roce 2000 byl průměrný výsledek pro špičkové stroje 2,4 milionu tpmC a společnosti ve snaze získat rekord stavěly systémy velmi velkých rozměrů. Současný rekord byl stanoven v roce 2020 pomocí cloud computingu, který poskytl 707,3 milionu tpmC~\cite{tpc-c-top-result}. Nedávné výsledky pro menší lokální systémy se zaměřily na snížení nákladů na tpmC.
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{ l | l }
+			\toprule
+			TPC benchmark & využití\\
+			\midrule
+			TPC-C, TPC-E & zpracovávání transakcí \\
+			TPC-H, TPC-DS, TPC-DI & podpora rozhodování \\
+			TPCx-V, TPCx-HCI & virtualizace \\
+			TPCx-HS, TPCx-BB & velká data \\
+			TPCx-IoT & IoT \\
+			TPCx-AI & umělá inteligence \\
+			TPC-Energy, TPC-Pricing & běžné specifikace \\
+			TPC-A, TPC-B, TPC-APP, TPC-D & zastaralé benchmarky \\
+			TPC-R, TPC-W, TPC-VMS & \\
+			\bottomrule
+		\end{tabular}
+		\caption{TPC benchmarky\label{tab_tpc_modely}}
+	\end{table}
+	
 	
 	\chapter{Vyhodnocení výsledků testů}
 	

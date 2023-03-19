@@ -539,5 +539,58 @@
     \field{urlmonth}{02}
     \field{urlyear}{2023}
   \endentry
+
+  \entry{iot}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{IoT definition in detail}
+    \verb{url}
+    \verb https://www.sap.com/insights/what-is-iot-internet-of-things.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{tpc-c}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC-C}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/TPC-C
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{tpc-c-top-result}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC-C Top Performance Results}
+    \verb{url}
+    \verb https://www.tpc.org/tpcc/results/tpcc_perf_results5.asp?resulttype=al
+    \verb l
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{oltp}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Online transaction processing (OLTP)}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Online_transaction_processing
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2023}
+  \endentry
 \enddatalist
 \endinput

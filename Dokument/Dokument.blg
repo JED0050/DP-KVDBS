@@ -20,7 +20,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'field_info' (item size: 4) to 10040 items.
+Reallocating 'field_info' (item size: 4) to 10460 items.
 Database file #1: Dokument-blx.bib
 Database file #2: citace.bib
 Repeated entry---line 135 of file citace.bib
@@ -30,45 +30,45 @@ I'm skipping whatever remains of this entry
 Biblatex version: 3.17
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 36 entries,
+You've used 40 entries,
             6399 wiz_defined-function locations,
-            1333 strings with 12130 characters,
-and the built_in function-call counts, 209712 in all, are:
-= -- 4500
-> -- 26982
-< -- 1345
-+ -- 25444
-- -- 24409
-* -- 5271
-:= -- 31078
+            1346 strings with 12490 characters,
+and the built_in function-call counts, 231331 in all, are:
+= -- 4804
+> -- 30014
+< -- 1493
++ -- 28268
+- -- 27175
+* -- 5689
+:= -- 34287
 add.period$ -- 0
-call.type$ -- 36
-change.case$ -- 117
-chr.to.int$ -- 1726
-cite$ -- 70
-duplicate$ -- 14679
-empty$ -- 13789
+call.type$ -- 40
+change.case$ -- 129
+chr.to.int$ -- 1918
+cite$ -- 78
+duplicate$ -- 16164
+empty$ -- 15203
 format.name$ -- 208
-if$ -- 23806
+if$ -- 26072
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 42
 missing$ -- 0
-newline$ -- 542
+newline$ -- 595
 num.names$ -- 114
-pop$ -- 11499
+pop$ -- 12795
 preamble$ -- 1
-purify$ -- 138
+purify$ -- 150
 quote$ -- 0
-skip$ -- 4459
+skip$ -- 4923
 stack$ -- 0
-substring$ -- 10188
-swap$ -- 4670
-text.length$ -- 1126
+substring$ -- 10922
+swap$ -- 5179
+text.length$ -- 1246
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1212
+type$ -- 1348
 warning$ -- 0
-while$ -- 1757
+while$ -- 1917
 width$ -- 0
-write$ -- 507
+write$ -- 556
 (There was 1 error message)
