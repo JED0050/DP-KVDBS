@@ -1,0 +1,65 @@
+fullscreen on/of - levý+pravý ctrl + F
+
+YCSB - https://github.com/brianfrankcooper/YCSB
+
+
+bin/ycsb.sh load basic -P workloads/workloada
+bin/ycsb.sh run basic -P workloads/workloada
+
+
+
+
+
+WINDOWS
+
+%JAVA_HOME%="C:\Program Files\Java\jdk1.8.0_231"
+	
+YCSB
+
+E:
+cd E:\Diploma\YCSB\ycsb-0.17.0
+cd E:\Diploma\YCSB\ycsb-0.17.0\bin
+
+bin\ycsb.bat load basic -P workloads\workloada
+bin\ycsb.bat run basic -P workloads\workloada
+
+DOCKER 
+	Redis
+		- .\ycsb load redis -P  ..\workloads\workloada -p redis.host=127.0.0.1 -p redis.port=6379 > out\outredisload.txt
+		- set port v dockeru na 6379
+		- docker exec -it sad_colden redis-cli
+
+	Aurospike
+		- .\ycsb load aerospike -s -P ..\workloads\workloada -p as.namespace=test
+		- set port na 3000, zbylé 2 jsou we
+		- důležité použít namespace název! takže ne default ycsb ale test => as.namespace=test
+		- docker exec -it aerospike bash -c aql
+	
+	Riak
+		- .\ycsb load riak -s -P ..\workloads\workloada
+		- v riak.conf souboru nastavit storage_backend = leveldb
+		- v riak.conf souboru odkomentovat strong_consistency=on
+		- spustit příkazy:
+			docker exec riak riak-admin bucket-type create ycsb		// '{"props":{"consistent":true}}' <-- vrací json error, odebrat
+			docker exec riak riak-admin bucket-type activate ycsb
+		- docker exec riak riak config effective
+	
+Amazon DynamoDB
+	
+Oracle NoSQL
+	
+
+
+
+citace:
+
+https://medium.com/@erdmozdmir/benchmarking-with-yahoo-cloud-server-benchmark-ycsb-deac5e34f75d
+https://www.youtube.com/watch?v=FQQk0I1Xk38
+https://github.com/stutzlab/ycsb-stresser
+https://vsis-www.informatik.uni-hamburg.de/getDoc.php/thesis/790/Bachelorarbeit_Mirko_Koester.pdf
+http://highscalability.com/blog/2021/2/17/benchmark-ycsb-numbers-for-redis-mongodb-couchbase2-yugabyte.html
+https://hrcak.srce.hr/file/340507
+https://benchant.com/blog/ycsb
+https://info.couchbase.com/rs/302-GJY-034/images/2023-Altoros-NoSQL-Dbaas-Performance-Capella-Atlas-Dynamo-Redis.pdf
+https://developer.redis.com/create/windows/
+https://www.msystechnologies.com/blog/4-steps-to-load-test-mongodb-using-ycsb-workloads-on-kubernetes-cluster/
