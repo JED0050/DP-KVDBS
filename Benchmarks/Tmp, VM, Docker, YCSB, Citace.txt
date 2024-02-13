@@ -45,6 +45,15 @@ DOCKER
 		- docker exec riak riak config effective
 	
 Amazon DynamoDB
+	- .\ycsb load dynamodb -s -P ..\workloads\workloada dynamodb.properties
+	- aws acc: 1..3P..2@aWs
+	- http://highscalability.com/blog/2013/4/3/5-steps-to-benchmarking-managed-nosql-dynamodb-vs-cassandra.html
+	- https://github.com/brianfrankcooper/YCSB/wiki/Using-the-Database-Libraries
+	- https://stackoverflow.com/questions/45508588/docker-how-to-create-a-table-for-local-dynamo-db
+	- https://www.youtube.com/watch?v=ZHMHQmCLakA
+	- https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html
+	- https://dev.to/aws-heroes/dynamodb-local-in-docker-25i
+	
 	
 Oracle NoSQL
 	
