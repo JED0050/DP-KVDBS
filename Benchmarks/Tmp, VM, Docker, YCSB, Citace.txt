@@ -29,7 +29,7 @@ DOCKER
 		- set port v dockeru na 6379
 		- docker exec -it sad_colden redis-cli
 
-	Aurospike
+	Aerospike
 		- .\ycsb load aerospike -s -P ..\workloads\workloada -p as.namespace=test
 		- set port na 3000, zbylé 2 jsou we
 		- důležité použít namespace název! takže ne default ycsb ale test => as.namespace=test
@@ -45,8 +45,9 @@ DOCKER
 		- docker exec riak riak config effective
 	
 Amazon DynamoDB
-	- .\ycsb load dynamodb -s -P ..\workloads\workloada dynamodb.properties
-	- aws acc: 1..3P..2@aWs
+	- .\ycsb load dynamodb -s -P ..\workloads\workloada
+	- docker run --rm -d --name dynamodb -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal
+	- docker, nastavit port 8000
 	- http://highscalability.com/blog/2013/4/3/5-steps-to-benchmarking-managed-nosql-dynamodb-vs-cassandra.html
 	- https://github.com/brianfrankcooper/YCSB/wiki/Using-the-Database-Libraries
 	- https://stackoverflow.com/questions/45508588/docker-how-to-create-a-table-for-local-dynamo-db
@@ -56,7 +57,14 @@ Amazon DynamoDB
 	
 	
 Oracle NoSQL
+	- .\ycsb load nosqldb -s -P ..\workloads\workloada
 	
+	- docker run --rm -ti --link kvlite:store oracle/nosql:ce java -jar lib/kvstore.jar runadmin -port 5000 -host localhost -script $YCSBHOME/conf/script.txt
+	
+	- docker run --rm -ti --link kvlite:store oracle/nosql:ce java -jar lib/kvstore.jar runadmin -host store -port 5000 -store kvstore
+	- docker run --rm -ti --link kvlite:store oracle/nosql:ce java -jar lib/kvstore.jar ping -host store -port 5000
+	- docker run -d --name=kvlite --hostname=kvlite --env KV_PROXY_PORT=8080 -p 8080:8080 oracle/nosql:ce
+	- https://github.com/oracle/docker-images/blob/main/NoSQL/README.md
 
 
 
