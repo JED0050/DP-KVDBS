@@ -38,10 +38,11 @@ DOCKER
 	Riak
 		- .\ycsb load riak -s -P ..\workloads\workloada
 		- v riak.conf souboru nastavit storage_backend = leveldb
-		- v riak.conf souboru odkomentovat strong_consistency=on
+		- v riak.conf souboru odkomentovat strong_consistency=on	// etc/riak/riak.conf
 		- spustit příkazy:
 			docker exec riak riak-admin bucket-type create ycsb		// '{"props":{"consistent":true}}' <-- vrací json error, odebrat
 			docker exec riak riak-admin bucket-type activate ycsb
+		- nastavit porty 8087 a 8098, a container name na riak
 		- docker exec riak riak config effective
 	
 Amazon DynamoDB
