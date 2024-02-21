@@ -81,3 +81,5 @@ https://benchant.com/blog/ycsb
 https://info.couchbase.com/rs/302-GJY-034/images/2023-Altoros-NoSQL-Dbaas-Performance-Capella-Atlas-Dynamo-Redis.pdf
 https://developer.redis.com/create/windows/
 https://www.msystechnologies.com/blog/4-steps-to-load-test-mongodb-using-ycsb-workloads-on-kubernetes-cluster/
+https://www.researchgate.net/publication/362695031_INDIAN_JOURNAL_OF_SCIENCE_AND_TECHNOLOGY_A_Study_of_Performance_and_Comparison_of_NoSQL_Databases_MongoDB_Cassandra_and_Redis_Using_YCSB
+https://docs.bangdb.com/bangdb-vs-other-dbs
