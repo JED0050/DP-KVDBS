@@ -83,3 +83,5 @@ https://developer.redis.com/create/windows/
 https://www.msystechnologies.com/blog/4-steps-to-load-test-mongodb-using-ycsb-workloads-on-kubernetes-cluster/
 https://www.researchgate.net/publication/362695031_INDIAN_JOURNAL_OF_SCIENCE_AND_TECHNOLOGY_A_Study_of_Performance_and_Comparison_of_NoSQL_Databases_MongoDB_Cassandra_and_Redis_Using_YCSB
 https://docs.bangdb.com/bangdb-vs-other-dbs
+https://db-engines.com/en/ranking/key-value+store
+https://anthonyaje.github.io/file/An_empirical_evaluation_of_Memcached_Redis_and_Aerospike_kvstore_Anthony_Eswar.pdf
