@@ -47,8 +47,8 @@ Memcached
 		.\ycsb load memcached -P ..\workloads\workloada -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p recordcount=100000 -p threadcount=4
 		.\ycsb run memcached -P  ..\workloads\workloada -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p operationcount=1000000 -p threadcount=4
 	Workload B
-		.\ycsb load memcached -P  ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p recordcount=100000 -p threadcount=4
-		.\ycsb run memcached -P  ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p operationcount=1000000 -p threadcount=4
+		.\ycsb load memcached -P  ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p recordcount=100000 -p threadcount=4
+		.\ycsb run memcached -P  ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p operationcount=1000000 -p threadcount=4
 	Workload C
 		.\ycsb load memcached -P  ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p recordcount=100000 -p threadcount=4
 		.\ycsb run memcached -P  ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p operationcount=1000000 -p threadcount=4

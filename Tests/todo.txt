@@ -1,3 +1,2 @@
-memcached tests b + c
 rocksdb run + tests
 ignite run + tests
