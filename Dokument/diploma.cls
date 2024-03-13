@@ -23,14 +23,13 @@
 %% This work is licensed under CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/deed.en
 %% You may distribute it and use it for non-commercial purposes, but the author must be mentioned and the document can not be changed.
 %% 
-\def\fileversion{5.01}
-\def\filedate{2021/04/08}
-\def\docdate{8. dubna 2021}
+\def\fileversion{5.04}
+\def\filedate{2022/07/01}
+\def\docdate{1. července 2022}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{diploma}[\filedate\space \fileversion\space diploma LaTeX document class]
 \RequirePackage{ifthen}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage{xassoccnt}
 \newcommand{\Dipl@BachelorThesis}{0}
 \newcommand{\Dipl@BachelorPractice}{1}
 \newcommand{\Dipl@MasterThesis}{2}
@@ -48,6 +47,8 @@
 \Dipl@EnglishThesisTitle={No English thesis title is given}
 \newtoks\Dipl@SubmissionYear
 \Dipl@SubmissionYear={}
+\newtoks\Dipl@ThesisAssignmentFileName
+\Dipl@ThesisAssignmentFileName={}
 \newtoks\Dipl@Acknowledgement
 \Dipl@Acknowledgement={}
 \newtoks\Dipl@CzechAbstract
@@ -72,14 +73,10 @@
 \setcounter{Dipl@CurrentThesisType}{\Dipl@MasterThesis}
 \newcounter{Dipl@CurrentThesisLanguage}
 \setcounter{Dipl@CurrentThesisLanguage}{\Dipl@CzechLanguage}
-\NewTotalDocumentCounter{Dipl@TotalFigures}
-\DeclareTotalAssociatedCounters{figure}{Dipl@TotalFigures}
-\NewTotalDocumentCounter{Dipl@TotalTables}
-\DeclareTotalAssociatedCounters{table}{Dipl@TotalTables}
 \LoadClass[11pt,openany]{book}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
-\RequirePackage[a4paper]{geometry}
+\RequirePackage{geometry}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
 \RequirePackage{longtable}
@@ -90,6 +87,7 @@
 \RequirePackage{titlesec}
 \RequirePackage[nottoc,notindex,chapter]{tocbibind}
 \RequirePackage{xcolor}
+\RequirePackage{pdfpages}
 \RequirePackage[a-1b]{pdfx}
 \DeclareOption{czech}
 {
@@ -170,13 +168,13 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \RequirePackage[\the\Dipl@BabelLanguageOptions]{babel}
-\newgeometry{twoside=false, includefoot, nohead, nomarginpar, left=25mm, right=25mm, top=25mm, bottom=25mm}
+\newgeometry{a4paper, twoside=false, includefoot, nohead, nomarginpar, left=25mm, right=25mm, top=25mm, bottom=25mm}
 \savegeometry{Dipl@OneSide}
-\newgeometry{twoside=false, nofoot, nohead, nomarginpar, left=25mm, right=25mm, top=25mm, bottom=25mm}
+\newgeometry{a4paper, twoside=false, nofoot, nohead, nomarginpar, left=25mm, right=25mm, top=25mm, bottom=25mm}
 \savegeometry{Dipl@OneSideNoFoot}
-\newgeometry{twoside, includefoot, nohead, nomarginpar, left=35mm, right=25mm, top=25mm, bottom=25mm}
+\newgeometry{a4paper, twoside, includefoot, nohead, nomarginpar, left=35mm, right=25mm, top=25mm, bottom=25mm}
 \savegeometry{Dipl@TwoSide}
-\newgeometry{twoside, nofoot, nohead, nomarginpar, left=35mm, right=25mm, top=25mm, bottom=25mm}
+\newgeometry{a4paper, twoside, nofoot, nohead, nomarginpar, left=35mm, right=25mm, top=25mm, bottom=25mm}
 \savegeometry{Dipl@TwoSideNoFoot}
 \ifthenelse{\value{Dipl@CurrentThesisType}=\Dipl@PhDThesis}
 {
@@ -190,6 +188,7 @@
 \newcommand{\CzechThesisTitle}[1]{\ifthenelse{\value{Dipl@CurrentThesisType}=\Dipl@BachelorPractice}{\relax}{\Dipl@CzechThesisTitle={#1}}}
 \newcommand{\EnglishThesisTitle}[1]{\ifthenelse{\value{Dipl@CurrentThesisType}=\Dipl@BachelorPractice}{\relax}{\Dipl@EnglishThesisTitle={#1}}}
 \newcommand{\SubmissionYear}[1]{\Dipl@SubmissionYear={#1}}
+\newcommand{\ThesisAssignmentFileName}[1]{\Dipl@ThesisAssignmentFileName={#1}}
 \newcommand{\Acknowledgement}[1]{\Dipl@Acknowledgement={#1}}
 \newcommand{\CzechAbstract}[1]{\Dipl@CzechAbstract={#1}}
 \newcommand{\CzechKeywords}[1]{\Dipl@CzechKeywords={#1}}
@@ -200,13 +199,12 @@
 {
 \pagestyle{empty}
 \Dipl@TitlePage
+\Dipl@ThesisAssignmentPages
 \Dipl@AbstractsKeywordsPage
 \Dipl@AcknowledgementPage
 \pagestyle{plain}
 \tableofcontents\clearpage
 \Dipl@WriteAcronymsPage
-\ifthenelse{\TotalValue{Dipl@TotalFigures}>0}{\listoffigures\clearpage}{\relax}
-\ifthenelse{\TotalValue{Dipl@TotalTables}>0}{\listoftables\clearpage}{\relax}
 }
 {\theorembodyfont{\itshape}\newtheorem{definition}{\Dipl@LanguageDependentText{Definice}{Definícia}{Definition}}}
 {\theorembodyfont{\itshape}\newtheorem{theorem}{\Dipl@LanguageDependentText{Věta}{Veta}{Theorem}}}
@@ -262,6 +260,20 @@ Ostrava,~\ifthenelse{\equal{\the\Dipl@SubmissionYear}{\empty}}{\number\year}{\th
 \end{flushleft}
 \clearpage
 \restoregeometry
+}
+\newcommand{\Dipl@ThesisAssignmentPages}
+{
+\ifthenelse{\equal{\the\Dipl@ThesisAssignmentFileName}{\empty}}
+{
+\begin{center}
+\Large\sffamily\bfseries
+\Dipl@LanguageDependentText{Nezapomeňte vložit zadání práce.}{Nezabudnite vložiť zadanie.}{Do not forget to insert the thesis assignment.}
+\end{center}
+\clearpage
+}
+{
+\includepdf[pages=-]{\the\Dipl@ThesisAssignmentFileName}
+}
 }
 \newcommand{\Dipl@AbstractsKeywordsPage}
 {
