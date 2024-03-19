@@ -72,13 +72,13 @@
 	
 	Restové API pro Oracle NoSQL Database je rozděleno do pěti částí. Správa indexů, která dovoluje vytvářet a mazat indexy pro danou tabulku. Tato část API také umožňuje zobrazit všechny indexy které jsou pro danou tabulku vytvořeny a společně s detailním popisem každého indexu. Druhá část API se věnuje dotazům, umožňuje tedy syntaktickou kontrolu daného SQL dotazu, před připravení a spuštění dotazu. Třetí část je zaměřena na správu záznamů, obsahuje tedy CRUD funkce pro jednotlivé záznamy. Tato část ale neobsahuje funkci pro úpravu existujícího záznamu a ani neumožňuje správu mnoha záznamů najednou, pro úpravu je tedy nutno provést funkci odstranění záznamu a vložení nového a všechny záznamy je tedy také potřeba spravovat jednotlivě a postupně. Čtvrtá část je zaměřena správě tabulek, obsahuje možnost vytvoření, upravování, a mazání tabulek. Tato část také umožňuje výpis všech tabulek, informace o dané tabulce a využívání dané tabulky. Poslední část API se věnuje správě pracovních požadavků, lze zde zobrazit stav jednotlivých požadavků, mazat požadavky, získat chyby či log daného požadavku a list všech požadavků.
 		
-	\section{Redis}
+	\section{Redis} \label{lab-redis}
 	
 	Redis~\cite{redis} je in-memory úložiště pro datové struktury, využívané jako Key-value databáze, cache, streaming engine nebo zprostředkovávatel zpráv. Toto datové úložiště má skvělé využití pro klíče v podobě hashe a hodnoty jako velký json objekt. Pro persistenci dat můžeme ukládání dat na disk provádět po nastavitelných pravidelných intervalech, nebo je možné data logovat vždy při vykonávání operací, pokud nemáme zájem o trvanlivost dat je možné ukládání dat vypnout úplně a datové úložiště využít čistě jako cache. Úložiště škáluje horizontálně. Redis podporuje datové struktury jako řetězce, hashe, listy, množiny, bitmapy, hyperloglog a geospatial indexy. Nad datovými typy Redis umožňuje rychlé atomické operace jako rozšíření řetězců, přidání prvků na začátek a konec listů atd. Datové úložiště také poskytuje seřazené množiny pro vytváření indexů dle ID nebo jiného číselného atributu. Redis hashing ukládá data jako klíč a mapu. Keyspace notifikace dovoluje klientům odebírat Publisher-Subscriber kanály. Pro práci s dotazy na souřadnice a geometrii je možné využívat Geo API. Redis umožňuje provádět transakce, volat lua skripty a nastavovat různé úrovně TTL pro záznamy. Redis podporuje Trivial-to-setup Master-Slave asynchronního replikování, společně s rychlou neblokující se prvotní synchronizaci. Struktura pro ukládání dat je Single-rooted replikovaný strom. Redis má vlastní API pro práci s daty pro populární programovací jazyky jako C, Python, Java a Javascript.
 	
 	S Redis databází lze pracovat například pomocí konzolového rozhraní, toto CLI~\cite{rediscli} poskytuje řadu jednoduše čitelných ale netradičních příkazů pro práci s daty. Vždy potřebujeme specifikovat klíč s jehož daty chceme v databázi pracovat. Pomocí příkazu SET a DEL vkládáme  do databáze či mažeme jednotlivé hodnoty pro zvolený klíč. Příkazem GET získáme hodnoty pro daný klíč, případně můžeme zjistit zda již existuje záznam pro daný klíč příkazem EXISTS. Pokud vyžadujeme práci s poli tak můžeme pro daný klíč zleva i zprava vkládat hodnoty zřetězené v poli díky příkazům LPUSH a RPUSH. Obdobně odebíráme hodnoty z pole pomocí LPOP a RPOP, příkazem LRANGE vypíšeme hodnoty z pole a příkazem LLEN zjistíme počet jeho záznamů. Místo jednoduchých polí je možno pracovat i s množinami pomocí příkazů SADD, SREM, SISMEMBER a obdobně, množiny mohou být i seřazené a pro ně se využívají příkazy jako ZADD. Pro práci se záznamy strukturovaných jako kolekce párů atribut-hodnota se využívá datový typ Hash, umožňuje nám pro daný klíč uložit záznam obsahující názvy atributů a jednotlivé hodnoty pro ně. Opět se zde využívají příkazy jako HSET a HGETALL pro nastavení a získání daného záznamu, případně HGET pro získání hodnoty daného atributu pro záznam na zadaném klíči. API obsahuje také příkazy pro ostatní datové typy jako jsou Bitmapy, Geo prostory, HyperLogLog a další.
 	
-	\section{Aerospike}
+	\section{Aerospike} \label{lab-aerospike}
 	
 	Aerospike~\cite{aerospike} je Key-value databáze využívající Hybrid Memory architekturu~\cite{hybmem-arch}, která umožňuje odezvu do jednotek milisekund a vysokou propustnost v řádu stovek tisíc až milionu operací za sekundu. Hybrid Memory architektura od Aerospike je implementována tak, že index je čistě In-Memory, tím pádem není index perzistentní (vhodné například pro uživatelské cache sessions), a data jsou uložena čistě perzistentně na SSD disku a čtou se přímo z něj. Díky tomu že je Aerospike jako Key-value databáze naprosto Schena-less tak je možné definovat Sets a Bins za běhu pro maximální flexibilitu aplikací. Databáze škáluje lineárně a poskytuje silnou konzistenci, nízkou cenu a korektnost. Umožňuje real-time analýzu pro rychlé rozhodování a dynamickou optimalizaci pro vhodné využívání zdrojů dat, proto je databáze vhodná pro velké a stále aktualizované databáze. Poskytuje server-side clustering, bezpečnost na transportní vrstvě. Databáze také umožňuje Customer deployment s nulovým downtime. V praxi se Aerospike díky svým vlastnostem využívá například pro banking, telekomunikace, adtech a gaming. Aerospike poskytuje vlastní silný dotazovací jazyk AQL~\cite{aql}, který má prakticky shodnou syntaxi jako SQL (i když se o SQL nejedná). Vlastní vytvořitelné agregační funkce pomocí Lua jazyku (flexibilní pro agregační algoritmy).
 	
@@ -90,7 +90,7 @@
 	
 	Interakce s Berkley DB SQL API je prakticky identická jako s SQLite~\cite{sqlite}. Pro práci s databází vytvořenou rozhraním BDB SQL používáte stejná rozhraní API, stejné Shell prostředí, stejné příkazy SQL a stejné PRAGMA, jako se využívá u SQLite. BDB SQL rozšiřuje standardní SQLite PRAGMA o možnosti nastavení velikosti alokované paměti sdílených zdrojů, nastavení počtu bucketů v hashovací tabulce objektů zámků, zvolení soukromého prostředí místo sdíleného, přesměrování logování chyb do vlastního souboru, nastavení příznaku, který způsobí, že sdílené prostředky databáze budou vytvořeny ve sdílené paměti systému a další. Dalším drobným rozdílem je že BDB SQL rozhraní nepodporuje klíčové slovo IMMEDIATE.
 	
-	\section{Riak KV}
+	\section{Riak KV} \label{lab-riak}
 	
 	Riak KV~\cite{riak} je distribuovaná NoSQL Key-value databáze s pokročilou lokání a multi-cluster replikací, která garantuje čtení a zápis i v případě selhání hardwaru nebo síťových oddílů. Riak využívá bezkonfliktní replikované datové typy (CRDT~\cite{crdt}), které umožňují nezávisle a souběžně aktualizovat jakoukoliv repliku v distribuované databázi se zajištěním sjednocení hodnot pomocí algoritmu který je součásti samotného datového typu (flagy, registry, čítače, množiny a mapy). Poskytuje konfiguraci aktivního clusteru a dosahuje nízké latence v řádu jednotek milisekund díky dodávání dat z nejbližšího data centra. Databáze rozděluje data z clusterů pro své dostupné zóny, má multi cluster repliky a využívá redundance dat v geografickém regionu. Riak tedy automaticky distribuuje data skrz cluster, pro robustnost a vysoký výkon. Key-value databáze poskytuje flexibilní datový model bez předem definovaného schématu. Databáze vylepšené logování chyb a reporty. Data jsou automaticky komprimována pomocí Snappy kompresní knihovny~\cite{snappy}. Databáze využívá master-less architekturu, je vysoce dostupná a má design horizontální škálovatelnosti. Škálovatelnost je téměř lineární při využití snadného přidání hardwarové kapacity bez nutnosti mnoha operací. Riak KV dovoluje zpracování dat pro analýzu a vyvození závěrů pro zlepšení chodu databáze. Riak KV je navržen pro nulové restrikce na hodnoty, takže session data mohou být enkódována mnoha způsoby a nevyžadují změnu schématu. Během nejvyšší zátěže nezhoršuje databáze zápis a horizontální škálovatelnost, uživatelé jsou stále obsluhování bez problémů. Databáze je vhodná pro ukládání velkého množství nestrukturovaných dat, také pro big-data aplikace, ukládání dat z připojených zařízení a replikování dat do okolí. Díky nízké latency je databáze vhodná i pro chat/messaging aplikace. Riak KV exceluje v soukromém, veřejném či hybridním cloud nasazování.
 	
@@ -153,7 +153,7 @@
 	
 	Existuje celá řada nástrojů pro měření výkonu databázových systémů. Mezi dva dosti známé a dostupné nástroje se řadí například TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC benchmarky od Transaction Processing Performance Council se dělí do mnoha kategorií, například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss} a TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíš pro typické relační databázové systémy. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání relativního výkonu NoSQL databázových systémů což je pro tuto práci zaměřenou na Key-value databáze ideální a proto i byla tato technologie zvolena pro měření výkonu jednotlivých databázových systémů~\cite{benchmark-pdf-1, benchmark-pdf-2}.
 	
-	\section{YCSB}
+	\section{YCSB} \label{lab-ycsb}
 	
 	YCSB architektura je založená na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro velkou část databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se následně skládá ze dvou částí, loading fáze zaměřená na vložení dat do databáze a running fáze ve které se spustí daný test (\ref{ycsb-blok-schema}).
 	
@@ -161,7 +161,7 @@
 	
 	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, odezvy a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřeny výhradně na čtení, zápis a nebo i kombinace obojího. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při sekvenčním skenování ve Workloadu E je maximální počet skenovaných záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů, takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
 	
-	\begin{itemize}
+	\begin{itemize} \label{lab-workloads}
 		\item Workload A (Update heavy)
 		\begin{itemize}
 			\item 50\% operací zaměřených na čtení a 50\% operací zaměřených na vkládání
@@ -196,7 +196,7 @@
 
 	\section{TPC}
 	
-	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření kvalitních benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{tpc} a i možnosti jejich následného monitoringu a porovnávání. TPC benchmarky poskytují spolehlivé testy pro velké firmy s přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
+	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření kvalitních benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{oltp} a i možnosti jejich následného monitoringu a porovnávání. TPC benchmarky poskytují spolehlivé testy pro velké firmy s přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
 	
 	TPC benchmarky jsou rozděleny do vícero modelů pro různě specifikované testy. Prvním z modelů pro OLTP byl TPC Benchmark A (TPC-A), který následně nahradil benchmark TPC-B a aktuálně se v tomto odvětví využívá poslední generace OLTP benchmarků TPC-C a TPC-E. Například modely TPC-DS/DI a TPC-H jsou uzpůsobeny pro benchmark pro systémy pro podporu rozhodování~\cite{dss}. TPC benchmarky jsou přizpůsobeny i pro virtualizaci, IoT~\cite{iot} a další viz tabulka TPC benchmarků (\ref{tab_tpc_modely}).
 	
@@ -224,10 +224,48 @@
 		\caption{TPC benchmarky\label{tab_tpc_modely}}
 	\end{table}
 	
-	
 	\chapter{Vyhodnocení výsledků testů}
 	
-	TODO
+	\section{Testovací prostředí}
+	
+	Veškeré testy byly spouštěny na vlastním stroji, domácím počítači. Konkrétní specifikace tohoto stroje se nachází v tabulce (\ref{tab_my_pc_spec}). 
+	
+	\begin{table}
+	\centering
+	\caption{Specifikace stroje na kterém se spouštěly testy\label{tab_my_pc_spec}}
+		\begin{tabular}{ l | l | l } 
+			\toprule
+			komponent & název & podrobnosti \\
+			\midrule
+			OS & Microsoft Windows 10 PRO & x64 \\
+			CPU & Intel Core i5 4590 & 3,3GHz (Boost 3,7GHz), core/thread 4, Haswell\\
+			GPU & NVIDIA GeForce GTX 1660 SUPER & 6GB, 1530MHz (Boost 1785MHz) \\
+			RAM & Crucial Ballistix Sport & 8GB (2x4GB), 1600MHz, DDR3 \\
+			SSD & Samsung 870 EVO & R/W 560/530MB/s, 1TB, TLC, SATA 6Gb/s \\
+			Základní deska & GIGABYTE GA-H81M-H - Intel H81 & 1150 socket, DDR3 DIMM \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\section{Zprovoznění testů}
+	
+	Pro rozsáhlé otestování byly vybrány 4 vhodné Key-value databáze. A to konkrétně Redis (\ref{lab-redis}), Riak KV (\ref{lab-riak}), Aerospike (\ref{lab-aerospike}) a Memcached. Všechny tyto zvolené databáze jsou v aktuálním roce 2024 hodnoceny jako jedny z nejlepších dle žebříčku na webu DB-Engines Ranking~\cite{db-engineers-ranking} právě pro námi testovaný model Key-value. Tento web přiřazuje databázím bodové ohodnocení na základě četnosti nových článků o dané databázi na internetu, obecný zájem, četnosti diskuzí na fórech, množstvím pracovních nabídek a poptávek a relevanci na sociálních sítích.
+	
+	Ve snaze o možnost testy snadno replikovat, byly všechny databáze instalovány a spouštěny pomocí open-source platformy Docker~\cite{docker}. Proto tedy bylo i zapotřebí najít vhodné a kompatibilní docker images pro každou z testovaných databází. V kontextu této práce Docker pomáhá zrychlit zdlouhavou fázi instalování a nastavení počátečního stavu databází, udržení funkčnosti vybrané verze instalovaného softwaru a odstínění od stavu stroje, na kterém databáze spouštíme.
+	
+	Veškeré testy byly vytvářeny a spouštěny pomocí frameworku YCSB (\ref{lab-ycsb}). YCSB framework ve své první části Load do databáze vložil data, a následně v druhé části Run spustil testy a vrátil hodnoty výsledků. Pomocí přidání volitelných parametrů bylo možné testy upravit k vlastním potřebám.
+	
+	Po spuštění databáze v Dockeru se k databázi připojil YCSB framework, který následné prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl následně úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
+	
+	\section{Popis parametrů testů}
+	
+	Veškeré testy pro každou z testovaných databází byly spuštěny třikrát, výsledný finální výsledek byl tedy nakonec průměrem ze všech tří testů pro každou databázi v dané testovací kategorii. Každý test byl spouštěn paralelně na čtyřech vláknech.
+	
+	Do databáze bylo vždy vloženo 100000 záznamů a následující test prováděl 1000000 dotazů nad danou naplněnou databází. Následně byla databáze vyprázdněna, reinstalována a celý proces se následně opakoval ještě dvakrát.
+	
+	Testy bylo prováděny ve třech YCSB kategoriích. A to Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (\ref{lab-workloads}).
+	
+	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a 95/99 percentil odezvy na operaci. V tabulce jsou i data o počtu spuštěných operací, průměrné odezvě na operaci, a také minimální a maximální doba odezvy na operaci.
 	
 	\chapter{Závěr}
 	

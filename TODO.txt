@@ -7,3 +7,11 @@ psát už ve větách cca 10 stran
 implmentace bude na test napříč co nejvíce KV systémama (můžná i drobné srovnání s relačníma pokud to půjde) a široké vlastnosti (inserty s updatama, dotazy atp.)
 
 Microsoft Azure Cosmos DB, významná kv db add or pass?
+
+
+
+Vyhodnocení výsledků testů - Kapitola
+	Testovací prostředí - Sekce
+	Popis testů - Sekce
+	Výsledky testů - Sekce
+	Zhodnocení testů - Sekce

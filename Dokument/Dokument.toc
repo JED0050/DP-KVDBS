@@ -22,8 +22,19 @@
 \contentsline {section}{\numberline {3.1}YCSB}{18}{section.3.1}%
 \contentsline {section}{\numberline {3.2}TPC}{20}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{22}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Závěr}{23}{chapter.5}%
-\contentsline {chapter}{Literatura}{24}{chapter*.8}%
+\contentsline {section}{\numberline {4.1}Testovací prostředí}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{23}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Závěr}{24}{chapter.5}%
+\contentsline {chapter}{Literatura}{25}{chapter*.9}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
