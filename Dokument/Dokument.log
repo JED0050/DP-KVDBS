@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  19 MAR 2024 22:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  3 APR 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,9 +1049,344 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(D:\Skola-SW\MikTex\tex/latex/pgf/frontendlayer\tikz.sty
+(D:\Skola-SW\MikTex\tex/latex/pgf/basiclayer\pgf.sty
+(D:\Skola-SW\MikTex\tex/latex/pgf/utilities\pgfrcs.sty
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks51
+\pgfutil@tempdima=\dimen195
+\pgfutil@tempdimb=\dimen196
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-common-lists.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box64
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfrcs.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/latex/pgf/basiclayer\pgfcore.sty
+(D:\Skola-SW\MikTex\tex/latex/pgf/systemlayer\pgfsys.sty
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks52
+\pgfkeys@temptoks=\toks53
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks54
+))
+\pgf@x=\dimen197
+\pgf@y=\dimen198
+\pgf@xa=\dimen199
+\pgf@ya=\dimen256
+\pgf@xb=\dimen257
+\pgf@yb=\dimen258
+\pgf@xc=\dimen259
+\pgf@yc=\dimen260
+\pgf@xd=\dimen261
+\pgf@yd=\dimen262
+\w@pgf@writea=\write5
+\r@pgf@reada=\read5
+\c@pgf@counta=\count449
+\c@pgf@countb=\count450
+\c@pgf@countc=\count451
+\c@pgf@countd=\count452
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
+\pgf@sys@id@count=\count453
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count454
+\pgfsyssoftpath@bigbuffer@items=\count455
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmath.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathcalc.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathutil.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen263
+\pgfmath@count=\count456
+\pgfmath@box=\box65
+\pgfmath@toks=\toks58
+\pgfmath@stack@operand=\toks59
+\pgfmath@stack@operation=\toks60
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.te
+x) (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.co
+de.tex))) (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count457
+))
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfint.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box66
+\pgf@hbox=\box67
+\pgf@layerbox@main=\box68
+\pgf@picture@serial@count=\count458
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen282
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
+) (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen286
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen287
+\pgf@sys@shading@range@num=\count459
+\pgf@shadingcount=\count460
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box69
+))
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box70
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(D:\Skola-SW\MikTex\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
+)
+(D:\Skola-SW\MikTex\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(D:\Skola-SW\MikTex\tex/latex/pgf/utilities\pgffor.sty
+(D:\Skola-SW\MikTex\tex/latex/pgf/utilities\pgfkeys.sty
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(D:\Skola-SW\MikTex\tex/latex/pgf/math\pgfmath.sty
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmath.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmath.code.tex)
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
+\pgffor@stack=\toks61
+\pgffor@toks=\toks62
+))
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count461
+\pgfplotmarksize=\dimen292
+)
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikz@lastmovetox=\dimen297
+\tikz@lastmovetoy=\dimen298
+\tikzleveldistance=\dimen299
+\tikzsiblingdistance=\dimen300
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count462
+\tikznumberofchildren=\count463
+\tikznumberofcurrentchild=\count464
+\tikz@fig@count=\count465
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count466
+\pgfmatrixcurrentcolumn=\count467
+\pgf@matrix@numberofcolumns=\count468
+)
+\tikz@expandcount=\count469
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytop
+aths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (D:\Skola-SW\MikTex\tex/latex/pgfplots\pgfplots.sty
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotscore.code.tex
+\t@pgfplots@toka=\toks63
+\t@pgfplots@tokb=\toks64
+\t@pgfplots@tokc=\toks65
+\pgfplots@tmpa=\dimen301
+\c@pgfplots@coordindex=\count470
+\c@pgfplots@scanlineindex=\count471
+
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_load
+er.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/libraries\pgflibraryfpu.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsutil.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsliststructure.co
+de.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsliststructureext
+.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count472
+)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count473
+\t@pgfplotstable@a=\toks66
+) (D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex
+) (D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsbinary.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.co
+de.tex
+\c@pgfplotslibrarysurf@no=\count474
+
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgf
+sys-pdftex.def)))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotscolormap.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotscolor.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotsstackedplots.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotsplothandlers.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex)))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.scaling.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.errorbars.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.markers.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotsticks.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.paths.code.tex)
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydec
+orations.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen302
+\pgfdecoratedremainingdistance=\dimen303
+\pgfdecoratedinputsegmentcompleteddistance=\dimen304
+\pgfdecoratedinputsegmentremainingdistance=\dimen305
+\pgf@decorate@distancetomove=\dimen306
+\pgf@decorate@repeatstate=\count475
+\pgfdecorationsegmentamplitude=\dimen307
+\pgfdecorationsegmentlength=\dimen308
+)
+\tikz@lib@dec@box=\box75
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydec
+orations.pathmorphing.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/libraries/decorations\pgflibrarydecorations
+.pathmorphing.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydec
+orations.pathreplacing.code.tex
+(D:\Skola-SW\MikTex\tex/generic/pgf/libraries/decorations\pgflibrarydecorations
+.pathreplacing.code.tex))
+(D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.co
+de.tex)
+\pgfplots@numplots=\count476
+\pgfplots@xmin@reg=\dimen309
+\pgfplots@xmax@reg=\dimen310
+\pgfplots@ymin@reg=\dimen311
+\pgfplots@ymax@reg=\dimen312
+\pgfplots@zmin@reg=\dimen313
+\pgfplots@zmax@reg=\dimen314
+)
+(D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplo
+tmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(D:\Skola-SW\MikTex\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 44
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 46
 .
 
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmr.fd
@@ -1059,24 +1394,24 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (Dokument.aux)
 \openout1 = `Dokument.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1114,17 +1449,17 @@ LaTeX Font Info:    ... okay on input line 44.
 
 (D:\Skola-SW\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count449
-\scratchdimen=\dimen195
-\scratchbox=\box64
-\nofMPsegments=\count450
-\nofMParguments=\count451
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count452
-\MPscratchDim=\dimen196
-\MPnumerator=\count453
-\makeMPintoPDFobject=\count454
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count477
+\scratchdimen=\dimen315
+\scratchbox=\box76
+\nofMPsegments=\count478
+\nofMParguments=\count479
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count480
+\MPscratchDim=\dimen316
+\MPnumerator=\count481
+\makeMPintoPDFobject=\count482
+\everyMPtoPDFconversion=\toks68
 ) (D:\Skola-SW\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1152,7 +1487,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 44.
+Package hyperref Info: Link coloring ON on input line 46.
 
 (D:\Skola-SW\MikTex\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1163,15 +1498,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (D:\Skola-SW\MikTex\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count455
+\c@section@level=\count483
 )
-LaTeX Info: Redefining \ref on input line 44.
-LaTeX Info: Redefining \pageref on input line 44.
-LaTeX Info: Redefining \nameref on input line 44.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 
 (Dokument.out) (Dokument.out)
-\@outlinefile=\write5
-\openout5 = `Dokument.out'.
+\@outlinefile=\write6
+\openout6 = `Dokument.out'.
 
 Package biblatex Info: Trying to load language 'czech' -> 'czech-iso'...
 Package biblatex Info: ... file 'czech-iso.lbx' found.
@@ -1218,52 +1553,58 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Dokument.bbl' found.
  (Dokument.bbl)
-Package biblatex Info: Reference section=0 on input line 44.
-Package biblatex Info: Reference segment=0 on input line 44.
-\c@lstlisting=\count456
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
-6.
+Package biblatex Info: Reference section=0 on input line 46.
+Package biblatex Info: Reference segment=0 on input line 46.
+\c@lstlisting=\count484
 
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 46.
+
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 4
+8.
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 pdfTeX warning: pdflatex.exe (file ./Figures/FEI_CZ.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<Figures/FEI_CZ.pdf, id=98, 350.70023pt x 109.21pt>
+<Figures/FEI_CZ.pdf, id=109, 350.70023pt x 109.21pt>
 File: Figures/FEI_CZ.pdf Graphic file (type pdf)
 <use Figures/FEI_CZ.pdf>
-Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 46.
+Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 48.
 (pdftex.def)             Requested size: 274.11765pt x 85.35826pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-6.
+8.
 (D:\Skola-SW\MikTex\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-6.
+8.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-46.
+48.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-46.
+48.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 46.
+(Font)              <14.4> on input line 48.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 46.
+(Font)              <10> on input line 48.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 46.
+(Font)              <7> on input line 48.
  [1
 
 
@@ -1273,44 +1614,44 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
  <./Figures/FEI_CZ.pdf>]
-<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=131, 597.23125pt x 845.1575
+<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=142, 597.23125pt x 845.1575
 pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 46.
+n input line 48.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 46.
+n input line 48.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=134, page=1, 597.23125pt x 
+<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=145, page=1, 597.23125pt x 
 845.1575pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 46.
+ used on input line 48.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 46.
+ used on input line 48.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 46.
+ used on input line 48.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 46.
+ used on input line 48.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 46.
+ used on input line 48.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 
 [2
@@ -1326,117 +1667,133 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 12.
-)
-\tf@toc=\write6
-\openout6 = `Dokument.toc'.
-
 
 [5
 
 
-] [6
+])
+\tf@toc=\write7
+\openout7 = `Dokument.toc'.
+
+ [6] [7
 
 
 ] (Dokument.lof)
-\tf@lof=\write7
-\openout7 = `Dokument.lof'.
-
- [7
-
-
-] (Dokument.lot)
-\tf@lot=\write8
-\openout8 = `Dokument.lot'.
+\tf@lof=\write8
+\openout8 = `Dokument.lof'.
 
  [8
 
-]
-Kapitola 1.
-[9
+
+] (Dokument.lot)
+\tf@lot=\write9
+\openout9 = `Dokument.lot'.
+
+ [9
 
 ]
-Kapitola 2.
+Kapitola 1.
 [10
 
 ]
-Underfull \vbox (badness 1360) has occurred while \output is active []
+Kapitola 2.
+[11
 
- [11]
+] [12]
 Underfull \vbox (badness 7907) has occurred while \output is active []
 
- [12]
-[13] [14]
+ [13]
+[14] [15]
 Underfull \vbox (badness 1360) has occurred while \output is active []
 
- [15]
-[16] [17]
+ [16]
+[17] [18]
 Kapitola 3.
 
-Overfull \hbox (0.12636pt too wide) in paragraph at lines 152--153
+Overfull \hbox (0.12636pt too wide) in paragraph at lines 155--156
 \T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou k °e-²ení jed-not-li-vých
  pro-blém· p°i-stu-po-vat od-li²n¥. Po-kud chceme
  []
 
-[18
+[19
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-65.
+68.
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Data/ycsb-1.jpg, id=336, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=356, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
-Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 193.
+Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 196.
 (pdftex.def)             Requested size: 351.31009pt x 262.77995pt.
- [19] [20 <./Data/ycsb-1.jpg>]
-[21]
+ [20] [21 <./Data/ycsb-1.jpg>]
+[22]
 Kapitola 4.
 
-Overfull \hbox (47.95074pt too wide) in paragraph at lines 236--248
+Overfull \hbox (47.95074pt too wide) in paragraph at lines 239--251
  [][] 
  []
 
-[22
-
-] [23]
-Kapitola 5.
-[24
+[23
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-76.
+Package pgfplots info on input line 288: Overriding colorspace to rgb due to xc
+olor configuration.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24] [25]
+Kapitola 5.
+[26
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+06.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 276--276
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 306--306
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[25
+[27
 
 ]
-Overfull \hbox (7.60954pt too wide) in paragraph at lines 276--276
+Overfull \hbox (12.80908pt too wide) in paragraph at lines 306--306
+\T1/lmtt/m/n/10.95 archive . org / web / 20190813163612 / https : / / www . dig
+italocean . com / community / tutorials /
+ []
+
+
+Overfull \hbox (6.64246pt too wide) in paragraph at lines 306--306
+[]\T1/lmr/m/n/10.95 COOPER, Brian F.; SIL-BER-STEIN, Adam; TAM, Er-win; RA-MAKR
+-ISH-NAN, Raghu; SEARS,
+ []
+
+
+Overfull \hbox (7.60954pt too wide) in paragraph at lines 306--306
 []\T1/lmr/m/n/10.95 OSE, Omoruyi; OKOKPU-JIE, Kennedy; NDU-JI-UBA, Nsikan Nko-r
 deh Charles; JOHN, Samuel;
  []
 
-[26]
-Overfull \hbox (50.44803pt too wide) in paragraph at lines 276--276
+[28]
+Overfull \hbox (50.44803pt too wide) in paragraph at lines 306--306
 [][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
 . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
 []
  []
 
-[27] (Dokument.aux)
+[29] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 44AD91959E609A72548418315DEB402A;3236.
+(rerunfilecheck)             Checksum: 4804144A67F3A4A2904A2730ACB3CBF0;3483.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1447,22 +1804,23 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27502 strings out of 478552
- 469273 string characters out of 2854123
- 996977 words of memory out of 3000000
- 45201 multiletter control sequences out of 15000+600000
+ 47939 strings out of 478552
+ 1038483 string characters out of 2854123
+ 1610099 words of memory out of 3000000
+ 65291 multiletter control sequences out of 15000+600000
  522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,17n,93p,2178b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,19n,93p,2172b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/en
-c/dvips/lm/lm-ts1.enc}<D:/Skola-SW/MikTex/fonts/type1/public/lm/lmbx10.pfb><D:/
-Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1
-/public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/
-Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type
-1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (27 pages, 1248588 bytes).
+c/dvips/lm/lm-rm.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}<D:/Skol
+a-SW/MikTex/fonts/type1/public/lm/lmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
+blic/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skol
+a-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
+blic/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/S
+kola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Dokument.pdf (29 pages, 1256867 bytes).
 PDF statistics:
- 527 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

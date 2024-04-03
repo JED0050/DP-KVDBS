@@ -17,11 +17,11 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{wiki-key-value-db}{online}{}
+  \entry{amaz-key-value-db}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Key–value database}
+    \field{title}{What Is a Key-Value Database?}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/Key%E2%80%93value_database
+    \verb https://aws.amazon.com/nosql/key-value/
     \endverb
     \field{langid}{english}
     \field{year}{2022}
@@ -207,7 +207,8 @@
     \field{labeltitlesource}{title}
     \field{title}{Multiversion concurrency control}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/Multiversion_concurrency_control
+    \verb https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-
+    \verb Opinions/What-is-MVCC-How-does-Multiversion-Concurrencty-Control-work
     \endverb
     \field{langid}{english}
     \field{year}{2022}
@@ -243,13 +244,42 @@
   \endentry
 
   \entry{crdt}{online}{}
+    \name{author}{4}{}{%
+      {{hash=SM}{%
+         family={Shapiro},
+         familyi={S\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Preguiça},
+         familyi={P\bibinitperiod},
+         given={Nuno},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Baquero},
+         familyi={B\bibinitperiod},
+         given={Carlos},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zawirski},
+         familyi={Z\bibinitperiod},
+         given={Marek},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMPNBCZM1}
+    \strng{fullhash}{SMPNBCZM1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Conflict-free replicated data type}
+    \field{title}{Conflict-free Replicated Data Types}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type
+    \verb https://inria.hal.science/hal-00932836/file/CRDTs_SSS-2011.pdf
     \endverb
     \field{langid}{english}
-    \field{year}{2022}
+    \field{year}{2014}
     \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
@@ -338,10 +368,12 @@
     \field{labeltitlesource}{title}
     \field{title}{Document-oriented database}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/Document-oriented_database
+    \verb https://web.archive.org/web/20190813163612/https://www.digitalocean.c
+    \verb om/community/tutorials/a-comparison-of-nosql-database-management-syst
+    \verb ems-and-models
     \endverb
     \field{langid}{english}
-    \field{year}{2023}
+    \field{year}{2019}
     \field{urlday}{28}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
@@ -362,9 +394,9 @@
 
   \entry{widecolumnstore}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Wide-column store}
+    \field{title}{Wide Column Stores}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/Wide-column_store
+    \verb https://db-engines.com/en/article/Wide+Column+Stores
     \endverb
     \field{langid}{english}
     \field{year}{2023}
@@ -387,10 +419,45 @@
   \endentry
 
   \entry{ycsb}{online}{}
+    \name{author}{5}{}{%
+      {{hash=CBF}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={Brian\bibnamedelima F.},
+         giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Silberstein},
+         familyi={S\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TE}{%
+         family={Tam},
+         familyi={T\bibinitperiod},
+         given={Erwin},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Ramakrishnan},
+         familyi={R\bibinitperiod},
+         given={Raghu},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Sears},
+         familyi={S\bibinitperiod},
+         given={Russell},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CBFSATERRSR1}
+    \strng{fullhash}{CBFSATERRSR1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{title}{Yahoo! Cloud Serving Benchmark (YCSB)}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/YCSB
+    \verb https://courses.cs.duke.edu/fall13/cps296.4/838-CloudPapers/ycsb.pdf
     \endverb
     \field{langid}{english}
     \field{year}{2023}
@@ -403,8 +470,8 @@
     \field{labeltitlesource}{title}
     \field{title}{Systém pro podporu rozhodování}
     \verb{url}
-    \verb https://cs.wikipedia.org/wiki/Syst%C3%A9m_pro_podporu_rozhodov%C3%A1n
-    \verb %C3%AD
+    \verb https://storm.fsv.cvut.cz/data/files/p%C5%99edm%C4%9Bty/RPZ/08-DSS.pd
+    \verb f
     \endverb
     \field{langid}{english}
     \field{year}{2023}
@@ -540,6 +607,19 @@
     \field{urlyear}{2023}
   \endentry
 
+  \entry{oltp}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Online transaction processing (OLTP)}
+    \verb{url}
+    \verb https://www.oracle.com/cz/database/what-is-oltp/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{iot}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{IoT definition in detail}
@@ -557,7 +637,7 @@
     \field{labeltitlesource}{title}
     \field{title}{TPC-C}
     \verb{url}
-    \verb https://en.wikipedia.org/wiki/TPC-C
+    \verb https://www.tpc.org/tpcc/
     \endverb
     \field{langid}{english}
     \field{year}{2023}
@@ -591,19 +671,6 @@
     \field{urlday}{19}
     \field{urlmonth}{03}
     \field{urlyear}{2024}
-  \endentry
-
-  \entry{oltp}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Online transaction processing (OLTP)}
-    \verb{url}
-    \verb https://en.wikipedia.org/wiki/Online_transaction_processing
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{19}
-    \field{urlmonth}{03}
-    \field{urlyear}{2023}
   \endentry
 \enddatalist
 \endinput

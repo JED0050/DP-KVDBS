@@ -20,7 +20,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'field_info' (item size: 4) to 10600 items.
+Reallocating 'field_info' (item size: 4) to 10740 items.
 Database file #1: Dokument-blx.bib
 Database file #2: citace.bib
 Repeated entry---line 135 of file citace.bib
@@ -32,43 +32,43 @@ Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 You've used 41 entries,
             6399 wiz_defined-function locations,
-            1351 strings with 12566 characters,
-and the built_in function-call counts, 236732 in all, are:
-= -- 4880
-> -- 30772
-< -- 1530
-+ -- 28974
-- -- 27866
-* -- 5793
-:= -- 35089
+            1355 strings with 12911 characters,
+and the built_in function-call counts, 256337 in all, are:
+= -- 6716
+> -- 31106
+< -- 1574
++ -- 29773
+- -- 28029
+* -- 7357
+:= -- 37896
 add.period$ -- 0
 call.type$ -- 41
-change.case$ -- 132
+change.case$ -- 140
 chr.to.int$ -- 1966
 cite$ -- 80
-duplicate$ -- 16535
-empty$ -- 15556
-format.name$ -- 208
-if$ -- 26638
+duplicate$ -- 18555
+empty$ -- 16817
+format.name$ -- 429
+if$ -- 30328
 int.to.chr$ -- 0
-int.to.str$ -- 43
+int.to.str$ -- 45
 missing$ -- 0
-newline$ -- 608
-num.names$ -- 114
-pop$ -- 13119
+newline$ -- 675
+num.names$ -- 190
+pop$ -- 13287
 preamble$ -- 1
-purify$ -- 153
+purify$ -- 188
 quote$ -- 0
-skip$ -- 5039
+skip$ -- 5326
 stack$ -- 0
-substring$ -- 11105
-swap$ -- 5306
-text.length$ -- 1276
+substring$ -- 14657
+swap$ -- 5507
+text.length$ -- 1329
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 1382
 warning$ -- 0
-while$ -- 1957
+while$ -- 2307
 width$ -- 0
-write$ -- 568
+write$ -- 635
 (There was 1 error message)
