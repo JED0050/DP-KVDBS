@@ -15,3 +15,31 @@ Vyhodnocení výsledků testů - Kapitola
 	Popis testů - Sekce
 	Výsledky testů - Sekce
 	Zhodnocení testů - Sekce
+	
+	
+---
+
+Str. 1:
+ukládání, načítání a správu různých datových struktur
+	Jak to myslíte? v databázi ukládáte data do datových struktur ...
+
+Na konci úvodní kapitoly chybí popis struktury práce.
+Chybí popis jednotlivých vlastností tabulky na str. 17.
+Chybí popis existujících testů a srovnání Key-Value DBS.
+Určitě do srovnání zařaďte i ukázky vkládání a dotazování dat.
+Nakolik je TPC relevantní pro Key-Value DBS?
+V 4.1 není popis testovacího prostředí, popis tedy úplně chybí.
+Chybí ukázky testů, tedy dat i operací.
+Chybí výsledky.
+
+Zkuste tedy vložit výsledky, opravte a pošlete znovu.
+
+Jak bude testovací prostředí přístupné pro vedoucího i oponenta?
+
+---
+
+
+Otázky:
+- Key-value nebo key-value?
+- jak udělat správné sloupsové grafy?
+- jak připravit testovací prostředí? návod jak to nainstalovat nebo nějaký vzdálený přístup? udělat to někde na školním serveru?

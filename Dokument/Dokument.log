@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  8 APR 2024 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  9 APR 2024 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1703,19 +1703,15 @@ Kapitola 2.
 Underfull \vbox (badness 7907) has occurred while \output is active []
 
  [13]
-[14] [15]
-Underfull \vbox (badness 1360) has occurred while \output is active []
-
- [16]
-[17] [18]
+[14] [15] [16] [17] [18] [19]
 Kapitola 3.
 
 Overfull \hbox (0.12636pt too wide) in paragraph at lines 155--156
-\T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou k °e-²ení jed-not-li-vých
- pro-blém· p°i-stu-po-vat od-li²n¥. Po-kud chceme
+\T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou p°i-stu-po-vat k °e-²ení 
+jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
  []
 
-[19
+[20
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
@@ -1723,20 +1719,20 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Data/ycsb-1.jpg, id=356, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=364, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 196.
 (pdftex.def)             Requested size: 351.31009pt x 262.77995pt.
- [20] [21 <./Data/ycsb-1.jpg>]
-[22]
+ [21] [22 <./Data/ycsb-1.jpg>]
+[23]
 Kapitola 4.
 
 Overfull \hbox (47.95074pt too wide) in paragraph at lines 239--251
  [][] 
  []
 
-[23
+[24
 
 ]
 Package pgfplots info on input line 288: Overriding colorspace to rgb due to xc
@@ -1745,9 +1741,9 @@ olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24] [25]
+[25] [26]
 Kapitola 5.
-[26
+[27
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
@@ -1761,7 +1757,7 @@ ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[27
+[28
 
 ]
 Overfull \hbox (12.80908pt too wide) in paragraph at lines 306--306
@@ -1781,14 +1777,14 @@ Overfull \hbox (7.60954pt too wide) in paragraph at lines 306--306
 deh Charles; JOHN, Samuel;
  []
 
-[28]
+[29]
 Overfull \hbox (50.44803pt too wide) in paragraph at lines 306--306
 [][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
 . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
 []
  []
 
-[29] (Dokument.aux)
+[30] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1804,13 +1800,13 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47939 strings out of 478552
- 1038483 string characters out of 2854123
- 1610117 words of memory out of 3000000
- 65291 multiletter control sequences out of 15000+600000
+ 47945 strings out of 478552
+ 1038661 string characters out of 2854123
+ 1610169 words of memory out of 3000000
+ 65295 multiletter control sequences out of 15000+600000
  522757 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,19n,93p,2172b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,19n,93p,2171b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/en
 c/dvips/lm/lm-rm.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}<D:/Skol
 a-SW/MikTex/fonts/type1/public/lm/lmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
@@ -1818,9 +1814,9 @@ blic/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skol
 a-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
 blic/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/S
 kola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (29 pages, 1256930 bytes).
+Output written on Dokument.pdf (30 pages, 1260436 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

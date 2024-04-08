@@ -230,6 +230,19 @@
     \field{urlyear}{2023}
   \endentry
 
+  \entry{bdbsql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Getting and Installing BDB SQL}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E17276_01/html/bdb-sql/buildinstall.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{08}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{riak}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Riak KV}
