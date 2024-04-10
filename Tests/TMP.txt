@@ -164,3 +164,43 @@ Run 1M
 [UPDATE], Return=ERROR, 4541
 
 
+
+
+Redis load 1M
+[OVERALL], RunTime(ms), 385618
+[OVERALL], Throughput(ops/sec), 2593.2399421188843
+[TOTAL_GCS_PS_Scavenge], Count, 602
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 179
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.04641899496392803
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 602
+[TOTAL_GC_TIME], Time(ms), 179
+[TOTAL_GC_TIME_%], Time(%), 0.04641899496392803
+[CLEANUP], Operations, 4
+[CLEANUP], AverageLatency(us), 492.75
+[CLEANUP], MinLatency(us), 76
+[CLEANUP], MaxLatency(us), 1696
+[CLEANUP], 95thPercentileLatency(us), 1696
+[CLEANUP], 99thPercentileLatency(us), 1696
+[INSERT], Operations, 1000000
+[INSERT], AverageLatency(us), 1539.097915
+[INSERT], MinLatency(us), 724
+[INSERT], MaxLatency(us), 62975
+[INSERT], 95thPercentileLatency(us), 2153
+[INSERT], 99thPercentileLatency(us), 3199
+[INSERT], Return=OK, 1000000
+
+Runtime(ms)	385618
+Throughput(ops/sec)	2593,239942
+Operations	1000000
+AverageLatency(us)	1539,097915
+MinLatency(us)	724
+MaxLatency(us)	62975
+95thPercentileLatency(us)	2153
+99thPercentileLatency(us)	3199
+
+
+
+
