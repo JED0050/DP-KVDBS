@@ -19,11 +19,6 @@ Vyhodnocení výsledků testů - Kapitola
 	
 ---
 
-Str. 1:
-ukládání, načítání a správu různých datových struktur
-	Jak to myslíte? v databázi ukládáte data do datových struktur ...
-
-Na konci úvodní kapitoly chybí popis struktury práce.
 Chybí popis jednotlivých vlastností tabulky na str. 17.
 Chybí popis existujících testů a srovnání Key-Value DBS.
 Určitě do srovnání zařaďte i ukázky vkládání a dotazování dat.
@@ -35,11 +30,3 @@ Chybí výsledky.
 Zkuste tedy vložit výsledky, opravte a pošlete znovu.
 
 Jak bude testovací prostředí přístupné pro vedoucího i oponenta?
-
----
-
-
-Otázky:
-- Key-value nebo key-value?
-- jak udělat správné sloupsové grafy?
-- jak připravit testovací prostředí? návod jak to nainstalovat nebo nějaký vzdálený přístup? udělat to někde na školním serveru?
