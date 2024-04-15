@@ -1,6 +1,6 @@
 -graf Workload A - Min Avg Max
 	graf Workload A - Percentile 95/99%
-graf Workload A - Propustnost
+-graf Workload A - Propustnost
 graf Workload B - Min Avg Max
 	graf Workload B - Percentile 95/99%
 graf Workload B - Propustnost
@@ -8,5 +8,5 @@ graf Workload C - Min Avg Max
 	graf Workload C - Percentile 95/99%
 graf Workload C - Propustnost
 graf Insert ABC - Min Avg Max
-graf Insert ABC - Percentile 95/99%
+	graf Insert ABC - Percentile 95/99%
 graf Insert ABC - Propustnost

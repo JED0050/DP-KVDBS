@@ -9,10 +9,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces YCSB rámec testování funkčnosti \blx@tocontentsinit {0}\cite {ycsb-parallel-data-lab}\relax }}{23}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Workload A - Latency (ms) Min Avg Max\relax }}{27}{figure.caption.9}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Workload A - Percentile Latency (ms)\relax }}{27}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Workload B - Percentile Latency (ms)\relax }}{27}{figure.caption.11}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Workload C - Percentile Latency (ms)\relax }}{28}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Workload A - Throughput (ops/sec)\relax }}{27}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Workload A - Latency (ms) Min Avg Max\relax }}{27}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Workload A - Percentile Latency (ms)\relax }}{27}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Workload B - Percentile Latency (ms)\relax }}{28}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Workload C - Percentile Latency (ms)\relax }}{28}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Insert only - Percentile Latency (ms)\relax }}{29}{figure.caption.14}%
 \addvspace {10\p@ }
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
