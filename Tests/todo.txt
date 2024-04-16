@@ -1,12 +1,20 @@
--graf Workload A - Min Avg Max
+	graf Workload A - Min Avg
 	graf Workload A - Percentile 95/99%
--graf Workload A - Propustnost
-graf Workload B - Min Avg Max
+	graf Workload A - Propustnost
+	graf Insert ABC - Max
+	graf Workload B - Min Avg Max
 	graf Workload B - Percentile 95/99%
-graf Workload B - Propustnost
-graf Workload C - Min Avg Max
+	graf Workload B - Propustnost
+	graf Workload C - Min Avg Max
 	graf Workload C - Percentile 95/99%
-graf Workload C - Propustnost
-graf Insert ABC - Min Avg Max
+	graf Workload C - Propustnost
+	graf Insert ABC - Min Avg Max
 	graf Insert ABC - Percentile 95/99%
-graf Insert ABC - Propustnost
+	graf Insert ABC - Propustnost
+
+
+
+				\addplot coordinates {(Min,0.3151666667) (Avg,0.830447166) (Max,47.92433333)};
+				\addplot coordinates {(Min,0.317) (Avg,0.7842715474) (Max,28.53233333)};
+				\addplot coordinates {(Min,0.4015) (Avg,0.9679028534) (Max,82.71366667)};
+				\addplot coordinates {(Min,1.694) (Avg,4.058593436) (Max,163.0176667)};

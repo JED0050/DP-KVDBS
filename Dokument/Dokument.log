@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  15 APR 2024 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  17 APR 2024 00:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1719,7 +1719,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Data/ycsb-1.jpg, id=381, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=391, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 206.
@@ -1738,83 +1738,126 @@ Overfull \hbox (47.95074pt too wide) in paragraph at lines 249--261
 Package pgfplots info on input line 315: Overriding colorspace to rgb due to xc
 olor configuration.
 
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 322--323
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 361: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 356: Overriding colorspace to rgb due to xc
+olor configuration.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 362.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 362.
+
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 363--364
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package pgfplots info on input line 396: Overriding colorspace to rgb due to xc
+olor configuration.
+
+Overfull \hbox (50.89632pt too wide) in paragraph at lines 403--404
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package pgfplots info on input line 442: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 401: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 482: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 441: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 528: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 481: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 568: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 521: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 614: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] [27] [28] [29]
+Package pgfplots info on input line 654: Overriding colorspace to rgb due to xc
+olor configuration.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package pgfplots info on input line 700: Overriding colorspace to rgb due to xc
+olor configuration.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package pgfplots info on input line 740: Overriding colorspace to rgb due to xc
+olor configuration.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26] [27] [28] [29] [30] [31] [32]
 Kapitola 5.
-[30
+[33
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-39.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+58.
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 539--539
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 758--758
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[31
+[34
 
 ]
-Overfull \hbox (12.80908pt too wide) in paragraph at lines 539--539
+Overfull \hbox (12.80908pt too wide) in paragraph at lines 758--758
 \T1/lmtt/m/n/10.95 archive . org / web / 20190813163612 / https : / / www . dig
 italocean . com / community / tutorials /
  []
 
 
-Overfull \hbox (6.64246pt too wide) in paragraph at lines 539--539
+Overfull \hbox (6.64246pt too wide) in paragraph at lines 758--758
 []\T1/lmr/m/n/10.95 COOPER, Brian F.; SIL-BER-STEIN, Adam; TAM, Er-win; RA-MAKR
 -ISH-NAN, Raghu; SEARS,
  []
 
 
-Overfull \hbox (7.60954pt too wide) in paragraph at lines 539--539
+Overfull \hbox (7.60954pt too wide) in paragraph at lines 758--758
 []\T1/lmr/m/n/10.95 OSE, Omoruyi; OKOKPU-JIE, Kennedy; NDU-JI-UBA, Nsikan Nko-r
 deh Charles; JOHN, Samuel;
  []
 
-[32]
-Overfull \hbox (50.44803pt too wide) in paragraph at lines 539--539
+[35]
+Overfull \hbox (50.44803pt too wide) in paragraph at lines 758--758
 [][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
 . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
 []
  []
 
-[33] (Dokument.aux)
+[36] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 5A7E3613F8EA0A58605FA14AB8257A12;3483.
+(rerunfilecheck)             Checksum: 44C0496637406B0D197E40558CAD3B1A;3483.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1825,24 +1868,26 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48059 strings out of 478552
- 1041121 string characters out of 2854123
- 1756568 words of memory out of 3000000
- 65401 multiletter control sequences out of 15000+600000
- 522757 words of font info for 61 fonts, out of 8000000 for 9000
+ 48149 strings out of 478552
+ 1042819 string characters out of 2854123
+ 1759298 words of memory out of 3000000
+ 65476 multiletter control sequences out of 15000+600000
+ 532941 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,2141b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/en
 c/dvips/lm/lm-mathit.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{D:/S
 kola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}<D:/Skola-SW/MikTex/fonts/type1/pu
 blic/lm/lmbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmmi10.pfb><D:/Sko
-la-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
-blic/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Sko
-la-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type1/p
-ublic/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Dokument.pdf (33 pages, 1295056 bytes).
+la-SW/MikTex/fonts/type1/public/lm/lmmi9.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
+blic/lm/lmr10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmr9.pfb><D:/Skola-
+SW/MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/publ
+ic/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola
+-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/p
+ublic/lm/lmtt10.pfb>
+Output written on Dokument.pdf (36 pages, 1327978 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 500000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

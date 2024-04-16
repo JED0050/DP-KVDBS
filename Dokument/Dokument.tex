@@ -286,26 +286,107 @@
 	
 	\begin{figure}[h]
 		\centering
-		\begin{tikzpicture}[scale=0.5]
+		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Throughput (ops/sec)},
+				ylabel={Throughput (kiloops/sec)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
 				ybar=5pt,
 				bar width=15pt,
 				x=4cm,
-				y=1.5cm,
+				%y=1.5cm,
 				ymin=0,
 				axis on top,
-				ymax=4.5,
+				%ymax=5.5,
 				xtick=data,
-				enlarge x limits=0.5,
+				enlarge x limits=0.2,
 				symbolic x coords={Workload A, Workload B, Workload C, Insert only},
-				restrict y to domain*=0:5.1, % Cut values off at 3
+				%restrict y to domain*=0:6, % Cut values off at 3
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+				%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis %cs:1,1.05);
+				%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				axis lines*=left,
+				clip=false
+				]
+				\addplot coordinates {(Workload A,4.8) (Workload B,4.726958) (Workload C,4.8683) (Insert only,2.553)};
+				\addplot coordinates {(Workload A,5.081) (Workload B,4.9454377) (Workload C,4.77812) (Insert only,4.95306)};
+				\addplot coordinates {(Workload A,4.1087) (Workload B,3.863588) (Workload C,4.51767) (Insert only,3.93796)};
+				\addplot coordinates {(Workload A,1.2839777) (Workload B,1.77815) (Workload C,1.7833) (Insert only,1.0524)};
+				\legend{Redis,Aerospike,Memcached,Riak KV}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Workloads A, B, C + Insert only - Throughput (kiloops/sec)}
+		\label{graph_Workloads A, B, C + Insert only - Throughput (kiloops/sec)}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				ylabel={Runtime (s)},
+				legend style={at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
+				%y=1.5cm, % změněno
+				ymin=0,
+				axis on top,
+				%ymax=500, % změněno
+				xtick=data,
+				enlarge x limits=0.2,
+				symbolic x coords={Workload A, Workload B, Workload C, Insert only},
+				%restrict y to domain*=0:6, % Cut values off at 3
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+					%    \draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+					%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				nodes near coords style={font=\footnotesize, rotate=30, xshift=0.1cm, yshift=0.1cm}, % změněno na north
+				%nodes near coords align={left}, % posunuto pouze doleva
+				axis lines*=left,
+				clip=false,
+				]
+				\addplot coordinates {(Workload A,208.4) (Workload B,212.0) (Workload C,205.5) (Insert only,39.19)};
+				\addplot coordinates {(Workload A,196.8) (Workload B,202.3) (Workload C,209.5) (Insert only,20.21)};
+				\addplot coordinates {(Workload A,243.4) (Workload B,263.2) (Workload C,221.4) (Insert only,25.41)};
+				\addplot coordinates {(Workload A,803.9) (Workload B,562.8) (Workload C,562.0) (Insert only,69.75)};
+				\legend{Redis,Aerospike,Memcached,Riak KV}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Workloads A, B, C + Insert only - Runtime (s)}
+		\label{graph_Workloads A, B, C + Insert only - Runtime(s)}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				ylabel={Latency (ms)},
+				legend style={at={(0.5,-0.2)},
+					anchor=north,legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=7pt,
+				bar width=17pt,
+				x=4cm,
+				%y=1.5cm,
+				ymin=0,
+				axis on top,
+				ymax=170,
+				xtick=data,
+				enlarge x limits=0.2,
+				symbolic x coords={Workload A, Workload B, Workload C, Insert only},
+				restrict y to domain*=0:190, % Cut values off at 3
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
 				after end axis/.code={ % Draw line indicating break
-					\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+						\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
 				},
 				nodes near coords={%
 					\pgfmathprintnumber{\rawy}% Print unclipped values
@@ -313,44 +394,44 @@
 				axis lines*=left,
 				clip=false
 				]
-				\addplot coordinates {(Workload A,2.219) (Workload B,3.195) (Workload C,3.195) (Insert only,3.195)};
-				\addplot coordinates {(Workload A,1.11933) (Workload B,1.690) (Workload C,3.195) (Insert only,3.195)};
-				\addplot coordinates {(Workload A,1.5366) (Workload B,2.32233) (Workload C,3.195) (Insert only,3.195)};
-				\addplot coordinates {(Workload A,4.3863) (Workload B,8.12433) (Workload C,3.195) (Insert only,3.195)};
+				\addplot coordinates {(Workload A,47.92) (Workload B,46.00) (Workload C,33.94) (Insert only,23.26)};
+				\addplot coordinates {(Workload A,28.53) (Workload B,21.43) (Workload C,41.88) (Insert only,34.93)};
+				\addplot coordinates {(Workload A,82.71) (Workload B,101.82) (Workload C,39.07) (Insert only,70.64)};
+				\addplot coordinates {(Workload A,163.02) (Workload B,118.79) (Workload C,83.90) (Insert only,325.89)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload A - Throughput (ops/sec)}
-		\label{graph_Workload A - Throughput (ops/sec)}
+		\caption{Workloads A, B, C + Insert only - Max Latency (ms)}
+		\label{graph_Workloads A, B, C + Insert only - Max Latency (ms)}
 	\end{figure}
 	
 	\begin{figure}[h]
 		\centering
-		\begin{tikzpicture}[scale=0.5]
+		\begin{tikzpicture}
 			\begin{axis}[
 				ylabel={Latency (ms)},
-				symbolic x coords={Min,Avg,Max},
+				symbolic x coords={Min,Avg},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
-				ybar=4pt,
-				bar width=24pt,
-				x=6cm,
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
 				%xmin=0,
 				%width=15cm,
-				y=1.5cm,
+				%y=1.5cm,
 				ymin=0,
 				axis on top,
-				ymax=4.3,
+				%ymax=200,
 				xtick=data,
 				%xmin=Min-15,
 				%xtick distance=10,
-				enlarge x limits=1.5,
-				restrict y to domain*=0:5, % Cut values off at 14
+				enlarge x limits=0.5,
+				%restrict y to domain*=0:300, % Cut values off at 14
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
-				after end axis/.code={ % Draw line indicating break
-					\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
-				},
+				%after end axis/.code={ % Draw line indicating break
+				%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+				%},
 				nodes near coords={%
 					\pgfmathprintnumber{\rawy}% Print unclipped values
 				},
@@ -359,15 +440,15 @@
 				%extra x ticks={Min, Avg, Max},
 				%x tick style={xticklabel style={xshift=-20pt}}
 				]
-				\addplot coordinates {(Min,0.3151666667) (Avg,0.830447166) (Max,47.92433333)};
-				\addplot coordinates {(Min,0.317) (Avg,0.7842715474) (Max,28.53233333)};
-				\addplot coordinates {(Min,0.4015) (Avg,0.9679028534) (Max,82.71366667)};
-				\addplot coordinates {(Min,1.694) (Avg,4.058593436) (Max,163.0176667)};
+				\addplot coordinates {(Min,0.3151666667) (Avg,0.830447166)};
+				\addplot coordinates {(Min,0.317) (Avg,0.7842715474)};
+				\addplot coordinates {(Min,0.4015) (Avg,0.9679028534)};
+				\addplot coordinates {(Min,1.694) (Avg,4.058593436)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload A - Latency (ms) Min Avg Max}
-		\label{graph_Workload A - Latency (ms) Min Avg Max}
+		\caption{Workload A - Min Avg Latency (ms)}
+		\label{graph_Workload A - Min Avg Latency (ms)}
 	\end{figure}
 	
 	\begin{figure}[h]
@@ -414,6 +495,52 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
+				ylabel={Latency (ms)},
+				symbolic x coords={Min,Avg},
+				legend style={at={(0.5,-0.2)},
+					anchor=north,legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
+				%xmin=0,
+				%width=15cm,
+				%y=1.5cm,
+				ymin=0,
+				axis on top,
+				%ymax=200,
+				xtick=data,
+				%xmin=Min-15,
+				%xtick distance=10,
+				enlarge x limits=0.5,
+				%restrict y to domain*=0:300, % Cut values off at 14
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+					%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+					%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				axis lines*=left,
+				clip=false,
+				%extra x ticks={Min, Avg, Max},
+				%x tick style={xticklabel style={xshift=-20pt}}
+				]
+				\addplot coordinates {(Min,0.33) (Avg,0.84)};
+				\addplot coordinates {(Min,0.33) (Avg,0.81)};
+				\addplot coordinates {(Min,0.40) (Avg,1.06)};
+				\addplot coordinates {(Min,1.80) (Avg,3.95)};
+				\legend{Redis,Aerospike,Memcached,Riak KV}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Workload B - Min Avg Latency (ms)}
+		\label{graph_Workload B - Min Avg Latency (ms)}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
 				ylabel={Percentile Latency (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -454,6 +581,52 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
+				ylabel={Latency (ms)},
+				symbolic x coords={Min,Avg},
+				legend style={at={(0.5,-0.2)},
+					anchor=north,legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
+				%xmin=0,
+				%width=15cm,
+				%y=1.5cm,
+				ymin=0,
+				axis on top,
+				%ymax=200,
+				xtick=data,
+				%xmin=Min-15,
+				%xtick distance=10,
+				enlarge x limits=0.5,
+				%restrict y to domain*=0:300, % Cut values off at 14
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+					%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+					%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				axis lines*=left,
+				clip=false,
+				%extra x ticks={Min, Avg, Max},
+				%x tick style={xticklabel style={xshift=-20pt}}
+				]
+				\addplot coordinates {(Min,0.31) (Avg,0.82)};
+				\addplot coordinates {(Min,0.32) (Avg,0.84)};
+				\addplot coordinates {(Min,0.38) (Avg,0.88)};
+				\addplot coordinates {(Min,0.80) (Avg,2.24)};
+				\legend{Redis,Aerospike,Memcached,Riak KV}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Workload C - Min Avg Latency (ms)}
+		\label{graph_Workload C - Min Avg Latency (ms)}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
 				ylabel={Percentile Latency (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -488,6 +661,52 @@
 		\end{tikzpicture}
 		\caption{Workload C - Percentile Latency (ms)}
 		\label{graph_Workload C - Percentile Latency (ms)}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				ylabel={Latency (ms)},
+				symbolic x coords={Min,Avg},
+				legend style={at={(0.5,-0.2)},
+					anchor=north,legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
+				%xmin=0,
+				%width=15cm,
+				%y=1.5cm,
+				ymin=0,
+				axis on top,
+				%ymax=200,
+				xtick=data,
+				%xmin=Min-15,
+				%xtick distance=10,
+				enlarge x limits=0.5,
+				%restrict y to domain*=0:300, % Cut values off at 14
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+					%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis cs:1,1.05);
+					%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				axis lines*=left,
+				clip=false,
+				%extra x ticks={Min, Avg, Max},
+				%x tick style={xticklabel style={xshift=-20pt}}
+				]
+				\addplot coordinates {(Min,0.76) (Avg,1.56)};
+				\addplot coordinates {(Min,0.32) (Avg,0.80)};
+				\addplot coordinates {(Min,0.41) (Avg,0.98)};
+				\addplot coordinates {(Min,1.12) (Avg,2.75)};
+				\legend{Redis,Aerospike,Memcached,Riak KV}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Insert only - Min Avg Latency (ms)}
+		\label{graph_Insert only - Min Avg Latency (ms)}
 	\end{figure}
 	
 	\begin{figure}[h]
