@@ -12,23 +12,49 @@
 \contentsline {section}{\numberline {2.1}Amazon DynamoDB}{12}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Redis}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Aerospike}{14}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{15}{section.2.5}%
+\contentsline {section}{\numberline {2.4}Aerospike}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{16}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Riak KV}{16}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Voldemort}{17}{section.2.7}%
-\contentsline {section}{\numberline {2.8}InfinityDB}{18}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Nezmíněné významné NoSQL databáze}{19}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}YCSB}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TPC}{23}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací prostředí}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{26}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštěná testů}{26}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Výsledky testů}{26}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Závěr}{33}{chapter.5}%
-\contentsline {chapter}{Literatura}{34}{chapter*.20}%
+\contentsline {section}{\numberline {2.8}InfinityDB}{19}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Memcached}{19}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{20}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}YCSB}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TPC}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{25}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací prostředí}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštěná testů}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Výsledky testů}{27}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Závěr}{34}{chapter.5}%
+\contentsline {chapter}{Literatura}{35}{chapter*.20}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

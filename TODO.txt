@@ -22,7 +22,6 @@ Vyhodnocení výsledků testů - Kapitola
 Chybí popis jednotlivých vlastností tabulky na str. 17.
 Chybí popis existujících testů a srovnání Key-Value DBS.
 Určitě do srovnání zařaďte i ukázky vkládání a dotazování dat.
-Nakolik je TPC relevantní pro Key-Value DBS?
 V 4.1 není popis testovacího prostředí, popis tedy úplně chybí.
 Chybí ukázky testů, tedy dat i operací.
 Chybí výsledky.

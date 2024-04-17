@@ -70,7 +70,13 @@
 	
 	\chapter{Key-value databázové systémy\label{chapter:no-sql-ky-sys}}
 	
-	V současné době existuje spousta různých KDBS, od malých open-source projektů po velké placené cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je propustnost, škálovatelnost, uživatelská přívětivost skrze dotazovací jazyk a podpora atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno 8 aktuálně významných KDBS, snažících se o jednoduchý popis, porovnání (\ref{tab_kvdb_compare}) a konečný výběr některých z těchto vhodných KDBS s cílem otestovat vlastnosti některých z těchto systémů.
+	V současné době existuje spousta různých KDBS, od malých open-source projektů po velké placené cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je propustnost, škálovatelnost, uživatelská přívětivost skrze dotazovací jazyk a podpora atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno 9 aktuálně významných KDBS, snažících se o jednoduchý popis, porovnání (\ref{tab_kvdb_compare}) a konečný výběr některých z těchto vhodných KDBS s cílem otestovat vlastnosti některých z těchto systémů.
+	
+	Při popisu jednotlivých KDBS v této kapitole se často hovoří o tom, jak je KDBS distribuovaná, a také o tom, jak škáluje při rostoucím objemu dat. Proto zde ještě popíšeme tyto dva pojmy.
+	
+	Distribuovaná databáze~\cite{ddbs} je typ databázového systému, který ukládá data na několik počítačů nebo uzlů v rámci sítě. Tento přístup umožňuje efektivnější zpracování velkých objemů dat a zlepšuje odolnost systému vůči výpadkům jednotlivých uzlů. Distribuovaná architektura umožňuje systému růst s rostoucím objemem dat a zároveň snižuje riziko selhání jednoho centrálního bodu, což zvyšuje celkovou spolehlivost a dostupnost systému.
+	
+	Škálovatelnost~\cite{scalability} je schopnost systému přizpůsobit se zvýšené zátěži nebo rostoucímu objemu dat a zachovat požadovanou úroveň výkonu a dostupnosti. Existují různé druhy škálovatelnosti. Horizontální škálovatelnost zahrnuje rozložení zátěže a zvýšení celkové kapacity přidáním dalších uzlů nebo serverů k distribuovanému systému. Vertikální škálovatelnost zlepšuje výkon jednotlivých uzlů nebo serverů zvětšením jejich výpočetní nebo paměťové kapacity. Lineární škálovatelnost je ideální situace, kdy se se zvýšením zdrojů (buď horizontálně nebo vertikálně) zvyšuje výkon systému lineárně.
 	
 	\section{Amazon DynamoDB}
 	
@@ -120,6 +126,12 @@
 	InfinityDB~\cite{infinitydb} je NoSQL hierarchicky tříděná KDBS implementovaná v jazyce Java. Databáze má možnost využít čistě In-Memory ukládání dat, která je vhodné pro cache, nebo naopak se mohou data ukládat i perzistentně na disk do souboru, přičemž je možné měnit nastavení bez zasahování do kódu. Přístup k datům v cache je plně vícevláknový, využívá se většina jader, a data, která nejsou často využívaná, jsou stránkována na disk. Databáze dosahuje výkonu v jednotkách milionů operací za sekundu pro více vláknové operace v cache. Veškerá data a informace o databázi jsou uložena na disku v jednom souboru, což zajišťuje jejich aktuálnost a zároveň maximalizuje bezpečnost a korektnost. Databáze je designována právě pro použití jednoho kompletního souboru s okamžitým zotavením a nevyžaduje proto administraci. Databáze neobsahuje dodatečné konfigurační nebo dočasné soubory, upgrade skripty ani logy. Zotavení je bez logů o transakcích okamžité ihned po restartu. V databázi není potřeba dělat čištění junk souborů po operacích, když zde nejsou žádné zanechány. InfinityDB podporuje ACID pro vlákna a ACD pro bulk operace. Databáze poskytuje prostor pro ukládání strukturovaných, polostrukturovaných a nestrukturovaných dat. Tento jednoduchý model umožňuje ukládání vnořených Multi-values a je možné reprezentovat různé datové struktury, jako jsou stromy, grafy, key/value mapy, dokumenty, velká řídká pole a tabulky. Schema je možné měnit za běhu pro zpětnou i následující kompatibilitu. Data dotazů lze dynamicky sledovat pomocí set logic views, delta views a ranges. Databáze se využívá pro servery, pracovní stanice a příruční zařízení.
 	
 	InfinityDB poskytuje základní jednoduché API o deseti hlavních voláních. Funkcionalitu pro vkládání, úpravu a mazání hodnot zajišťují funkce Insert, Update a Delete. Funkce Delete je rozšířena o funkci Delete-suffixes, která umožňuje odstranit více hodnot v jednom volání. Pro získávání hodnot se využívá kurzoru, jehož pohyb v obou směrech zajišťují funkce First, Next, Last a Previous. Nakonec jsou k dispozici také potřebné funkce Commit a Rollback pro možnost využívání transakcí.
+	
+	\section{Memcached}
+	
+	Memcached~\cite{memcached} je open-source, distribuované, in-memory key-value úložiště, navržené pro rychlý a efektivní caching. Primárním účelem Memcached je uchovávání často používaných dat v paměti, aby se snížila latence a zvýšila rychlost přístupu k nim. Jeho jednoduchý a efektivní přístup k ukládání a získávání dat ho činí populární volbou pro webové servery, kde je potřeba rychle cachovat často používané informace jako například HTML stránky, databázové dotazy nebo výpočty. Memcached funguje jako distribuovaná cache, díky čemuž může být nasazen na více serverech, a data jsou mezi nimi rovnoměrně distribuována. Tento přístup umožňuje horizontální škálování, takže kapacitu a výkon Memcached lze jednoduše rozšiřovat přidáním dalších serverů.
+	
+	Jednou z klíčových vlastností této KDBS je jeho jednoduché API, které podporuje základní operace s key-value páry, jako je ukládání, získávání a mazání dat. Tato funkcionalita je dostupná pomocí funkcí SET, GET, ADD, REPLACE a DELETE. Díky tomu je integrace Memcached do existujících aplikací relativně snadná a není vyžadována žádná složitá konfigurace. Memcached také poskytuje možnost nastavení expirace dat, což umožňuje automatické odstranění zastaralých dat z cache a uvolnění paměťových prostředků. Tato funkce je užitečná zejména pro udržování čerstvých a aktuálních dat v cache. Další významnou vlastností Memcachedu je jeho podpora distribuovaných transakcí, která umožňuje atomické operace nad více key-value páry. Pro práci s touto KDBS jsou k dispozici knihovny pro různé programovací jazyky, což usnadňuje jeho integraci do široké škály aplikací a systémů. Díky své jednoduchosti, efektivitě a škálovatelnosti je Memcached oblíbenou volbou pro mnoho webových aplikací a služeb.
 
 	\begin{sidewaystable}
 		\centering
@@ -236,6 +248,16 @@
 		\end{tabular}
 		\caption{TPC benchmarky\label{tab_tpc_modely}}
 	\end{table}
+	
+	\section{Relevance TPC a YCSB pro měření KDBS}
+	
+	Pokud jde o relevanci TPC pro KDBS, je potřeba brát v úvahu, že KDBS se liší od tradičních relačních databází. Zatímco TPC benchmarky se zaměřují na transakční zpracování a operace typické pro relační databáze, KDBS se často používají pro rychlý přístup k datům pomocí jednoduchého klíč-hodnota rozhraní a jsou často součástí aplikací s vysokým objemem operací typu čtení a zápisu.
+	
+	Z tohoto důvodu by benchmarky navržené specificky pro KDBS byly relevantnější pro měření jejich výkonnosti a charakteristik. Nicméně, některé aspekty TPC benchmarků, jako je schopnost zpracovávat vysoký objem transakcí nebo zátěžové testování, mohou poskytnout užitečné informace i pro KDBS, i když nejsou primárně určeny pro tuto kategorii databází.
+	
+	Pokud jde o relevanci YCSB pro KDBS, můžeme říci, že je velmi relevantní. To je způsobeno tím, že YCSB je zaměřen na testování databází pomocí jednoduchého klíč-hodnota rozhraní, což je přesně ten způsob, jakým komunikují KDBS.
+	
+	YCSB poskytuje sadu připravených scénářů a operací, které simuluji reálné aplikace a zátěžové podmínky. To umožňuje uživatelům testovat výkonnost KDBS v různých situacích a porovnávat je s jinými NoSQL databázemi. Celkově lze říci, že YCSB je relevantní nástroj pro testování KDBS a poskytuje užitečné informace o jejich výkonu a škálovatelnosti v scénářích podobných reálnému použití.
 	
 	\chapter{Vyhodnocení výsledků testů\label{chapter:4-test_results}}
 	

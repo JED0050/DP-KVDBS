@@ -99,6 +99,50 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{ddbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Distribuované databázové systémy (DDBS)}
+    \verb{url}
+    \verb http://langer.zam.slu.cz/teaching/dbaii/distribuovane_db_systemy.pdf
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{17}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{scalability}{online}{}
+    \name{author}{2}{}{%
+      {{hash=AR}{%
+         family={ANANDHI},
+         familyi={A\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={CHITRA},
+         familyi={C\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ARCK1}
+    \strng{fullhash}{ARCK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Challenge in Improving the Consistency of Transactions in
+  Cloud Databases - Scalability}
+    \verb{url}
+    \verb https://research.ijcaonline.org/volume52/number2/pxc3881485.pdf
+    \endverb
+    \field{langid}{english}
+    \field{year}{2012}
+    \field{urlday}{17}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{dynamodb}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Amazon DynamoDB}
@@ -349,6 +393,19 @@
     \field{urlday}{22}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{memcached}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is Memcached?}
+    \verb{url}
+    \verb https://memcached.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{17}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{mongodb}{online}{}
