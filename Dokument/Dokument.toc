@@ -9,13 +9,13 @@
 \contentsline {chapter}{Seznam tabulek}{9}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Úvod}{10}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Key-value databázové systémy}{12}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Amazon DynamoDB}{12}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{13}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Redis}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.1}Amazon DynamoDB}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Redis}{15}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Aerospike}{15}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{16}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Riak KV}{16}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Voldemort}{17}{section.2.7}%
+\contentsline {section}{\numberline {2.6}Riak KV}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Voldemort}{18}{section.2.7}%
 \contentsline {section}{\numberline {2.8}InfinityDB}{19}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Memcached}{19}{section.2.9}%
 \contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{20}{section.2.10}%
@@ -27,10 +27,26 @@
 \contentsline {section}{\numberline {4.1}Testovací prostředí}{26}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Zprovoznění testů}{26}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Popis parametrů testů}{27}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštěná testů}{27}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{27}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Výsledky testů}{27}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Závěr}{34}{chapter.5}%
 \contentsline {chapter}{Literatura}{35}{chapter*.20}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

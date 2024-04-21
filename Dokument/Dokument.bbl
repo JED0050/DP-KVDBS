@@ -70,6 +70,33 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{kdbs-oracle}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction to Oracle NoSQL Database}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E26161_02/html/GettingStartedGuide/introdu
+    \verb ction.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{21}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{kdbs-redis}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{WHAT IS A KEY-VALUE DATABASE?}
+    \verb{url}
+    \verb https://redis.io/nosql/key-value-databases/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{21}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{predictiveanalyticstoday}{online}{}
     \field{labeltitlesource}{title}
     \field{subtitle}{Predictiveanalyticstoday}
