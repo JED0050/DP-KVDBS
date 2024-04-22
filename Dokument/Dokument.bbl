@@ -70,6 +70,112 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{db-engineers-ranking-kdbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines Ranking of Key-value Stores}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking/key-value+store
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{22}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{azure-cosmos-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Azure Cosmos DB}
+    \verb{url}
+    \verb https://azure.microsoft.com/cs-cz/products/cosmos-db
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{22}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{memcached}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is Memcached?}
+    \verb{url}
+    \verb https://memcached.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{17}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{tpc}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC}
+    \verb{url}
+    \verb https://www.tpc.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{ycsb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Yahoo! Cloud Serving Benchmark (YCSB)}
+    \verb{url}
+    \verb https://github.com/brianfrankcooper/YCSB
+    \endverb
+    \field{langid}{english}
+    \field{year}{2019}
+    \field{urlday}{22}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{riak}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Riak KV}
+    \verb{url}
+    \verb https://riak.com/products/riak-kv/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{aerospike}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Aerospike}
+    \verb{url}
+    \verb https://aerospike.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{20}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{predictiveanalyticstoday}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{Predictiveanalyticstoday}
+    \field{title}{Top NoSQL Key Value store Databases}
+    \verb{url}
+    \verb https://www.predictiveanalyticstoday.com/top-sql-key-value-store-data
+    \verb bases/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{13}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{kdbs-oracle}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introduction to Oracle NoSQL Database}
@@ -95,35 +201,6 @@
     \field{urlday}{21}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
-  \endentry
-
-  \entry{predictiveanalyticstoday}{online}{}
-    \field{labeltitlesource}{title}
-    \field{subtitle}{Predictiveanalyticstoday}
-    \field{title}{Top NoSQL Key Value store Databases}
-    \verb{url}
-    \verb https://www.predictiveanalyticstoday.com/top-sql-key-value-store-data
-    \verb bases/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{13}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
-  \endentry
-
-  \entry{g2}{online}{}
-    \field{labeltitlesource}{title}
-    \field{subtitle}{G2}
-    \field{title}{Best Document Databases}
-    \verb{url}
-    \verb https://www.g2.com/categories/document-databases
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{13}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
   \endentry
 
   \entry{ddbs}{online}{}
@@ -168,6 +245,20 @@
     \field{urlday}{17}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
+  \endentry
+
+  \entry{g2}{online}{}
+    \field{labeltitlesource}{title}
+    \field{subtitle}{G2}
+    \field{title}{Best Document Databases}
+    \verb{url}
+    \verb https://www.g2.com/categories/document-databases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{13}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
   \endentry
 
   \entry{dynamodb}{online}{}
@@ -220,19 +311,6 @@
     \field{urlday}{14}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
-  \endentry
-
-  \entry{aerospike}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Aerospike}
-    \verb{url}
-    \verb https://aerospike.com/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{20}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
   \endentry
 
   \entry{hybmem-arch}{online}{}
@@ -312,19 +390,6 @@
     \field{urlday}{08}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
-  \endentry
-
-  \entry{riak}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Riak KV}
-    \verb{url}
-    \verb https://riak.com/products/riak-kv/index.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{21}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
   \endentry
 
   \entry{crdt}{online}{}
@@ -422,19 +487,6 @@
     \field{urlyear}{2022}
   \endentry
 
-  \entry{memcached}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{What is Memcached?}
-    \verb{url}
-    \verb https://memcached.org/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2024}
-    \field{urlday}{17}
-    \field{urlmonth}{04}
-    \field{urlyear}{2024}
-  \endentry
-
   \entry{mongodb}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{MongoDB}
@@ -499,67 +551,6 @@
     \field{year}{2023}
     \field{urlday}{28}
     \field{urlmonth}{01}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{tpc}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{TPC}
-    \verb{url}
-    \verb https://www.tpc.org/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{11}
-    \field{urlmonth}{02}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{ycsb}{online}{}
-    \name{author}{5}{}{%
-      {{hash=CBF}{%
-         family={Cooper},
-         familyi={C\bibinitperiod},
-         given={Brian\bibnamedelima F.},
-         giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-      {{hash=SA}{%
-         family={Silberstein},
-         familyi={S\bibinitperiod},
-         given={Adam},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=TE}{%
-         family={Tam},
-         familyi={T\bibinitperiod},
-         given={Erwin},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=RR}{%
-         family={Ramakrishnan},
-         familyi={R\bibinitperiod},
-         given={Raghu},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=SR}{%
-         family={Sears},
-         familyi={S\bibinitperiod},
-         given={Russell},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{CBFSATERRSR1}
-    \strng{fullhash}{CBFSATERRSR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Yahoo! Cloud Serving Benchmark (YCSB)}
-    \verb{url}
-    \verb https://courses.cs.duke.edu/fall13/cps296.4/838-CloudPapers/ycsb.pdf
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{11}
-    \field{urlmonth}{02}
     \field{urlyear}{2023}
   \endentry
 
@@ -648,6 +639,54 @@
     \field{langid}{english}
     \field{year}{2023}
     \field{urlday}{12}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{ycsb-benchmarking}{online}{}
+    \name{author}{5}{}{%
+      {{hash=CBF}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={Brian\bibnamedelima F.},
+         giveni={B\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Silberstein},
+         familyi={S\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TE}{%
+         family={Tam},
+         familyi={T\bibinitperiod},
+         given={Erwin},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Ramakrishnan},
+         familyi={R\bibinitperiod},
+         given={Raghu},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Sears},
+         familyi={S\bibinitperiod},
+         given={Russell},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CBFSATERRSR1}
+    \strng{fullhash}{CBFSATERRSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Benchmarking Cloud Serving Systems with YCSB}
+    \verb{url}
+    \verb https://courses.cs.duke.edu/fall13/cps296.4/838-CloudPapers/ycsb.pdf
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
     \field{urlmonth}{02}
     \field{urlyear}{2023}
   \endentry

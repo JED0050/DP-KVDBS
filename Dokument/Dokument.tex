@@ -40,6 +40,7 @@
 \AddAcronym{NoSQL}{Not only Structured Query Language}
 \AddAcronym{Key-value DBS}{Klíč-hodnota DBS}
 \AddAcronym{KDBS}{Key-value DBS}
+\AddAcronym{RDBS}{Relační DBS}
 \AddAcronym{JSON}{JavaScript Object Notation}
 \AddAcronym{TTL}{Time to live}
 \AddAcronym{TPC}{Transaction Processing Performance Council}
@@ -61,16 +62,17 @@
 	
 	KDBS fungují odlišně oproti tradičním relačním databázovým systémům. Relační databáze mají předdefinovanou datovou strukturu v databázi jako sérii tabulek s dopředu definovanými datovými typy. Díky tomuto modelu může relační databázový systém provádět řadu optimalizací. Na druhou stranu KDBS mohou mít pro každý záznam různě definované kolekce dat s odlišnými velikostmi a počty atributů. Tato vlastnost nabízí KDBS flexibilitu a možnost přiblížení se k objektově orientovanému programování. Protože KDBS nevyžaduje pevně nastavené datové typy hodnot, jako je tomu u relační databáze, tak KDBS často potřebují méně paměti k uložení stejných dat, což může vést k značnému nárůstu výkonu. Dále tyto databáze bývají distribuované a dosahují horizontální až lineární škálovatelnosti.
 	
-	Výkon a nedostatečná standardizace omezovaly KDBS pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing, dochází v posledních letech k rozšíření obecné využitelnosti NoSQL databázových systémů. Například databázový systém Redis~\cite{redis} je v současnosti jedním z deseti nejlépe hodnocených~\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy.
+	Výkon a nedostatečná standardizace omezovaly KDBS pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing, dochází v posledních letech k nárůstu popularity NoSQL databázových systémů, zatímco RDBS jsou stále populární velice podobně jako před lety. Například databázový systém Redis~\cite{redis} je v současnosti jedním z deseti nejlépe hodnocených~\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy. V žebříčku porovnání téměř 70 čistě KDBS~\cite{db-engineers-ranking-kdbs}, je Redis na prvním místě, za ním následují Amazon DynamoDB~\cite{dynamodb}, společně s Microsoft Azure Cosmos DB~\cite{azure-cosmos-db} a Memcached~\cite{memcached}.
 	
 	Cílem práce je prostudovat a podrobně popsat problematiku KDBS. Práce se zaměří na vysvětlení tohoto konceptu a identifikaci klíčových rozdílů mezi jednotlivými KDBS. Jednou z hlavních úloh práce je zmínit a detailně popsat některé z nejznámějších a nejčastěji využívaných databázových systémů v tomto odvětví. Tyto DBS budou vzájemně porovnány s důrazem na jejich vlastnosti, výhody a nevýhody. Dalším úkolem práce je příprava a zprovoznění testovacího prostředí, které umožní měření propustnosti a odezvy na dotazy těchto vybraných KDBS. Návrh a implementace testovacího prostředí zahrnuje konfiguraci prostředí a zprovoznění instancí databázových systémů, ať už lokálně nebo v cloudovém prostředí. Následně budou vybrané DBS podrobeny testování a budou měřeny jejich propustnosti a odezva v reálném provozu. Naměřené hodnoty budou prezentovány a analyzovány s cílem porovnat chování jednotlivých DBS v různých scénářích. Konečné výsledky budou porovnány, což umožní vyvodit závěry o tom, jak se jednotlivé DBS osvědčily v praxi při manipulaci s daty.
 	
 	Struktura práce je následující. První část práce (viz kapitola \ref{chapter:no-sql-ky-sys}) se zaměřuje na detailní představení několika klíčových KDBS (např. Redis, Riak KV, Aerospike). Každá z těchto DBS je popsána, a to včetně analýzy jejich charakteristických vlastností. V závěru této části je provedeno srovnání jednotlivých databází na základě jejich vlastností, například škálovatelnost, dotazovací jazyk a odezva.
 	
-	Třetí kapitola (viz kapitola \ref{chapter:3-test_environment}) se obecně věnuje popisu prostředí pro testování databázových systémů. Jsou zde konkrétně zmíněna a popsána dvě prostředí. Prvním je TPC, které je využíváno především pro relační databázové systémy, a druhým YCSB, jež je připraveno a vyvíjeno zejména pro NoSQL databáze. Každé z těchto prostředí je detailně rozebráno z hlediska svých funkcionalit, možností a účelu testování.
-		
-	Čtvrtá kapitola (viz kapitola \ref{chapter:4-test_results}) je věnována otestování a vyhodnocení výsledků čtyř vybraných KDBS, konkrétně Redis, Riak KV, Aerospike a Memcached. Tyto databáze byly vybrány pro analýzu z důvodu své relevance podle internetových žebříčků. Kapitola popisuje stroj, na kterém se KDBS testovaly, a potřebnou přípravu zvoleného testovacího prostředí YCSB a databází v Dockeru. Konkrétně se zde i popisují konfigurace jednotlivých testů, kroky pro úspěšné spuštění testů a samotné otestování. Kapitola je zakončena demonstrací výsledků naměřených hodnot při testování, vizualizací hodnot do grafů a vzájemným porovnáním hodnot jednotlivých KDBS mezi sebou. Z výsledného porovnání naměřených hodnot se sestaví závěr o tom, jak si jednotlivé KDBS vedly, v čem excelovaly a v čem naopak zaostávaly.
-
+	Kapitola 3 (viz kapitola \ref{chapter:3-test_environment}) obsahuje popis a využitelnost testovacích prostředí databázových systémů. V kapitole jsou uvedena dvě existující testovací prostředí TPC~\cite{tpc} a YCSB~\cite{ycsb}. Testovací prostředí TPC je využíváno především pro relační databázové systémy, zatímco prostředí YCSB je připraveno a vyvíjeno zejména pro NoSQL DBS.
+	
+	Kapitola 4 (viz kapitola \ref{chapter:4-test_results}) je věnována testování a vyhodnocení výsledků čtyř vybraných KDBS (Redis~\cite{redis}, Riak KV~\cite{riak}, Aerospike~\cite{aerospike} a Memcached~\cite{memcached}). Tyto DBS byly vybrány pro analýzu z důvodu své relevance podle internetových žebříčků~\cite{db-engineers-ranking, predictiveanalyticstoday}. Kapitola popisuje stroj, na kterém se KDBS testovaly, a potřebnou přípravu zvoleného testovacího prostředí YCSB a databází v Dockeru. Konkrétně se zde popisují konfigurace jednotlivých testů, kroky pro úspěšné spuštění testů a samotné otestování. Kapitola je zakončena prezentací výsledků naměřených hodnot při testování a vzájemným porovnáním výsledků jednotlivých KDBS. 
+	
+	V závěru práce, kapitole 5 (viz kapitola \ref{chapter:5-diploma_results}), jsou vyhodnoceny výsledky srovnání KDBS. Součástí kapitoly je zhodnocení samotné práce.
 	
 	\chapter{Key-value databázové systémy\label{chapter:no-sql-ky-sys}}
 	
@@ -193,7 +195,7 @@
 	
 	\section{YCSB} \label{lab-ycsb}
 	
-	YCSB architektura je založena na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro značnou část významných databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se skládá ze dvou fází. První z nich je Loading fáze zaměřená na vložení dat do databáze a následně druhá je Running fáze, ve které se spouští daný test (viz schéma \ref{ycsb-blok-schema}).
+	YCSB~\cite{ycsb,ycsb-benchmarking} architektura je založena na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro značnou část významných databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se skládá ze dvou fází. První z nich je Loading fáze zaměřená na vložení dat do databáze a následně druhá je Running fáze, ve které se spouští daný test (viz schéma \ref{ycsb-blok-schema}).
 	
 	Při spouštění každého testu je možné nastavit určité parametry pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
 	
@@ -784,7 +786,7 @@
 		\label{graph_Insert only - Percentile Latency (ms)}
 	\end{figure}
 	
-	\chapter{Závěr}
+	\chapter{Závěr\label{chapter:5-diploma_results}}
 	
 	TODO
 		
