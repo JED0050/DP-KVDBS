@@ -44,6 +44,165 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{rdbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is a Relational Database (RDBMS)?}
+    \verb{url}
+    \verb https://www.oracle.com/cz/database/what-is-a-relational-database/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{relace}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Relace}
+    \verb{url}
+    \verb https://portal.matematickabiologie.cz/index.php?pg=zaklady-informatik
+    \verb y-pro-biology--teoreticke-zaklady-informatiky--teorie-mnozin--relace
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{rdbs-optimalizace}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Efektivnější SQL dotazy pomocí plánování a
+  optimalizace}
+    \verb{url}
+    \verb https://cs.khanacademy.org/computing/computer-programming/sql/relatio
+    \verb nal-queries-in-sql/a/more-efficient-sql-with-query-planning-and-optim
+    \verb ization
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{kdbs-memory}{online}{}
+    \name{author}{1}{}{%
+      {{hash=FKD}{%
+         family={Foote},
+         familyi={F\bibinitperiod},
+         given={Keith\bibnamedelima D.},
+         giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FKD1}
+    \strng{fullhash}{FKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Key-Value Databases Demystified}
+    \verb{url}
+    \verb https://www.dataversity.net/understanding-key-value-databases/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{schemaless-vs-schema}{online}{}
+    \name{author}{1}{}{%
+      {{hash=PS}{%
+         family={Podeti},
+         familyi={P\bibinitperiod},
+         given={Suresh},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PS1}
+    \strng{fullhash}{PS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Schema-on-read vs Schema-on-write}
+    \verb{url}
+    \verb https://medium.com/@sureshpodeti/schema-on-read-vs-schema-on-write-62
+    \verb 4a1f1343e4
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-trend-by-model}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DBMS popularity broken down by database model}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking_categories
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{scalegrid-sql-vs-nosql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{2019 Database Trends – SQL™ vs. NoSQL, Top Databases,
+  Single vs. Multiple Database Use}
+    \verb{url}
+    \verb https://scalegrid.io/blog/2019-database-trends-sql-vs-nosql-top-datab
+    \verb ases-single-vs-multiple-database-use/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2019}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-web-index}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines}
+    \verb{url}
+    \verb https://db-engines.com/en/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-ranking-definition}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Method of calculating the scores of the DB-Engines Ranking}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking_definition
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-trend-by-dbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines Ranking - Trend Popularity}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking_trend
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{redis}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Redis}
@@ -55,6 +214,19 @@
     \field{urlday}{18}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{oracle-index}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle - Database}
+    \verb{url}
+    \verb https://www.oracle.com/database/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{db-engineers-ranking}{online}{}
@@ -81,6 +253,19 @@
     \field{urlday}{22}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
+  \endentry
+
+  \entry{dynamodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon DynamoDB}
+    \verb{url}
+    \verb https://aws.amazon.com/dynamodb/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
   \endentry
 
   \entry{azure-cosmos-db}{online}{}
@@ -257,19 +442,6 @@
     \field{langid}{english}
     \field{year}{2022}
     \field{urlday}{13}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
-  \endentry
-
-  \entry{dynamodb}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Amazon DynamoDB}
-    \verb{url}
-    \verb https://aws.amazon.com/dynamodb/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{18}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry

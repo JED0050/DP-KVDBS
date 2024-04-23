@@ -8,29 +8,117 @@
 \contentsline {chapter}{Seznam obr\'azk\r {u}}{8}{chapter*.3}%
 \contentsline {chapter}{Seznam tabulek}{9}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Úvod}{10}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Key-value databázové systémy}{12}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Amazon DynamoDB}{13}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{14}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Redis}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Aerospike}{15}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{16}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Riak KV}{17}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Voldemort}{18}{section.2.7}%
-\contentsline {section}{\numberline {2.8}InfinityDB}{19}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Memcached}{19}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{20}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}YCSB}{22}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TPC}{24}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{25}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací prostředí}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{26}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{27}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštění testů}{27}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Výsledky testů}{27}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Závěr}{34}{chapter.5}%
-\contentsline {chapter}{Literatura}{35}{chapter*.20}%
+\contentsline {chapter}{\numberline {2}Key-value databázové systémy}{14}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Amazon DynamoDB}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Redis}{17}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Aerospike}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Riak KV}{19}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Voldemort}{20}{section.2.7}%
+\contentsline {section}{\numberline {2.8}InfinityDB}{21}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Memcached}{21}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{22}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}YCSB}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TPC}{26}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{27}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací prostředí}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{28}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{29}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Výsledky testů}{29}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Závěr}{36}{chapter.5}%
+\contentsline {chapter}{Literatura}{37}{chapter*.22}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
