@@ -12,6 +12,9 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 
+\usepackage{xcolor}
+\usepackage{listings}
+
 %\usepackage{mathtools} %- blokuje list obrázků a tabulek
 
 \ThesisAuthor{Bc. Jan Jedlička}
@@ -45,7 +48,7 @@
 \AddAcronym{TTL}{Time to live}
 \AddAcronym{TPC}{Transaction Processing Performance Council}
 \AddAcronym{YCSB}{Yahoo! Cloud Serving Benchmark}
-
+\AddAcronym{Kiloops}{Tisíce operací}
 
 \addbibresource{citace.bib}
 
@@ -64,7 +67,7 @@
 	
 	Na druhou stranu KDBS mohou mít pro každý klíč různě definované hodnoty, které mohou zahrnovat kolekce dat s odlišnými velikostmi. Tato vlastnost nabízí KDBS flexibilitu a možnost přiblížení se k objektově orientovanému programování. Například do KDBS s klíči jako ID uživatele a hodnotami reprezentujícími záznamy různých uživatelů můžeme ukládat JSON objekty. Tyto objekty reprezentují uživatele, kteří jsou definováni odlišnými, na sobě nezávislými třídami s různým počtem a datovým typem atributů, bez společného rodiče. Dále tyto databáze dosahují horizontální až lineární škálovatelnosti (viz kapitola~\ref{scaling-dbs}). Protože KDBS nevyžaduje pevně nastavené datové typy hodnot, jako je tomu u relační databáze, tak KDBS může vyžadovat méně paměti k uložení stejných dat~\cite{kdbs-memory}, což vede k nárůstu výkonu v určitých případech.
 	
-	Databáze se schématem~\cite{schemaless-vs-schema} (schema-on-write) vyžadují definici datového schématu před tím, než jsou data uložena. To znamená, že musíte předem definovat strukturu dat včetně typů dat, a poté můžete data vložit do DBS. Na druhou stranu databáze bez schématu (schema-on-read) umožňují ukládat data bez předchozí definice datového schématu. Schéma je definováno až v okamžiku, kdy data čtete z DBS. To umožňuje pružnější přístup k ukládání a zpracování dat, ale může vést k menší kontrole nad strukturou dat a k možným problémům s konzistencí dat.
+	Databáze se schématem~\cite{schemaless-vs-schema} (schema-on-write) vyžadují definici datového schématu před tím, než jsou data uložena. To znamená, že musíte předem definovat strukturu dat včetně typů dat, a poté můžete data vložit do DBS. Na druhou stranu databáze bez schématu (schema-on-read, schema-less) umožňují ukládat data bez předchozí definice datového schématu. Schéma je definováno až v okamžiku, kdy data čtete z DBS. To umožňuje pružnější přístup k ukládání a zpracování dat, ale může vést k menší kontrole nad strukturou dat a k možným problémům s konzistencí dat.
 	
 	Výkon a nedostatečná standardizace omezovaly KDBS pouze na specializovaná využití, ale díky rychlému přechodu na cloud computing, dochází v posledních letech k nárůstu popularity NoSQL databázových systémů, zatímco popularita RDBS je víceméně stejná~\cite{dbranking-trend-by-model}. Dle výzkumu z roku 2019~\cite{scalegrid-sql-vs-nosql} byly RDBS využívány v 60,48 \% případů napříč všemi databázovými systémy, zatímco NoSQL DBS pak zastávaly zbylých 39,52 \%. Často se však pro využití výhod různých druhů DBS využívá kombinace RDBS a NoSQL DBS. Tato kombinace je proto využívána v 75,6 \% případů. Čistě využívané RDBS poté zabírají 16,6 \% a NoSQL DBS 9,8 \%. 
 	
@@ -78,7 +81,7 @@
 	
 	Kapitola 3 (viz kapitola \ref{chapter:3-test_environment}) obsahuje popis a využitelnost testovacích prostředí databázových systémů. V kapitole jsou uvedena dvě existující testovací prostředí TPC~\cite{tpc} a YCSB~\cite{ycsb}. Testovací prostředí TPC je využíváno především pro relační databázové systémy, zatímco prostředí YCSB je připraveno a vyvíjeno zejména pro NoSQL DBS.
 	
-	Kapitola 4 (viz kapitola \ref{chapter:4-test_results}) je věnována testování a vyhodnocení výsledků čtyř vybraných KDBS (Redis~\cite{redis}, Riak KV~\cite{riak}, Aerospike~\cite{aerospike} a Memcached~\cite{memcached}). Tyto DBS byly vybrány pro analýzu z důvodu své relevance podle internetových žebříčků~\cite{db-engineers-ranking, predictiveanalyticstoday}. Kapitola popisuje stroj, na kterém se KDBS testovaly, a potřebnou přípravu zvoleného testovacího prostředí YCSB a databází v Dockeru. Konkrétně se zde popisují konfigurace jednotlivých testů, kroky pro úspěšné spuštění testů a samotné otestování. Kapitola je zakončena prezentací výsledků naměřených hodnot při testování a vzájemným porovnáním výsledků jednotlivých KDBS. 
+	Kapitola 4 (viz kapitola \ref{chapter:4-test_results}) je věnována testování a vyhodnocení výsledků čtyř vybraných KDBS (Redis~\cite{redis}, Riak KV~\cite{riak}, Aerospike~\cite{aerospike} a Memcached~\cite{memcached}). Tyto DBS byly vybrány pro analýzu z důvodu své relevance podle internetových žebříčků~\cite{db-engineers-ranking, predictiveanalyticstoday}. Kapitola popisuje stroj, na kterém se KDBS testovaly, a potřebnou přípravu zvoleného testovacího prostředí YCSB a databází v Dockeru~\cite{docker}. Konkrétně se zde popisují konfigurace jednotlivých testů, kroky pro úspěšné spuštění testů a samotné otestování. Kapitola je zakončena prezentací výsledků naměřených hodnot při testování a vzájemným porovnáním výsledků jednotlivých KDBS. 
 	
 	V závěru práce, kapitole 5 (viz kapitola \ref{chapter:5-diploma_results}), jsou vyhodnoceny výsledky srovnání KDBS. Součástí kapitoly je zhodnocení samotné práce.
 	
@@ -107,19 +110,17 @@
 	
 	Vzhledem k těmto vlastnostem jsou KDBS vhodné pro širokou škálu aplikací, včetně webových aplikací, analytických systémů, cache pamětí a dalších. Jsou ideální pro situace, kde je potřeba rychle a efektivně ukládat a získávat data a zároveň udržovat vysoký výkon a škálovatelnost systému.
 	
-	Při popisu jednotlivých KDBS v této kapitole se často hovoří o tom, jak je KDBS distribuovaná, a také o tom, jak škáluje při rostoucím objemu dat. Proto zde ještě popíšeme tyto dva pojmy.
-	
-	Distribuovaná databáze~\cite{ddbs} je typ databázového systému, který ukládá data na několik počítačů nebo uzlů v rámci sítě. Tento přístup umožňuje efektivnější zpracování velkých objemů dat a zlepšuje odolnost systému vůči výpadkům jednotlivých uzlů. Distribuovaná architektura umožňuje systému růst s rostoucím objemem dat a zároveň snižuje riziko selhání jednoho centrálního bodu, což zvyšuje celkovou spolehlivost a dostupnost systému.
+	Jelikož KDBS jsou primárně určeny pro distribuované nasazení, nyní popíšeme tento pojem. Distribuovaný databázový systém~\cite{ddbs} je typ databázového systému, který ukládá data na několik počítačů nebo uzlů v rámci sítě. Tento přístup umožňuje efektivnější zpracování velkých objemů dat a zlepšuje odolnost systému vůči výpadkům jednotlivých uzlů. Distribuovaná architektura umožňuje systému růst s rostoucím objemem dat a zároveň snižuje riziko selhání jednoho centrálního bodu, což zvyšuje celkovou spolehlivost a dostupnost systému.
 	
 	Škálovatelnost~\cite{scalability}\label{scaling-dbs} je schopnost systému přizpůsobit se zvýšené zátěži nebo rostoucímu objemu dat a zachovat požadovanou úroveň výkonu a dostupnosti. Existují různé druhy škálovatelnosti. Horizontální škálovatelnost zahrnuje rozložení zátěže a zvýšení celkové kapacity přidáním dalších uzlů nebo serverů k distribuovanému systému. Vertikální škálovatelnost zlepšuje výkon jednotlivých uzlů nebo serverů zvětšením jejich výpočetní nebo paměťové kapacity. Lineární škálovatelnost je ideální situace, kdy se se zvýšením zdrojů (buď horizontálně nebo vertikálně) zvyšuje výkon systému lineárně.
 	
-	V současné době existuje spousta různých KDBS, od malých open-source projektů po velké placené cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je propustnost, škálovatelnost, uživatelská přívětivost skrze dotazovací jazyk a podpora atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno 9 aktuálně významných KDBS, snažících se o jednoduchý popis, porovnání (viz tabulka \ref{tab_kvdb_compare}) a konečný výběr některých z těchto vhodných KDBS s cílem otestovat vlastnosti některých z těchto systémů.
+	V současné době existuje celá řada KDBS, od malých open-source projektů po velké komerční cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je propustnost, škálovatelnost, uživatelská přívětivost skrze dotazovací jazyk a podpora atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno~9 významných KDBS, snažících se o jednoduchý popis, porovnání (viz tabulka \ref{tab_kvdb_compare}) a konečný výběr KDBS  pro testování a porovnání.
 	
 	\section{Amazon DynamoDB}
 	
-	Amazon DynamoDB~\cite{dynamodb} je v současné době největší a nejvyužívanější KDBS. Jedná se o serverless cloud systém s odezvou v řádu jednotek mikrosekund a využitím v oblastech jako je web, technologie IoT, mobilní aplikace a herní průmysl. DynamoDB je plně a automaticky spravovatelná, multi-master databáze zaměřená na vysoké využití horizontální škálovatelnosti. Unikátní primární klíče umožňují identifikaci jednotlivých záznamů v tabulkách a sekundární indexy zlepšují dotazovací flexibilitu. Primární klíč slouží jako vstup do hashovací funkce a výsledný hash určuje fyzickou pozici uloženého záznamu. DynamoDB poskytuje silnou konzistenci při čtení hodnot od poslední aktualizace. Atomické čítače umožňují automatické změny hodnot číselných atributů. Pro expirované záznamy v tabulkách využívá tzv. TTL. Archivace dat je umožněna díky full backupu. Amazon DynamoDB rovněž nabízí VPC pro soukromou komunikaci bez nutnosti využití internetu.
+	Amazon DynamoDB~\cite{dynamodb} je v současné době největší a nejvyužívanější KDBS. Jedná se o serverless cloud systém s odezvou v řádu jednotek mikrosekund a využitím v oblastech jako je web, technologie IoT, mobilní aplikace a herní průmysl. DynamoDB je plně a automaticky spravovatelná, multi-master databáze zaměřená na vysoké využití horizontální škálovatelnosti. Unikátní primární klíče umožňují identifikaci jednotlivých záznamů v tabulkách a sekundární indexy zlepšují dotazovací flexibilitu. Primární klíč slouží jako vstup do hashovací funkce a výsledná hashovací hodnota určuje fyzickou pozici uloženého záznamu. DynamoDB poskytuje silnou konzistenci při čtení hodnot od poslední aktualizace. Atomické čítače umožňují automatické změny hodnot číselných atributů. Pro expirované záznamy v tabulkách využívá tzv. TTL (Time To Live)~\cite{ttl} k označení doby, po kterou má záznam zůstat platný v databázi. Archivace dat je umožněna díky full backupu. Amazon DynamoDB rovněž nabízí VPC~\cite{vpc} pro soukromou komunikaci za využití vlastní privátní síťové prostředí v rámci AWS cloudu.
 	
-	Databázový systém disponuje konzolovým API pro správu DBS a práci s daty, ale nabízí také možnost využití jazyka PartiQL~\cite{partiql}, který je vhodný pro kompatibilní SQL dotazy na schema-less databázích. DynamoDB API je rozděleno do čtyř hlavních částí. Kontrolní plán zahrnuje funkce spojené s vytvářením, úpravami, mazáním a získáním jmen všech tabulek. Dále umožňuje výpis podrobných specifikací dané tabulky, jako jsou primární klíče, indexy a nastavení propustnosti. Následuje datový plán, který poskytuje CRUD operace pro data v dané tabulce. S daty lze pracovat buď jednotlivě po záznamech, nebo pomocí Batch funkcí, které umožňují provést stejnou operaci nad desítkami záznamů najednou a dosáhnout tak vyšší propustnosti než při volání stejných funkcí pro jednotlivé záznamy opakovaně. Následně je možné provést Scan pro získání všech záznamů dané tabulky nebo indexu, případně Query pro získání hledané části dat. Třetí částí je DynamoDB Streams pro práci s časovými sekvencemi a práci s logy za posledních 24 hodin. Stream API poskytuje funkce pro výpis všech streamů, konkrétní popis daného streamu, získání iterátoru pro daný stream a nakonec získání jednoho záznamu z daného streamu. Poslední částí API jsou ACID transakce, které jsou rozděleny do dvou částí. První část je určena pro batch vkládání, úpravu a mazání záznamů a druhá část slouží k batch získání záznamů.
+	Databázový systém disponuje konzolovým API pro správu DBS a práci s daty, ale nabízí také možnost využití jazyka PartiQL~\cite{partiql}, který je vhodný pro kompatibilní SQL dotazy na databázích bez schématu. DynamoDB API je rozděleno do čtyř hlavních částí. Kontrolní plán zahrnuje funkce spojené s vytvářením, úpravami, mazáním a získáním jmen všech tabulek. Dále umožňuje výpis podrobných specifikací dané tabulky, jako jsou primární klíče, indexy a nastavení propustnosti. Následuje datový plán, který poskytuje CRUD operace pro data v dané tabulce. S daty lze pracovat buď jednotlivě po záznamech, nebo pomocí Batch funkcí, které umožňují provést stejnou operaci nad desítkami záznamů najednou a dosáhnout tak vyšší propustnosti, než při volání stejných funkcí pro jednotlivé záznamy opakovaně. Následně je možné provést Scan pro získání všech záznamů dané tabulky nebo indexu, případně Query pro získání hledané části dat. Třetí částí je DynamoDB Streams pro práci s časovými sekvencemi a práci s logy za posledních 24 hodin. Stream API poskytuje funkce pro výpis všech streamů, konkrétní popis daného streamu, získání iterátoru pro daný stream a nakonec získání jednoho záznamu z daného streamu. Poslední částí API jsou ACID transakce, které jsou rozděleny do dvou částí. První část je určena pro batch vkládání, úpravu a mazání záznamů a druhá část slouží k batch získání záznamů.
 		
 	\section{Oracle NoSQL Database}
 	
@@ -225,11 +226,11 @@
 	\begin{itemize} \label{lab-workloads}
 		\item Workload A (Update heavy)
 		\begin{itemize}
-			\item 50\% operací zaměřených na čtení a 50\% operací zaměřených na vkládání
+			\item 50\% operací zaměřených na čtení a 50\% operací zaměřených na úpravu
 		\end{itemize}
 		\item Workload B (Read mostly)
 		\begin{itemize}
-			\item 95\% operací zaměřených na čtení a 5\% operací zaměřených na vkládání
+			\item 95\% operací zaměřených na čtení a 5\% operací zaměřených na úpravu
 		\end{itemize}
 		\item Workload C (Read only)
 		\begin{itemize}
@@ -324,7 +325,7 @@
 	
 	Ve snaze o možnost replikace testů byly všechny databáze instalovány a spouštěny pomocí open-source platformy Docker~\cite{docker}. Bylo tedy nutné najít vhodné a kompatibilní docker images pro každou z testovaných databází. V kontextu této práce Docker pomáhá zrychlit zdlouhavou fázi instalování a nastavení počátečního stavu databází, udržení funkčnosti vybrané verze instalovaného softwaru a odstínění od stavu stroje, na kterém DBS spouštíme.
 	
-	Veškeré testy byly vytvářeny a spouštěny pomocí frameworku YCSB (\ref{lab-ycsb}). YCSB framework v první části, Load, do databáze vložil data, a následně v druhé části, Run, spustil testy a vrátil hodnoty výsledků. Pomocí přidání volitelných parametrů bylo možné testy upravit podle vlastních potřeb.
+	Veškeré testy byly vytvářeny a spouštěny pomocí frameworku YCSB (\ref{lab-ycsb}). YCSB framework v první části, Load, do databáze vložil data, a následně v druhé části, Run, spustil testy a vrátil hodnoty výsledků. Pomocí přidání volitelných parametrů~\cite{ycsb-properties} bylo možné testy upravit podle vlastních potřeb.
 	
 	Po spuštění databáze v Dockeru se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
 	
@@ -332,14 +333,159 @@
 	
 	Veškeré testy pro každou z testovaných databází byly spuštěny třikrát, a finální výsledek byl tedy průměrem ze všech tří testů pro každou databázi v dané testovací kategorii. Každý test byl spouštěn paralelně na čtyřech vláknech.
 	
-	Do databáze bylo vždy vloženo 100 000 záznamů a následující test prováděl 1 000 000 dotazů nad danou naplněnou databází. Následně byla DBS vyprázdněna, reinstalována a celý proces se opakoval ještě dvakrát.
+	Do databáze bylo vždy vloženo 100~000 záznamů a následující test prováděl 1~000~000 dotazů nad danou naplněnou databází. Následně byla DBS vyprázdněna a celý proces se opakoval ještě dvakrát.
 	
-	Testy byly prováděny ve třech YCSB kategoriích. Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (viz YCSB Workloads \ref{lab-workloads}).
+	Testy byly prováděny ve třech YCSB kategoriích (tzv. YCSB Workload~\cite{workloads}). Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (viz YCSB Workloads \ref{lab-workloads}).
 	
-	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a 95/99 percentil odezvy na operaci. V tabulce jsou také data o počtu spuštěných operací, průměrné odezvě na operaci, a také minimální a maximální doba odezvy na operaci.
+	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a 95/99 percentil odezvy na operaci. V tabulce jsou také data o počtu provedených operací, průměrné odezvě na operaci, a také minimální, průměrná a maximální doba odezvy na operaci.
+	
+	Určité databáze vyžadují i další parametry pro spuštění testování, nejčastěji to jsou host IP adresy nebo porty dané DBS pro možné spojení. Dále je například možné specifikovat cestu k souborům, se kterými pracuje testovací prostředí, nebo stanovit TTL~\cite{ttl} testovaných dat, aby bylo možné vyhnout se expiraci dat při dlouhotrvajících nebo vzájemně opožděných testech.
 	
 	\section{Spouštění testů}
 	
+	Pro spuštění testů je zapotřebí nejprve nainstalovat, nastavit a spustit vybranou databázi. Následně se musíme k DBS připojit testovacím prostředí YCSB pro možnou komunikaci s DBS a naplnit ji daty. Nakonec jsou spuštěny požadované testy, po dokončení testů nám prostředí YCSB vrátí tabulku výsledků v textové podobě.
+	
+	Nainstalujeme platformu Docker~\cite{docker-console} pro snadnou práci s instalovanými databázemi. Pokud chceme využívat grafického rozhraní pro prostředí Docker je možnost i instalace platformy Docker Desktop~\cite{docker-desktop, docker-cli} (případně si samozřejmě můžeme DBS instalovat i jiným pro nás vhodnějším způsobem). Docker Desktop bych doporučil pro práci s DBS u kterých se plánuje větší úprava konfiguračních souborů, případně pro sledování chování databáze za běhu prostřednictví logování.
+	
+	Práce s Docker Desktop je velice intuitivní, proto se zaměříme na práce s Docker CLI~\cite{docker-cli}. Po zvolení vhodné databáze si musíme stáhnout Docker Image~\cite{docker-image-container} této DBS~\cite{docker-hub} pomocí příkazu "docker~image~pull~[OPTIONS]~NAME[:TAG|@DIGEST]"~\cite{docker-image-pull}. Druhým krokem je nastavení a spuštění DBS, vytvoříme tedy pomocí Docker Image náš Docker Container~\cite{docker-image-container} který spustíme příkazem "docker~container~run~[OPTIONS]~IMAGE~[COMMAND]~[ARG...]"~\cite{docker-container-run}. Nesmíme zapomenout nastavit správné čísla portů pro Docker Container, jinak nebude testovací prostředí YCSB schopno komunikovat s Docker Image. 
+	
+	Testovací prostředí YCSB je možno získat z oficiálního Yahoo! Cloud Serving Benchmark GitHubu~\cite{ycsb}. Pokud nechceme manuálně překládat zdrojové kódy projektu pro možnost nasazení vlastních změn, je vhodné stáhnout funkční verzi na odkazu zmíněném v README souboru~\cite{ycsb-download}. Pro úspěšné sestavení projektu ze zdrojových kódů je zapotřebí mít nainstalovaný Apache Maven~\cite{maven} verze 3, pokud je na stroji Maven verze 2 bude docházet k chybám (používanou verzi je možné zkontrolovat pomocí příkazu "mvn~-version"). Dále je zapotřebí mít zprovozněné Java JDK 8 (1.8)~\cite{java-jdk} a výše. Na OS Windows doporučuji zkontrolovat hodnotu systémové proměnné~\cite{win-env-var} "\%JAVA\_HOME\%" zda je nastavena správně příkazem "echo~\%JAVA\_HOME\%", případně ji manuálně změnit (správně by nám měl příkaz vrátit cestu k nainstalovanému Java JDK s verzí minimálně 1.8 např. "C:$\backslash$Program Files$\backslash$Java$\backslash$jdk1.8.0\_231").
+	
+	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS můžeme přejít na poslední fázi testování. Nejprve musíme DBS naplnit daty a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím skriptů vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}, nicméně není problém skripty vkládat i do obyčejné příkazová řádky pokud se vymění obrácená lomítka za obyčejná lomítka a vynechá se tečka na začátku každého příkazu. Všechny příkazy byly spouštěny v adresáři "bin", uvnitř kořenového adresáře projektu "ycsb-0.17.0".
+	
+	V první části testování spustíme příkaz "ycsb~load" pro připojení k databázi a vložení dat do DBS. Nejprve musíme specifikovat název testované DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme námi zvolené požadavky. Například počet záznamů které chceme do DBS vložit parametrem "-p~recordcount=NUM", počet vláken "-p~threadcount=NUM" a nebo nejčastěji IP adresu či port DBS "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM" pro spojení s DBS. Pomocí dodatku "-s" po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme mimo data v DBS i textový výstup popisující průběh zápisu dat do DBS, nejpodstatnější je zde mimo jiné propustnost vkládání a čas odezvy na operace rozdělen do sekce minimum, průměr, maximum a percentily (95\%, 99\%).
+	
+	Druhá část testování se věnu spuštění operací pro čtení a úpravu vložených dat z předešlého kroku pomocí příkazu "ycsb~run". Opět musíme zadat název testované DBS a Workload~\cite{workloads} který nám specifikuje poměr operací pro čtení a úpravy dat. Pomocí volitelných parametrů~\cite{ycsb-properties} určíme počet prováděných operací "-p operationcount=NUM". Kombinace celkového počtu operací a Workloadu nám udá konkrétní počet operací čtení a úprav které se během testu vykonají. Pokud pracujeme s Workloadem D nebo E~(viz popis YCSB Workloads~\ref{lab-workloads}) tak dochází i k zápisu nových hodnot do DBS a počet klíčů v DBS stoupá, ostatní Workloady provádějí pouze úpravy již existujících prvků a počet klíčů v DBS je během testu stále stejný. Stejným způsobem jako v první fázi testování i nyní můžeme specifikovat IP adresu a port DBS, případně počet vláken, podrobnější výstup testu atd. Celý příkaz pro spuštění testu DBS pak vypadá takto "ycsb~run~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení testu získáme opět textový výstup v podobě tabulky popisující průběh testu, nejpodstatnější je zde mimo jiné propustnost operací a čas odezvy na operace rozdělen do sekce minimum, průměr, maximum a percentily (95\%, 99\%).
+	
+	Před reálným testováním můžeme vyzkoušet zda vše správně nastaveno pomocí spuštěný rychlého dema. Demo se skládá ze dvou příkazů, naplnění databáze tisíci záznamy a následného otestování, provedení přibližně 500 operací čtení a 500 úprav na databázi BasicDB~\cite{basicdb}. Po spuštění obou příkazů by nám měly testy na konci vrátit status "Return=OK".
+	
+	\begin{itemize}
+		\item .$\backslash$ycsb load basic -P ..$\backslash$workloads$\backslash$workloada
+		\item .$\backslash$ycsb run basic -P ..$\backslash$workloads$\backslash$workloada
+	\end{itemize}
+	
+	Pro názorný příklad si popíšeme a ukážeme příkazy pro testování databáze Redis~\cite{redis} (viz obrázky~\ref{ps-docker},~\ref{ps-ycsb-load},~\ref{ps-ycsb-run}). Test poběží na 4 vláknech. Testovat se bude případ Workload A~\cite{workloads} (50\% Read, 50\% Update). Do databáze se vloží 10~000 záznamů, a provede se 10~000 operací při testování (přibližně 5~000 čtení a 5~000 úprav dat).
+	
+	\begin{itemize}
+		\item docker pull redis:latest
+		\item docker run --name my-redis -p 6379:6379 -d redis:latest
+		\item .$\backslash$ycsb load redis -P  ..$\backslash$workloads$\backslash$workloada -p redis.host=127.0.0.1 -p redis.port=6379 \\-p recordcount=10000 -p threadcount=4
+		\item .$\backslash$ycsb run redis -P ..$\backslash$workloads$\backslash$workloada -p redis.host=127.0.0.1 -p redis.port=6379 \\-p operationcount=10000 -p threadcount=4
+		\item docker stop aba5fabc123example4568aa97
+		\item docker rm aba5fabc123example4568aa97
+	\end{itemize}
+	
+	\lstdefinestyle{DOS}
+	{
+		backgroundcolor=\color[RGB]{1, 36, 86},
+		basicstyle=\scriptsize\color{white}\ttfamily
+	}
+	
+	\begin{figure}[h]
+	\centering
+	\begin{lstlisting}[style=DOS]
+	PS E:\ycsb-0.17.0\bin> docker pull redis:latest
+	latest: Pulling from library/redis
+	Digest: sha256:f14f42fabc123example456c7e824b9
+	Status: Image is up to date for redis:latest
+	docker.io/library/redis:latest
+		
+	PS E:\ycsb-0.17.0\bin> docker run --name my-redis -p 6379:6379 -d redis:latest
+	aba5fabc123example4568aa97
+		
+	PS E:\ycsb-0.17.0\bin> docker stop aba5fabc123example4568aa97
+	aba5fabc123example4568aa97
+		
+	PS E:\ycsb-0.17.0\bin> docker rm aba5fabc123example4568aa97
+	aba5fabc123example4568aa97
+	\end{lstlisting}
+	\caption{Docker Redis, příkazy pro stažení, spuštění, zastavení a odstranění DBS
+	\label{ps-docker}}
+	\end{figure}
+	
+	\begin{figure}
+	\centering
+	\begin{lstlisting}[style=DOS]
+	PS E:\ycsb-0.17.0\bin> .\ycsb load redis -P ..\workloads\workloada
+		-p redis.host=127.0.0.1 -p redis.port=6379 -p recordcount=10000
+		-p threadcount=4
+	YCSB Client 0.17.0
+	Loading workload...
+	Starting test.
+	[OVERALL], RunTime(ms), 4211
+	[OVERALL], Throughput(ops/sec), 2374.7328425552128
+	[TOTAL_GCS_PS_Scavenge], Count, 4
+	[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 6
+	[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.14248397055331277
+	[TOTAL_GCS_PS_MarkSweep], Count, 0
+	[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+	[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+	[TOTAL_GCs], Count, 4
+	[TOTAL_GC_TIME], Time(ms), 6
+	[TOTAL_GC_TIME_%], Time(%), 0.14248397055331277
+	[CLEANUP], Operations, 4
+	[CLEANUP], AverageLatency(us), 333.25
+	[CLEANUP], MinLatency(us), 80
+	[CLEANUP], MaxLatency(us), 1060
+	[CLEANUP], 95thPercentileLatency(us), 1060
+	[CLEANUP], 99thPercentileLatency(us), 1060
+	[INSERT], Operations, 10000
+	[INSERT], AverageLatency(us), 1647.61
+	[INSERT], MinLatency(us), 904
+	[INSERT], MaxLatency(us), 13895
+	[INSERT], 95thPercentileLatency(us), 2481
+	[INSERT], 99thPercentileLatency(us), 3389
+	[INSERT], Return=OK, 10000
+	\end{lstlisting}
+	\caption{YCSB Redis, příkaz pro vložení dat (load)
+	\label{ps-ycsb-load}}
+	\end{figure}
+
+	\begin{figure}
+	\centering
+	\begin{lstlisting}[style=DOS]
+	PS E:\ycsb-0.17.0\bin> .\ycsb run redis -P ..\workloads\workloada
+		-p redis.host=127.0.0.1 -p redis.port=6379 -p operationcount=10000
+		-p threadcount=4
+	YCSB Client 0.17.0
+	Loading workload...
+	Starting test.
+	[OVERALL], RunTime(ms), 2560
+	[OVERALL], Throughput(ops/sec), 3906.25
+	[TOTAL_GCS_PS_Scavenge], Count, 1
+	[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+	[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0390625
+	[TOTAL_GCS_PS_MarkSweep], Count, 0
+	[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+	[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+	[TOTAL_GCs], Count, 1
+	[TOTAL_GC_TIME], Time(ms), 1
+	[TOTAL_GC_TIME_%], Time(%), 0.0390625
+	[READ], Operations, 5157
+	[READ], AverageLatency(us), 998.8885010665116
+	[READ], MinLatency(us), 389
+	[READ], MaxLatency(us), 17695
+	[READ], 95thPercentileLatency(us), 1692
+	[READ], 99thPercentileLatency(us), 3479
+	[READ], Return=OK, 5157
+	[CLEANUP], Operations, 4
+	[CLEANUP], AverageLatency(us), 221.75
+	[CLEANUP], MinLatency(us), 60
+	[CLEANUP], MaxLatency(us), 638
+	[CLEANUP], 95thPercentileLatency(us), 638
+	[CLEANUP], 99thPercentileLatency(us), 638
+	[UPDATE], Operations, 4843
+	[UPDATE], AverageLatency(us), 985.7646087136072
+	[UPDATE], MinLatency(us), 364
+	[UPDATE], MaxLatency(us), 17567
+	[UPDATE], 95thPercentileLatency(us), 1744
+	[UPDATE], 99thPercentileLatency(us), 3675
+	[UPDATE], Return=OK, 4843
+	\end{lstlisting}
+	\caption{YCSB Redis, příkaz pro spuštění testů (run)
+	\label{ps-ycsb-run}}
+	\end{figure}
+
 	\section{Výsledky testů}
 	
 	\begin{figure}[h]

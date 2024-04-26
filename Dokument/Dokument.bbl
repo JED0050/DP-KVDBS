@@ -361,6 +361,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{docker}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Docker Builds: Now Lightning Fast}
+    \verb{url}
+    \verb https://www.docker.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{kdbs-oracle}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introduction to Oracle NoSQL Database}
@@ -444,6 +457,33 @@
     \field{urlday}{13}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{ttl}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Using Time to Live (TTL)}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E17277_02/html/GettingStartedGuide/timetol
+    \verb ive.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{vpc}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon Virtual Private Cloud (VPC}
+    \verb{url}
+    \verb https://aws.amazon.com/vpc/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{partiql}{online}{}
@@ -968,16 +1008,190 @@
     \field{urlyear}{2023}
   \endentry
 
-  \entry{docker}{online}{}
+  \entry{ycsb-properties}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Docker Builds: Now Lightning Fast}
+    \field{title}{Core YCSB properties}
     \verb{url}
-    \verb https://www.docker.com/
+    \verb https://github.com/brianfrankcooper/YCSB/wiki/Core-Properties
     \endverb
     \field{langid}{english}
     \field{year}{2024}
-    \field{urlday}{19}
-    \field{urlmonth}{03}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-console}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Get Docker}
+    \verb{url}
+    \verb https://docs.docker.com/get-docker/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-desktop}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Docker Desktop}
+    \verb{url}
+    \verb https://www.docker.com/products/docker-desktop/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-cli}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Docker Docs - CLI}
+    \verb{url}
+    \verb https://docs.docker.com/reference/cli/docker/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-image-container}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What’s the Difference Between Docker Images and
+  Containers?}
+    \verb{url}
+    \verb https://aws.amazon.com/compare/the-difference-between-docker-images-a
+    \verb nd-containers/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-hub}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Docker Hub}
+    \verb{url}
+    \verb https://hub.docker.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-image-pull}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{docker image pull}
+    \verb{url}
+    \verb https://docs.docker.com/reference/cli/docker/image/pull/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker-container-run}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{docker container run}
+    \verb{url}
+    \verb https://docs.docker.com/reference/cli/docker/container/run/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{ycsb-download}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Download the latest release of YCSB}
+    \verb{url}
+    \verb https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycs
+    \verb b-0.17.0.tar.gz
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{maven}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Apache Maven Project}
+    \verb{url}
+    \verb https://maven.apache.org/download.cgi
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{java-jdk}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle - Java Downloads}
+    \verb{url}
+    \verb https://www.oracle.com/java/technologies/downloads/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{win-env-var}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Windows Environment Variables}
+    \verb{url}
+    \verb https://ss64.com/nt/syntax-variables.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{26}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{win-powershell}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Co je PowerShell?}
+    \verb{url}
+    \verb https://learn.microsoft.com/cs-cz/powershell/scripting/overview?view=
+    \verb powershell-7.4
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{basicdb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{com.yahoo.ycsb.BasicDB}
+    \verb{url}
+    \verb https://github.com/TSDBBench/YCSB-TS/blob/master/core/src/main/java/c
+    \verb om/yahoo/ycsb/BasicDB.java
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
 \enddatalist
