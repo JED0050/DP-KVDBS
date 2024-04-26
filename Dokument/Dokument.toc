@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {3.2}TPC}{26}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{27}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací prostředí}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Testovací stroj}{28}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Zprovoznění testů}{28}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Popis parametrů testů}{29}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Spouštění testů}{29}{section.4.4}%
