@@ -81,8 +81,9 @@ Riak
 		před testem
 			docker pull basho/riak-kv:latest
 			docker run --name my-riak -p 8087:8087 -p 8098:8098 -d basho/riak-kv:latest
-			// v riak.conf souboru (etc/riak/riak.conf) nastavit storage_backend = leveldb
-			// v riak.conf souboru (etc/riak/riak.conf) odkomentovat strong_consistency=on
+			// vhodný Docker Desktop pro přístup k riak.conf souboru, Docker Desktop -> Containers -> my-riak -> Files -> etc/riak/riak.conf
+			// v riak.conf souboru (etc/riak/riak.conf, řádek 334) nastavit storage_backend = leveldb
+			// v riak.conf souboru (etc/riak/riak.conf, řádek 276) odkomentovat strong_consistency=on
 			docker exec my-riak riak-admin bucket-type create ycsb
 			docker exec my-riak riak-admin bucket-type activate ycsb
 		po testu
