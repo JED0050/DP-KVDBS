@@ -459,6 +459,47 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{dynamodb-dbengines-rank2}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines Ranking Key-value stores, 2nd place Amazon
+  DynamoDB}
+    \verb{url}
+    \verb https://db-engines.com/en/system/Amazon+DynamoDB
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dynamodb-autoscaling}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon DynamoDB auto scaling}
+    \verb{url}
+    \verb https://db-engines.com/en/system/Amazon+DynamoDB
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dynamodb-secondary-index}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Improving data access with secondary indexes}
+    \verb{url}
+    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Seco
+    \verb ndaryIndexes.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{ttl}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Using Time to Live (TTL)}
@@ -1016,7 +1057,7 @@
     \endverb
     \field{langid}{english}
     \field{year}{2024}
-    \field{urlday}{25}
+    \field{urlday}{26}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
@@ -1154,19 +1195,6 @@
     \field{urlyear}{2024}
   \endentry
 
-  \entry{win-env-var}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Windows Environment Variables}
-    \verb{url}
-    \verb https://ss64.com/nt/syntax-variables.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2024}
-    \field{urlday}{26}
-    \field{urlmonth}{04}
-    \field{urlyear}{2024}
-  \endentry
-
   \entry{win-powershell}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Co je PowerShell?}
@@ -1176,7 +1204,7 @@
     \endverb
     \field{langid}{english}
     \field{year}{2024}
-    \field{urlday}{25}
+    \field{urlday}{26}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
@@ -1190,7 +1218,34 @@
     \endverb
     \field{langid}{english}
     \field{year}{2024}
-    \field{urlday}{25}
+    \field{urlday}{26}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{win-env-var}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Windows Environment Variables}
+    \verb{url}
+    \verb https://ss64.com/nt/syntax-variables.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{26}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{postgres-multimaster-replication}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Terms and Definitions for Database Replication}
+    \verb{url}
+    \verb https://web.archive.org/web/20110710093040/http://www.postgres-r.org/
+    \verb documentation/terms
+    \endverb
+    \field{langid}{english}
+    \field{year}{2011}
+    \field{urlday}{27}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
