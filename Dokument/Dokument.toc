@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{36}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{40}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{40}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {5}Závěr}{46}{chapter.5}%
-\contentsline {chapter}{Literatura}{47}{chapter*.28}%
+\contentsline {chapter}{\numberline {5}Závěr}{47}{chapter.5}%
+\contentsline {chapter}{Literatura}{48}{chapter*.29}%
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

@@ -625,6 +625,27 @@
 	
 	\subsection{Testový scénář 4 - Insert only} 
 	
+	\begin{table}
+		\centering
+		\begin{tabular}{ l | l l l l }
+			\toprule
+			KDBS & Redis & Riak KV & Aerospike & Memcached \\
+			\midrule
+			Čas běhu (ms) & 39184 & 69749 & 20212 & 25412,67 \\
+			Propustnost (op/sec) & 2553,02 & 1052,43 & 4953,06 & 3937,96 \\
+			\midrule
+			\multicolumn{5}{l}{Zápis} \\
+			Počet operací & 100000 & 100000 & 100000 & 100000 \\
+			AverageLatency(us) & 1559,62 & 2753,93 & 800,58 & 983,52 \\
+			Min letence ($\mu$s) & 762 & 1121,33 & 318,67 & 406,33 \\
+			Max letence ($\mu$s) & 23260,33 & 325887 & 34927 & 70644,33 \\
+			Letence 95. percentil ($\mu$s) & 2219 & 4386,33 & 1199,33 & 1536,67 \\
+			Letence 99. percentil ($\mu$s) & 3195 & 8124,33 & 1690 & 2322,33 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Naměřené výsledky testů pro Insert only\label{tab_workload_insert_only}}
+	\end{table}
+	
 	\begin{figure}[h]
 		\centering
 		\begin{tikzpicture}
