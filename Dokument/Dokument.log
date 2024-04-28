@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  28 APR 2024 20:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  28 APR 2024 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1696,7 +1696,7 @@ Kapitola 1.
 [10
 
 ] [11]
-<Data/db-engine-trend-dbs.PNG, id=349, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=353, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
 Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 90.
@@ -1709,7 +1709,7 @@ Overfull \hbox (8.97263pt too wide) in paragraph at lines 90--92
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Data/db-engine-trend-model.PNG, id=353, 786.68906pt x 359.84438pt>
+<Data/db-engine-trend-model.PNG, id=357, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
 Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 97.
@@ -1747,7 +1747,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Data/ycsb-1.jpg, id=504, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=508, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 255.
@@ -1768,137 +1768,137 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
  (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [32] [33]
-[34] [35] [36]
-Package pgfplots info on input line 586: Overriding colorspace to rgb due to xc
+[34] [35] [36] [37] [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Package pgfplots info on input line 656: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.29631pt too wide) in paragraph at lines 593--594
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 663--664
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package pgfplots info on input line 627: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 697: Overriding colorspace to rgb due to xc
 olor configuration.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 633.
+(Font)              <9> on input line 703.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 633.
+(Font)              <5> on input line 703.
 
-Overfull \hbox (50.9971pt too wide) in paragraph at lines 634--635
+Overfull \hbox (50.9971pt too wide) in paragraph at lines 704--705
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 667: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 737: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.89632pt too wide) in paragraph at lines 674--675
+Overfull \hbox (50.89632pt too wide) in paragraph at lines 744--745
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 713: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 783: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 753: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 823: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 799: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 869: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 839: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 909: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 885: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 955: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 925: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 995: Overriding colorspace to rgb due to xc
 olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package pgfplots info on input line 971: Overriding colorspace to rgb due to xc
-olor configuration.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package pgfplots info on input line 1011: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1041: Overriding colorspace to rgb due to x
 color configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37] [38] [39] [40] [41] [42] [43]
+Package pgfplots info on input line 1081: Overriding colorspace to rgb due to x
+color configuration.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[40] [41] [42] [43] [44] [45]
 Kapitola 5.
-[44
+[46
 
 ]
-Overfull \hbox (23.05782pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (23.05782pt too wide) in paragraph at lines 1099--1099
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
 
-[45
+[47
 
-] [46]
-Overfull \hbox (24.30655pt too wide) in paragraph at lines 1029--1029
+] [48]
+Overfull \hbox (24.30655pt too wide) in paragraph at lines 1099--1099
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
 
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 1099--1099
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[47]
-Overfull \hbox (12.80908pt too wide) in paragraph at lines 1029--1029
+[49]
+Overfull \hbox (12.80908pt too wide) in paragraph at lines 1099--1099
 \T1/lmtt/m/n/10.95 archive . org / web / 20190813163612 / https : / / www . dig
 italocean . com / community / tutorials /
  []
 
 
-Overfull \hbox (7.60954pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (7.60954pt too wide) in paragraph at lines 1099--1099
 []\T1/lmr/m/n/10.95 OSE, Omoruyi; OKOKPU-JIE, Kennedy; NDU-JI-UBA, Nsikan Nko-r
 deh Charles; JOHN, Samuel;
  []
 
 
-Overfull \hbox (6.64246pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (6.64246pt too wide) in paragraph at lines 1099--1099
 []\T1/lmr/m/n/10.95 COOPER, Brian F.; SIL-BER-STEIN, Adam; TAM, Er-win; RA-MAKR
 -ISH-NAN, Raghu; SEARS,
  []
 
 
-Overfull \hbox (50.44803pt too wide) in paragraph at lines 1029--1029
+Overfull \hbox (50.44803pt too wide) in paragraph at lines 1099--1099
 [][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
 . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
 []
  []
 
-[48] [49] [50] (Dokument.aux)
+[50] [51] [52] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 861C650A72500CFE3C207E47CB574FA1;3889.
+(rerunfilecheck)             Checksum: 9F5FCB98B245DEA66A55EE384406A74F;3889.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1909,10 +1909,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48773 strings out of 478552
- 1055385 string characters out of 2854123
- 1787048 words of memory out of 3000000
- 65945 multiletter control sequences out of 15000+600000
+ 48779 strings out of 478552
+ 1055463 string characters out of 2854123
+ 1786839 words of memory out of 3000000
+ 65947 multiletter control sequences out of 15000+600000
  542223 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,2520b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1928,9 +1928,9 @@ ic/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola
 lic/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmsy10.pfb><D:/Sk
 ola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/
 public/lm/lmtt8.pfb>
-Output written on Dokument.pdf (50 pages, 1521966 bytes).
+Output written on Dokument.pdf (52 pages, 1531700 bytes).
 PDF statistics:
- 1058 PDF objects out of 1200 (max. 8388607)
- 268 named destinations out of 1000 (max. 500000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

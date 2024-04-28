@@ -490,7 +490,7 @@
 	
 	Po opětovném spouštění stejných testů a následném zprůměrování naměřených hodnot jsme došli k finálním výsledkům. Hlavní měřené parametry byly propustnost (počet operací za sekundu), celkový čas testu (milisekundy), a minimální, průměrná, maximální latence na operaci (mikrosekundy) a percentil latence (mikrosekundy), konkrétně 95. a 99. percentil.
 	
-	Jednotlivé testy se dělí do 4 scénářů Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář se otestovaly všechny 4 vybrané KDBS třikrát, a následně se výsledky dané KDBS pro daný scénář zprůměrovaly. U scénářů Workload A a Workload B se měřila latence čtení a úpravu dat zvlášť, proto se výsledná latence těchto dvou scénářů počítala jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, proto nebylo zapotřebí průměrovat latence mezi sebou a stejně tak tomu je i u scénáře kde se pouze plní KDBS daty (Insert only).
+	Jednotlivé testy se dělí do 4 scénářů Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář se otestovaly všechny 4 vybrané KDBS třikrát, a následně se výsledky dané KDBS pro daný scénář zprůměrovaly. U scénářů Workload A a Workload B se měřila latence čtení a úpravu dat zvlášť, proto se výsledná latence těchto dvou scénářů počítala jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, proto nebylo zapotřebí průměrovat latence mezi sebou a stejně tak tomu je i u scénáře kde se pouze plní KDBS daty (Insert only). U grafů a tabulek latence je minimum označeno zkratkou "min", maximum "max" a průměr "avg".
 	
 	V grafech porovnávajících propustnosti KDBS jsem zavedl jednotku "kiloops/sec" reprezentující tisíce operací za sekundu. Všechny měřené propustnosti se pohybují v řádech jednotek tisíců operací za sekundu, proto je tato jednotka vhodná a zlepšuje čitelnost grafů. Nejvyšší naměřené hodnoty latence jsem zařadil do jednoho společného grafu napříč všemi testovými scénáři (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}) protože při porovnání maximální latence v jednom grafu daného scénáře s minimální a průměrnou latencí (viz graf~\ref{graph_Workload A - Min Avg Latency (ms)}) docházelo k velkému nepoměru vykreslených hodnot který jednou kategorií maximálních hodnot způsoboval zanedbatelné vizuální rozdíly pro hodnoty nejnižší a průměrné z předešlých kategorií. Při použití logaritmické stupnice nebyly grafy stále čitelné, proto jsem maximální latence dal do jednoho společného grafu napříč všemi testovými scénáři. Pokud na sloupcovém grafu dochází k několikanásobnému převýšení jedné maximální hodnoty některého sloupce vůči sloupcům ostatním v rámci dané kategorie či celého grafu využívám vizuální indikátor přetrhnutého sloupce (viz graf~\ref{graph_Workload B - Percentile Latency (ms)}), který znázorňuje že daný sloupec je vyšší oproti ostatním a zároveň nedochází k vykreslení celé výšky sloupce pro možnost zachovat vizuální poměry ostatních několikanásobně nižších hodnot.
 	
@@ -508,15 +508,7 @@
 	
 	Pokud se zaměříme na 95. a 99. percentil latence (viz graf~\ref{graph_Workload A - Percentile Latency (ms)}) tak je zřejmé že KDBS Aerospike dominuje svou nízkou latencí i v této kategorii pro scénář Workload A. KDBS Aerospike má 95. percentil 1121,8 $\mu$s, což je o 11,81 \% méně při srovnání s 95. percentilem KDBS Redis který činí 1273 $\mu$s a o 19,42 \% oproti KDBS Memcached kde 95. percentil latence 1386,33 $\mu$s. Nakonec KDBS Riak KV dosáhla 95. percentilu latence 6757 $\mu$s. Hodnota pro 99. percentil latence KDBS Aerospike byla 1539,33 $\mu$s, což je opět nejnižší 99. percentil latence napříč všemi KDBS v rámci tohoto scénáře. Databáze Memcached má druhý nejnižší 99. percentil latence s hodnotou 1848,33 $\mu$s a těsně za ní následuje KDBS Redis s 99. percentilem latence 1904,5 $\mu$s. KDBS Aerospike má 99. percentil nižší o 16,76 \% při srovnání s KDBS Memcached a o 18,95 \% menší při srovnání s KDBS Redis. KDBS Riak KV má opět nejhorší výsledky, a to latency 11,87 $\mu$s pro 99. percentil.
 	
-	Z naměřených hodnot testového scénáře Workload A můžeme vidět že KDBS Aerospike zvládá nejlépe velký počet aktualizací ve srovnání s ostatními testovanými KDBS. Databáze Aerospike dosahovala výsledků přibližně o 15 \% lepších při srovnání s ostatními KDBS. Za ní následovaly KDBS Redis a Memcached které měli vzájemně podobné výsledky. Databáze Redis byla v řádu jednotek procent lepší oproti Memcached ve všech měřeních s výjmkou 99. percentilu latence kde byla KDBS Memcached lepší o 3,04 \% (viz zabulka~\ref{graph_Workload A - Percentile Latency (ms)}). Jediná databáze Riak KV několikanásobně zaostávala vůči všem ostatním testovaným KDBS v rámci všech naměřených hodnot. Pokud bychom se zaměřili zvlášť na operace čtení a aktualizací u KDBS Riak KV tak uvidíme že latence aktualizací je minimálně dvojnásobně horší než latence čtení pro tuto KDBS, oproti tomu ostatní testované KDBS v rámci tohoto scénáře dosahovaly téměř identické latence jak pro čtení tak zápis.
-	
-	\subsection{Testový scénář 2 - Workload B}
-	
-	Druhým testovaným scénářem byl Workload B~\cite{workloads}, tento scénář se snaží více realisticky simulovat reálná chod databázového systému v praxi, kde většinou dochází především ke čtení záznamům a aktualizace jsou oproti tomu poměrově méně frekventované. Tento scénář se skládá z 95 \% operací zaměřených na čtení a 5 \% aktualizací. Oproti prvnímu scénáři kde byl poměr těchto dvou operací vyvážený (50 \% čtení, 50 \% aktualizace) bude tento scénář více přizpůsobený databázím které disponují rychlím čtením a pomalé aktualizace zde nebudou tvořit tak znatelné omezení. Do každé KDBS bylo předem vloženo 100~000 záznamů a provádělo se 1~000~000 testovacích operací. Tedy přibližně 950~000 čtení a 50~000 úprav, konkrétní počet poměru operací se vždy liší v řádu nízkých stovek (v součtu je vždy roven milionu).
-	
-	\subsection{Testový scénář 3 - Workload C}
-	
-	\subsection{Testový scénář 4 - Insert only} 
+	Z naměřených hodnot testového scénáře Workload A můžeme vidět že KDBS Aerospike zvládá nejlépe velký počet aktualizací ve srovnání s ostatními testovanými KDBS. Databáze Aerospike dosahovala výsledků přibližně o 15 \% lepších při srovnání s ostatními KDBS. Za ní následovaly KDBS Redis a Memcached které měli vzájemně podobné výsledky. Databáze Redis byla v řádu jednotek procent lepší oproti Memcached ve všech měřeních s výjimkou 99. percentilu latence kde byla KDBS Memcached lepší o 3,04 \% (viz graf~\ref{graph_Workload A - Percentile Latency (ms)}). Jediná databáze Riak KV několikanásobně zaostávala vůči všem ostatním testovaným KDBS v rámci všech naměřených hodnot. Pokud bychom se zaměřili zvlášť na operace čtení a aktualizací u KDBS Riak KV (viz tabulka~\ref{tab_workload_a}) tak uvidíme že latence aktualizací je minimálně dvojnásobně horší než latence čtení pro tuto KDBS, oproti tomu ostatní testované KDBS v rámci tohoto scénáře dosahovaly téměř identické latence jak pro čtení tak zápis.
 	
 	\begin{table}
 		\centering
@@ -554,6 +546,84 @@
 		\end{tabular}
 		\caption{Naměřené výsledky testů pro Workload A\label{tab_workload_a}}
 	\end{table}
+	
+	\subsection{Testový scénář 2 - Workload B}
+	
+	Druhým testovaným scénářem byl Workload B~\cite{workloads}, tento scénář se snaží více realisticky simulovat reálná chod databázového systému v praxi, kde většinou dochází především ke čtení záznamům a aktualizace jsou oproti tomu poměrově méně frekventované. Tento scénář se skládá z 95~\% operací zaměřených na čtení a 5~\% aktualizací. Oproti prvnímu scénáři kde byl poměr těchto dvou operací vyvážený (50~\% čtení, 50~\% aktualizace) bude tento scénář více přizpůsobený databázím které disponují rychlím čtením a pomalé aktualizace zde nebudou tvořit tak znatelné omezení. Do každé KDBS bylo předem vloženo 100~000 záznamů a provádělo se 1~000~000 testovacích operací. Tedy přibližně 950~000 čtení a 50~000 úprav, konkrétní počet poměru operací se vždy liší v řádu nízkých stovek (v součtu je vždy roven milionu).
+	
+	Z naměřených hodnot (viz tabulka~\ref{tab_workload_b}) můžeme vidět že i pro druhý scénář se nám opakuje stejný trend propustností KDBS dle propustnosti jako tomu bylo u prvního scénáře. Pokud se podíváme na grafy propustnosti a celkového času běhu testu (viz grafy~\ref{graph_Workloads A, B, C + Insert only - Throughput (kiloops/sec)},~\ref{graph_Workloads A, B, C + Insert only - Runtime(s)}) tak zjistíme že KDBS Aerospike opět dosáhla nejlepší propustnosti napříč všemi testovanými KDBS která se rovná 4945,37 operací za sekundu a průměrným časem běhu celého testu 202,3 sekund. KDBS Aerospike má o 4,62~\% lepší propustnost při porovnání s KDBS Redis, o 27,99~\% oproti KDBS Memcached a o 178,18~\% oproti KDBS Riak KV. Na druhém místě co se týče propustnosti je stejně jako v předešlém scénáři KDBS Redis s propustností 4726,96 operací za sekundu. Dále následuje KDBS Memcached s hodnotou propustnosti 3863,59 operací za sekundu a nakonec stejně jako v předešlém scénáři KDBS Riak KV s propustností 1778,16 operací za sekundu.
+	
+	Z grafu minimální a průměrné latence operace (viz graf~\ref{graph_Workload B - Min Avg Latency (ms)}) vyplývá že KDBS Aerospike a Redis mají prakticky identické časy latence nejkratší operace a to 327 $\mu$s, liší se pouze v desetinných hodnotách což je zanedbatelný rozdíl. Následuje KDBS Memcached s nejmenší latencí 397,83 $\mu$s zaostávající o 17,71~\%. Poslední je KDBS Riak KV s nejvyšší hodnotou minimálního času latence operace 1795,33~$\mu$s pomalejší o 81,78~\%. Průměrné časy latence operací jsou pro KDBS Aerospike a Redis opět téměř identické s hodnotou 807,98~$\mu$s pro Aerospike a 843,29~$\mu$s pro Redis. Následuje KDBS Memcached s hodnotou 1055,21~$\mu$s která je o 30,60~\% větší než je tomu pro KDBS Aerospike. Nakonec KDBS Riak KV dosáhla nejmenšího latence 3950,21~$\mu$s což je o 388,95~\% víc při porovnání s KDBS Aerospike.
+	
+	Nejvyšší hodnoty latence (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}) ukazují v tomto případě oproti scénáři Workload A velký nárůst pro KDBS Memcached (101,82~ms) a naopak pokles pro KDBS Riak KV (118,79~ms). Databáze Aerospike a Redis se drží na hodnotách velice blízkým předešlému scénáři. To znamená že KDBS Aerospike dosahuje hodnoty maximální latence 21,43~ms což je o 53,41~\% méně při porovnání s KDBS Redis kde je maximální hodnota latence 46~ms.
+	
+	Při zaměření na porovnání percentilů latencí (viz graf~\ref{graph_Workload B - Percentile Latency (ms)}) vidíme že i 95. a 99. percentil latence následuje trend ostatních výsledků tohoto testovaného scénáře. KDBS Aerospike má 95. percentil latence roven 1192,83~$\mu$s. Tento percentil je nižší o 9,87~\% při srovnání s KDBS Redis která má 95. percentil latence roven 1323,67~$\mu$s. Oproti KDBS Memcached pro kterou je 95. percentil latence roven 1744~$\mu$s je KDBS Aerospike rychlejší o 31,61~\%. Při porovnání s KDBS Riak KV vidíme obrovský skok na 95. percentil latence roven 6067,67~$\mu$s což je přibližně o 409~\% více oproti KDBS Aerospike a o 247,98~\% oproti KDBS Memcached která je v rámci tohoto scénáře druhá nejpomalejší. Při sledování 99. percentilu vidíme opět stejné poměry hodnot, nejnižší hodnota u KDBS Aerospike činí 1767,83~$\mu$s, následuje Redis s 2237,83~$\mu$s a zhoršením o 26,60~\% oproti Aerospike, poté Memcached s 2838~$\mu$s a nakonec opět Riak KV s 99. percentilem latence 10650,33~$\mu$s.
+	
+	Z tohoto měření vyplývá že KDBS Memcached pro scénář Workload B zaostává oproti databázím Aerospike a Redis. Samotné KDBS Aerospike a Redis mají stejně jako v předešlém scénáři vzájemně podobné výsledky pro všechny měřené kategorie, i přesto Aerospike dosahuje lepších výsledků i když jen v zanedbatelných řádech. Databáze Riak KV dosahuje stále řádově horších hodnot oproti ostatním testovaným KDBS, každopádně si vede lépe než tomu bylo v předešlém scénáři, propustnost se navýšila o 494,19 operací za sekundu což činí zlepšení o 38,43~\%, zbylé 3 KDBS si vedli srovnatelně s předešlým scénářem. Z toho scénáře vyplývá že KDBS Riak KV znatelně zaostává při aktualizacích, proto nyní dochází ke zvýšení propustnosti při sníženém počtu aktualizací. Na druhou stranu KDBS Memcached při sníženém počtu aktualizací zaostává oproti předešlému scénáři o 6,08~\% protože nemá dostatečně rychlé čtení při srovnání s KDBS Aerospike a Redis.
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{ l | l l l l }
+			\toprule
+			KDBS & Redis & Riak KV & Aerospike & Memcached \\
+			\midrule
+			Čas běhu (ms) & 212026,33 & 562799,67 & 202264 & 263195,67 \\
+			Propustnost (op/sec) & 4726,96 & 1778,16 & 4945,38 & 3863,59 \\
+			\midrule
+			\multicolumn{5}{l}{Čtení} \\
+			Počet operací & 949836 & 949728 & 949706 & 950435 \\
+			Avg letence ($\mu$s) & 845,22 & 2072,91 & 805,97 & 1046,18 \\
+			Min letence ($\mu$s) & 313,67 & 825,33 & 313,33 & 389 \\
+			Max letence ($\mu$s) & 50559 & 110356,33 & 25732,33 & 112020,33 \\
+			Letence 95. percentil & 1325 & 3232,33 & 1188 & 1735,33 \\
+			Letence 99. percentil ($\mu$s) & 2232,33 & 6805,67 & 1756 & 2813 \\
+			\midrule
+			\multicolumn{5}{l}{Aktualizace} \\
+			Počet operací & 50164 & 50272 & 50294 & 49565 \\
+			Avg letence ($\mu$s) & 841,3802758 & 5827,51 & 809,98 & 1064,24 \\
+			Min letence ($\mu$s) & 342 & 2765,33 & 341,33 & 406,67 \\
+			Max letence ($\mu$s) & 41449,67 & 127231 & 17132,33 & 91625,67 \\
+			Letence 95. percentil & 1322,33 & 8903 & 1197,67 & 1752,67 \\
+			Letence 99. percentil ($\mu$s) & 2243,33 & 14495 & 1779,67 & 2851 \\
+			\midrule
+			\multicolumn{5}{l}{Čtení + aktualizace} \\
+			Počet operací & 1000000 & 1000000 & 1000000 & 1000000 \\
+			Avg letence ($\mu$s) & 843,30 & 3950,21 & 807,97 & 1055,21 \\
+			Min letence ($\mu$s) & 327,83 & 1795,33 & 327,33 & 397,83 \\
+			Max letence ($\mu$s) & 46004,33 & 118793,67 & 21432,33 & 101823 \\
+			Letence 95. percentil & 1323,67 & 6067,67 & 1192,83 & 1744 \\
+			Letence 99. percentil ($\mu$s) & 2237,83 & 10650,33 & 1767,83 & 2832 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Naměřené výsledky testů pro Workload B\label{tab_workload_b}}
+	\end{table}
+	
+	\subsection{Testový scénář 3 - Workload C}
+	
+	Třetím testovým scénářem je Workload C~\cite{workloads}. Tento scénář se věnuje čistě čtení záznamů. Výsledky tohoto scénáře nám pomohou porovnat propustnost testovaných KDBS čistě na základě načítání hodnot, pokud má databáze velice rychlé čtení ale pomalé zápisy, aktualizace nebo mazání hodnot tak v tomto scénáři bude excelovat. Do každé KDBS bylo předem vloženo 100~000 záznamů a testovalo se 1~000~000 operací čtení hodnot.
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{ l | l l l l }
+			\toprule
+			KDBS & Redis & Riak KV & Aerospike & Memcached \\
+			\midrule
+			Čas běhu (ms) & 205492,67 & 562029,33 & 209528 & 221353,33 \\
+			Propustnost (op/sec) & 4868,30 & 1783,39 & 4778,13 & 4517,67 \\
+			\midrule
+			\multicolumn{5}{l}{Čtení} \\
+			Počet operací & 1000000 & 1000000 & 1000000 & 1000000 \\
+			Avg letence ($\mu$s) & 819,32 & 2241,01 & 835,17 & 880,17 \\
+			Min letence ($\mu$s) & 308,69 & 804,67 & 319,33 & 376 \\
+			Max letence ($\mu$s) & 33935 & 83903 & 41881,67 & 39071 \\
+			Letence 95. percentil ($\mu$s) & 1213,33 & 3714,33 & 1242,33 & 1233,33 \\
+			Letence 99. percentil ($\mu$s) & 1856 & 7885,67 & 1861,67 & 1615,33 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Naměřené výsledky testů pro Workload C\label{tab_workload_c}}
+	\end{table}
+	
+	\subsection{Testový scénář 4 - Insert only} 
 	
 	\begin{figure}[h]
 		\centering
