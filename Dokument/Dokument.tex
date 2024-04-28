@@ -75,7 +75,7 @@
 	
 	Například databázový systém Redis je v současnosti jedním z deseti nejlépe hodnocených~\cite{db-engineers-ranking} databázových systémů napříč relačními i NoSQL databázovými systémy. V žebříčku porovnání téměř 70 čistě KDBS~\cite{db-engineers-ranking-kdbs}, je Redis na prvním místě, za ním následují Amazon DynamoDB~\cite{dynamodb}, společně s Microsoft Azure Cosmos DB~\cite{azure-cosmos-db} a Memcached~\cite{memcached}.
 	
-	Cílem práce je prostudovat a podrobně popsat problematiku KDBS. Práce se zaměří na vysvětlení tohoto konceptu a identifikaci klíčových rozdílů mezi jednotlivými KDBS. Jednou z hlavních úloh práce je zmínit a detailně popsat některé z nejznámějších a nejčastěji využívaných databázových systémů v tomto odvětví. Tyto DBS budou vzájemně porovnány s důrazem na jejich vlastnosti, výhody a nevýhody. Dalším úkolem práce je příprava a zprovoznění testovacího prostředí, které umožní měření propustnosti a odezvy na dotazy těchto vybraných KDBS. Návrh a implementace testovacího prostředí zahrnuje konfiguraci prostředí a zprovoznění instancí databázových systémů, ať už lokálně nebo v cloudovém prostředí. Následně budou vybrané DBS podrobeny testování a budou měřeny jejich propustnosti a odezva v reálném provozu. Naměřené hodnoty budou prezentovány a analyzovány s cílem porovnat chování jednotlivých DBS v různých scénářích. Konečné výsledky budou porovnány, což umožní vyvodit závěry o tom, jak se jednotlivé DBS osvědčily v praxi při manipulaci s daty.
+	Cílem práce je prostudovat a podrobně popsat problematiku KDBS. Práce se zaměří na vysvětlení tohoto konceptu a identifikaci klíčových rozdílů mezi jednotlivými KDBS. Jednou z hlavních úloh práce je zmínit a detailně popsat některé z nejznámějších a nejčastěji využívaných databázových systémů v tomto odvětví. Tyto DBS budou vzájemně porovnány s důrazem na jejich vlastnosti, výhody a nevýhody. Dalším úkolem práce je příprava a zprovoznění testovacího prostředí, které umožní měření propustnosti a odezvy na dotazy těchto vybraných KDBS. Návrh a implementace testovacího prostředí zahrnuje konfiguraci prostředí a zprovoznění instancí databázových systémů, ať už lokálně nebo v cloudovém prostředí. Následně budou vybrané DBS podrobeny testování a budou měřeny jejich propustnosti a latence v reálném provozu. Naměřené hodnoty budou prezentovány a analyzovány s cílem porovnat chování jednotlivých DBS v různých scénářích. Konečné výsledky budou porovnány, což umožní vyvodit závěry o tom, jak se jednotlivé DBS osvědčily v praxi při manipulaci s daty.
 	
 	Struktura práce je následující. První část práce (viz kapitola \ref{chapter:no-sql-ky-sys}) se zaměřuje na detailní představení několika klíčových KDBS (např. Redis, Riak KV, Aerospike). Každá z těchto DBS je popsána, a to včetně analýzy jejich charakteristických vlastností. V závěru této části je provedeno srovnání jednotlivých databází na základě jejich vlastností, například škálovatelnost, dotazovací jazyk a odezva.
 	
@@ -221,7 +221,7 @@
 	
 	Při spouštění každého testu je možné nastavit určité parametry pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
 	
-	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, odezvy a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřené výhradně na čtení, zápis nebo kombinace obojího. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při sekvenčním skenování ve Workloadu E je maximální počet skenovaných záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů. Takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
+	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, latence a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřené výhradně na čtení, zápis nebo kombinace obojího. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při sekvenčním skenování ve Workloadu E je maximální počet skenovaných záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů. Takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
 	
 	\begin{itemize} \label{lab-workloads}
 		\item Workload A (Update heavy)
@@ -337,7 +337,7 @@
 	
 	Testy byly prováděny ve třech YCSB kategoriích (tzv. YCSB Workload~\cite{workloads}). Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (viz YCSB Workloads \ref{lab-workloads}).
 	
-	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a 95/99 percentil odezvy na operaci. V tabulce jsou také data o počtu provedených operací, průměrné odezvě na operaci, a také minimální, průměrná a maximální doba odezvy na operaci.
+	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a percentily latence operací, konkrétně 95. a 99. percentil. V tabulce jsou také data o počtu provedených operací, průměrné latenci operací, a také minimální, průměrná a maximální latence operací.
 	
 	Určité databáze vyžadují i další parametry pro spuštění testování, nejčastěji to jsou host IP adresy nebo porty dané DBS pro možné spojení. Dále je například možné specifikovat cestu k souborům, se kterými pracuje testovací prostředí, nebo stanovit TTL~\cite{ttl} testovaných dat, aby bylo možné vyhnout se expiraci dat při dlouhotrvajících nebo vzájemně opožděných testech.
 	
@@ -353,9 +353,9 @@
 	
 	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS, můžeme přejít na poslední fázi testování. Nejprve musíme DBS naplnit daty a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím skriptů vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}. Nicméně není problém tyto skripty spouštět i v obyčejném příkazovém řádku. Jen zde může nastat problém s čitelností příliš dlouhých výpisů kvůli omezení pohybu ve výpisech. Všechny příkazy byly spouštěny v adresáři "bin", uvnitř kořenového adresáře projektu "ycsb-0.17.0".
 	
-	V první části testování spustíme příkaz "ycsb~load" pro připojení k databázi a vložení dat do DBS. Nejprve musíme specifikovat název testované DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme naše požadavky. Například počet záznamů, které chceme do DBS vložit, je určen parametrem "-p~recordcount=NUM", počet vláken parametrem "-p~threadcount=NUM", a nejčastěji IP adresa nebo port DBS příkazy "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM" pro spojení s DBS. Pomocí zadání vlastnosti "-s" po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto: "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme kromě dat v DBS také textový výstup popisující průběh zápisu dat do DBS, kde je zahrnuta propustnost vkládání a čas odezvy na operace rozdělené do sekcí minimum, průměr, maximum a percentily (95\%, 99\%).
+	V první části testování spustíme příkaz "ycsb~load" pro připojení k databázi a vložení dat do DBS. Nejprve musíme specifikovat název testované DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme naše požadavky. Například počet záznamů, které chceme do DBS vložit, je určen parametrem "-p~recordcount=NUM", počet vláken parametrem "-p~threadcount=NUM", a nejčastěji IP adresa nebo port DBS příkazy "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM" pro spojení s DBS. Pomocí zadání vlastnosti "-s" po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto: "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme kromě dat v DBS také textový výstup popisující průběh zápisu dat do DBS, kde je zahrnuta propustnost vkládání a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
 	
-	Druhá část testování se věnuje spuštění operací pro čtení a úpravu vložených dat z předchozího kroku pomocí příkazu "ycsb~run". Opět musíme zadat název testované DBS a Workload~\cite{workloads}, který nám určuje poměr operací pro čtení a úpravy dat. Pomocí volitelných parametrů~\cite{ycsb-properties} určíme počet prováděných operací "-p operationcount=NUM". Kombinace celkového počtu operací a Workloadu nám určí konkrétní počet operací čtení a úprav, které se během testu vykonají. Pokud pracujeme s Workloady D nebo E~(viz popis YCSB Workloads~\ref{lab-workloads}), dochází navíc k zápisu nových hodnot do DBS a počet klíčů v DBS stoupá. Ostatní Workloady provádějí pouze úpravy již existujících hodnot, a počet klíčů v DBS zůstává během testu stále stejný. Stejným způsobem jako v první fázi testování, i nyní můžeme specifikovat IP adresu a port DBS, případně počet vláken, podrobnější výstup testu atd. Celý příkaz pro spuštění testu DBS pak vypadá takto: "ycsb~run~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení testu získáme opět textový výstup v podobě tabulky popisující průběh testu, kde je zahrnuta propustnost operací a čas odezvy na operace rozdělené do sekcí minimum, průměr, maximum a percentily (95\%, 99\%).
+	Druhá část testování se věnuje spuštění operací pro čtení a úpravu vložených dat z předchozího kroku pomocí příkazu "ycsb~run". Opět musíme zadat název testované DBS a Workload~\cite{workloads}, který nám určuje poměr operací pro čtení a úpravy dat. Pomocí volitelných parametrů~\cite{ycsb-properties} určíme počet prováděných operací "-p operationcount=NUM". Kombinace celkového počtu operací a Workloadu nám určí konkrétní počet operací čtení a úprav, které se během testu vykonají. Pokud pracujeme s Workloady D nebo E~(viz popis YCSB Workloads~\ref{lab-workloads}), dochází navíc k zápisu nových hodnot do DBS a počet klíčů v DBS stoupá. Ostatní Workloady provádějí pouze úpravy již existujících hodnot, a počet klíčů v DBS zůstává během testu stále stejný. Stejným způsobem jako v první fázi testování, i nyní můžeme specifikovat IP adresu a port DBS, případně počet vláken, podrobnější výstup testu atd. Celý příkaz pro spuštění testu DBS pak vypadá takto: "ycsb~run~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení testu získáme opět textový výstup v podobě tabulky popisující průběh testu, kde je zahrnuta propustnost operací a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
 	
 	Před reálným testováním můžeme ověřit, zda je všechno správně nastavené, pomocí rychlého dema (viz příkazy~\ref{itemize-demo}). Demo se skládá ze dvou příkazů, naplnění databáze tisíci záznamy a následného otestování, provedení přibližně 500 operací čtení a 500 úprav v databázi BasicDB~\cite{basicdb}. Po spuštění obou příkazů by nám měly testy na konci vrátit status "Return=OK".
 	
@@ -486,15 +486,80 @@
 	\label{ps-ycsb-run}}
 	\end{figure}
 
-	\section{Výsledky testů}
+	\section{Vyhodnocení výsledků testů}
 	
-	TODO
+	Po opětovném spouštění stejných testů a následném zprůměrování naměřených hodnot jsme došli k finálním výsledkům. Hlavní měřené parametry byly propustnost (počet operací za sekundu), celkový čas testu (milisekundy), a minimální, průměrná, maximální latence na operaci (mikrosekundy) a percentil latence (mikrosekundy), konkrétně 95. a 99. percentil.
+	
+	Jednotlivé testy se dělí do 4 scénářů Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář se otestovaly všechny 4 vybrané KDBS třikrát, a následně se výsledky dané KDBS pro daný scénář zprůměrovaly. U scénářů Workload A a Workload B se měřila latence čtení a úpravu dat zvlášť, proto se výsledná latence těchto dvou scénářů počítala jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, proto nebylo zapotřebí průměrovat latence mezi sebou a stejně tak tomu je i u scénáře kde se pouze plní KDBS daty (Insert only).
+	
+	V grafech porovnávajících propustnosti KDBS jsem zavedl jednotku "kiloops/sec" reprezentující tisíce operací za sekundu. Všechny měřené propustnosti se pohybují v řádech jednotek tisíců operací za sekundu, proto je tato jednotka vhodná a zlepšuje čitelnost grafů. Nejvyšší naměřené hodnoty latence jsem zařadil do jednoho společného grafu napříč všemi testovými scénáři (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}) protože při porovnání maximální latence v jednom grafu daného scénáře s minimální a průměrnou latencí (viz graf~\ref{graph_Workload A - Min Avg Latency (ms)}) docházelo k velkému nepoměru vykreslených hodnot který jednou kategorií maximálních hodnot způsoboval zanedbatelné vizuální rozdíly pro hodnoty nejnižší a průměrné z předešlých kategorií. Při použití logaritmické stupnice nebyly grafy stále čitelné, proto jsem maximální latence dal do jednoho společného grafu napříč všemi testovými scénáři. Pokud na sloupcovém grafu dochází k několikanásobnému převýšení jedné maximální hodnoty některého sloupce vůči sloupcům ostatním v rámci dané kategorie či celého grafu využívám vizuální indikátor přetrhnutého sloupce (viz graf~\ref{graph_Workload B - Percentile Latency (ms)}), který znázorňuje že daný sloupec je vyšší oproti ostatním a zároveň nedochází k vykreslení celé výšky sloupce pro možnost zachovat vizuální poměry ostatních několikanásobně nižších hodnot.
+	
+	V rámci všech testů KDBS Riak KV několikanásobně zaostávala vůči zbylým třem databázím. Při testování docházelo i k pádům samotné KDBS spouštěné v Dockeru, a obecně docházelo k chybám a přetékání paměti způsobené nejspíše špatným nastavením konfiguračních souborů, obecně nastavení této KDBS bylo nejtěžší v porovnání s ostatními. Ve výsledcích testů (viz tabulka~\ref{tab_workload_a}) můžeme vidět, že KDBS Riak KV má hodnotu nejnižší latence stále vyšší než jsou průměrné latence zbylých tří databází a dokonce je i vyšší než 95. percentil latence zbylých KDBS.
+	
+	\subsection{Testový scénář 1 - Workload A}
+	
+	Prvním testovaným scénářem byl Workload A~\cite{workloads}, scénář se skládá z 50 \% operací pro čtení a 50 \% pro aktualizaci dat. Tento scénář byl vybrán pro demonstraci chování databází při vysokém počtu operací zaměřených právě na úpravu dat. Do každé KDBS bylo předem vloženo 100~000 záznamů a provádělo se 1~000~000 testovacích operací. Tedy přibližně 500~000 čtení a 500~000 úprav, konkrétní počet poměru operací se vždy liší v řádu nízkých stovek (v součtu je vždy roven milionu).
+	
+	Z naměřených hodnot (viz tabulka~\ref{tab_workload_a} a grafy~\ref{graph_Workloads A, B, C + Insert only - Throughput (kiloops/sec)},~\ref{graph_Workloads A, B, C + Insert only - Runtime(s)}) můžeme vidět že databáze Aerospike dosáhla nejvyšší propustnosti ze všech měřených KDBS 5081,13 operací za sekundu a její testy trvaly průměrně 196,8 sekund. Databáze Redis se umístila hned jako druhá s propustností 4801,04 operací za sekundu. Propustnost KDBS Redis je průměrně menší o 5,51 \% oproti KDBS Aerospike pro scénář Workload A. Následuje KDBS Memcached s propustností 4108,70 operací za sekundu, která oproti KDBS Aerospike zaostává o 19,13 \% a při srovnání s KDBS Redis je to méně o 14,42 \%. Nakonec KDBS Riak KV dosáhla nejnižší propustnosti 1283,98 operací za sekundu, což je zhoršení o 74,73 \% oproti KDBS Aerospike. Riak KV je pro tento scénář téměř čtyřnásobné pomalejší ve srovnání s nejrychlejší měřenou databází Aerospike.
+	
+	Při porovnání latence operací na první pohled vidíme že trend rychlostí latence operací kopíruje propustnosti. Pokud se zaměříme na minimální a průměrnou latenci (viz graf~\ref{graph_Workload A - Min Avg Latency (ms)}), tak vidíme že KDBS Aerospike zpracovala operaci nejrychleji za 317 $\mu$s a KDBS Redis za 315,17 $\mu$s. Rozdíl v minimální latenci pro tyto dvě KDBS je zanedbatelný. Databáze Memcached má poté minimální latenci operace 401,5 $\mu$s, tedy přibližně o 27 \% při porovnání s KDBS Aerospike a Redis. Databáze Riak KV má nejnižší latenci 1694 $\mu$s, což je pětinásobně více než nejnižší latence v tomto měření. Minimální latence KDBS Riak KV převyšuje i průměrné latence a 95. percentily tří zbylých databází ve všech testech pro tento scénář. Z toho měření vyplývá že pro tento scénář a konfiguraci má KDBS Riak KV několikanásobně vyšší latenci operací. U průměrné latence vidíme že KDBS Aerospike a Redis dosahují podobných hodnot přibližně 800 $\mu$s. KDBS Memcached dosahuje průměrné latence 967,9 $\mu$s což je opět o 23,31 \% pomalejší ve srovnání s KDBS Aerospike.
+	
+	Z největších naměřených latencí (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}) můžeme vidět že KDBS Aerospike provedla nejpomalejší operaci za 28,53 ms. V nejhorším možném případě pro tento scénář z hlediska latence operací byla KDBS Aerospike rychlejší přibližně o 67,94 \% oproti KDBS Redis u které maximální latence činí 47,92 ms a přibližně o 190 \% při porovnání s KDBS Memecached kde byla maximální latence 82,71 \%. KDBS Riak KV je dosáhla nejvyšší latence 163,02 ms a je skoro dvojnásobně pomalejší při porovnání v rámci tohoto měření s druhou nejpomalejší KDBS Memcached.
+	
+	Pokud se zaměříme na 95. a 99. percentil latence (viz graf~\ref{graph_Workload A - Percentile Latency (ms)}) tak je zřejmé že KDBS Aerospike dominuje svou nízkou latencí i v této kategorii pro scénář Workload A. KDBS Aerospike má 95. percentil 1121,8 $\mu$s, což je o 11,81 \% méně při srovnání s 95. percentilem KDBS Redis který činí 1273 $\mu$s a o 19,42 \% oproti KDBS Memcached kde 95. percentil latence 1386,33 $\mu$s. Nakonec KDBS Riak KV dosáhla 95. percentilu latence 6757 $\mu$s. Hodnota pro 99. percentil latence KDBS Aerospike byla 1539,33 $\mu$s, což je opět nejnižší 99. percentil latence napříč všemi KDBS v rámci tohoto scénáře. Databáze Memcached má druhý nejnižší 99. percentil latence s hodnotou 1848,33 $\mu$s a těsně za ní následuje KDBS Redis s 99. percentilem latence 1904,5 $\mu$s. KDBS Aerospike má 99. percentil nižší o 16,76 \% při srovnání s KDBS Memcached a o 18,95 \% menší při srovnání s KDBS Redis. KDBS Riak KV má opět nejhorší výsledky, a to latency 11,87 $\mu$s pro 99. percentil.
+	
+	Z naměřených hodnot testového scénáře Workload A můžeme vidět že KDBS Aerospike zvládá nejlépe velký počet aktualizací ve srovnání s ostatními testovanými KDBS. Databáze Aerospike dosahovala výsledků přibližně o 15 \% lepších při srovnání s ostatními KDBS. Za ní následovaly KDBS Redis a Memcached které měli vzájemně podobné výsledky. Databáze Redis byla v řádu jednotek procent lepší oproti Memcached ve všech měřeních s výjmkou 99. percentilu latence kde byla KDBS Memcached lepší o 3,04 \% (viz zabulka~\ref{graph_Workload A - Percentile Latency (ms)}). Jediná databáze Riak KV několikanásobně zaostávala vůči všem ostatním testovaným KDBS v rámci všech naměřených hodnot. Pokud bychom se zaměřili zvlášť na operace čtení a aktualizací u KDBS Riak KV tak uvidíme že latence aktualizací je minimálně dvojnásobně horší než latence čtení pro tuto KDBS, oproti tomu ostatní testované KDBS v rámci tohoto scénáře dosahovaly téměř identické latence jak pro čtení tak zápis.
+	
+	\subsection{Testový scénář 2 - Workload B}
+	
+	Druhým testovaným scénářem byl Workload B~\cite{workloads}, tento scénář se snaží více realisticky simulovat reálná chod databázového systému v praxi, kde většinou dochází především ke čtení záznamům a aktualizace jsou oproti tomu poměrově méně frekventované. Tento scénář se skládá z 95 \% operací zaměřených na čtení a 5 \% aktualizací. Oproti prvnímu scénáři kde byl poměr těchto dvou operací vyvážený (50 \% čtení, 50 \% aktualizace) bude tento scénář více přizpůsobený databázím které disponují rychlím čtením a pomalé aktualizace zde nebudou tvořit tak znatelné omezení. Do každé KDBS bylo předem vloženo 100~000 záznamů a provádělo se 1~000~000 testovacích operací. Tedy přibližně 950~000 čtení a 50~000 úprav, konkrétní počet poměru operací se vždy liší v řádu nízkých stovek (v součtu je vždy roven milionu).
+	
+	\subsection{Testový scénář 3 - Workload C}
+	
+	\subsection{Testový scénář 4 - Insert only} 
+	
+	\begin{table}
+		\centering
+		\begin{tabular}{ l | l l l l }
+			\toprule
+			KDBS & Redis & Riak KV & Aerospike & Memcached \\
+			\midrule
+			Čas běhu (ms) & 208419 & 803880,33 & 196849,33 & 243409,33 \\
+			Propustnost (op/sec) & 4801,04 & 1283,98 & 5081,13 & 4108,70 \\
+			\midrule
+			\multicolumn{5}{l}{Čtení} \\
+			Počet operací & 500157 & 500382 & 499106 & 500683 \\
+			Avg letence ($\mu$s) & 836,77 & 2175,86 & 785,86 & 967,90 \\
+			Min letence ($\mu$s) & 325,33 & 861,33 & 319,67 & 395,33 \\
+			Max letence ($\mu$s) & 50473,67 & 158271 & 27311 & 83177,67 \\
+			Letence 95. percentil ($\mu$s) & 1281,33 & 3695 & 1122,67 & 1385 \\
+			Letence 99. percentil ($\mu$s) & 1917,33 & 7399 & 1540,33 & 1846 \\
+			\midrule
+			\multicolumn{5}{l}{Aktualizace} \\
+			Počet operací & 499843 & 499618 & 500894 & 499317 \\
+			Avg letence ($\mu$s) & 824,13 & 5941,33 & 782,68 & 967,90 \\
+			Min letence ($\mu$s) & 305 & 2526,67 & 314,33 & 407,67 \\
+			Max letence ($\mu$s) & 45375 & 167764,33 & 29753,67 & 82249,67 \\
+			Letence 95. percentil ($\mu$s) & 1264,67 & 9819 & 1121 & 1387,67 \\
+			Letencezva 99. percentil ($\mu$s) & 1891,67 & 16332,33 & 1538,33 & 1850,67 \\
+			\midrule
+			\multicolumn{5}{l}{Čtení + aktualizace} \\
+			Počet operací & 1000000 & 1000000 & 1000000 & 1000000 \\
+			Avg letence ($\mu$s) & 830,45 & 4058,59 & 784,27 & 967,90 \\
+			Min letence ($\mu$s) & 315,17 & 1694 & 317 & 401,5 \\
+			Max letence ($\mu$s) & 47924,3 & 163017,67 & 28532,33 & 82713,67 \\
+			Letence 95. percentil ($\mu$s) & 1273 & 6757 & 1121,83 & 1386,33 \\
+			Latence 99. percentil ($\mu$s) & 1904,5 & 11865,67 & 1539,33 & 1848,33 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Naměřené výsledky testů pro Workload A\label{tab_workload_a}}
+	\end{table}
 	
 	\begin{figure}[h]
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Throughput (kiloops/sec)},
+				ylabel={Propustnost (kiloops/sec)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -526,7 +591,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workloads A, B, C + Insert only - Throughput (kiloops/sec)}
+		\caption{Workload A, B, C + Insert only - Propustnost (kiloops/sec)}
 		\label{graph_Workloads A, B, C + Insert only - Throughput (kiloops/sec)}
 	\end{figure}
 
@@ -534,7 +599,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Runtime (s)},
+				ylabel={Čas běhu (s)},
 				legend style={at={(0.5,-0.2)}, anchor=north, legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
 				ybar=5pt,
@@ -567,7 +632,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workloads A, B, C + Insert only - Runtime (s)}
+		\caption{Workload A, B, C + Insert only - Čas běhu (s)}
 		\label{graph_Workloads A, B, C + Insert only - Runtime(s)}
 	\end{figure}
 	
@@ -575,7 +640,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Latency (ms)},
+				ylabel={Latence (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -607,7 +672,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workloads A, B, C + Insert only - Max Latency (ms)}
+		\caption{Workload A, B, C + Insert only - Max Latence (ms)}
 		\label{graph_Workloads A, B, C + Insert only - Max Latency (ms)}
 	\end{figure}
 	
@@ -615,7 +680,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Latency (ms)},
+				ylabel={Latence (ms)},
 				symbolic x coords={Min,Avg},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -653,7 +718,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload A - Min Avg Latency (ms)}
+		\caption{Workload A - Min Avg Latence (ms)}
 		\label{graph_Workload A - Min Avg Latency (ms)}
 	\end{figure}
 	
@@ -661,7 +726,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Percentile Latency (ms)},
+				ylabel={Percentil latence (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -674,7 +739,7 @@
 				ymax=2.5,
 				xtick=data,
 				enlarge x limits=0.5,
-				symbolic x coords={95\%,99\%},
+				symbolic x coords={95.,99.},
 				restrict y to domain*=0:3, % Cut values off at 14
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
 				after end axis/.code={ % Draw line indicating break
@@ -686,14 +751,14 @@
 				axis lines*=left,
 				clip=false
 				]
-				\addplot coordinates {(95\%,1.273) (99\%,1.9045)};
-				\addplot coordinates {(95\%,1.12183) (99\%,1.5393)};
-				\addplot coordinates {(95\%,1.3863) (99\%,1.8483)};
-				\addplot coordinates {(95\%,6.757) (99\%,11.8656)};
+				\addplot coordinates {(95.,1.273) (99.,1.9045)};
+				\addplot coordinates {(95.,1.12183) (99.,1.5393)};
+				\addplot coordinates {(95.,1.3863) (99.,1.8483)};
+				\addplot coordinates {(95.,6.757) (99.,11.8656)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload A - Percentile Latency (ms)}
+		\caption{Workload A - Percentil latence (ms)}
 		\label{graph_Workload A - Percentile Latency (ms)}
 	\end{figure}
 
@@ -701,7 +766,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Latency (ms)},
+				ylabel={Latence (ms)},
 				symbolic x coords={Min,Avg},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -739,7 +804,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload B - Min Avg Latency (ms)}
+		\caption{Workload B - Min Avg Latence (ms)}
 		\label{graph_Workload B - Min Avg Latency (ms)}
 	\end{figure}
 
@@ -747,7 +812,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Percentile Latency (ms)},
+				ylabel={Percentil latence (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -760,7 +825,7 @@
 				ymax=3,
 				xtick=data,
 				enlarge x limits=0.5,
-				symbolic x coords={95\%,99\%},
+				symbolic x coords={95.,99.},
 				restrict y to domain*=0:3.5, % Cut values off at 3
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
 				after end axis/.code={ % Draw line indicating break
@@ -772,14 +837,14 @@
 				axis lines*=left,
 				clip=false
 				]
-				\addplot coordinates {(95\%,1.3236) (99\%,2.237833)};
-				\addplot coordinates {(95\%,1.19283) (99\%,1.76783)};
-				\addplot coordinates {(95\%,1.744) (99\%,2.832)};
-				\addplot coordinates {(95\%,6.06766) (99\%,10.65033)};
+				\addplot coordinates {(95.,1.3236) (99.,2.237833)};
+				\addplot coordinates {(95.,1.19283) (99.,1.76783)};
+				\addplot coordinates {(95.,1.744) (99.,2.832)};
+				\addplot coordinates {(95.,6.06766) (99.,10.65033)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload B - Percentile Latency (ms)}
+		\caption{Workload B - Percentil latence (ms)}
 		\label{graph_Workload B - Percentile Latency (ms)}
 	\end{figure}
 
@@ -787,7 +852,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Latency (ms)},
+				ylabel={Latence (ms)},
 				symbolic x coords={Min,Avg},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -825,7 +890,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload C - Min Avg Latency (ms)}
+		\caption{Workload C - Min Avg Latence (ms)}
 		\label{graph_Workload C - Min Avg Latency (ms)}
 	\end{figure}
 
@@ -833,7 +898,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Percentile Latency (ms)},
+				ylabel={Percentil latence (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -846,7 +911,7 @@
 				ymax=4,
 				xtick=data,
 				enlarge x limits=0.5,
-				symbolic x coords={95\%,99\%},
+				symbolic x coords={95.,99.},
 				restrict y to domain*=0:4.5, % Cut values off at 3
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
 				after end axis/.code={ % Draw line indicating break
@@ -858,14 +923,14 @@
 				axis lines*=left,
 				clip=false
 				]
-				\addplot coordinates {(95\%,1.21) (99\%,1.856)};
-				\addplot coordinates {(95\%,1.24) (99\%,1.8616)};
-				\addplot coordinates {(95\%,1.23) (99\%,1.6153)};
-				\addplot coordinates {(95\%,3.71) (99\%,7.8856)};
+				\addplot coordinates {(95.,1.21) (99.,1.856)};
+				\addplot coordinates {(95.,1.24) (99.,1.8616)};
+				\addplot coordinates {(95.,1.23) (99.,1.6153)};
+				\addplot coordinates {(95.,3.71) (99.,7.8856)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Workload C - Percentile Latency (ms)}
+		\caption{Workload C - Percentil latence (ms)}
 		\label{graph_Workload C - Percentile Latency (ms)}
 	\end{figure}
 	
@@ -873,7 +938,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Latency (ms)},
+				ylabel={Latence (ms)},
 				symbolic x coords={Min,Avg},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
@@ -911,7 +976,7 @@
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Insert only - Min Avg Latency (ms)}
+		\caption{Insert only - Min Avg Latence (ms)}
 		\label{graph_Insert only - Min Avg Latency (ms)}
 	\end{figure}
 	
@@ -919,7 +984,7 @@
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
-				ylabel={Percentile Latency (ms)},
+				ylabel={Percentil latence (ms)},
 				legend style={at={(0.5,-0.2)},
 					anchor=north,legend columns=-1},
 				every axis plot post/.style={/pgf/number format/fixed},
@@ -932,7 +997,7 @@
 				ymax=4.5,
 				xtick=data,
 				enlarge x limits=0.5,
-				symbolic x coords={95\%,99\%},
+				symbolic x coords={95.,99.},
 				restrict y to domain*=0:5.1, % Cut values off at 3
 				visualization depends on=rawy\as\rawy, % Save the unclipped values
 				after end axis/.code={ % Draw line indicating break
@@ -944,14 +1009,14 @@
 				axis lines*=left,
 				clip=false
 				]
-				\addplot coordinates {(95\%,2.219) (99\%,3.195)};
-				\addplot coordinates {(95\%,1.11933) (99\%,1.690)};
-				\addplot coordinates {(95\%,1.5366) (99\%,2.32233)};
-				\addplot coordinates {(95\%,4.3863) (99\%,8.12433)};
+				\addplot coordinates {(95.,2.219) (99.,3.195)};
+				\addplot coordinates {(95.,1.11933) (99.,1.690)};
+				\addplot coordinates {(95.,1.5366) (99.,2.32233)};
+				\addplot coordinates {(95.,4.3863) (99.,8.12433)};
 				\legend{Redis,Aerospike,Memcached,Riak KV}
 			\end{axis}
 		\end{tikzpicture}
-		\caption{Insert only - Percentile Latency (ms)}
+		\caption{Insert only - Percentil latence (ms)}
 		\label{graph_Insert only - Percentile Latency (ms)}
 	\end{figure}
 	
