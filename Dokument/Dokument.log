@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 APR 2024 01:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 APR 2024 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1855,53 +1855,53 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Kapitola 5.
 [50
 
-]
-Overfull \hbox (23.05782pt too wide) in paragraph at lines 1146--1146
+] [51]
+Overfull \hbox (23.05782pt too wide) in paragraph at lines 1154--1154
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
 
-[51
+[52
 
-] [52]
-Overfull \hbox (24.30655pt too wide) in paragraph at lines 1146--1146
+] [53]
+Overfull \hbox (24.30655pt too wide) in paragraph at lines 1154--1154
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
 
-Overfull \hbox (5.62495pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (5.62495pt too wide) in paragraph at lines 1154--1154
 []\T1/lmr/m/it/10.95 Hybrid Mem-ory Ar-chi-tec-ture [][]\T1/lmr/m/n/10.95 [on-l
 ine][][]. 2022. [[][]cit.[] []2022-11-20]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m
 /n/10.95 https : / / aerospike .
  []
 
-[53]
-Overfull \hbox (12.80908pt too wide) in paragraph at lines 1146--1146
+[54]
+Overfull \hbox (12.80908pt too wide) in paragraph at lines 1154--1154
 \T1/lmtt/m/n/10.95 archive . org / web / 20190813163612 / https : / / www . dig
 italocean . com / community / tutorials /
  []
 
 
-Overfull \hbox (7.60954pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (7.60954pt too wide) in paragraph at lines 1154--1154
 []\T1/lmr/m/n/10.95 OSE, Omoruyi; OKOKPU-JIE, Kennedy; NDU-JI-UBA, Nsikan Nko-r
 deh Charles; JOHN, Samuel;
  []
 
 
-Overfull \hbox (6.64246pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (6.64246pt too wide) in paragraph at lines 1154--1154
 []\T1/lmr/m/n/10.95 COOPER, Brian F.; SIL-BER-STEIN, Adam; TAM, Er-win; RA-MAKR
 -ISH-NAN, Raghu; SEARS,
  []
 
 
-Overfull \hbox (50.44803pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (50.44803pt too wide) in paragraph at lines 1154--1154
 [][]\T1/lmr/m/n/10.95 Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / www 
 . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPUAKq -
 []
  []
 
-[54] [55] [56] (Dokument.aux)
+[55] [56] [57] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1917,13 +1917,13 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48785 strings out of 478552
- 1055533 string characters out of 2854123
- 1786190 words of memory out of 3000000
+ 48786 strings out of 478552
+ 1055540 string characters out of 2854123
+ 1786191 words of memory out of 3000000
  65948 multiletter control sequences out of 15000+600000
  542223 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,19n,93p,2520b,4679s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,19n,93p,2520b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{D:/Skola-SW/MikTex/fonts/e
 nc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{D:/
 Skola-SW/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{D:/Skola-SW/MikTex/fonts/enc/dvip
@@ -1936,9 +1936,9 @@ ic/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola
 lic/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmsy10.pfb><D:/Sk
 ola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/
 public/lm/lmtt8.pfb>
-Output written on Dokument.pdf (56 pages, 1546395 bytes).
+Output written on Dokument.pdf (57 pages, 1551770 bytes).
 PDF statistics:
- 1112 PDF objects out of 1200 (max. 8388607)
- 277 named destinations out of 1000 (max. 500000)
+ 1123 PDF objects out of 1200 (max. 8388607)
+ 278 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
