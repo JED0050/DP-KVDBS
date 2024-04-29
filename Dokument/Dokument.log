@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 APR 2024 21:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 APR 2024 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1807,11 +1807,7 @@ Package pgfplots info on input line 846: Overriding colorspace to rgb due to xc
 olor configuration.
 Package pgfplots info on input line 886: Overriding colorspace to rgb due to xc
 olor configuration.
-
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
- [41]
-[42] [43]
+ [41] [42] [43]
 Package pgfplots info on input line 967: Overriding colorspace to rgb due to xc
 olor configuration.
 Package pgfplots info on input line 1007: Overriding colorspace to rgb due to x
@@ -1889,7 +1885,7 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 Here is how much of TeX's memory you used:
  48784 strings out of 478552
  1055520 string characters out of 2854123
- 1727683 words of memory out of 3000000
+ 1727786 words of memory out of 3000000
  65947 multiletter control sequences out of 15000+600000
  542223 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1906,7 +1902,7 @@ ic/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola
 lic/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmsy10.pfb><D:/Sk
 ola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/
 public/lm/lmtt8.pfb>
-Output written on Dokument.pdf (56 pages, 1553109 bytes).
+Output written on Dokument.pdf (56 pages, 1553132 bytes).
 PDF statistics:
  1120 PDF objects out of 1200 (max. 8388607)
  277 named destinations out of 1000 (max. 500000)

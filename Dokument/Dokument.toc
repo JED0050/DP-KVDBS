@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{32}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{35}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{38}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{43}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{41}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{44}{subsection.4.5.4}%
 \contentsline {chapter}{\numberline {5}Závěr}{49}{chapter.5}%
 \contentsline {chapter}{Literatura}{51}{chapter*.29}%
