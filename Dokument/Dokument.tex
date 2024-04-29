@@ -323,11 +323,11 @@
 	
 	Pro rozsáhlé otestování byly vybrány čtyři vhodné KDBS. A to konkrétně Redis (\ref{lab-redis}), Riak KV (\ref{lab-riak}), Aerospike (\ref{lab-aerospike}) a Memcached. Všechny tyto zvolené databáze jsou v aktuálním roce 2024 hodnoceny jako jedny z nejlepších podle žebříčku na webu DB-Engines Ranking~\cite{db-engineers-ranking} právě pro testovaný model Key-value. Tento web přiřazuje databázím bodové hodnocení na základě četnosti nových článků o dané databázi na internetu, obecného zájmu, četnosti diskuzí na fórech, množství pracovních nabídek a poptávek a relevanci na sociálních sítích.
 	
-	Ve snaze o možnost replikace testů byly všechny databáze instalovány a spouštěny pomocí open-source platformy Docker~\cite{docker}. Bylo tedy nutné najít vhodné a kompatibilní docker images pro každou z testovaných databází. V kontextu této práce Docker pomáhá zrychlit zdlouhavou fázi instalování a nastavení počátečního stavu databází, udržení funkčnosti vybrané verze instalovaného softwaru a odstínění od stavu stroje, na kterém DBS spouštíme.
+	Ve snaze o možnost replikace testů byly všechny databáze instalovány a spouštěny pomocí open-source platformy Docker~\cite{docker}. Bylo tedy nutné najít vhodný a kompatibilní Docker Image pro každou z testovaných databází. V kontextu této práce Docker pomáhá zrychlit zdlouhavou fázi instalování a nastavení počátečního stavu databází, udržení funkčnosti vybrané verze instalovaného softwaru a odstínění od stavu stroje, na kterém DBS spouštíme.
 	
 	Veškeré testy byly vytvářeny a spouštěny pomocí frameworku YCSB (\ref{lab-ycsb}). YCSB framework v první části, Load, do databáze vložil data, a následně v druhé části, Run, spustil testy a vrátil hodnoty výsledků. Pomocí přidání volitelných parametrů~\cite{ycsb-properties} bylo možné testy upravit podle vlastních potřeb.
 	
-	Po spuštění databáze v Dockeru se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
+	Po spuštění databáze v prostředí Docker se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
 	
 	\section{Popis parametrů testů}
 	
