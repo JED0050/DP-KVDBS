@@ -21,20 +21,20 @@
 \contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{22}{section.2.10}%
 \contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{24}{chapter.3}%
 \contentsline {section}{\numberline {3.1}YCSB}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TPC}{26}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{27}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací stroj}{28}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{29}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštění testů}{30}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{32}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{35}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{38}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{41}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{44}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {5}Závěr}{49}{chapter.5}%
-\contentsline {chapter}{Literatura}{51}{chapter*.29}%
+\contentsline {section}{\numberline {3.2}TPC}{27}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{28}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací stroj}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{30}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{31}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{33}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{36}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{39}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{42}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{45}{subsection.4.5.4}%
+\contentsline {chapter}{\numberline {5}Závěr}{50}{chapter.5}%
+\contentsline {chapter}{Literatura}{52}{chapter*.29}%
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
