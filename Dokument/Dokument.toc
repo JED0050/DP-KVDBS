@@ -23,18 +23,58 @@
 \contentsline {section}{\numberline {3.1}YCSB}{25}{section.3.1}%
 \contentsline {section}{\numberline {3.2}TPC}{28}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{29}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{30}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací stroj}{30}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{30}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{31}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštění testů}{32}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{34}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{38}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{42}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{43}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{48}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {5}Závěr}{51}{chapter.5}%
-\contentsline {chapter}{Literatura}{53}{chapter*.29}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací stroj}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{33}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{35}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{39}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{43}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{44}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{49}{subsection.4.5.4}%
+\contentsline {chapter}{\numberline {5}Závěr}{52}{chapter.5}%
+\contentsline {chapter}{Literatura}{54}{chapter*.30}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

@@ -89,7 +89,7 @@
 	
 	Cílem práce je prostudovat a podrobně popsat problematiku KDBS. Práce se zaměří na vysvětlení tohoto konceptu a identifikaci klíčových rozdílů mezi jednotlivými KDBS. Jednou z hlavních úloh práce je zmínit a detailně popsat některé z nejznámějších a nejčastěji využívaných databázových systémů v tomto odvětví. Tyto DBS budou vzájemně porovnány s důrazem na jejich vlastnosti, výhody a nevýhody. Dalším úkolem práce je příprava a zprovoznění testovacího prostředí, které umožní měření propustnosti a odezvy na dotazy těchto vybraných KDBS. Návrh a implementace testovacího prostředí zahrnuje konfiguraci prostředí a zprovoznění instancí databázových systémů, ať už lokálně nebo v cloudovém prostředí. Následně budou vybrané DBS podrobeny testování a budou měřeny jejich propustnosti a latence v reálném provozu. Naměřené hodnoty budou prezentovány a analyzovány s cílem porovnat chování jednotlivých DBS v různých scénářích. Konečné výsledky budou porovnány, což umožní vyvodit závěry o tom, jak se jednotlivé DBS osvědčily při manipulaci s daty.
 	
-	Struktura práce je následující. První část práce (viz kapitola \ref{chapter:no-sql-ky-sys}) se zaměřuje na detailní představení několika klíčových KDBS (např. Redis, Riak KV, Aerospike). Každý z těchto DBS je popsána, a to včetně analýzy jejich charakteristických vlastností. V závěru této části je provedeno srovnání jednotlivých DBS na základě jejich vlastností, například škálovatelnost, dotazovací jazyk a odezva.
+	Struktura práce je následující. První část práce (viz kapitola~\ref{chapter:no-sql-ky-sys}) se zaměřuje na detailní představení několika klíčových KDBS (např. Redis, Riak KV, Aerospike). Každý z těchto DBS je popsána, a to včetně analýzy jejich charakteristických vlastností. V závěru této části je provedeno srovnání jednotlivých DBS na základě jejich vlastností, například škálovatelnost, dotazovací jazyk a odezva.
 	
 	Kapitola \ref{chapter:3-test_environment} obsahuje popis a využitelnost testovacích prostředí databázových systémů. V kapitole jsou uvedena dvě existující testovací prostředí TPC~\cite{tpc} a YCSB~\cite{ycsb}. Testovací prostředí TPC je využíváno především pro relační databázové systémy, zatímco prostředí YCSB je připraveno a vyvíjeno zejména pro KDBS.
 	
@@ -99,7 +99,7 @@
 	
 	\chapter{Key-value databázové systémy\label{chapter:no-sql-ky-sys}}
 	
-	KDBS~\cite{amaz-key-value-db, ytb-nosql-db, kdbs-oracle, kdbs-redis} jsou typem databázového systému, který se specializuje na ukládání dat ve formě jednoduchých párování klíč-hodnota. Každá hodnota v této databázi je spojena s unikátním klíčem, který slouží k identifikaci daného záznamu (hodnoty). Tyto databáze jsou často preferované pro svou schopnost rychle a efektivně ukládat a získávat data, což je zvláště důležité pro aplikace, které potřebují vysoký výkon a škálovatelnost.
+	KDBS~\cite{kdbs-oracle, kdbs-redis} jsou typem databázového systému, který se specializuje na ukládání dat ve formě jednoduchých párování klíč-hodnota. Každá hodnota v této databázi je spojena s unikátním klíčem, který slouží k identifikaci daného záznamu (hodnoty). Tyto databáze jsou často preferované pro svou schopnost rychle a efektivně ukládat a získávat data, což je zvláště důležité pro aplikace, které potřebují vysoký výkon a škálovatelnost.
 	
 	Jedna z hlavních vlastností KDBS spočívá v tom, že ukládají data v jednoduchém formátu klíč-hodnota. Klíč slouží jako identifikátor, který umožňuje rychlé vyhledávání a přístup k datům. Data jsou obvykle indexována podle klíče, což zajišťuje rychlý přístup k nim i při velkém objemu dat.
 	
@@ -113,7 +113,7 @@
 	
 	Škálovatelnost~\cite{scalability}\label{scaling-dbs} je schopnost systému přizpůsobit se zvýšené zátěži nebo rostoucímu objemu dat a zachovat požadovanou úroveň výkonu a dostupnosti. Existují různé druhy škálovatelnosti. Horizontální škálovatelnost zahrnuje rozložení zátěže a zvýšení celkové kapacity přidáním dalších uzlů nebo serverů k distribuovanému systému. Vertikální škálovatelnost zlepšuje výkon jednotlivých uzlů nebo serverů zvětšením jejich výpočetní nebo paměťové kapacity. Lineární škálovatelnost je ideální situace, kdy se se zvýšením zdrojů (buď horizontálně nebo vertikálně) zvyšuje výkon systému lineárně.
 	
-	V současné době existuje celá řada KDBS, od malých open-source projektů po velké komerční cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je rychlost zpracování dat, škálovatelnost, uživatelská přívětivost skrze jednoduchou konfiguraci DBS a rozhraní pro práci s daty atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno~9 významných KDBS. Cílem je představit tyto KDBS, popsat jejich klíčové vlastnosti a provést jejich teoretické porovnání (viz tabulka \ref{tab_kvdb_compare}). Z uvedených KDBS se následně provede konečný výběr databází pro testování a porovnání v praxi.
+	V současné době existuje celá řada KDBS, od malých open-source projektů po velké komerční cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je rychlost zpracování dat, škálovatelnost, uživatelská přívětivost skrze jednoduchou konfiguraci DBS a rozhraní pro práci s daty atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno~9 významných KDBS. Cílem je představit tyto KDBS, popsat jejich klíčové vlastnosti a provést jejich teoretické porovnání (viz tabulka~\ref{tab_kvdb_compare}). Z uvedených KDBS se následně provede konečný výběr databází pro testování a porovnání v praxi.
 	
 	\section{Amazon DynamoDB}
 	
@@ -220,17 +220,17 @@
 	
 	\chapter{Prostředí pro testování databázových systémů\label{chapter:3-test_environment}}
 	
-	Různé databázové systémy mohou přistupovat k řešení jednotlivých problémů odlišně. Pokud chceme rozhodnout, který z těchto systémů je nejvhodnější pro určité úkoly, musíme provést řadu testů a porovnání. Je prakticky nemožné nalézt ideální databázový systém, který by exceloval ve všech aspektech pro všechna data a případy využití. Testování nám umožní odhalit, který systém vyniká a naopak zaostává pro konkrétní operace nad konkrétními daty. Proto je důležité najít ideální prostředí pro měření a porovnání vlastností vybraných KDBS z kapitoly~\ref{chapter:no-sql-ky-sys}.
+	Různé databázové systémy mohou přistupovat k řešení jednotlivých problémů odlišně. Pokud chceme rozhodnout, který z těchto systémů je nejvhodnější pro určité úkoly, musíme provést řadu testů a porovnání. Je prakticky nemožné nalézt ideální databázový systém, který by exceloval ve všech aspektech pro všechna data a případy použití. Testování nám umožní odhalit, který systém vyniká a naopak zaostává pro konkrétní operace nad konkrétními daty. Proto je důležité najít ideální prostředí pro měření a porovnání vlastností vybraných KDBS z kapitoly~\ref{chapter:no-sql-ky-sys}.
 	
-	Aktuálně existuje celá řada nástrojů pro měření výkonu databázových systémů. Mezi dva využitelné a bezplatné nástroje se řadí například TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC od organizace Transaction Processing Performance Council se dělí do mnoha kategorií. Například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss}, zatímco TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíše pro typické relační databázové systémy. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od společnosti Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání výkonu NoSQL databázových systémů, což je pro tuto práci zaměřenou na KDBS ideální. Proto byla tato technologie zvolena pro měření výkonu jednotlivých databázových systémů~\cite{benchmark-pdf-1, benchmark-pdf-2}.
+	Aktuálně existuje celá řada nástrojů pro měření výkonu databázových systémů~\cite{dbs-testing-tools}. Mezi dva využitelné a bezplatné nástroje se řadí například TPC~\cite{tpc} a YCSB~\cite{ycsb}. TPC od organizace Transaction Processing Performance Council se dělí do mnoha kategorií. Například TPC-H je považován spíše za benchmark pro systémy pro podporu rozhodování~\cite{dss}, zatímco TPCx-BB je benchmark pro Big Data. Obecně se TPC benchmarky využívají spíše pro RDBS. Na druhou stranu Yahoo! Cloud Serving Benchmark (dále jen YCSB) od společnosti Yahoo! je open-source specifikace a sada programů pro vyhodnocování možností vyhledávání a údržby počítačových programů. Často se ale právě YCSB používá k porovnání výkonu NoSQL databázových systémů~\cite{benchmark-pdf-1, benchmark-pdf-2}, což je pro tuto práci zaměřenou na KDBS ideální. Proto bylo v této práci toto testovací prostředí zvoleno pro měření výkonu jednotlivých DBS.
 	
 	\section{YCSB} \label{lab-ycsb}
 	
-	Architektura YCSB~\cite{ycsb,ycsb-benchmarking} je založena na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro značnou část významných databázových systémů existuje podpora v podobě bindingů. Samotný benchmark se skládá ze dvou fází. První z nich je Loading fáze zaměřená na vložení dat do databáze a následně druhá je Running fáze, ve které se spouští daný test (viz schéma \ref{ycsb-blok-schema}).
+	Architektura YCSB~\cite{ycsb,ycsb-benchmarking} je založena na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro značnou část významných databázových systémů existuje podpora v podobě bindingů~\cite{ycsb}. Samotný benchmark se skládá ze dvou fází. První z nich je Loading fáze zaměřená na vložení dat do databáze a následně druhá je Running fáze, ve které se spouští daný test (viz schéma~\ref{ycsb-blok-schema}).
 	
-	Při spouštění každého testu je možné nastavit určité parametry pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
+	Při spouštění každého testu je možné nastavit určité parametry (viz kapitola~\ref{test-param} a~\ref{test-start}) pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
 	
-	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, latence a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřené výhradně na čtení, zápis nebo kombinace obojího. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při sekvenčním skenování ve Workloadu E je maximální počet skenovaných záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů. Takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
+	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, latence a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřené výhradně na čtení, zápis, aktualizace, mazání nebo kombinace zmíněných operací. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při rozsahových dotazech ve Workloadu E je maximální počet procházených záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů. Takže při počtu záznamů 1000 bude každá operace skenování číst právě 1 až 50 záznamů.
 	
 	\begin{itemize} \label{lab-workloads}
 		\item Workload A (Update heavy)
@@ -251,7 +251,7 @@
 		\end{itemize}
 		\item Workload E (Short ranges)
 		\begin{itemize}
-			\item 95\% operací zaměřených na sekvenční skenování nízkého počtu záznamů a 5\% operací zaměřených na vkládání
+			\item 95\% operací zaměřených na rozsahové skenování nízkého počtu záznamů a 5\% operací zaměřených na vkládání
 		\end{itemize}
 		\item Workload F (Read-modify-write)
 		\begin{itemize}
@@ -269,11 +269,44 @@
 	
 	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{oltp} a možnosti jejich následného monitoringu a porovnávání. TPC benchmarky využívají firmy s velkými data a přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
 	
-	TPC benchmarky jsou rozděleny do více modelů pro různě specifikované testy. Prvním z modelů pro OLTP byl TPC Benchmark A (TPC-A), který následně nahradil benchmark TPC-B a aktuálně se v tomto odvětví využívá poslední generace OLTP benchmarků TPC-C a TPC-E. Například modely TPC-DS/DI a TPC-H jsou uzpůsobeny pro testování systémů pro podporu rozhodování~\cite{dss}. TPC benchmarky jsou přizpůsobeny i pro virtualizaci, IoT~\cite{iot} a další (viz tabulka TPC benchmarků \ref{tab_tpc_modely}).
+	TPC benchmarky jsou rozděleny do více modelů pro různě specifikované testy. Prvním z modelů pro OLTP byl TPC Benchmark A (TPC-A), který následně nahradil benchmark TPC-B a aktuálně se v tomto odvětví využívá poslední generace OLTP benchmarků TPC-C a TPC-E. Například modely TPC-DS/DI a TPC-H jsou uzpůsobeny pro testování systémů pro podporu rozhodování~\cite{dss}. TPC benchmarky jsou přizpůsobeny i pro virtualizaci, IoT~\cite{iot} a další (viz tabulka TPC benchmarků~\ref{tab_tpc_modely}).
+	
+	Při spouštění TPC testů si nejprve zvolíme požadovaný scénář obsahující sadu SQL příkazů. Tyto příkazy se následně provádějí, ideálně nad velkými daty. TPC benchmark nakonec vyhodnotí výkon DBS~\cite{tpc-ytb-benchmark} na základě naměřených hodnot v testovaném scénáři. Pro komplexní testování SQL příkazy často obsahují náročné operace, jako například agregace, seřazení, průměry, spojení tabulek nebo vnořené dotazy~\cite{tpc-h-sql, tpc-h-index} (viz první SQL Test Q1 pro TPC-H~\ref{tpc-h-sql}).
+	
+	\begin{figure}
+		\centering
+		\begin{lstlisting}[
+			language=SQL,
+			showspaces=false,
+			basicstyle=\ttfamily,
+			numbers=left,
+			numberstyle=\tiny,
+			commentstyle=\color{gray}
+			]
+ --Q1
+ select
+   l_returnflag,
+   l_linestatus,
+   sum(l_quantity) as sum_qty,
+   sum(l_extendedprice) as sum_base_price,
+   sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
+   sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+   avg(l_quantity) as avg_qty,
+   avg(l_extendedprice) as avg_price,
+   avg(l_discount) as avg_disc,
+   count(*) as count_order
+ from lineitem
+ where  l_shipdate <= date '1998-12-01'
+ group by  l_returnflag,  l_linestatus
+ order by  l_returnflag,  l_linestatus;
+		\end{lstlisting}
+		\caption{TPC-H, SQL Test Q1~\cite{tpc-h-sql, tpc-h-index}
+			\label{tpc-h-sql}}
+	\end{figure}
 	
 	Model TPC-C~\cite{tpc-c} simuluje velkoobchodní provoz s více sklady, známý jednoduše jako "společnost". V minimálním testu má společnost deset skladů, každý s deseti uživatelskými terminály. Každý sklad obsluhuje deset definovaných prodejních okrsků, každý s 3000 zákazníky, kteří objednávají podle katalogu výrobků o 100 000 položkách. Nejčastějšími transakcemi jsou objednávky zákazníků, přičemž každá objednávka obsahuje v průměru 10 položek, a platby zákazníků. Méně časté požadavky se dotazují na stav objednávek a skladových zásob, expedují objednávky a doplňují zásoby, které se sníží. Pro testování výkonnosti daného systému se počet skladů zvyšuje tak, aby splňoval požadované minimum potřebné k měření cílové úrovně výkonnosti.
 	
-	Výsledky srovnávacího testu se měří v transakcích za minutu, známých jako tpmC. První výsledek tpmC byl zveřejněn v září 1992 pro IBM AS/400 a přinesl výsledek 54 tpmC. V roce 2000 byl průměrný výsledek pro špičkové stroje 2,4 milionu tpmC a společnosti ve snaze získat rekord stavěly systémy velkých rozměrů. Současný rekord byl stanoven v roce 2020 pomocí cloud computingu, který poskytl 707,3 milionu tpmC~\cite{tpc-c-top-result}. Nedávné výsledky pro menší lokální systémy se zaměřily na snížení nákladů na tpmC.
+	Výsledky srovnávacího testu se měří v transakcích za minutu, známých jako tpmC. První výsledek tpmC byl zveřejněn v září 1992 pro IBM AS/400 a přinesl výsledek 54 tpmC. V roce 2000 byl průměrný výsledek pro špičkové stroje 2,4 milionu tpmC~\cite{tpc-rec-2000}, a společnosti ve snaze získat rekord stavěly systémy velkých rozměrů. Současný rekord byl stanoven v roce 2020 pomocí cloud computingu, který poskytl 707,3 milionu tpmC~\cite{tpc-c-top-result}. Nedávné výsledky pro menší lokální systémy se zaměřily na snížení nákladů na tpmC.
 	
 	\begin{table}
 		\centering
@@ -297,13 +330,13 @@
 	
 	\section{Relevance TPC a YCSB pro měření KDBS}
 	
-	Pokud jde o relevanci TPC pro KDBS, je potřeba brát v úvahu, že KDBS se liší od tradičních relačních databází. Zatímco TPC benchmarky se zaměřují na transakční zpracování a operace typické pro RDBS, KDBS se často používají pro rychlý přístup k datům pomocí jednoduchého klíč-hodnota rozhraní a jsou často součástí aplikací s vysokým objemem operací typu čtení a zápisu.
+	Pokud jde o relevanci TPC pro KDBS, je potřeba brát v úvahu, že KDBS se liší od tradičních relačních databází. Zatímco TPC benchmarky se zaměřují na transakční zpracování a složitější operace typické pro RDBS (viz SQL Test Q1 z TPC-H~\ref{tpc-h-sql}), KDBS se často používají pro rychlý přístup k datům pomocí jednoduchého klíč-hodnota rozhraní a jsou často součástí aplikací s vysokým objemem operací typu čtení a zápisu.
 	
 	Z tohoto důvodu by benchmarky navržené specificky pro KDBS byly relevantnější pro měření jejich výkonnosti a charakteristik. Nicméně některé aspekty TPC benchmarků, jako je schopnost zpracovávat vysoký objem transakcí nebo zátěžové testování, mohou poskytnout užitečné informace i pro KDBS, i když nejsou primárně určeny pro tuto kategorii databází.
 	
 	Pokud jde o relevanci YCSB pro KDBS, můžeme říci, že je velmi relevantní. To je způsobeno tím, že YCSB je zaměřen na testování databází pomocí jednoduchého klíč-hodnota rozhraní, což je přesně ten způsob, jakým komunikují KDBS.
 	
-	YCSB poskytuje sadu připravených scénářů a operací, které simuluji reálné aplikace a zátěžové podmínky. To umožňuje uživatelům testovat výkonnost KDBS v různých situacích a porovnávat je s jinými NoSQL DBS. Celkově lze říci, že YCSB je relevantní nástroj pro testování KDBS a poskytuje užitečné informace o jejich výkonu a škálovatelnosti v scénářích podobných reálnému použití.
+	YCSB poskytuje sadu připravených scénářů~\cite{workloads} a operací~\cite{ycsb-properties}, které simuluji reálné aplikace a zátěžové podmínky. Obecně lze říci, že YCSB je oproti TPC relevantnější nástroj pro testování KDBS a poskytuje užitečné informace o jejich výkonu a škálovatelnosti v scénářích podobných reálnému použití.
 	
 	\chapter{Vyhodnocení výsledků testů\label{chapter:4-test_results}}
 	
@@ -340,19 +373,19 @@
 	
 	Veškeré potřebné použité skripty jsou dostupné v textovém souboru "YCSB\_Docker\_Scripty.txt". Tento soubor je součástí příloh odevzdaných k diplomové práci. Začátek souboru obsahuje odkazy pro získání potřebného softwaru k spuštění testů. Následuje stručný popis testových scénářů Workload~A~-~F. Poté následují skripty pro spuštění DEMA. Soubor je zakončen čtyřmi kategoriemi pro každou z testovaných KDBS. Součástí testovacích skriptů každé KDBS jsou dvě sekce, které jsou zaměřené na příkazy potřebné pro prostředí Docker a YCSB.
 	
-	\section{Popis parametrů testů}
+	\section{Popis parametrů testů}\label{test-param}
 	
 	Veškeré testy pro každou z testovaných databází byly spuštěny třikrát, a finální výsledek byl tedy průměrem ze všech tří testů pro každou databázi v dané testovací kategorii. Každý test byl spouštěn paralelně na čtyřech vláknech.
 	
 	Do databáze bylo vždy vloženo 100~000 záznamů a následující test prováděl 1~000~000 dotazů nad danou naplněnou databází. Následně byla databáze vyprázdněna a celý proces se opakoval ještě dvakrát.
 	
-	Testy byly prováděny ve třech YCSB kategoriích (tzv. YCSB Workload~\cite{workloads}). Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (viz YCSB Workloads \ref{lab-workloads}).
+	Testy byly prováděny ve třech YCSB kategoriích (tzv. YCSB Workload~\cite{workloads}). Workload A (Update-heavy: 50\% read, 50\% update), Workload B (Read-mostly: 95\% read, 5\% update) a Workload C (Read-only) (viz YCSB Workloads~\ref{lab-workloads}).
 	
 	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a percentily latence operací, konkrétně 95. a 99. percentil. V tabulce jsou také data o počtu provedených operací, průměrné latenci operací, a také minimální, průměrná a maximální latence operací.
 	
 	Určité databáze vyžadují i další parametry pro spuštění testování, nejčastěji to jsou host IP adresy nebo porty dané databáze pro možné spojení. Dále je například možné specifikovat cestu k souborům, se kterými pracuje testovací prostředí, nebo stanovit TTL~\cite{ttl} testovaných dat, aby bylo možné vyhnout se expiraci dat při dlouhotrvajících nebo vzájemně opožděných testech.
 	
-	\section{Spouštění testů}
+	\section{Spouštění testů}\label{test-start}
 	
 	Pro spuštění testů je nejprve zapotřebí nainstalovat, nastavit a spustit vybranou databázi. Poté se musíme k DBS připojit pomocí testovacího prostředí YCSB pro možnou komunikaci s databází a naplnit ji daty. Nakonec spustíme požadované testy a po dokončení testování nám prostředí YCSB vrátí tabulku výsledků v textové podobě.
 	
