@@ -514,6 +514,32 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{strong-consistency}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Dremio - Strong Consistency}
+    \verb{url}
+    \verb https://www.dremio.com/wiki/strong-consistency/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{atomic-counter}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Use the atomic counter feature}
+    \verb{url}
+    \verb https://www.alibabacloud.com/help/en/tablestore/atomic-counters
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{ttl}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Using Time to Live (TTL)}
@@ -524,6 +550,20 @@
     \field{langid}{english}
     \field{year}{2024}
     \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{full-backup}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Full database backups (SQL Server)}
+    \verb{url}
+    \verb https://learn.microsoft.com/en-us/sql/relational-databases/backup-res
+    \verb tore/full-database-backups-sql-server?view=sql-server-ver16
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
@@ -552,6 +592,74 @@
     \field{urlday}{09}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
+  \endentry
+
+  \entry{what-is-sql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is SQL (Structured Query Language)?}
+    \verb{url}
+    \verb https://aws.amazon.com/what-is/sql/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{api-dynamodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DynamoDB API}
+    \verb{url}
+    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowI
+    \verb tWorks.API.html#HowItWorks.API.ControlPlane
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{control-plan-dynamodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Best practices for managing the control plane in DynamoDB}
+    \verb{url}
+    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-c
+    \verb ontrol-plane.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{scan-dynamo}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Working with scans in DynamoDB}
+    \verb{url}
+    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan
+    \verb .html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{query-dynamo}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DynamoDB - Querying}
+    \verb{url}
+    \verb https://www.dynamodbguide.com/querying/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{oraclenosqldb}{online}{}
@@ -1245,7 +1353,7 @@
     \endverb
     \field{langid}{english}
     \field{year}{2024}
-    \field{urlday}{29}
+    \field{urlday}{27}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry

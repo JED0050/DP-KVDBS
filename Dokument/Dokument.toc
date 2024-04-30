@@ -13,28 +13,92 @@
 \contentsline {section}{\numberline {2.2}Oracle NoSQL Database}{16}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Redis}{17}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Aerospike}{18}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Oracle Berkeley DB}{19}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Riak KV}{19}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Voldemort}{20}{section.2.7}%
 \contentsline {section}{\numberline {2.8}InfinityDB}{21}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Memcached}{22}{section.2.9}%
-\contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{22}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}YCSB}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TPC}{27}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{28}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací stroj}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštění testů}{31}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{33}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{37}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{41}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{42}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{47}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {5}Závěr}{50}{chapter.5}%
-\contentsline {chapter}{Literatura}{52}{chapter*.29}%
+\contentsline {section}{\numberline {2.10}Nezmíněné významné NoSQL databáze}{24}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}YCSB}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TPC}{28}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{29}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{30}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací stroj}{30}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{32}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{34}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{38}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{42}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{43}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{48}{subsection.4.5.4}%
+\contentsline {chapter}{\numberline {5}Závěr}{51}{chapter.5}%
+\contentsline {chapter}{Literatura}{53}{chapter*.29}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
