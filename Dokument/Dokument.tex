@@ -329,6 +329,8 @@
 	
 	Po spuštění databáze v prostředí Docker se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
 	
+	Veškeré potřebné použité skripty jsou dostupné v textovém souboru "YCSB\_Docker\_Scripty.txt". Tento soubor je součástí příloh odevzdaných k diplomové práci. Začátek souboru obsahuje odkazy pro získání potřebného softwaru k spuštění testů. Následuje stručný popis testových scénářů Workload~A~-~F. Poté následují skripty pro spuštění DEMA. Soubor je zakončen čtyřmi kategoriemi pro každou z testovaných KDBS. Součástí testovacích skriptů každé KDBS jsou dvě sekce, které jsou zaměřené na příkazy potřebné pro prostředí Docker a YCSB.
+	
 	\section{Popis parametrů testů}
 	
 	Veškeré testy pro každou z testovaných databází byly spuštěny třikrát, a finální výsledek byl tedy průměrem ze všech tří testů pro každou databázi v dané testovací kategorii. Každý test byl spouštěn paralelně na čtyřech vláknech.
@@ -489,6 +491,8 @@
 	\section{Vyhodnocení výsledků testů}
 	
 	Po opětovném spuštění stejných testů a následném zprůměrování naměřených hodnot jsme dospěli k finálním výsledkům. Hlavními měřenými parametry byly propustnost (počet operací za sekundu), celkový čas testu (v milisekundách) a minimální, průměrná a maximální latence operací (v mikrosekundách), spolu s percentily latence (v mikrosekundách), konkrétně 95. a 99. percentil.
+	
+	Veškeré hodnoty z testů byly zaznamenány do Excel dokumentu~\cite{excel} "KDBS\_Vysledky\_testu.xlsx". Tento dokument je součástí dodaných příloh k diplomové práci. Dokument je rozdělen do šesti sekcí. První 2 listy se zaměřují na konečné zprůměrované výsledky všech měření pro 4 testované scénáře. Zbývající 4 listy se věnují konkrétním výsledkům dílčích testů pro každou ze 4 testovaných KDBS, na základě kterých se počítaly výsledné hodnoty pro předešlé listy.
 	
 	Jednotlivé testy byly rozděleny do čtyř scénářů: Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář byly všechny čtyři vybrané KDBS testovány třikrát, a jejich výsledky byly následně zprůměrovány. U scénářů Workload A a Workload B byla měřena latence čtení a aktualizace dat zvlášť, a jejich výsledná latence byla počítána jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, a proto nebylo zapotřebí průměrovat výsledné latence. Stejně tak tomu bylo u scénáře Insert only, kde dochází pouze k vkládání dat do KDBS. U grafů a tabulek latence je minimum označeno zkratkou "min", maximum "max" a průměr "avg".
 	

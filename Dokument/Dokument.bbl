@@ -486,6 +486,20 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{postgres-multimaster-replication}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Terms and Definitions for Database Replication}
+    \verb{url}
+    \verb https://web.archive.org/web/20110710093040/http://www.postgres-r.org/
+    \verb documentation/terms
+    \endverb
+    \field{langid}{english}
+    \field{year}{2011}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{dynamodb-secondary-index}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Improving data access with secondary indexes}
@@ -553,6 +567,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{berkeleydb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle Berkeley DB}
+    \verb{url}
+    \verb https://www.oracle.com/database/technologies/related/berkeleydb.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2022}
+    \field{urlday}{21}
+    \field{urlmonth}{11}
+    \field{urlyear}{2022}
+  \endentry
+
   \entry{rediscli}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Redis CLI}
@@ -588,19 +615,6 @@
     \field{langid}{english}
     \field{year}{2022}
     \field{urlday}{20}
-    \field{urlmonth}{11}
-    \field{urlyear}{2022}
-  \endentry
-
-  \entry{berkeleydb}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Oracle Berkeley DB}
-    \verb{url}
-    \verb https://www.oracle.com/database/technologies/related/berkeleydb.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2022}
-    \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry
@@ -1223,6 +1237,19 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{excel}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Microsoft Excel}
+    \verb{url}
+    \verb https://www.microsoft.com/cs-cz/microsoft-365/excel
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{29}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{win-env-var}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Windows Environment Variables}
@@ -1232,20 +1259,6 @@
     \field{langid}{english}
     \field{year}{2024}
     \field{urlday}{26}
-    \field{urlmonth}{04}
-    \field{urlyear}{2024}
-  \endentry
-
-  \entry{postgres-multimaster-replication}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Terms and Definitions for Database Replication}
-    \verb{url}
-    \verb https://web.archive.org/web/20110710093040/http://www.postgres-r.org/
-    \verb documentation/terms
-    \endverb
-    \field{langid}{english}
-    \field{year}{2011}
-    \field{urlday}{27}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry

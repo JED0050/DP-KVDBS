@@ -15,7 +15,7 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces YCSB Redis, příkaz pro vložení dat (load) \relax }}{34}{figure.caption.12}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces YCSB Redis, příkaz pro spuštění testů (run) \relax }}{35}{figure.caption.13}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Workload A, B, C + Insert only - Propustnost (kiloops/sec)\relax }}{37}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Workload A, B, C + Insert only - Čas běhu (s)\relax }}{37}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Workload A, B, C + Insert only - Čas běhu (s)\relax }}{38}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Workload A, B, C + Insert only - Max Latence (ms)\relax }}{40}{figure.caption.17}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Workload A - Min Avg Latence (ms)\relax }}{40}{figure.caption.18}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Workload A - Percentil latence (ms)\relax }}{41}{figure.caption.19}%
@@ -26,6 +26,14 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Insert only - Min Avg Latence (ms)\relax }}{49}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Insert only - Percentil latence (ms)\relax }}{49}{figure.caption.28}%
 \addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
