@@ -688,6 +688,168 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{oracle-singlemaster-multireplica}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Single Master with Multiple Replica Strategy}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E89495_01/html/sdm_80_administration/GUID-
+    \verb 87551A6E-BDC7-4807-99ED-A10BCC83BA57.htm
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-storage-node}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Storage Node Configuration}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E19114-01/sol.backup51/805-3795/6j3jtvjmr/
+    \verb index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-sql-shell}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{A Introduction to the SQL for Oracle NoSQL Database Shell}
+    \verb{url}
+    \verb https://docs.oracle.com/en/database/other-databases/nosql-database/21
+    \verb .2/sqlfornosql/introduction-sql-shell.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{failover}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Failover}
+    \verb{url}
+    \verb https://www.barracuda.com/support/glossary/failover
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{switchover}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Performing a Switchover to a Physical Standby Database}
+    \verb{url}
+    \verb https://docs.oracle.com/en/database/oracle/oracle-database/19/spmsu/s
+    \verb witchover-to-a-physical-db.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-bulkapi}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle Bulk API}
+    \verb{url}
+    \verb https://docs.oracle.com/en/cloud/saas/data-cloud/data-cloud-help-cent
+    \verb er/Developers/reference/bulkapi.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{offheapcache}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{On-Heap and Off-Heap Memory}
+    \verb{url}
+    \verb https://docs.oracle.com/en/java/javase/21/core/heap-and-heap-memory.h
+    \verb tml
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-big-data-sql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle Big Data SQL}
+    \verb{url}
+    \verb https://www.oracle.com/docs/tech/database/bigdatasql-datasheet.pdf
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{index}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is a Database Index?}
+    \verb{url}
+    \verb https://www.codecademy.com/article/sql-indexes
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{redis-keyspace-not}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Redis keyspace notifications}
+    \verb{url}
+    \verb https://redis.io/docs/latest/develop/use/keyspace-notifications/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{redis-geospatial}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Redis geospatial}
+    \verb{url}
+    \verb https://redis.io/docs/latest/develop/data-types/geospatial/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{tree-replic}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Replication topology}
+    \verb{url}
+    \verb https://www.ibm.com/docs/en/sdse/6.4.0?topic=replication-topology
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{rediscli}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Redis CLI}
@@ -712,6 +874,71 @@
     \field{urlday}{20}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{ssd-avast}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What Is a Solid-State Drive (SSD)?}
+    \verb{url}
+    \verb https://www.avast.com/c-what-is-ssd
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{aerospike-datamodel}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Components of the Aerospike schemaless data mode}
+    \verb{url}
+    \verb https://aerospike.com/docs/server/architecture/data-model
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{aerospike-rtanalysis}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What are real time data analytics platforms?}
+    \verb{url}
+    \verb https://aerospike.com/glossary/real-time-data-analytics-platforms/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{aerospike-clustering}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Clustering}
+    \verb{url}
+    \verb https://aerospike.com/docs/server/architecture/clustering
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{aerospike-deployment}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Planning a Deployment}
+    \verb{url}
+    \verb https://aerospike.com/docs/server/operations/plan
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{aql}{online}{}
