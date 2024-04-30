@@ -954,6 +954,45 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{inmemory}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What Is an In-Memory Database?}
+    \verb{url}
+    \verb https://aws.amazon.com/nosql/in-memory/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{btree}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction of B-Tree}
+    \verb{url}
+    \verb https://www.geeksforgeeks.org/introduction-of-b-tree-2/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{acid}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{ACID Transactions}
+    \verb{url}
+    \verb https://www.databricks.com/glossary/acid-transactions
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{mvcc}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Multiversion concurrency control}
@@ -966,6 +1005,20 @@
     \field{urlday}{21}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{hotstandby}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Hot Standby}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/E17277_02/html/GettingStartedGuide/hotfail
+    \verb over.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{sqlite}{online}{}
@@ -1036,6 +1089,20 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{multicluster}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Multi-cluster use cases}
+    \verb{url}
+    \verb https://cloud.google.com/kubernetes-engine/fleet-management/docs/mult
+    \verb i-cluster-use-cases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{snappy}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Snappy}
@@ -1060,6 +1127,19 @@
     \field{urlday}{22}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{mysql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{MySQL}
+    \verb{url}
+    \verb https://www.mysql.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{jmx}{online}{}
@@ -1087,6 +1167,21 @@
     \field{urlday}{22}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{cachovani}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Cachování – jedna z metod zrychlení načítání
+  e-shopů}
+    \verb{url}
+    \verb https://www.shockworks.eu/cz/cachovani-jedna-z-metod-zrychleni-nacita
+    \verb ni-e-shopu/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2014}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{mongodb}{online}{}
