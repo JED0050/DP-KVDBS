@@ -1,0 +1,54 @@
+Připomínky:
+Str. 1:
+NoSQL Key-value (neboli Klíč-hodnota) databáze
+Používejte pojem Key-value databázové systémy
+Nepoužívejte NoSQL Key-value ...
+ukládání, načítání a správu různých datových struktur
+Jak to myslíte? v databázi ukládáte data do datových struktur ...
+Záznamy jsou ukládána ...
+fungují velice odlišně než
+atd. každou větu bych vám opravil, tzn. zkuste to znovu přečíst, pošlu vám teď spíš rámcové připomínky.
+ 
+
+Na konci úvodní kapitoly chybí popis struktury práce.
+Chybí popis jednotlivých vlastností tabulky na str. 17.
+Chybí popis existujících testů a srovnání Key-Value DBS.
+Určitě do srovnání zařaďte i ukázky vkládání a dotazování dat.
+Nakolik je TPC relevantní pro Key-Value DBS?
+V 4.1 není popis testovacího prostředí, popis tedy úplně chybí.
+Chybí ukázky testů, tedy dat i operací.
+Chybí výsledky.
+Wikipedii necitujte.
+Zkuste tedy vložit výsledky, opravte a pošlete znovu.
+ 
+
+Jak bude testovací prostředí přístupné pro vedoucího i oponenta?
+
+
+
+-----
+
+
+
+ Do pátku práci přečtu a napíšu vám, zda dostanete zápočet. Vzhledem k průběhu a konzultaci konečné podoby práce o tom pochybuji, nicméně je mojí povinností to přečíst.
+
+
+
+-----
+
+
+
+Podrobné připomínky najdete v přiloženém pdf. Přestože jsem neuvedl všechny připomínky, připomínek je cca 100. Práce tedy není obhajitelná, proto vám nemohu dát zápočet. Vzhledem k postupu práce, to asi ani jinak dopadnout nemohlo. Dejte mi vědět, kdy to budete odevzdávat. Tedy, zda budete mít možnost obhajovat práci v srpnu nebo až za rok. Dle termínu odevzdání, se domluvíme, co dál.
+
+Jakmile zapracujete všechny připomínky, je nutné se rozhodnout, jak naložit s testováním. Pokud např. něco chybí v YCSB, mohlo by to doplnit vlastní testovací prostředí.
+
+Budu tedy čekat na kompletně opravený text a pak budeme řešit co dál.
+
+V kap. 2 jsem podrobné poznámky dál nepsal, pošlu, pokud se domluvíme. Obecné připomínky:
+- Kromě 2.1 chybí příklady operací.
+- V kap. 3 není zdůvodněno, proč není splněno zadání. Tedy, zda je rámec YCSB dokonalý, že jste nenavrhl vlastní rámec.
+- Kap. 4: není jasné, jaká data a operace jste použil pro testování. Dále neuvádíte verze DBS a testovacího prostředí.
+  - Také uvádíte výsledky testů, ty musí být v jiné kapitole.
+- Dále používáte mix anglického a českého jazyka, jelikož je to psáno česky, nepoužívejte anglické termíny, resp. pouze v případech, kdy neexistují české ekvivalenty.
+- Často se opakujete, některé informace jsem ve vaší práci našel až 5x.
+- V práci neuvádíte srovnání s výsledky podobných, dříve provedených, srovnání.
