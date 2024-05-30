@@ -44,6 +44,32 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{nosql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is NoSQL?}
+    \verb{url}
+    \verb https://www.mongodb.com/resources/basics/databases/nosql-explained
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{05}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{json}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Introducing JSON}
+    \verb{url}
+    \verb https://www.json.org/json-en.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{05}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{rdbs}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{What is a Relational Database (RDBMS)?}

@@ -14,8 +14,35 @@
 
 \usepackage{xcolor}
 \usepackage{listings}
-
 %\usepackage{mathtools} %- blokuje list obrázků a tabulek
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+	basicstyle=\normalfont\ttfamily,
+	numbers=left,
+	numberstyle=\scriptsize,
+	stepnumber=1,
+	numbersep=8pt,
+	showstringspaces=false,
+	breaklines=true,
+	frame=lines,
+	backgroundcolor=\color{background},
+	literate=
+	*{3}{{{\color{numb}3}}}{1}
+	{5}{{{\color{numb}5}}}{1}
+	{:}{{{\color{punct}{:}}}}{1}
+	{,}{{{\color{punct}{,}}}}{1}
+	{\{}{{{\color{delim}{\{}}}}{1}
+	{\}}{{{\color{delim}{\}}}}}{1}
+	{[}{{{\color{delim}{[}}}}{1}
+	{]}{{{\color{delim}{]}}}}{1},
+}
+
+
 
 \ThesisAuthor{Bc. Jan Jedlička}
 
@@ -31,11 +58,12 @@
 
 \Acknowledgement{Na tomto místě bych chtěl poděkovat vedoucímu této práce prof. Ing. Michalovi Krátkému, Ph.D., za poskytnutí užitečných rad a pomoci vedením práce.}
 
-\CzechAbstract{Cílem diplomové práce je popsat Key-value databázové systémy (DBS), ukázat výhody a nevýhody těchto systémů a představit některé významné zástupce. První část práce je zaměřena nejen na obecný popis Key-value DBS, ale i na podrobnější specifikace vybraných DBS a jejich vzájemné porovnání. Součástí práce je zmapování existujících testů DBS a následný výběr a zprovoznění testovacího prostředí pro testování těchto systémů a porovnání s ostatními DBS. Práce popisuje dva významné představitele testovacích prostředí DBS, YCSB a TPC. S prostředím YCSB se v práci následně pracuje a testují se v něm čtyři vybrané Key-value DBS: Redis, Aerospike, Riak KV a Memcached. Veškeré testy jsou spouštěny pomocí skriptů, které spustí a nastaví DBS v prostředí Docker. Připravené DBS jsou následně naplněny daty a otestovány za pomoci prostředí YCSB. Práce je zakončena reprezentací hodnot naměřených při testování, vzájemným porovnáním pomocí grafů a vyhodnocením výsledků těchto testů.}
+\CzechAbstract{Cílem diplomové práce je popsat Key-value databázové systémy (KDBS), ukázat výhody a nevýhody těchto databázových systémů (DBS) a představit některé významné zástupce. První část práce je zaměřena nejen na obecný popis KDBS, ale i na podrobnější specifikace vybraných KDBS a jejich vzájemné porovnání. Součástí práce je zmapování existujících testů DBS a následný výběr a zprovoznění testovacího prostředí pro testování těchto systémů a porovnání s ostatními DBS. Práce popisuje dva významné představitele testovacích prostředí DBS, YCSB a TPC. S prostředím YCSB se v práci následně pracuje a testují se v něm čtyři vybrané KDBS: Redis, Aerospike, Riak KV a Memcached. YCSB testy jsou spouštěny pomocí skriptů, které nejprve spustí a nastaví DBS v prostředí Docker. Práce je zakončena prezentací hodnot naměřených při testování, vyhodnocením výsledků a srovnáním výkonu KDBS.}
 
 \CzechKeywords{DBS; NoSQL; Key-value DBS; Benchmarking; YCSB; TPC; Redis; Riak KV; Aerospike; Memcached}
 
-\EnglishAbstract{The aim of this thesis is to describe Key-value database systems (DBS), to show the advantages and disadvantages of these systems and to introduce some important representatives. The first part of the thesis focuses not only on a general description of Key-value DBSs, but also on more detailed specifications of selected DBSs and their comparison with each other. The work includes a mapping of existing DBSs and then the selection and commissioning of a testbed for testing these systems and comparing them with other DBSs. The thesis describes two prominent representatives of DBS test environments, YCSB and TPC. The YCSB environment is then used in the thesis to test four selected key-value DBSs: Redis, Aerospike, Riak KV and Memcached. All tests are run using scripts that start and set up the DBS in the Docker environment. The prepared DBSs are then populated with data and tested using the YCSB environment. The paper concludes by representing the values measured during testing, comparing them with each other using graphs and evaluating the results of these tests.}
+\EnglishAbstract{The aim of this thesis is to describe Key-value database systems (KDBS), to show the advantages and disadvantages of these database systems (DBS) and to introduce some important representatives. The first part of the thesis focuses not only on a general description of KDBSs, but also on more detailed specifications of selected KDBSs and their comparison with each other. The work includes a study of existing DBSs and then the selection and commissioning of a testbed for testing these systems
+and comparing them with other DBSs. The thesis describes two prominent representatives of DBS test environments, YCSB and TPC. The YCSB environment is then used in the thesis to test four selected KDBSs: Redis, Aerospike, Riak KV and Memcached. The YCSB tests are run using scripts that first start and set up the DBS in the Docker environment. The paper concludes by presenting the values measured during testing, evaluating the results and comparing the performance of the KDBS.}
 
 \EnglishKeywords{DBS; NoSQL; Key-value DBS; Benchmarking; YCSB; TPC; Redis; Riak KV; Aerospike; Memcached}
 
@@ -61,7 +89,24 @@
 	
 	\chapter{Úvod}
 	
-	Key-value (neboli Klíč-hodnota) databázové systémy~\cite{amaz-key-value-db, ytb-nosql-db}, dále jen KDBS, jsou jedním z paradigmat pro úložiště dat. Databáze je navržena pro rychlý přístup k datům a uživatelsky snadnou práci. Základem manipulace s daty je přístup k objektům v databázi na základě klíčů. V KDBS se hodnota ukládá k danému klíči, přičemž klíč může být například "jmeno\_uzivatele", a hodnota může být "Jan Novák".
+	Key-value (neboli Klíč-hodnota) databázové systémy~\cite{amaz-key-value-db, ytb-nosql-db}, dále jen KDBS, jsou jedním z typů NoSQL DBS~\cite{nosql}. Databáze je navržena pro uživatelsky přátelský přístup k datům pomocí triviálních příkazů. Základem manipulace s daty je přístup k objektům v databázi prostřednictvím klíčů. V KDBS se hodnota ukládá k danému klíči, přičemž klíč může být například "jmeno\_uzivatele\_03", a hodnota může být řetězec "Jan Novák". Při práci s komplexnějšími daty mohou být hodnoty reprezentovány prostřednictvím JSON objektů~\cite{json}. Klíč "detail\_uzivatele\_03"~může pak jako hodnotu ukládat například JSON objekt vybraného uživatele popisující jeho jméno, věk, adresu nebo kontakt (viz JSON objekt~\ref{json-hodnota}).
+	
+	\begin{figure}
+	\centering
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  "jmeno": "Jan Novak",
+   "vek": 35,
+   "adresa": null,
+   "kontakt": [
+      {"email": "jan.novak.01@gmail.com"},
+      {"telefon": "406-792-448"}
+   ]
+}
+	\end{lstlisting}
+	\caption{Příklad JSON objektu uloženého jako hodnotu pro klíč "detail\_uzivatele\_03"}
+	\label{json-hodnota}
+	\end{figure}	
 	
 	KDBS fungují odlišně oproti tradičním relačním databázovým systémům. Datový model RDBS je relační~\cite{rdbs}, což znamená, že data jsou organizována do tabulek, kde každá tabulka představuje jednu relaci~\cite{relace} a každý záznam v tabulce odpovídá jednomu prvku relace. Každá tabulka obsahuje sloupce (atributy), které předem pevně definují datové typy atributů. Jedním ze sloupců je primární klíč, který jednoznačně identifikuje každý záznam. Tento relační model poskytuje strukturovaný a systematický přístup k ukládání a manipulaci s daty, což usnadňuje organizaci a vyhledávání informací. Díky definované struktuře záznamů může RDBS provádět řadu optimalizací, jako je například přidávání vlastních indexů nebo plánování a optimalizace dotazů~\cite{rdbs-optimalizace}. Například pokud chceme do RDBS ukládat záznamy obsahující uživatele, musí mít každý záznam stejnou strukturu. Takže uživatel musí obsahovat všechny povinné atributy, jako jsou jméno a příjmení, a dodržet jejich předem stanovený datový typ a velikost, například počet číslic v telefonním čísle. Pokud by záznam obsahoval nějaké atributy navíc, například informaci o tom, zda je uživatel nemocný, nebo by jejich datový typ neodpovídal očekávanému, je zapotřebí upravit i tabulku, do které záznam vkládáme, a také záznamy, které se již v této tabulce nachází.
 	
@@ -281,18 +326,20 @@
 			basicstyle=\ttfamily,
 			numbers=left,
 			numberstyle=\tiny,
-			commentstyle=\color{gray}
+			commentstyle=\color{gray},
+			frame=lines,
+			backgroundcolor=\color{background}
 			]
  --Q1
  select
    l_returnflag,
    l_linestatus,
    sum(l_quantity) as sum_qty,
-   sum(l_extendedprice) as sum_base_price,
-   sum(l_extendedprice * (1 - l_discount)) as sum_disc_price,
-   sum(l_extendedprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
+   sum(l_extprice) as sum_base_price,
+   sum(l_extprice * (1 - l_discount)) as sum_disc_price,
+   sum(l_extprice * (1 - l_discount) * (1 + l_tax)) as sum_charge,
    avg(l_quantity) as avg_qty,
-   avg(l_extendedprice) as avg_price,
+   avg(l_extprice) as avg_price,
    avg(l_discount) as avg_disc,
    count(*) as count_order
  from lineitem

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 APR 2024 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 MAY 2024 23:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,7 +1386,7 @@ File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 55
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 83
 .
 
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmr.fd
@@ -1394,24 +1394,24 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (Dokument.aux)
 \openout1 = `Dokument.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1487,7 +1487,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 55.
+Package hyperref Info: Link coloring ON on input line 83.
 
 (D:\Skola-SW\MikTex\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1500,9 +1500,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count483
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
 
 (Dokument.out) (Dokument.out)
 \@outlinefile=\write6
@@ -1553,18 +1553,18 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Dokument.bbl' found.
  (Dokument.bbl)
-Package biblatex Info: Reference section=0 on input line 55.
-Package biblatex Info: Reference segment=0 on input line 55.
+Package biblatex Info: Reference section=0 on input line 83.
+Package biblatex Info: Reference segment=0 on input line 83.
 \c@lstlisting=\count484
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 55.
+ on input line 83.
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5
-7.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 8
+5.
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1574,37 +1574,37 @@ PDF version <1.6>, but at most version <1.5> allowed
 <Figures/FEI_CZ.pdf, id=117, 350.70023pt x 109.21pt>
 File: Figures/FEI_CZ.pdf Graphic file (type pdf)
 <use Figures/FEI_CZ.pdf>
-Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 57.
+Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 85.
 (pdftex.def)             Requested size: 274.11765pt x 85.35826pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-7.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+5.
 (D:\Skola-SW\MikTex\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+5.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-57.
+85.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-57.
+85.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 57.
+(Font)              <14.4> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 57.
+(Font)              <10> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 57.
+(Font)              <7> on input line 85.
  [1
 
 
@@ -1619,39 +1619,39 @@ pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 57.
+n input line 85.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 57.
+n input line 85.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 <ThesisSpecification_JED0050_vsboee2302B326.pdf, id=153, page=1, 597.23125pt x 
 845.1575pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 57.
+ used on input line 85.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 57.
+ used on input line 85.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 57.
+ used on input line 85.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 57.
+ used on input line 85.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 57.
+ used on input line 85.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 
 [2
@@ -1693,38 +1693,42 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]
 Kapitola 1.
-[10
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+6.
+(D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [10
 
 ]
-<Data/db-engine-trend-dbs.PNG, id=317, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=335, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
-Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 74.
+Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 119.
 (pdftex.def)             Requested size: 481.00386pt x 269.12727pt.
 
-Overfull \hbox (8.97263pt too wide) in paragraph at lines 74--75
+Overfull \hbox (8.97263pt too wide) in paragraph at lines 119--120
  [][] 
  []
 
-[11 <./Data/db-engine-trend-dbs.PNG>]
-<Data/db-engine-trend-model.PNG, id=345, 786.68906pt x 359.84438pt>
+[11]
+<Data/db-engine-trend-model.PNG, id=366, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
-Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 86.
-
+Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 131
+.
 (pdftex.def)             Requested size: 511.34183pt x 233.89607pt.
 
-Overfull \hbox (39.3106pt too wide) in paragraph at lines 86--87
+Overfull \hbox (39.3106pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
-[12 <./Data/db-engine-trend-model.PNG>] [13]
+[12 <./Data/db-engine-trend-dbs.PNG>] [13 <./Data/db-engine-trend-model.PNG>]
 Kapitola 2.
 [14
 
 ] [15]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-26.
+71.
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [16] [17]
@@ -1738,7 +1742,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [23] [24]
 Kapitola 3.
 
-Overfull \hbox (0.12636pt too wide) in paragraph at lines 223--224
+Overfull \hbox (0.12636pt too wide) in paragraph at lines 268--269
 \T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou p°i-stu-po-vat k °e-²ení 
 jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
  []
@@ -1746,116 +1750,105 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [25
 
 ]
-<Data/ycsb-1.jpg, id=597, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=616, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
-Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 264.
+Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 309.
 (pdftex.def)             Requested size: 426.59575pt x 319.09363pt.
  [26] [27 <./Data/ycsb-1.jpg>]
 (D:\Skola-SW\MikTex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-85.
-
-(D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 287.
-
-Overfull \hbox (17.7665pt too wide) in paragraph at lines 293--294
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[28] [29] [30]
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 334.
+ [28] [29] [30]
 Kapitola 4.
 
-Overfull \hbox (47.95074pt too wide) in paragraph at lines 350--362
+Overfull \hbox (47.95074pt too wide) in paragraph at lines 397--409
  [][] 
  []
 
 [31
 
 ]
-Overfull \hbox (5.02594pt too wide) in paragraph at lines 374--375
+Overfull \hbox (5.02594pt too wide) in paragraph at lines 421--422
 []\T1/lmr/m/n/10.95 Ve²keré po-t°ebné po-u-ºité skripty jsou do-stupné v tex-to
 -vém sou-boru "YCSB_Docker_Scripty.txt".
  []
 
 [32] [33] [34]
-Overfull \hbox (18.1056pt too wide) in paragraph at lines 537--538
+Overfull \hbox (18.1056pt too wide) in paragraph at lines 584--585
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]117[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]119[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
 [35] [36] [37] [38]
-Package pgfplots info on input line 577: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 624: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.29631pt too wide) in paragraph at lines 584--585
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 631--632
  [][] 
  []
 
-Package pgfplots info on input line 618: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 665: Overriding colorspace to rgb due to xc
 olor configuration.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 624.
+(Font)              <9> on input line 671.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 624.
+(Font)              <5> on input line 671.
 
-Overfull \hbox (50.9971pt too wide) in paragraph at lines 625--626
+Overfull \hbox (50.9971pt too wide) in paragraph at lines 672--673
  [][] 
  []
 
 [39] [40]
-Package pgfplots info on input line 709: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 756: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.89632pt too wide) in paragraph at lines 716--717
+Overfull \hbox (50.89632pt too wide) in paragraph at lines 763--764
  [][] 
  []
 
-Package pgfplots info on input line 755: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 802: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 795: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 842: Overriding colorspace to rgb due to xc
 olor configuration.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
 [42] [43]
-Package pgfplots info on input line 892: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 939: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 932: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 979: Overriding colorspace to rgb due to xc
 olor configuration.
  [44] [45] [46]
-Package pgfplots info on input line 1013: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1060: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1053: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1100: Overriding colorspace to rgb due to x
 color configuration.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
 [48] [49]
-Package pgfplots info on input line 1136: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1183: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1176: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1223: Overriding colorspace to rgb due to x
 color configuration.
  [50] [51]
 Kapitola 5.
 [52
 
 ] [53]
-Overfull \hbox (4.80904pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (4.80904pt too wide) in paragraph at lines 1249--1249
 []\T1/lmr/m/it/10.95 Relace [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]cit
 .[] []2024-04-23]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / por
 tal . matematickabiologie .
  []
 
 
-Overfull \hbox (28.5328pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (28.5328pt too wide) in paragraph at lines 1249--1249
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
@@ -1863,20 +1856,20 @@ biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
 [54
 
 ] [55]
-Overfull \hbox (29.78154pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (29.78154pt too wide) in paragraph at lines 1249--1249
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
 [56] [57]
-Overfull \hbox (27.80927pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (27.80927pt too wide) in paragraph at lines 1249--1249
 []\T1/lmr/m/it/10.95 Introduction of B-Tree [][]\T1/lmr/m/n/10.95 [on-line][][]
 . 2024. [[][]cit.[] []2024-04-27]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95
  https : / / www . geeksforgeeks .
  []
 
 [58] [59]
-Overfull \hbox (77.41739pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (77.41739pt too wide) in paragraph at lines 1249--1249
 \T1/lmr/m/n/10.95 12]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / /
  www . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPU
 AKq -[]
@@ -1887,7 +1880,7 @@ AKq -[]
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: 1B69474C50F60C0160CD9D5F03686A37;3889.
+(rerunfilecheck)             Checksum: CE2255A2D32A3A3CB1F7C6271F5C93D4;3889.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1898,10 +1891,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49347 strings out of 478552
- 1067610 string characters out of 2854123
- 1839986 words of memory out of 3000000
- 66443 multiletter control sequences out of 15000+600000
+ 49385 strings out of 478552
+ 1068268 string characters out of 2854123
+ 1841267 words of memory out of 3000000
+ 66468 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3274b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1912,15 +1905,16 @@ s/lm/lm-mathsy.enc}<D:/Skola-SW/MikTex/fonts/type1/public/lm/lmbx10.pfb><D:/Sko
 la-SW/MikTex/fonts/type1/public/lm/lmmi10.pfb><D:/Skola-SW/MikTex/fonts/type1/p
 ublic/lm/lmmi9.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmr10.pfb><D:/Skol
 a-SW/MikTex/fonts/type1/public/lm/lmr6.pfb><D:/Skola-SW/MikTex/fonts/type1/publ
-ic/lm/lmr9.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skola-S
-W/MikTex/fonts/type1/public/lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/publi
-c/lm/lmss17.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/Skol
-a-SW/MikTex/fonts/type1/public/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/pu
-blic/lm/lmtk10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Sko
-la-SW/MikTex/fonts/type1/public/lm/lmtt8.pfb>
-Output written on Dokument.pdf (61 pages, 1657733 bytes).
+ic/lm/lmr8.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmr9.pfb><D:/Skola-SW/
+MikTex/fonts/type1/public/lm/lmri10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/
+lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
+/MikTex/fonts/type1/public/lm/lmssbx10.pfb><D:/Skola-SW/MikTex/fonts/type1/publ
+ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
+-SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
+lic/lm/lmtt8.pfb>
+Output written on Dokument.pdf (61 pages, 1688071 bytes).
 PDF statistics:
- 1353 PDF objects out of 1440 (max. 8388607)
- 338 named destinations out of 1000 (max. 500000)
+ 1381 PDF objects out of 1440 (max. 8388607)
+ 351 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
