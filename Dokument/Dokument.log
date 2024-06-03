@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  2 JUN 2024 23:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  3 JUN 2024 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1731,15 +1731,18 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 71.
  (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16] [17]
-Underfull \vbox (badness 1360) has occurred while \output is active []
-
- [18]
-[19] [20] [21]
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-[23] [24]
+ [16]
+[17] [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+[21] [22] [23] [24]
 Kapitola 3.
 
 Overfull \hbox (0.12636pt too wide) in paragraph at lines 268--269
@@ -1891,10 +1894,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49385 strings out of 478552
- 1068268 string characters out of 2854123
- 1842269 words of memory out of 3000000
- 66468 multiletter control sequences out of 15000+600000
+ 49386 strings out of 478552
+ 1068283 string characters out of 2854123
+ 1842282 words of memory out of 3000000
+ 66469 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3274b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1912,9 +1915,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (61 pages, 1687920 bytes).
+Output written on Dokument.pdf (61 pages, 1688026 bytes).
 PDF statistics:
- 1381 PDF objects out of 1440 (max. 8388607)
+ 1382 PDF objects out of 1440 (max. 8388607)
  351 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
