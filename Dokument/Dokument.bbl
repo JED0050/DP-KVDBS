@@ -467,6 +467,46 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{kdbs-quick-fast}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{SQL vs NoSQL Databases: Key Differences and Practical
+  Insights}
+    \verb{url}
+    \verb https://www.datacamp.com/blog/sql-vs-nosql-databases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{redisql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{RediSQL}
+    \verb{url}
+    \verb https://redisql.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{common-use-kdbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What are common use cases for key-value databases?}
+    \verb{url}
+    \verb https://www.dragonflydb.io/faq/key-value-database-use-cases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{ddbs}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Distribuované databázové systémy (DDBS)}
@@ -477,6 +517,19 @@
     \field{year}{2024}
     \field{urlday}{17}
     \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{availability}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Dostupnost (Availability)}
+    \verb{url}
+    \verb https://managementmania.com/cs/dostupnost-availability
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry
 
@@ -523,6 +576,136 @@
     \field{urlday}{13}
     \field{urlmonth}{11}
     \field{urlyear}{2022}
+  \endentry
+
+  \entry{dokument-dbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is a Document Database?}
+    \verb{url}
+    \verb https://phoenixnap.com/kb/document-database
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{bson}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{BSON}
+    \verb{url}
+    \verb https://bsonspec.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{xml}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is XML?}
+    \verb{url}
+    \verb https://aws.amazon.com/what-is/xml/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{mongodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{MongoDB}
+    \verb{url}
+    \verb https://www.mongodb.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{couchdb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{CouchDB}
+    \verb{url}
+    \verb https://couchdb.apache.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{cassandra}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Cassandra}
+    \verb{url}
+    \verb https://cassandra.apache.org/_/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{hbase}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Welcome to Apache HBase}
+    \verb{url}
+    \verb https://hbase.apache.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{crm}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Co je CRM?}
+    \verb{url}
+    \verb https://dynamics.microsoft.com/cs-cz/crm/what-is-crm/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{neo4j}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Neo4j}
+    \verb{url}
+    \verb https://neo4j.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{amazon-neptune}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon Neptune}
+    \verb{url}
+    \verb https://aws.amazon.com/neptune/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{dynamodb-dbengines-rank2}{online}{}
@@ -1250,19 +1433,6 @@
     \field{urlyear}{2024}
   \endentry
 
-  \entry{mongodb}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{MongoDB}
-    \verb{url}
-    \verb https://www.mongodb.com/
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{28}
-    \field{urlmonth}{01}
-    \field{urlyear}{2023}
-  \endentry
-
   \entry{couchbase}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Couchbase}
@@ -1286,19 +1456,6 @@
     \endverb
     \field{langid}{english}
     \field{year}{2019}
-    \field{urlday}{28}
-    \field{urlmonth}{01}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{cassandra}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Cassandra}
-    \verb{url}
-    \verb https://cassandra.apache.org/_/index.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
     \field{urlday}{28}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
