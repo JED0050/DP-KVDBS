@@ -113,6 +113,19 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{schemaless-vs-schema-2}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Database Management: Schema Vs. Schemaless}
+    \verb{url}
+    \verb https://cdp.com/glossary/schema-schemaless-database-management/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{kdbs-memory}{online}{}
     \name{author}{1}{}{%
       {{hash=FKD}{%
@@ -134,6 +147,33 @@
     \field{year}{2023}
     \field{urlday}{23}
     \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{normalizace}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Description of the database normalization basics}
+    \verb{url}
+    \verb https://learn.microsoft.com/en-us/office/troubleshoot/access/database
+    \verb -normalization-description
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{metadata}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Typical metadata in databases}
+    \verb{url}
+    \verb https://dataedo.com/kb/databases/all/metadata
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry
 
