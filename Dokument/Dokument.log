@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  10 JUN 2024 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  11 JUN 2024 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1726,7 +1726,7 @@ Overfull \hbox (39.3106pt too wide) in paragraph at lines 131--132
 [13]
 Kapitola 2.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-52.
+54.
 (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14
@@ -1900,7 +1900,7 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 Here is how much of TeX's memory you used:
  49463 strings out of 478552
  1071016 string characters out of 2854123
- 1845685 words of memory out of 3000000
+ 1845688 words of memory out of 3000000
  66524 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1919,7 +1919,7 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (63 pages, 1707774 bytes).
+Output written on Dokument.pdf (63 pages, 1707817 bytes).
 PDF statistics:
  1444 PDF objects out of 1728 (max. 8388607)
  373 named destinations out of 1000 (max. 500000)
