@@ -440,6 +440,64 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{scalability}{online}{}
+    \name{author}{2}{}{%
+      {{hash=AR}{%
+         family={ANANDHI},
+         familyi={A\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={CHITRA},
+         familyi={C\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ARCK1}
+    \strng{fullhash}{ARCK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A Challenge in Improving the Consistency of Transactions in
+  Cloud Databases - Scalability}
+    \verb{url}
+    \verb https://research.ijcaonline.org/volume52/number2/pxc3881485.pdf
+    \endverb
+    \field{langid}{english}
+    \field{year}{2012}
+    \field{urlday}{17}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{acid-vs-base}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What’s the difference between an ACID and a BASE database?}
+    \verb{url}
+    \verb https://aws.amazon.com/compare/the-difference-between-acid-and-base-d
+    \verb atabase/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{integrita}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Atributy a integrita}
+    \verb{url}
+    \verb https://e-learning.vscht.cz/mod/book/view.php?id=63031&chapterid=2365
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{kdbs-oracle}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introduction to Oracle NoSQL Database}
@@ -494,6 +552,19 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{partiql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{PartiQL}
+    \verb{url}
+    \verb https://partiql.org/docs.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{common-use-kdbs}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{What are common use cases for key-value databases?}
@@ -533,35 +604,30 @@
     \field{urlyear}{2024}
   \endentry
 
-  \entry{scalability}{online}{}
-    \name{author}{2}{}{%
-      {{hash=AR}{%
-         family={ANANDHI},
-         familyi={A\bibinitperiod},
-         given={R.},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=CK}{%
-         family={CHITRA},
-         familyi={C\bibinitperiod},
-         given={K.},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{ARCK1}
-    \strng{fullhash}{ARCK1}
-    \field{labelnamesource}{author}
+  \entry{join}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{A Challenge in Improving the Consistency of Transactions in
-  Cloud Databases - Scalability}
+    \field{title}{SQL - JOIN}
     \verb{url}
-    \verb https://research.ijcaonline.org/volume52/number2/pxc3881485.pdf
+    \verb https://www.lovelydata.cz/blog/sql-join/
     \endverb
     \field{langid}{english}
-    \field{year}{2012}
-    \field{urlday}{17}
-    \field{urlmonth}{04}
+    \field{year}{2024}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
+  \endentry
+
+  \entry{cassandra}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Cassandra}
+    \verb{url}
+    \verb https://cassandra.apache.org/_/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
   \endentry
 
   \entry{g2}{online}{}
@@ -641,19 +707,6 @@
     \field{urlday}{10}
     \field{urlmonth}{06}
     \field{urlyear}{2024}
-  \endentry
-
-  \entry{cassandra}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Cassandra}
-    \verb{url}
-    \verb https://cassandra.apache.org/_/index.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{28}
-    \field{urlmonth}{01}
-    \field{urlyear}{2023}
   \endentry
 
   \entry{hbase}{online}{}
@@ -828,19 +881,6 @@
     \field{urlday}{25}
     \field{urlmonth}{04}
     \field{urlyear}{2024}
-  \endentry
-
-  \entry{partiql}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{PartiQL}
-    \verb{url}
-    \verb https://partiql.org/docs.html
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{09}
-    \field{urlmonth}{01}
-    \field{urlyear}{2023}
   \endentry
 
   \entry{what-is-sql}{online}{}

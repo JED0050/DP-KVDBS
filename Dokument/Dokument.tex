@@ -157,6 +157,23 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\item Grafové databázové systémy
 	\end{itemize}
 	
+	Při popisu DBS zaznívají pojmy jako ACID nebo BASE~\cite{acid-vs-base}. Proto si oba tyto pojmy vysvětlíme. ACID je soubor čtyř vlastností, které zajišťují spolehlivost a integritu transakcí především v tradičních relačních databázích. Tyto vlastnosti jsou klíčové pro aplikace, které vyžadují vysokou úroveň datové integrity~\cite{integrita}, jako jsou například bankovní systémy a systémy pro správu objednávek.
+	
+	\begin{itemize}
+		\item Atomicita (A): Transakce je nedělitelná jednotka řady dotazů; buď se provede celá, nebo žádná její část
+		\item Konzistence (C): Transakce převádí databázi z jednoho konzistentního stavu do druhého
+		\item Izolace (I): Současně běžící transakce se navzájem neovlivňují
+		\item Trvanlivost (D): Po dokončení transakce jsou změny trvalé, i když dojde k výpadku systému
+	\end{itemize}
+	
+	BASE je alternativní přístup k ACID, který je častěji používán v NoSQL databázích, zejména v distribuovaných systémech. BASE přístup je často preferován pro systémy, které vyžadují vysokou dostupnost a rychlost, jako jsou sociální sítě a webové aplikace, kde je akceptovatelné dočasné zpoždění v konzistenci dat.
+	
+	\begin{itemize}
+		\item Basically Available (B): Systém garantuje dostupnost většiny datových operací
+		\item Soft state (S): Stav systému se může měnit v čase, i bez vstupu, kvůli eventuální konzistenci
+		\item Eventual consistency (E): Systém se časem stane konzistentním, jakmile přestane přijímat nové vstupy
+	\end{itemize}
+	
 	\section{Key-value databázové systémy}
 	
 	KDBS~\cite{kdbs-oracle, kdbs-redis} jsou typem databázového systému, který slouží pro ukládání dat ve formě jednoduchých párování klíč-hodnota bez pevně definovaného schématu dat. Klíč slouží jako unikátní identifikátor, který umožňuje rychlé vyhledávání a přístup k datům (hodnotám) i při jejich velkém objemu. Každá hodnota v databázi je spojena s tímto klíčem. Tyto databáze jsou často preferované pro svou schopnost rychle a efektivně ukládat a získávat data~\cite{kdbs-quick-fast}, což je zvláště důležité pro aplikace, které potřebují vysoký výkon a škálovatelnost.
@@ -168,6 +185,8 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	Vzhledem k těmto vlastnostem jsou KDBS vhodné pro širokou škálu aplikací, včetně webových aplikací, analytických systémů, cache pamětí a dalších~\cite{kdbs-memory, common-use-kdbs}. Jsou ideální pro situace, kde je potřeba rychle a efektivně ukládat a získávat data a zároveň udržovat vysoký výkon a škálovatelnost systému.
 	
 	Jelikož KDBS jsou primárně určeny pro distribuované nasazení, nyní popíšeme tento pojem. Distribuovaný databázový systém~\cite{ddbs} je typ databázového systému, který ukládá data na několik počítačů (neboli uzlů) v rámci sítě. Tento přístup umožňuje přizpůsobitelnější zpracování velkých objemů dat a zlepšuje odolnost systému vůči výpadkům jednotlivých uzlů. Pokud je konkrétní uzel nedostupný kvůli výpadku nebo zvýšené odezvě způsobené přetížením, můžeme jednoduše pokračovat v komunikaci s jiným uzlem, i když je možná vzdálenější. Distribuovaná architektura umožňuje systému růst s rostoucím objemem dat a zároveň snižuje riziko selhání komunikace, což zvyšuje celkovou spolehlivost a dostupnost systému. Dostupnost~\cite{availability} znamená, že data nebo jiné zařízení jsou k dispozici v okamžiku jejích potřeby. Vyjadřuje se v procentech dostupného času. Dostupnost systému je možné zvýšit například pokrytím rozsáhlejších geografických oblastí vhodným rozmístěním uzlů a přidáním nových uzlů do systému. Tím dosáhneme i kratší odezvy díky možnosti komunikace s uzly blíže uživatelům.
+	
+	Distribuované NoSQL DBS se JOIN operacím~\cite{join} často vyhýbají, aby se zachoval výkon a škálovatelnost. Místo toho se používají následující strategie. Denormalizace kde jsou data často duplikována napříč různými kolekcemi nebo tabulkami, aby se eliminovala potřeba JOIN operací. Například informace o uživateli a jeho příspěvcích mohou být vloženy do jednoho dokumentu, pokud jsou často dotazovány společně. Případně může být JOIN logika na straně klienta. Místo provádění JOIN operací uvnitř databáze může aplikace načíst související data z více uzlů a kombinovat je v aplikační vrstvě. Případně lze dotazy přímo směřovat na relevantní uzly. Některé NoSQL systémy, jako Cassandra~\cite{cassandra}, umožňují směrování dotazů na specifické uzly, které obsahují relevantní data, čímž se snižuje potřeba JOIN operací.
 	
 	V současné době existuje celá řada KDBS, od malých open-source projektů po velké komerční cloudové služby. Různé systémy disponují odlišnými vlastnostmi, jako je rychlost zpracování dat, škálovatelnost, uživatelská přívětivost skrze jednoduchou konfiguraci DBS a rozhraní pro práci s daty atd. Dle průzkumu~\cite{predictiveanalyticstoday,g2,db-engineers-ranking} bylo vybráno~9 významných KDBS. Cílem je představit tyto KDBS, popsat jejich klíčové vlastnosti a provést jejich porovnání vlastností (viz tabulka~\ref{tab_kvdb_compare}). Z uvedených KDBS se následně provede konečný výběr databází pro testování a porovnání pro dané vytížení.
 	
@@ -193,15 +212,22 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Databázový systém disponuje konzolovým API pro správu DBS a práci s daty, ale nabízí také možnost využití jazyka PartiQL~\cite{partiql}, který je vhodný pro SQL dotazy~\cite{what-is-sql} na databázích bez schématu. DynamoDB API~\cite{api-dynamodb} je rozděleno do čtyř hlavních částí. Kontrolní plán~\cite{control-plan-dynamodb, api-dynamodb} zahrnuje funkce spojené s vytvářením, úpravami, mazáním a získáním jmen všech tabulek. Dále umožňuje výpis podrobných specifikací dané tabulky, jako jsou primární klíče, indexy a nastavení propustnosti. Následuje datový plán~\cite{api-dynamodb}, který poskytuje CRUD operace pro data v dané tabulce. S daty lze pracovat buď jednotlivě po záznamech, nebo pomocí Batch funkcí, které umožňují provést stejnou operaci nad desítkami záznamů najednou a dosáhnout tak vyšší propustnosti, než při volání stejných funkcí pro jednotlivé záznamy opakovaně. Také je možné provést Scan~\cite{scan-dynamo} pro získání všech záznamů dané tabulky nebo indexu, případně Query~\cite{query-dynamo} pro získání hledané části dat (viz výpis příkladů níže). Třetí částí je DynamoDB Streams pro práci s časovými sekvencemi a práci s logy za posledních 24 hodin. Stream API poskytuje funkce pro výpis všech streamů, konkrétní popis daného streamu, získání iterátoru pro daný stream a nakonec získání jednoho záznamu z daného streamu. Čtvrtou částí API jsou ACID transakce, které jsou rozděleny do dvou sekcí. První sekce je určena pro batch vkládání, úpravu a mazání záznamů a druhá sekce slouží k batch získání záznamů.
 	
-	Příklady příkazů pro Scan a Query operace prostřednictvím DynamoDB API:
+	Příklady příkazů bodového dotazu (get-item) a sekvenčního průchodu všech položek na základě sekundárního indexu (query) prostřednictvím DynamoDB API:
+	
 	\begin{itemize}
-		\item aws dynamodb scan --table-name Thread \\
-			 --filter-expression "LastPostedBy = :name" \\
-			 --expression-attribute-values '\{":name": \{ "S": "User A" \}\}'~\cite{scan-dynamo}
-		\item aws dynamodb query --table-name UserOrdersTable \\
-			 --key-condition-expression "Username = :username" \\
-			 --expression-attribute-values '\{":username": \{ "S": "User B" \}\}'~\cite{query-dynamo}
+		\item aws dynamodb get-item \\
+		--table-name Users	\\
+		--key '\{"UserID": \{"S": "user123"\}\}'
+		\item aws dynamodb query \\
+		--table-name Users \\
+		--index-name EmailIndex \\
+		--key-condition-expression "Email = :email" \\
+		--expression-attribute-values '\{":email":\{"S":"user123@myemail.com"\}\}'~\cite{query-dynamo, scan-dynamo}
 	\end{itemize}
+	
+	První příkaz načte položku z tabulky "Users"~na základě primárního klíče "UserID". Vlastnost "--table-name Users"~určuje název tabulky, ze které chcete načítat data. A "--key '\{"UserID": \{"S":~"user123"\}\}'"~specifikuje primární klíč položky, kterou chcete načíst. V tomto případě je primární klíč pojmenován "UserID", který je datového typu řetězce "S"~s hodnotou "user123". 
+	
+	Druhý příkaz načte všechny položky z tabulky "Users"~na základě sekundárního indexu "EmailIndex", kde "Email"~je "user123@myemail.com". Název sekundárního indexu který chcete použít pro dotaz specifikuje vlastnost "--index-name EmailIndex". Vlastnost "--key-condition-expression "Email~=~:email":"~definuje podmínku pro dotaz, kde "Email"~musí být rovno ":email". Nakonec vlastnost "--expression-attribute-values '\{":email":\{"S":"user123@myemail.com"\}\}'"~poskytuje hodnotu atributu ":email", který je datového typu řetězce s hodnotou "user123@myemail.com".
 	
 	\subsection{Oracle NoSQL Database}
 	
@@ -253,7 +279,8 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 
 	\begin{sidewaystable}
 		\centering
-		\caption{Porovnání Key-value databází\label{tab_kvdb_compare}}
+		%\rotatebox[origin=c]{180}{
+		%\caption{Porovnání Key-value databází\label{tab_kvdb_compare}}
 		\scalebox{0.8}
 		{
 			\begin{tabular}{ l|c c c c c c c c } 
@@ -282,8 +309,9 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 				Dotazovací & PartiQL & Omezený SQL & Redis & AQL & SQL & Riak & Voldemort & InfinityDB \\
 				jazyk & & & query & & & query & query & query \\
 				\bottomrule
-			\end{tabular}
-		}
+			\end{tabular}}%}
+			\caption{Porovnání Key-value databází\label{tab_kvdb_compare}}
+		
 	\end{sidewaystable}
 	
 	\subsection {Nezmíněné významné NoSQL databáze}
