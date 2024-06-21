@@ -1,0 +1,271 @@
+\chapter{Implementace}
+V této kapitole se budeme věnovat popisu konkrétního postupu realizace navrženého řešení. V této kapitole jsou popsány jednotlivé kroky, které byly potřebné k naplnění cíle diplomové práce. Také je zde rovněž podrobně popsán návrh a realizace testů, které byly použity k ověření funkčnosti implementace. Dále jsou zde popsány případné problémy, které byly během implementace řešeny, a způsoby, jakými byly vyřešeny. Tato kapitola je klíčová pro celkové pochopení řešení, protože umožňuje čtenáři porozumět jednotlivým fázím implementace a vývoje. Jejím cílem je poskytnout čtenáři důkladný náhled na vnitřní strukturu řešení a umožnit mu porozumět, jak jednotlivé části navrženého řešení spolu souvisí.
+
+\section{Export DICOM série do binárního souboru}
+Jak již bylo zmíněno v předchozích kapitolách, DICOM formát se skládá z vícero souborů, kde každý soubor obsahuje vlastní informace. Z tohoto důvodu je vhodné soubory v sérii vyexportovat do jednoho, který bude následně snazší zpracovat v našem programu pro rekonstrukci. K tomuto účelu bude sloužit skript napsaný v pythonu.
+
+Pro načtení dat z DICOM formátu se využívá již zmíněná knihovna Pydicom. Při načtení dat se nejprve procházejí záznamy pacientů a hledají se jejich studie. Z těchto studií se následně vybírají série a jejich obrázky. Pro zobrazení obrázků je použita knihovna cv2, ta ale vyžaduje hodnoty v rozsahu $0-1$ nebo $0-255$, proto se obrázky nejprve do toho rozsahu převádějí. Tento skript nabízí čtyři možnosti použití: vypsání všech sérií, vypsání a zobrazení obrázků v sérii, export vybrané série a kontrolní načtení vyexportovaného souboru. Vypsání všech sérií vypíše číslo série a počet obrázků v sérii. Vypsání a zobrazení obrázků v sérii vypíše všechny obrázky v sérii, jejich index, $PS_x$, $PS_y$, $PS_z$ a jejich rozlišení. Také vykreslí čtyři obrázky v $1/5$ až $4/5$. Jestliže soubor v sérii nemá typ obrázku, je to uživateli oznámeno, stejně tak pokud obrázek neobsahuje informaci o PS. Ve formátu DICOM nemáme přimo obsaženou informaci o $PS_z$, je tedy nutné tuto hodnotu dopočítat. To provedeme díky informaci o pozici obrázku, kde nám stačí zjistit průměrnou vzdálenost mezi všemi obrázky v sérii. Jelikož u některých sériích obsahuje první obrázek jiné rozlišení a pohled CT skenu, než zbytek série, byla přidána možnost přeskočit první obrázek. Export vybrané série do požadovaného souboru nejprve zapíše hlavičku obsahující informace o počtu obrázků, počet řádků, počet sloupců, $PS_z$, $PS_y$ a $PS_x$ ve formátu \verb|<iiifff| \cite{python-byte-order-size-alignment}. Data obrázků jsou následně zapsána řádek po řádku ve formátu \verb|e|. Kontrolní načtení vyexportovaného souboru načte daný soubor, vypíše jeho hlavičku, pro každý obrázek vypíše počet dat v obrázku a zobrazí obrázek v $1/5$ až $4/5$. Skript také obsahuje nápovědu pro usnadnění použití uživatelem.
+
+\section{Třída Volume}
+Abychom s daty mohli nějakým způsobem pracovat, musíme je nejdřív načíst do nějaké struktury, která nám práci s daty umožní, k tomuto účelu slouží třída \verb|Volume|, kterou si teď popíšeme.
+
+Načtení binárního souboru provádí metoda \verb|Load|, která přijímá parametr \verb|path_to_file|. Tato metoda se nejprve pokusí daný soubor načíst a pokud se to napořadí, upozorní uživatele. Následuje přečtení souboru a načtení hlavičky. Největším problémem bylo převést binární data do našich proměnných, jelikož C++ neobsahuje žádné standartní funkce pro tento účel. Toto bylo nakonec vyřešeno poněkud jednoduše, jelikož python takové funkce obsahuje a jsou napsány v jazyce C++, stačilo pouze najít kód pro knihovnu struct a použít v našem projektu. Po načtení hlavičky se načtou data a zároveň se hledá maximální hodnota v datech. Při tomto se do standartního výstupu vypisuje progres načítání.
+
+Metoda \verb|Normalize| data podělí maximální hodnotou získanou při načítání čímž změní rozsah dat na $0-1$.
+
+Metoda \verb|Threshold| přijímá dva parametry \verb|min_value| a \verb|max_value| a následně vynuluje všechny hodnoty které nejsou v rozsahu \verb|min_value >= value < max_value|.
+
+Metoda \verb|AvgPool| přijímá tři parametry \verb|threshold|, \verb|offset_x| a \verb|offset_y|. Tato metoda získá průměrnou hodnotu v okolí daného pixelu a následně tuto hodnotu binarizuje pomocí daného parametru \verb|threshold|, tedy pokud je daná hodnota větší nebo rovna \verb|thresholdu|, je nastavena na jedničku, jinak na nulu. Parametry \verb|offset_x| a \verb|offset_y| udávají jak velké okolí pixelu se započítá do průměrné hodnoty. Rozsah na ose x získáme jako $\left<pixel_x - offset_x, pixel_x + offset_x\right>$ a obdobně na ose y $\left<pixel_y - offset_y, pixel_y + offset_y\right>$.
+
+Jelikož třída \verb|Volume| ukládá všechny data z obrázků v 1D poli, ale naše volumetrická data jsou defakto ve 3D kdy osa \verb|z| označuje konkrétní obrázek a osy \verb|x| a \verb|y| označují pixel v daném obrázku, byla vytvořena funkce \verb|GetIndex|, která umožňuje získat index pixelu v 1D poli na základě 3D souřadnic. Tato metoda tudíž přijímá tři parametry \verb|k|, \verb|j| a \verb|i|, ze kterých následně vypočte 1D index kde $index = k \cdot pocet\_obrazku + j \cdot pocet\_sloupcu + i$. Abychom při dalších výpočtech nemuseli řešit kontrolu hranic, jsou hodnoty všechny parametry nejprve ořezány do jejich korespondujícího rozsahu, tedy $k: \left<0, pocet\_obrazku\right)$, $j: \left<0, pocet\_radku\right)$, $i: \left<0, pocet\_sloupcu\right)$.
+
+Metoda \verb|Set| přijímá pět parametrů \verb|k|, \verb|j|, \verb|i|, \verb|value| a \verb|thread_id| a na danou pozici nastaví předanou hodnotu, kromě toho také vyresetuje cachovanou strukturu \verb|Cell| pro dané vlákno.
+
+Metoda \verb|PrepareCache| umožňuje pro každé vlákno procesoru uložit do struktury \verb|Cell| uložit potřebné informace použité v následujícím metodě. Tato metoda přijímá sedm parametrů, z toho tři typu int \verb|k|, \verb|j| a \verb|i|, tři typu float \verb|absolute_z|, \verb|absolute_y| a \verb|absolute_x| a jeden typu uint \verb|thread_id|. První tři parametry určují pozici prvního pixelu pro cachování, ostatních sedm se vypočte přičtením jedničky k příslušným osám. Další tři parametry jsou zde pro kontrolu, jestli již dané pixely nejsou cachovány. Poslední parametr určuje, pro které vlákno se struktura \verb|Cell| uloží.
+
+Předchozí metoda \verb|Get| dokáže pracovat pouze přímo s indexy pixelů a obrázků, pro deformaci koule ale budeme potřebovat třídě Volume zadat reálné souřadnice a dostat z ní korespondující data. K tomuto účelu slouží druhá metoda \verb|Get|, která přijímá tři parametry typu float \verb|x|, \verb|y|, \verb|z| a jeden parametr typu uint \verb|thread_id|. Reálné souřadnice mohou zasahovat do míst, kde ale data nemáme, proto je pro získání těchto dat využita trilineární interpolace. Abychom ji ale mohli provést, budeme nejprve potřebovat osm pixelů tvořící kvádr v okolí reálné souřadnice. Pro získání pozice prvního pixelu musíme nejdřív získat pozici jeho indexů, tu získáme tak, že parametry podělíme jejich PS, tzn. $real\_k = z / PS_z; real\_y = y / PS_y; real\_x = x / PS_x$. Tyto hodnoty budou obsahovat reálné číslo, kterým nelze pole indexovat, proto je zaokrouhlíme dolů a ořežeme stejně jako u předchozí metody \verb|Get|, čímž získáme indexy pro první pixel. Pro získání ostatních pixelů stačí když k souřadnicím prvního indexu přičteme jedničku ve správných osách, k čemuž slouží zmíněná metoda \verb|PrepareCache|, které se předají potřebné parametry spolu s posledním parametrem \verb|thread_id|. Na obrázku \ref{trilinear-interpolation-cube} jsou tyto body znázorněny modrou barvou. Princip trilineární interpolace v podstatě spočívá v sumě procentuálního podílu z hodnoty v každém z osmi bodů. Začneme na ose $x$ kde získáme hodnoty pro první čtyři body (označeny oranžovou barvou). Novou hodnotu získáme tak, že sečteme procentuální podíl z vedlejších bodů na ose $x$, poté na ose $z$ a nakonec na ose $y$. Je důležité dávát si pozor na na souřadnicový systém, který je používán, protože pokud se rozdíly pomíchají, nebude trilineární interpolace fungovat správně. Také nutno dodat, že krajní body (označeny modře) jsou od sebe vzdáleny jednotkovou hodnotou.
+
+\begin{figure}[ht]
+	\centering
+	\scalebox{2}{\includegraphics[]{figures/trilinear_interpolation_cube_v2.pdf}}
+	\caption[Trilineární interpolace]{Na obrázku se nachází krychle s body znázorňující trilineární interpolaci. Body jsou označeny indexy ve formátu (k, j, i). Oranžové body označují interpolaci na ose $x$, zelené body na ose $z$ a červený bod na ose $y$}
+	\label{trilinear-interpolation-cube}
+\end{figure}
+
+Metoda \verb|Gradient| přijímá tři parametry \verb|k|, \verb|j| a \verb|i| a vrací rozdíl mezi následující a předchozí hodnotou v každé ose podělenou dvojnásobkem PS v dané ose, což odpovídá derivaci prvního řádu nahrazenou centrálními diferencemi.
+
+Metoda \verb|Derivative| přijímá sedm parametrů, tři typu int \verb|k|, \verb|j| a \verb|i|, dále \verb|direction| udávající směr derivace, poté \verb|derivative| určující řád derivace (1, 2, 3 nebo 4), \verb|order| představující řád chyby aproximace ($O(h^2)$ nebo $O(h^4)$) a \verb|h| udávající velikost kroku vzorkování aproximace. Metoda nejprve načte hodnoty sousedních bodů, které jsou použity pro výpočet numerické derivace podle zadaných argumentů směru, řádu a aproximace. V případě, že zadaná hodnota řádu neodpovídá žádné z podporovaných možností, metoda vypíše chybovou hlášku a vrátí nulovou hodnotu. Pokud byla zvolena aproximace druhého řádu, metoda použije centrální diferenci, aby vypočetla derivaci v bodě $(i, j, k)$. Pokud byla zvolena aproximace čtvrtého řádu, použije se rozdílová metoda, která vypočítá derivaci pomocí hodnot funkce v okolních bodech.
+
+\renewcommand{\umlfillcolor}{white}
+\renewcommand{\umldrawcolor}{black}
+\begin{figure}[p]
+	\centering
+	\begin{tikzpicture}
+		\begin{package}{volume}
+			\begin{class}[text width=4cm]{Cell<T2>}{-3,0}
+				\attribute{+ data : float[8]}
+				\attribute{+ position\_x : float}
+				\attribute{+ position\_y : float}
+				\attribute{+ position\_z : float}
+				\attribute{+ initialized : bool}
+			\end{class}
+
+			\begin{class}[text width=4cm]{<<enumeration>> Direction}{3,0}
+				\attribute{X}
+				\attribute{Y}
+				\attribute{Z}
+			\end{class}
+
+			\begin{class}[text width=4cm]{<<enumeration>> Order}{3,-3}
+				\attribute{h2}
+				\attribute{h4}
+			\end{class}
+
+			\begin{class}[text width=14cm]{Volume<T1>}{0,-6}
+				\attribute{+ max\_value\_ : T1}
+
+				\attribute{- frame\_pixel\_spacing\_x\_ : T1}
+				\attribute{- frame\_pixel\_spacing\_y\_ : T1}
+				\attribute{- frame\_pixel\_spacing\_z\_ : T1}
+				\attribute{- frame\_count\_ : int}
+				\attribute{- frame\_rows\_ : int}
+				\attribute{- frame\_columns\_ : int}
+				\attribute{- frame\_data\_count\_ : int}
+				\attribute{- cells\_ : vector\textless Cell\textless T1\textgreater \textgreater}
+				\attribute{- data\_ : vector<T1>}
+
+				\operation{+ Volume(thread\_count : unsigned int = 1)}
+
+				\operation{+ Load(path\_to\_file : string)}
+				\operation{+ Normalize()}
+				\operation{+ Threshold(min\_value : float, max\_value : float)}
+				\operation{+ AvgPool(threshold : float = 0.001f, offset\_x : int = 1, offset\_y : int = 1)}
+
+				\operation{+ GetIndex(k : int, j : int, i : int) : int}
+				\operation{+ Get(k : int, j : int, i : int) : T1}
+				\operation{+ Get(z : float, y : float, x : float, thread\_id : unsigned int = 0) : T1}
+				\operation{+ Set(k : int, j : int, i : int, value : T1, thread\_id : unsigned int = 0)}
+
+				\operation{+ Derivative(z : int, y : int, x : int, direction : Direction, derivative : int, order : Order = Order::h2, error : int = 1, thread\_id : unsigned int = 0) : T1}
+				\operation{+ Gradient(k : int, j : int, i : int) : array\textless float, 3\textgreater}
+
+				\operation{- PrepareCache(k : int, j : int, i : int, absolute\_z : float, absolute\_y : float, absolute\_x : float, thread\_id : unsigned int = 0) : T1}
+			\end{class}
+		\end{package}
+	\end{tikzpicture}
+\end{figure}
+
+\section{Gradient vector flow}
+Třídu \verb|Volume| máme už nachystanou a můžeme se vrhnout na zpracování obrázků. Abychom z obrázku obsahujícího kosti a různé tkáně jako je kůže vyfiltrovali pouze kosti, využijeme prahování zespodu a zvrchu. Hodnoty prahování jsou určeny experimentem, jelikož každé CT může generovat různé rozsahy a maximální hodnoty a není zde daný žádný standard. Jakmile provedeme prahování (pomocí metody \verb|Threshold|), můžeme pokračovat normalizací dat (metodou \verb|Normalize|). Na takto připravená data aplikujeme metodu \verb|AvgPool| abychom získali vyfiltrovaná data připravená ke zpracování pomocí GVF, ale ještě před tím si vybereme oblast zájmu, pro kterou budeme GVF počítat (pro nás tedy oblast oka).
+
+Výpočet GVF započneme připravením si několika dalších proměnných typu \verb|Volume|. První proměnná s názvem $f$ bude obsahovat délku gradientu z našeho původního datasetu, což v podstatě slouží jako hranový detektor. Data pro další čtyři proměnné $b$, $c_1$, $c_2$ a $c_3$ lze spočítat najednou pomocí parciální derivace, pro kterou využijeme metodu \verb|Derivative|.
+\begin{flalign*}
+& f_x = \frac{\partial f}{\partial x}; f_y = \frac{\partial f}{\partial y}; f_z = \frac{\partial f}{\partial z} \\
+& b = (f_x)^2 + (f_y)^2 + (f_z)^2 \\
+& c_1 = b \cdot f_x; c_2 = b \cdot f_y; c_3 = b \cdot f_z
+\end{flalign*}
+
+Dále si připravíme další proměnné typu \verb|Volume|, které budou udržovat aktuální GVF (\verb|u|, \verb|v| a \verb|w|) a GVF, které teprve budeme počítat (\verb|u_next|, \verb|v_next| a \verb|w_next|). Nutno dodat, že tyto proměnné jsou inicializovány s výchozí hodnotou nula. Kromě těchto proměnných budeme potřebovat ještě dvě konstanty $\mu$ a $\Delta t$, které určují jak moc se bude GVF měnit, je vhodné volit tyto hodnoty malé např. $\mu = 0,15$ $\Delta t = 0,1$. Dále budeme potřebovat konstanty $\Delta x$, $\Delta y$ a $\Delta z$ určující obrácenou hodnotu druhé mocniny PS v dané ose.
+\begin{flalign*}
+& \Delta x = \frac{1}{(PS_x)^2} \\
+& \Delta y = \frac{1}{(PS_y)^2} \\
+& \Delta z = \frac{1}{(PS_z)^2}
+\end{flalign*}
+Nyní bychom měli být připraveni na iterační vývoj GVF. Pro urychlení výpočtu použijeme knihovnu OpenCL, která umožňuje provádět výpočet na grafické kartě. Abychom toto mohli provést, musíme si nejprve vybrat zařízení, na kterém chceme GVF počítat a vytvořit pro něj kontext a frontu. Dále si načteme zdrojový kód v OpenCL, ze kterého v kontextu vytvoříme program a zbuildíme ho. Z takto takového programu můžeme udělat kernel, kterému řekneme, jakou funkci má ze zdrojového kódu volat. Předtím, než necháme grafickou kartu zpracovat náš kernel, si musíme ještě připravit paměť na daném zařízení s příslušnými právy pomocí třídy \verb|cl::Buffer|. Nyní můžeme začít iterační vývoj GVF tím, že kernelu nastavíme parametry naší funkce (tedy naše instance \verb|cl::Buffer|) a nachystáme si třídu \verb|cl::Event|. Do fronty vložíme náš kernel s eventem, počkáme na zpracování pomocí \verb|event.wait();| a zkontrolujeme, zda byl kernel úspěšně spočítán. Následně prohodíme proměnné \verb|u|, \verb|v| a \verb|w| s \verb|u_next|, \verb|v_next| a \verb|w_next| a pokračujeme další iterací.
+
+Kód v OpenCL tedy obsahuje výpočet nových složek GVF, kde si nejprve nachystáme indexy, se kterými budeme pracovat. Pro výpočet indexu použijeme externí metodu \verb|get_index|, která funguje stejně jako metoda \verb|GetIndex| z třídy \verb|Volume|, jenom přijímá navíc čtyři parametry pro výpočet daného indexu. Budeme potřebovat celkem sedm indexů 1D pole, jeden aktuální a zbylé posunuté o jedničku nahoru a dolů v každé ose, jak lze vidět na tomto obrázku \ref{voxel}. Aktuální 3D indexy $k$, $j$ a $i$ získáme ze standardní funkce OpenCL \verb|get_global_id|.
+\begin{flalign*}
+& index_{000} = get\_index( k, j, i ) \\
+& index_{001} = get\_index( k, j, i + 1 ) \\
+& index_{00-1} = get\_index( k, j, i - 1 ) \\
+& index_{010} = get\_index( k, j + 1, i ) \\
+& index_{0-10} = get\_index( k, j - 1, i ) \\
+& index_{100} = get\_index( k + 1, j, i ) \\
+& index_{-100} = get\_index( k - 1, j, i )
+\end{flalign*}
+Nyní si nachystáme ještě dvě proměnné $b0 \Delta t$ a $\mu \Delta t$, které budou následě použity vícekrát, tedy $b0 \Delta t = 1 - b_index000 \cdot \Delta t; \mu \Delta t = \mu \cdot \Delta t$. Teď už můžeme vypočítat nové složky GVF na ose $x$ a obdobným způsobem vypočteme posun na ose $y$ a $z$.
+\begin{flalign*}
+& u_0 = u_{index_{000}} \\
+& u_{px} = u_{index_{001}}, u_{mx} = u_{index_{00-1}} \\
+& u_{py} = u_{index_{010}}, u_{my} = u_{index_{0-10}} \\
+& u_{pz} = u_{index_{100}}, u_{mz} = u_{index_{-100}} \\
+& u_{next} = u_0 \cdot b0\_dt + mu\_dt \cdot ( \\
+&\begin{aligned}[t]
+	&\quad \Delta x \cdot u_{px} - 2 \cdot u_0 + u_{mx} + \\
+	&\quad \Delta y \cdot u_{py} - 2 \cdot u_0 + u_{my} + \\
+	&\quad \Delta z \cdot u_{pz} - 2 \cdot u_0 + u_{mz} +
+	\end{aligned} \\
+& ) + c1_{index_{000}} \cdot dt
+\end{flalign*}
+Po určitém počtu iterací by nám mělo GVF zkonvergovat do stabilního stavu. V tomto momentě iterační výpočet zastavíme a GVF znormalizujeme tak, aby každý vektor $(u_{k,j,i}, v_{k,j,i}, w_{k,j,i})$ měl délku rovnou jedné. Výsledek této metody můžeme vidět na obrázcích \ref{gvf-development-xy}, \ref{gvf-development-zy-1} a \ref{gvf-development-zy-2}.
+
+\begin{figure}[ht]
+	\centering
+	\scalebox{2}{\includegraphics[]{figures/voxel.pdf}}
+	\caption[Voxel]{Na obrázku se nachází voxel s vyznačenými body, ze kterých se berou data pro výpočet GVF. Body jsou označeny indexy ve formátu (k, j, i)}
+	\label{voxel}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\subfloat[GVF XY po 10 iteracích\label{gvf-xy-10}]
+	{
+		\includegraphics[width=0.48\textwidth]{figures/gvf_xy_10.png}
+	}
+	\subfloat[GVF XY po 100 iteracích\label{gvf-xy-100}]
+	{
+		\includegraphics[width=0.48\textwidth]{figures/gvf_xy_100.png}
+	}
+	\hspace{3em}
+	\subfloat[GVF XY po 500 iteracích\label{gvf-xy-500}]
+	{
+		\includegraphics[width=0.48\textwidth]{figures/gvf_xy_500.png}
+	}
+	\subfloat[GVF XY po 1000 iteracích\label{gvf-xy-1000}]
+	{
+		\includegraphics[width=0.48\textwidth]{figures/gvf_xy_1000.png}
+	}
+	\caption[Ukázka vývoje GVF zepředu]{Ukázka vývoje GVF zepředu. Na obrázcích je zobrazená pouze každá čtvrtá šipka. GVF na obrázcích je znormalizované a tečky značí nulovou délku šipky. Obrázky jsou generovány s parametry $\mu = 0,15$ $\Delta t = 0.1$. Na obrázcích lze vidět, že díky uzavřené části šipky směřují ke kraji oka }
+	\label{gvf-development-xy}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\subfloat[GVF ZY po 10 iteracích\label{gvf-zy-10}]
+	{
+		\includegraphics[width=0.98\textwidth]{figures/gvf_zy_10.png}
+	}
+	\hspace{3em}
+	\subfloat[GVF ZY po 100 iteracích\label{gvf-zy-100}]
+	{
+		\includegraphics[width=0.98\textwidth]{figures/gvf_zy_100.png}
+	}
+	\caption[Ukázka vývoje GVF zprava 1]{Ukázka vývoje GVF zprava. Na obrázcích je zobrazená pouze každá čtvrtá šipka. GVF na obrázcích je znormalizované a tečky značí nulovou délku šipky. Obrázky jsou generovány s parametry $\mu = 0,15$ $\Delta t = 0.1$. Na obrázcích lze vidět, že kvůli otevřené části šipky směřují dovnitř oka, což stěžuje transformaci sítě }
+	\label{gvf-development-zy-1}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\subfloat[GVF ZY po 500 iteracích\label{gvf-zy-500}]
+	{
+		\includegraphics[width=0.98\textwidth]{figures/gvf_zy_500.png}
+	}
+	\hspace{3em}
+	\subfloat[GVF ZY po 1000 iteracích\label{gvf-zy-1000}]
+	{
+		\includegraphics[width=0.98\textwidth]{figures/gvf_zy_1000.png}
+	}
+	\caption[Ukázka vývoje GVF zprava 2]{Ukázka vývoje GVF zprava. Na obrázcích je zobrazená pouze každá čtvrtá šipka. GVF na obrázcích je znormalizované a tečky značí nulovou délku šipky. Obrázky jsou generovány s parametry $\mu = 0,15$ $\Delta t = 0.1$. Na obrázcích lze vidět, že kvůli otevřené části šipky směřují dovnitř oka, což stěžuje transformaci sítě }
+	\label{gvf-development-zy-2}
+\end{figure}
+
+\section{Transformace trojúhelníkové sítě}
+Nyní již víme vše potřebné k tomu, abychom mohli začít transformovat jednoduchou trojúhelníkovou síť. Transformace probíhá tak, že GVF a síť vložíme do jedné soustavy souřadnic, kde ke každému vrcholu v síti budeme moct přiřadit pomocí trilineární interpolace hodnotu GVF, které nám určuje jakým směrem by se měla síť roztahovat/smršťovat.
+
+Nejprve budeme iterovat všemi vrcholy v duální síti, kde si pro každý vrchol vypočítáme sumu vrcholů ve vnitřním a vnějším kruhu, vrcholy jsou znázorněny na obrázku \ref{dual-mesh-calc}. Následně zjistíme hodnotu GVF v našem bodě, kterou díky naší metodě \verb|Get| získáme snadno jenom tím, že jako parametry předáme námi zpracovávaný bod, nyní můžeme vypočítat jeho posun $\mathbf{\epsilon}$.
+\begin{flalign*}
+& \mathbf{\tilde{\Delta} x} = \frac{\sum_{i = 1}^{3}x_i}{3} - x_0 \\
+& \mathbf{\tilde{\Delta}^2 x} = \frac{\sum_{i = 4}^{9}(x_i - 6) \cdot \sum_{i = 1}^{3}(x_i) + 12 \cdot x_0}{9} \\
+& \mathbf{\epsilon} = \tau \cdot (\alpha \cdot \mathbf{\tilde{\Delta} x} - \beta \cdot \mathbf{\tilde{\Delta}^2 x} + \mathbf{GVF_{x_0}})
+\end{flalign*}
+Je kriticky důležité, abychom nejprve spočítali posun pro všechny vrcholy a až posléze na ně tento posun aplikovali, v opačném případě dojdeme ke špatným výsledkům.
+
+\begin{figure}[ht]
+	\centering
+	\scalebox{2}{\includegraphics[]{figures/deform_dual_mesh_v2.pdf}}
+	\caption[Transformace duální sítě]{Na obrázku se nachází duální síť, kde jsou zeleně zvýrazněny vrcholy pro výpočet sumy vnitřního kruhu a oranžově vrcholy pro výpočet sumy vnějšího kruhu}
+	\label{dual-mesh-calc}
+\end{figure}
+
+V tento moment bychom měli mít kód připravený k otestování jednoduché rekonstrukce. Pro otestování funkčnosti si připravíme syntetické GVF data. Začneme koulí kde si nejprve určíme velikost dat a poloměr koule, následně pro každý voxel spočítáme délku vektoru ze středu k danému voxelu a pokud je délka větší než požadovaný poloměr, vektor otočíme a znormalijuzeme. Takto upravený vektor uložíme do příslušeného voxelu. V opačném případě vektor pouze znormalizujeme a rovnou vložíme do voxelu. Následně vložíme kouli doprostřed a deformujeme, očekávaným výsledkem je pouze zvětšená koule na zvolený poloměr. Dalším testem bude syntetická krychle, kterou vytvoříme obdobně jako kouli, jenom místo porovnání délky vektoru s poloměrem budeme porovnávat, zda se voxel nachází uvnitř krychle, nebo venku. Zde očekáváme, že se koule zvětší na velikost krychle a roztáhne se do rohů.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/deform_to_sphere_n_cube.PNG}
+	\caption[Transformace na kouli a krychli]{Na obrázku dole se nachází transformace na kouli s očekávaným výsledným průměrem 5,8m a nad ní je ukázána transformace na krychli s očekávanou délkou hrany 5,8m. Počet iterací transformace zleva je 0 (originální koule), 8, 16, 24, 32, 40, 48 a 56. Také je vidět že se transformace po 40. kroku ustálila. Použité parametry $\tau = 0,1$ $\alpha = 1$ $\beta = 1$}
+	\label{deform-to-sphere-n-cube}
+\end{figure}
+
+\subsection{Rozpínání}
+Jeden z problému transformace trojúhelníkové sítě pomocí GVF se objeví při otevřeném objektu, kde GVF u otvoru bude směřovat dovnitř, čímž se při deformaci koule posune ke stěně tělesa a nebude mít tendenci se roztáhnout tak, aby tvar objektu kopírovala. Tento problém lze částečně vyřešit pomocí rozpínání inspirovaného rovnicí pro ideální plyn \cite{ideal-gas-law}, kde kouli budeme považovat za balónek, který jě nějakým způsobem nafouklý plynem a má tedy tendenci se roztahovat i proti směru GVF. Abychom vypočítali tento odpor plynu proti smrštění, potřebujeme nejprve duální síť převést zpět na trojúhelníkovou, ze které následně vypočítáme její objem $V$. Tento objem získáme tak, že z každé stěny v této síti vyrobíme tetrahedron propojením dané stěny s novým bodem na pozici mimo deformovaný objekt, v našem případě jsme zvolili bod $(0, 0, 0)$, a sečteme objemy těchto tetrahedronů. Objem tetrahedronu získáme výpočtem jeho determinantu a následným podělením šesti.
+\begin{flalign*}
+& determinant = ( \\
+&\begin{aligned}[t]
+	&\quad (p_{2_x} - p_{1_x}) \cdot ((p_{3_y} - p_{1_y}) \cdot (p_{4_z} - p_{1_z}) - (p_{3_z} - p_{1_z}) \cdot (p_{4_y} - p_{1_y})) - \\
+	&\quad (p_{2_y} - p_{1_y}) \cdot ((p_{3_x} - p_{1_x}) \cdot (p_{4_z} - p_{1_z}) - (p_{3_z} - p_{1_z}) \cdot (p_{4_x} - p_{1_x})) + \\
+	&\quad (p_{2_z} - p_{1_z}) \cdot ((p_{3_x} - p_{1_x}) \cdot (p_{4_y} - p_{1_y}) - (p_{3_y} - p_{1_y}) \cdot (p_{4_x} - p_{1_x}))
+\end{aligned} \\
+& ) \\
+& V = \frac{determinant}{6}
+\end{flalign*}
+Jelikož naše koule reálně není žádný balónek plynu, aproximujeme jeho chování pomocí konstanty, určující, jak velkou tendenci roztahovat se, bude naše koule mít. V našem případě jsme zvolili $\gamma = 700$. Když naši konstantu podělíme objemem, získáme tlak v kouli $p$. Dále pro každou stěnu v duální síti vypočteme velikost tlaku, který na ni působí. Tuto hodnotu získáme vynásobením normály stěny $\mathbf{n}$ s její plochou $S$ a tlakem. Plochu polygonové stěny vypočítáme pomocí cyklu, kde iterujeme přes všechny vrcholy stěny a pro každou dvojici sousedících vrcholů vypočítáme determinant matice o rozměrech $3\times3$, která vznikne z vektorového součinu těchto dvou vrcholů a vektoru s nulovými souřadnicemi v y-ové ose, což odpovídá dvojnásobku obsahu plochy, kterou tyto dva vrcholy ohraničují na rovině $y = 0$. Tento výsledek sečteme do jedné proměnné, kterou následně vydělíme dvěmi a získáme tak plochu polygonu. Při výpočtu posunu vrcholu pomocí GVF ale pracujeme s bodama a ne stěnama. Proto před výpočtem posunu spočítáme průměrný tlak přilehlých stěn našeho bodu a výslednou hodnotu poté přičteme ke GVF.
+\begin{flalign*}
+& pV = nRT = \gamma \\
+& p = \frac{\gamma}{V} \\
+& S = \frac{\sum_{i = 0; j = i - 1}^{n}(v_{jx} + v_{ix}) \cdot (v_{jy} - v_{jy}) \cdot (v_{jz} - v_{jz})}{2} \\
+& \mathbf{F^S_{inf}} = \mathbf{n} \cdot p \cdot S \\
+& \mathbf{F_{inf}} = \frac{\sum_{l=0}^{m}\mathbf{F^S_{inf_l}}}{m} \\
+& \mathbf{\epsilon} = \tau \cdot (\alpha \cdot \mathbf{\tilde{\Delta} x} - \beta \cdot \mathbf{\tilde{\Delta}^2 x} + \mathbf{GVF_{x_0}} + \mathbf{F_{inf}})
+\end{flalign*}
+
+\subsection{Isotropic remeshing}
+Při deformování sítě může dojít k velkému roztažení a smrštění některých stěn. Tento problém lze vyřešit tím, že po několika iteracích deformování aplikujeme \emph{Isotropic remeshing} (IR) \cite{isotropic-remeshing}. Tato metoda spočívá v normalizaci trojúhelníkové sítě tak, že všechny trojúhelníky budou mít zhruba stejnou plochu. Toho docílíme nejprve převodem naší duální sítě do trojúhelníkové. Nyní si trojúhelníkovou strukturu musíme připravit zavoláním několika metod, které jsou kritické pro úpravy topologie sítě jako je např. přidání/odebrání vrcholů, hran a stěn.
+\lstinputlisting[
+	label=src:CppExternal,
+	caption={Důležité inicializační metody trojúhelníkové sitě v knihovně OpenMesh, které umožňují úpravu topologie sítě}
+]{src/init_methods.cpp}
+IR se skládá z pěti částí a to nalezení průměrné délky hrany v síti, rozdělení hran delších než $4/3$ průměrné délky, sjednocení hran kratších než $4/5$ průměrné délky, překlopení hran pro zlepšení stupňů vrcholů a nakonec tangenciální posun vrcholů do středu. První krok je dobré v našem případě upravit a to tak, že místo výpočtu průměrné délky hran si tuto délku určíme, díky čemuž bude mít tento algoritmus tendenci udržovat hrany v námi požadované délce. Dále je doporučeno zopakovat tuto metodu zhruba \emph{pětkrát} \cite{isotropic-remeshing-2} pro dosažení optimálních výsledků.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/remeshing.PNG}
+	\caption[Isostropic remeshing na kouli]{Na obrázku se nachází ukázka metody IR na kouli s požadovanou průměrnou délkou $0,1$. Počet iterací IR zleva je 0 (originální koule) - 8. Také je vidět že již ve druhé iteraci dostaneme poněkud přijatelný výsledek}
+	\label{remeshing}
+\end{figure}
+
+\section{Command line interface}
+V předchozích částech jsme si připravili všechny funkce pro rekonstrukci očnice a potřebujem připravit uživatelské prostředí.
+
+Program lze použít dvěma způsoby, prvním je zadáním všech potřebných parametrů při volání skriptu, o což se stará knihovna Args-parser, která umožňuje definovat si parametry programu a zároveň umí vypsat nápovědu pro celý program. Druhý způsob je uživatelsky přívětivější, jelikož uživateli nabízí si parametry postupně vybrat a zároveň mu ukáže jejich dopad. Pro použití tohoto způsobu je potřeba programu předat cestu k binárnímu souboru, který si program načte a následne uživateli nabídne výběr obrázku z pohledu osy $z$ a $x$. Výběr obrázků se provádí šipkami vlevo/vpravo a stisknutím klávesy Tab lze zapnout/vypnout větší krok posunu, který je normálně nastaven na 1 a při rychlém posunu je nastaven na 10. Svou volbu potvrdí stisknutím klávesy Enter. Poté se uživateli nabídne výběr prahování zvrchu a zespodu, kde šipky vlevo/vpravo posouvají dolní práh a šipky dolů/nahoru posouvají horní práh. Při každém posunu prahu jsou obrázky překresleny, aby uživatel viděl, které oblasti budou zachovány. Jakmile si uživatel vybere hodnoty prahování a potvrdí je stisknutím klávesy Enter, tak se aplikují v naší třídě \verb|Volume|. Dále uživateli nabídneme výběr prahu average poolu, který lze opět vybrat šipkami vlevo/vpravo, obrázky jsou průběžně překreslovány při změně a hodnotu lze potvrdit klávesou Enter. Tato hodnota je opět aplikována ve třídě \verb|Volume|. Nyní může uživatel vybrat oblast zájmu pro výpočet GVF, kterou zvolí čtvercem vytvořeným podržením levého tlačítka myši na jednom místě v obrázku a následným tahem a puštěním levého tlačítka v jiném místě. Takto vytvořená oblast zájmu lze posunout podržením a tahem pravého tlačítka myši. Opět volbu potvrdíme klávesou Enter. Po výpočtu GVF z takto získaných informací se uživateli zobrazí dva obrázky s vykresleným GVF pomocí šipek, kde si uživatel vybere velikost a pozici elipsoidu. Doporučujeme jej vložit na místo, kde se šipky od sebe rozcházejí, aby se neměl tendenci smršťovat. Opět potvrdíme stiskem klávesy Enter a program nám následně vyexportuje výsledný soubor ve formátu OBJ. Tento druhý způsob je také aktivován, pokud některá z potřebných hodnot chybí.
+
+\endinput

@@ -1,0 +1,25 @@
+ediné co tak k poznámce: "Vysoký objem transakcí není určen pro RDBS, proč?"
+jsem z chatgpt vyhrabal tohle:
+
+Klíčově-hodnotové databáze (Key-Value Databases, KVDBs) řeší vysoký objem transakcí efektivněji než tradiční relační databáze (RDBMS) díky své specifické architektuře a zaměření. Pojďme se podívat, jak konkrétně KVDBs řeší problémy, které jsem zmínil v souvislosti s RDBMS:
+
+Komplexita transakcí a ACID vlastnosti:
+
+RDBMS: Poskytují plné ACID vlastnosti, což může zvyšovat latenci.
+KVDBs: Často upřednostňují jednoduché transakce a mohou nabízet relaxované modely konzistence (např. eventual consistency). To umožňuje rychlejší zpracování transakcí, protože nemusí udržovat složité zámky a logy. Například Redis podporuje jednoduché transakce, které umožňují vykonávat několik operací atomicky bez složitých zámkových mechanismů.
+Zámky a konkurence:
+
+RDBMS: Používají zámky, což může vést ke zámkové soustavě při vysokém objemu transakcí.
+KVDBs: Často používají bezzámkové (lock-free) algoritmy a distribuované zámky, což snižuje riziko zámkových soustav. Redis využívá optimistic locking a případně LUA skripty pro atomické operace, které minimalizují zámkové soustavy.
+Škálovatelnost:
+
+RDBMS: Tradičně škálují vertikálně, což je finančně náročné a má své limity.
+KVDBs: Navrženy pro horizontální škálování (scale-out). Distribuují data napříč mnoha uzly, což umožňuje efektivní zpracování vysokého objemu transakcí. Cassandra, například, používá peer-to-peer architekturu, která umožňuje snadné přidávání nových uzlů bez výpadků.
+Složitost dotazů:
+
+RDBMS: Podporují složité dotazy a operace, což může být výpočetně náročné.
+KVDBs: Zaměřují se na jednoduché dotazy typu „get“ a „put“, což umožňuje rychlé a efektivní zpracování. Složité dotazy a operace jako spojení se v KVDBs typicky neprovádějí, což zjednodušuje a urychluje přístup k datům.
+Údržba a optimalizace:
+
+RDBMS: Vyžaduje složité optimalizační techniky a časté aktualizace indexů a statistik.
+KVDBs: Mají jednodušší modely dat, což snižuje potřebu komplexní údržby. Automatické shardování a replikace v databázích jako Redis nebo DynamoDB minimalizují potřebu manuální údržby a optimalizace.
