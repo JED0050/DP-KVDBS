@@ -1834,6 +1834,21 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{skripty-soubor}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Soubor se skripty pro nastavení DBS a spuštění testů -
+  YCSB Docker Scripty.txt}
+    \verb{url}
+    \verb https://github.com/JED0050/DP-KVDBS/blob/main/Tests/YCSB_Docker_Scrip
+    \verb ty.txt
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{docker-console}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Get Docker}
