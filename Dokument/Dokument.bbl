@@ -1678,19 +1678,6 @@
     \field{urlyear}{2023}
   \endentry
 
-  \entry{workloads}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Core Workloads - YCSB}
-    \verb{url}
-    \verb https://github.com/brianfrankcooper/YCSB/wiki/Core-Workloads
-    \endverb
-    \field{langid}{english}
-    \field{year}{2023}
-    \field{urlday}{12}
-    \field{urlmonth}{02}
-    \field{urlyear}{2023}
-  \endentry
-
   \entry{ycsb-parallel-data-lab}{online}{}
     \name{author}{1}{}{%
       {{hash=GG}{%
@@ -1712,6 +1699,32 @@
     \field{langid}{english}
     \field{year}{2023}
     \field{urlday}{24}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{zipf-dist}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{ZipfDistribution}
+    \verb{url}
+    \verb https://reference.wolfram.com/language/ref/ZipfDistribution.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{28}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{workloads}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Core Workloads - YCSB}
+    \verb{url}
+    \verb https://github.com/brianfrankcooper/YCSB/wiki/Core-Workloads
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{12}
     \field{urlmonth}{02}
     \field{urlyear}{2023}
   \endentry

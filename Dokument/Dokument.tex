@@ -6,6 +6,7 @@
 \usepackage{dcolumn} % sloupce tabulky s ciselnymi hodnotami
 \usepackage{subfig} % makra pro "podobrazky" a "podtabulky"
 \usepackage{rotating}
+\usepackage{float}
 
 \usepackage{geometry}
 \usepackage{listings}
@@ -77,6 +78,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 \AddAcronym{TPC}{Transaction Processing Performance Council}
 \AddAcronym{YCSB}{Yahoo! Cloud Serving Benchmark}
 \AddAcronym{kops}{tisíc operací}
+\AddAcronym{Workload}{vytížení}
 
 \addbibresource{citace.bib}
 
@@ -89,7 +91,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	\chapter{Úvod}
 	
-	Key-value (neboli Klíč-hodnota) databázové systémy~\cite{amaz-key-value-db, ytb-nosql-db}, dále jen KDBS, jsou jedním z typů NoSQL DBS~\cite{nosql}. Tyto databázové systémy jsou navrženy pro uživatelsky přívětivý přístup k datům pomocí elementárních příkazů. Základem manipulace s daty je přístup k hodnotám v databázi prostřednictvím klíčů. V KDBS se hodnota ukládá k danému klíči, přičemž klíč může být například "jmeno\_uzivatele\_03" a hodnota může být řetězec "Jan Novák". Při práci s komplexnějšími daty mohou být hodnoty JSON dokumenty~\cite{json}. Klíč "detail\_uzivatele\_03"~může pak, jako hodnotu ukládat, například JSON dokument vybraného uživatele popisující jeho jméno, věk, adresu nebo kontakt (viz JSON dokument~\ref{json-hodnota}).
+	Key-value (neboli Klíč-hodnota) databázové systémy~\cite{amaz-key-value-db, ytb-nosql-db}, dále jen KDBS, jsou jedním z typů NoSQL DBS~\cite{nosql}. Tyto databázové systémy jsou navrženy pro uživatelsky přívětivý přístup k datům pomocí elementárních příkazů. Základem manipulace s daty je přístup k hodnotám v databázi prostřednictvím klíčů. V KDBS se hodnota ukládá k danému klíči, přičemž klíč může být například "jmeno\_uzivatele\_03"~a hodnota může být řetězec "Jan Novák". Při práci s komplexnějšími daty mohou být hodnoty JSON dokumenty~\cite{json}. Klíč "detail\_uzivatele\_03"~může pak, jako hodnotu ukládat, například JSON dokument vybraného uživatele popisující jeho jméno, věk, adresu nebo kontakt (viz JSON dokument~\ref{json-hodnota}).
 	
 	\begin{figure}
 	\centering
@@ -328,7 +330,15 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Architektura YCSB~\cite{ycsb,ycsb-benchmarking} je založena na pluginech a poskytuje snadnou rozšiřitelnost pomocí skriptů. Pro značnou část významných databázových systémů existuje podpora v podobě bindingů~\cite{ycsb}. Samotný benchmark se skládá ze dvou fází. První z nich je Loading fáze zaměřená na vložení dat do databáze a následně druhá je Running fáze, ve které se spouští daný test (viz schéma~\ref{ycsb-blok-schema}).
 	
-	Při spouštění každého testu je možné nastavit určité parametry (viz kapitola~\ref{test-param} a~\ref{test-start}) pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
+	Při spouštění každého testu je možné nastavit určité parametry (viz kapitola~\ref{test-param} a~\ref{test-start}) pro lepší konkretizaci měřeného scénáře~\cite{ytb-ycsb}. První a druhý parametr slouží pro specifikaci loading nebo running fáze a výběr testovaného databázového systému. Následně se vybírá testovaný scénář vytížení (Workload), počet záznamů v databázi, počet atributů daného záznamu, bytovou velikost každého atributu v záznamu, počet vláken, umístění serveru databáze a nakonec distribuci dotazů (uniformní, exponenciální, sekvenční, nejnovější, hotspot, definované).
+	
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.85]{Data/ycsb-1.jpg}
+		\caption{YCSB rámec testování funkčnosti \cite{ycsb-parallel-data-lab}\label{ycsb-blok-schema}}
+	\end{figure}
+	
+	V YCSB se typicky používá uměle generovaná sada dat, která simuluje běžné operace nad databází. Tato data obvykle obsahují záznamy, kde každý záznam má jedinečný klíč a přidruženou hodnotu. Klíče jsou řetězce generované náhodně nebo podle určitého rozložení (např. uniformního a zipfovského~\cite{zipf-dist}), aby bylo možné simulovat různé typy zatížení. Velikost klíče je nastavitelná. Vygenerované klíče mohou být například "user1274"~nebo "record7891". Hodnota je JSON dokument, který obsahuje několik polí. Každé pole je pojmenováno jako "fieldX", kde X je číslo od 0 do N (výchozí nastavení zahrnuje 10 polí). Hodnoty polí jsou řetězce obsahující náhodná data nastavené velikosti.
 	
 	YCSB poskytuje 5 různých scénářů označených A až F pro testování propustnosti, latence a škálovatelnosti jednotlivých databázových systémů. Tyto pracovní scénáře, neboli Workloads~\cite{benchmark-pdf-1, workloads}, napodobují různé chování požadavků webových aplikací, jako jsou scénáře zaměřené výhradně na čtení, zápis, aktualizace, mazání nebo kombinace zmíněných operací. Konkrétní počet zvolených operací dle procentuální definice je vypočítán na základě parametru určujícího celkový počet operací daného scénáře. Při rozsahových dotazech ve Workloadu E je maximální počet procházených záznamů v jedné operaci definován jako 5\% z celkového počtu záznamů. Takže při počtu záznamů 1000 bude každá operace rozsahového dotazu číst právě 1 až 50 záznamů.
 	
@@ -358,13 +368,42 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 			\item každá operace se skládá z čtení daného záznamu, úpravy záznamu a následného vložení změněného záznamu zpět
 		\end{itemize}
 	\end{itemize}
-
-	\begin{figure}
+	
+	Testované operace jsou definovány prostřednictvím JSON dokumentů. Tento dokument obsahuje informace o typu operace (read, insert, update a delete), názvu tabulky, klíči a případně i názvech polí a jejich hodnotách. Například dotaz v první ukázce (viz obrázek~\ref{json-ycsb-operace-read}) načte hodnoty polí "field0"~a "field1"~záznamu s klíčem "user1474"~z tabulky "usertable". Dotaz v druhé ukázce (viz obrázek~\ref{json-ycsb-operace-insert}) vloží nový záznam s klíčem "user1474"~a hodnotami "field0", "field1"~a "field2"~do tabulky "usertable".
+	
+	\begin{figure}[H]
+	\centering
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  "operation": "read",
+  "table": "usertable",
+  "key": "user1474",
+  "fields": ["field0", "field1"]
+}
+	\end{lstlisting}
+	\caption{YCSB - příklad čtení záznamu}
+	\label{json-ycsb-operace-read}
+	\end{figure}	
+	
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.85]{Data/ycsb-1.jpg}
-		\caption{YCSB rámec testování funkčnosti \cite{ycsb-parallel-data-lab}\label{ycsb-blok-schema}}
-	\end{figure}
-
+		\begin{lstlisting}[language=json,firstnumber=1]
+{
+  "operation": "insert",
+  "table": "usertable",
+  "key": "user1474",
+  "values": {
+    "field0": "value0",
+    "field1": "value1",
+    "field2": "value2"
+  }
+}
+		\end{lstlisting}
+		\caption{YCSB - příklad vložení záznamu}
+		\label{json-ycsb-operace-insert}
+	\end{figure}	
+	
+	
 	\section{TPC}
 	
 	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{oltp} a možnosti jejich následného monitoringu a porovnávání. TPC benchmarky využívají firmy s velkými data a přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
@@ -495,9 +534,9 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Testovací prostředí YCSB je možné získat z oficiálního GitHub repozitáře Yahoo! Cloud Serving Benchmark~\cite{ycsb}. Pokud nechcete manuálně překládat zdrojové kódy projektu pro možnost nasazení vlastních změn, je vhodné stáhnout funkční verzi, která je k dispozici na odkazu uvedeném v README souboru~\cite{ycsb-download}. Pro úspěšné sestavení projektu ze zdrojových kódů je zapotřebí mít nainstalovaný Apache Maven~\cite{maven} ve verzi 3. Pokud je na stroji nainstalována verze Maven 2, může docházet k chybám (aktuální verzi Mavenu můžete zkontrolovat pomocí příkazu "mvn~-version"). Dále je zapotřebí mít nainstalované Java JDK ve verzi 8 (1.8)~\cite{java-jdk} a vyšší. Na operačním systému Windows doporučuji zkontrolovat hodnotu systémové proměnné "\%JAVA\_HOME\%", abyste se ujistili, že je nastavena správně. To můžete udělat pomocí příkazu "echo~\%JAVA\_HOME\%". Pokud tato systémová proměnná není nastavena správně, musíte ji manuálně změnit (správně nastavená proměnná by měla obsahovat cestu k nainstalovanému Java JDK s verzí minimálně 1.8, například  "C:$\backslash$Program Files$\backslash$Java$\backslash$jdk1.8.0\_231").
 	
-	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS v prostředí Docker, můžeme začít spouštět testy. Nejprve musíme do databáze vložit data a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím námi vytvořených skriptů (viz přiložený soubor "YCSB\_Docker\_Scripty.txt"~\cite{skripty-soubor}) vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}. Nicméně není problém tyto skripty spouštět i v obyčejném příkazovém řádku. Jen zde může nastat problém s čitelností příliš dlouhých výpisů kvůli omezení pohybu ve výpisech. Všechny příkazy byly spouštěny v adresáři "bin" uvnitř kořenového adresáře projektu "ycsb-0.17.0".
+	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS v prostředí Docker, můžeme začít spouštět testy. Nejprve musíme do databáze vložit data a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím námi vytvořených skriptů (viz přiložený soubor "YCSB\_Docker\_Scripty.txt"~\cite{skripty-soubor}) vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}. Nicméně není problém tyto skripty spouštět i v obyčejném příkazovém řádku. Jen zde může nastat problém s čitelností příliš dlouhých výpisů kvůli omezení pohybu ve výpisech. Všechny příkazy byly spouštěny v adresáři "bin"~uvnitř kořenového adresáře projektu "ycsb-0.17.0".
 	
-	V první části testování spustíme příkaz "ycsb~load" pro připojení k databázi a vložení dat do databáze. Nejprve musíme specifikovat název testovaného DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme naše požadavky. Například počet záznamů, které chceme do databáze vložit, je určen parametrem "-p~recordcount=NUM", počet vláken parametrem "-p~threadcount=NUM", a nejčastěji IP adresa nebo port DBS příkazy "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM" pro spojení s DBS. Pomocí zadání vlastnosti "-s" po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto: "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme kromě dat v databázi také textový výstup popisující průběh zápisu dat do databáze, kde je zahrnuta propustnost vkládání a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
+	V první části testování spustíme příkaz "ycsb~load"~pro připojení k databázi a vložení dat do databáze. Nejprve musíme specifikovat název testovaného DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme naše požadavky. Například počet záznamů, které chceme do databáze vložit, je určen parametrem "-p~recordcount=NUM", počet vláken parametrem "-p~threadcount=NUM", a nejčastěji IP adresa nebo port DBS příkazy "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM"~pro spojení s DBS. Pomocí zadání vlastnosti "-s"~po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto: "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme kromě dat v databázi také textový výstup popisující průběh zápisu dat do databáze, kde je zahrnuta propustnost vkládání a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
 	
 	Druhá část testování se věnuje spuštění operací pro čtení a úpravu vložených dat z předchozího kroku pomocí příkazu "ycsb~run". Opět musíme zadat název testovaného DBS a Workload~\cite{workloads}, který nám určuje poměr operací pro čtení a úpravy dat. Pomocí volitelných parametrů~\cite{ycsb-properties} určíme počet prováděných operací "-p operationcount=NUM". Kombinace celkového počtu operací a Workloadu nám určí konkrétní počet operací čtení a úprav, které se během testu vykonají. Pokud pracujeme s Workloady D nebo E~(viz popis YCSB Workloads~\ref{lab-workloads}), dochází navíc k zápisu nových hodnot do DBS a počet klíčů v DBS stoupá. Ostatní vytížení provádějí pouze úpravy již existujících hodnot, a počet klíčů v DBS zůstává během testu stále stejný. Stejným způsobem jako v první fázi testování, i nyní můžeme specifikovat IP adresu a port DBS, případně počet vláken, podrobnější výstup testu atd. Celý příkaz pro spuštění testu DBS pak vypadá takto: "ycsb~run~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení testu získáme opět textový výstup v podobě tabulky popisující průběh testu, kde je zahrnuta propustnost operací a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
 	
@@ -508,7 +547,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\item .$\backslash$ycsb run basic -P ..$\backslash$workloads$\backslash$workloada
 	\end{itemize}
 	
-	Pro názorný příklad si popíšeme a ukážeme příkazy pro testování databáze Redis~\cite{redis} (viz příkazy~\ref{itemiza-docker-ycsb} a obrázky~\ref{ps-docker},~\ref{ps-ycsb-load},~\ref{ps-ycsb-run}). Testovaným scénářem bude Workload A~\cite{workloads} (50\% Read, 50\% Update), který poběží na 4 vláknech. Do databáze se vloží 10~000 záznamů, a provede se 10~000 operací během testování (přibližně 5~000 čtení a 5~000 aktualizací dat). Nejprve si stáhneme Docker Image pro KDBS Redis příkazem "docker~pull" a následně spustíme kontejner příkazem "docker~run" a nastavíme porty. Nyní máme KDBS Redis připravenou a můžeme začít s testováním. Nejprve spustíme příkaz "ycsb~load" k vložení dat do databáze. Po dokončení vkládání dat můžeme v příkazovém řádku vidět tabulku popisující informace o vkládání dat do databáze. Následně zahájíme testy spuštěním příkazu "ycsb~run", a opět uvidíme ve výstupní tabulce výpis informací o našem testu. Pokud na konci tabulky uvidíme status "Return=OK", vše proběhlo podle očekávání.
+	Pro názorný příklad si popíšeme a ukážeme příkazy pro testování databáze Redis~\cite{redis} (viz příkazy~\ref{itemiza-docker-ycsb} a obrázky~\ref{ps-docker},~\ref{ps-ycsb-load},~\ref{ps-ycsb-run}). Testovaným scénářem bude Workload A~\cite{workloads} (50\% Read, 50\% Update), který poběží na 4 vláknech. Do databáze se vloží 10~000 záznamů, a provede se 10~000 operací během testování (přibližně 5~000 čtení a 5~000 aktualizací dat). Nejprve si stáhneme Docker Image pro KDBS Redis příkazem "docker~pull"~a následně spustíme kontejner příkazem "docker~run"~a nastavíme porty. Nyní máme KDBS Redis připravenou a můžeme začít s testováním. Nejprve spustíme příkaz "ycsb~load"~k vložení dat do databáze. Po dokončení vkládání dat můžeme v příkazovém řádku vidět tabulku popisující informace o vkládání dat do databáze. Následně zahájíme testy spuštěním příkazu "ycsb~run", a opět uvidíme ve výstupní tabulce výpis informací o našem testu. Pokud na konci tabulky uvidíme status "Return=OK", vše proběhlo podle očekávání.
 	
 	\begin{itemize}\label{itemiza-docker-ycsb}
 		\item docker pull redis:latest
@@ -636,15 +675,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Veškeré hodnoty z testů byly zaznamenány do Excel dokumentu~\cite{excel} "KDBS\_Vysledky\_testu.xlsx". Tento dokument je součástí dodaných příloh k diplomové práci. Dokument je rozdělen do šesti sekcí. První 2 listy se zaměřují na konečné zprůměrované výsledky všech měření pro 4 testované scénáře. Zbývající 4 listy se věnují konkrétním výsledkům dílčích testů pro každou ze 4 testovaných KDBS, na základě kterých se počítaly výsledné hodnoty pro předešlé listy.
 	
-	Jednotlivé testy byly rozděleny do čtyř scénářů: Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář byly všechny čtyři vybrané KDBS testovány třikrát, a jejich výsledky byly následně zprůměrovány. U scénářů Workload A a Workload B byla měřena latence čtení a aktualizace dat zvlášť, a jejich výsledná latence byla počítána jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, a proto nebylo zapotřebí průměrovat výsledné latence. Stejně tak tomu bylo u scénáře Insert only, kde dochází pouze k vkládání dat do KDBS. U grafů a tabulek latence je minimum označeno zkratkou "min", maximum "max" a průměr "avg".
-	
-	V grafech porovnávajících propustnosti KDBS jsem zavedl jednotku "kops/sec", která reprezentuje tisíce provedených operací za sekundu. Všechny měřené propustnosti se pohybují v řádech jednotek tisíců operací za sekundu, a proto je tato jednotka vhodná a zlepšuje čitelnost grafů. Nejvyšší naměřené hodnoty latence jsem zařadil do jednoho společného grafu napříč všemi testovými scénáři (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}), protože při porovnání maximální latence v jednom grafu daného scénáře s minimální a průměrnou latencí (viz graf~\ref{graph_Workload A - Min Avg Latency (ms)}) docházelo k velkému nepoměru vykreslených hodnot, což způsobovalo zanedbatelné vizuální rozdíly pro hodnoty nejnižší a průměrné. Při použití logaritmické stupnice nebyly grafy stále čitelné, proto jsem maximální latence dal do jednoho společného grafu. Pokud na sloupcovém grafu dochází k několikanásobnému převýšení jedné maximální hodnoty některého sloupce vůči sloupcům ostatním v rámci dané kategorie či celého grafu, využívám vizuální indikátor přetrhnutého sloupce (viz graf~\ref{graph_Workload B - Percentile Latency (ms)}), který znázorňuje, že daný sloupec má několikanásobně vyšší hodnotu oproti ostatním, a zároveň nedochází k vykreslení celé výšky sloupce, aby bylo možné zachovat vizuální poměry ostatních několikanásobně nižších hodnot.
-	
-	Obecně se dá říci, že v rámci těchto testů si průměrně vedla nejlépe KDBS Aerospike, následně za ní pak KDBS Redis a KDBS Memcached. Každopádně výsledky těchto tří KDBS jsou velice vyrovnané a liší se od konkrétních scénářů.
-	
-	DBS Aerospike měl kromě scénáře Workload C zaměřeného na čisté čtení vždy nejvyšší propustnost. Dosahovala nejlepších výsledků jak pro operace aktualizací, tak i zápisu. Za ní následovala KDBS Redis s nejrychlejším čtením záznamů a druhou nejrychlejší aktualizací. Tato KDBS zaostávala pouze při operaci vkládání nových záznamů. Databáze Memcached byla sice pomalejší pro čtení i aktualizace, ale při vkládání záznamů byla druhá nejrychlejší hned po KDBS Aerospike a podstatně rychlejší než KDBS Redis.
-	
-	V rámci všech testů KDBS Riak KV několikanásobně zaostávala vůči zbylým třem databázím. Při testování docházelo i k pádům samotné KDBS spouštěné v Dockeru~\cite{docker} a obecně k chybám a přetékání paměti, způsobené nejspíše špatným nastavením konfiguračních souborů. Obecně nastavení této KDBS bylo nejtěžší v porovnání s ostatními. Ve výsledcích testů (viz tabulka~\ref{tab_workload_a}) můžeme vidět, že KDBS Riak KV má hodnotu nejnižší latence stále vyšší než jsou průměrné latence zbylých tří databází a dokonce je i vyšší než 95. percentil latence zbylých KDBS.
+	Jednotlivé testy byly rozděleny do čtyř scénářů: Workload A, Workload B, Workload C a Insert only (viz~\ref{lab-workloads}). Pro každý scénář byly všechny čtyři vybrané KDBS testovány třikrát, a jejich výsledky byly následně zprůměrovány. U scénářů Workload A a Workload B byla měřena latence čtení a aktualizace dat zvlášť, a jejich výsledná latence byla počítána jako průměr latence pro čtení a úpravu dat. Workload C provádí pouze čtení dat, a proto nebylo zapotřebí průměrovat výsledné latence. Stejně tak tomu bylo u scénáře Insert only, kde dochází pouze k vkládání dat do KDBS. U grafů a tabulek latence je minimum označeno zkratkou "min", maximum "max"~a průměr "avg".
 	
 	\begin{figure}
 		\centering
@@ -1176,8 +1207,6 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	V grafu znázorňujícím 95. a 99. percentil latence (viz graf~\ref{graph_Insert only - Percentile Latency (ms)}) vidíme stejný trend jako u propustnosti a minimální a průměrné latence v rámci tohoto scénáře. Pro 95. percentil latence má opět KDBS Aerospike nejnižší latenci s hodnotou~1199,33~$\mu$s. Za ní následuje KDBS Memcached s latencí~1536,67~$\mu$s a nárůstem o~28,12~\%. Další v pořadí je KDBS Redis s latencí~2219~$\mu$s a nárůstem 95. percentilu latence o~84,99~\% oproti KDBS Aerospike. Poslední je pro tento percentil KDBS Riak KV s 95. percentilem latence s hodnotou~4386,33~$\mu$s a nárůstem o~265,72~\%. Následně pak 99. percentil zastává stejné uspořádání KDBS dle nejnižších latencí jako 95. percentil. Databáze Aerospike má latenci~1690~$\mu$s, za ní je KDBS Memcached s latencí~2322,33~$\mu$s a nárůstem o~37,43~\%. Následuje KDBS Redis s latencí~3195~$\mu$s a nárůstem 99. percentilu latence o~89,05~\% oproti KDBS Aerospike. Na posledním místě je opět KDBS Riak KV s latencí~8124,33~$\mu$s a nárůstem o~380,57~\%.
 	
-	Tento scénář nám ukázal, jak rychlá dokáže být KDBS Aerospike, pokud jde o vkládání nových záznamů do databáze. S nejvyšší propustností 4953,06~operací za sekundu překonala všechny ostatní KDBS v rámci tohoto scénáře. Byla rychlejší o více než~1015~operací za sekundu ve srovnání s druhou nejrychlejší v tomto scénáři, KDBS Memcached. Samotná KDBS Memcached zde byla pro téměř všechny kategorie druhá nejrychlejší, zatímco v předchozích třech scénářích se pohybovala spíše až na třetím místě. Jediná kategorie ve které byla Memcached až třetí v rámci tohoto měření, byla maximální latence, kde zaostávala za databázemi Redis a Aerospike. Databáze Redis zde převážně obsadila pozici třetí nejrychlejší, přičemž v jediné kategorii nejvyšší naměřené latence dosáhla nejnižších hodnot napříč ostatními KDBS. Databáze Riak KV zůstala stále nejpomalejší a dosahovala ještě horší propustnosti než v předchozích scénářích. Oproti scénáři Workload C, kde dosáhla nejvyšší propustnosti 1783,39~operací za sekundu, v porovnání sama se sebou v rámci všech scénářů měla v tomto scénáři pokles o 730,97~operací za sekundu a~41,01~\%.
-	
 	\begin{table}
 		\centering
 		\begin{tabular}{ l | l l l l }
@@ -1284,6 +1313,20 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\caption{Insert only - Percentil latence (ms)}
 		\label{graph_Insert only - Percentile Latency (ms)}
 	\end{figure}
+	
+	Tento scénář nám ukázal, jak rychlá dokáže být KDBS Aerospike, pokud jde o vkládání nových záznamů do databáze. S nejvyšší propustností 4953,06~operací za sekundu překonala všechny ostatní KDBS v rámci tohoto scénáře. Byla rychlejší o více než~1015~operací za sekundu ve srovnání s druhou nejrychlejší v tomto scénáři, KDBS Memcached. Samotná KDBS Memcached zde byla pro téměř všechny kategorie druhá nejrychlejší, zatímco v předchozích třech scénářích se pohybovala spíše až na třetím místě. Jediná kategorie ve které byla Memcached až třetí v rámci tohoto měření, byla maximální latence, kde zaostávala za databázemi Redis a Aerospike. Databáze Redis zde převážně obsadila pozici třetí nejrychlejší, přičemž v jediné kategorii nejvyšší naměřené latence dosáhla nejnižších hodnot napříč ostatními KDBS. Databáze Riak KV zůstala stále nejpomalejší a dosahovala ještě horší propustnosti než v předchozích scénářích. Oproti scénáři Workload C, kde dosáhla nejvyšší propustnosti 1783,39~operací za sekundu, v porovnání sama se sebou v rámci všech scénářů měla v tomto scénáři pokles o 730,97~operací za sekundu a~41,01~\%.
+	
+	\subsection{Porovnání výsledků testů}
+	
+	Obecně se dá říci, že v rámci těchto testů si průměrně vedla nejlépe KDBS Aerospike, následně za ní pak KDBS Redis a KDBS Memcached. Každopádně výsledky těchto tří KDBS jsou velice vyrovnané a liší se od konkrétních scénářů.
+	
+	DBS Aerospike měl kromě scénáře Workload C zaměřeného na čisté čtení vždy nejvyšší propustnost. Dosahovala nejlepších výsledků jak pro operace aktualizací, tak i zápisu. Za ní následovala KDBS Redis s nejrychlejším čtením záznamů a druhou nejrychlejší aktualizací. Tato KDBS zaostávala pouze při operaci vkládání nových záznamů. Databáze Memcached byla sice pomalejší pro čtení i aktualizace, ale při vkládání záznamů byla druhá nejrychlejší hned po KDBS Aerospike a podstatně rychlejší než KDBS Redis.
+	
+	V rámci všech testů KDBS Riak KV několikanásobně zaostávala vůči zbylým třem databázím. Při testování docházelo i k pádům samotné KDBS spouštěné v Dockeru~\cite{docker} a obecně k chybám a přetékání paměti, způsobené nejspíše špatným nastavením konfiguračních souborů. Obecně nastavení této KDBS bylo nejtěžší v porovnání s ostatními. Ve výsledcích testů (viz tabulka~\ref{tab_workload_a}) můžeme vidět, že KDBS Riak KV má hodnotu nejnižší latence stále vyšší než jsou průměrné latence zbylých tří databází a dokonce je i vyšší než 95. percentil latence zbylých KDBS.
+	
+	\subsection{Vizualizace do grafů}
+	
+	V grafech porovnávajících propustnosti KDBS byla zavedena jednotka "kops/sec", která reprezentuje tisíce provedených operací za sekundu. Všechny měřené propustnosti se pohybují v řádech jednotek tisíců operací za sekundu, a proto je tato jednotka vhodná a zlepšuje čitelnost grafů. Nejvyšší naměřené hodnoty latence byly zařazeny do jednoho společného grafu napříč všemi testovými scénáři (viz graf~\ref{graph_Workloads A, B, C + Insert only - Max Latency (ms)}), protože při porovnání maximální latence v jednom grafu daného scénáře s minimální a průměrnou latencí (viz graf~\ref{graph_Workload A - Min Avg Latency (ms)}) docházelo k velkému nepoměru vykreslených hodnot, což způsobovalo zanedbatelné vizuální rozdíly pro hodnoty nejnižší a průměrné. Při použití logaritmické stupnice nebyly grafy stále čitelné, proto jsou maximální latence vloženy do jednoho společného grafu. Pokud na sloupcovém grafu dochází k několikanásobnému převýšení jedné maximální hodnoty některého sloupce vůči sloupcům ostatním v rámci dané kategorie či celého grafu, tak je využit vizuální indikátor přetrhnutého sloupce (viz graf~\ref{graph_Workload B - Percentile Latency (ms)}), který znázorňuje, že daný sloupec má několikanásobně vyšší hodnotu oproti ostatním, a zároveň nedochází k vykreslení celé výšky sloupce, aby bylo možné zachovat vizuální poměry ostatních několikanásobně nižších hodnot.
 	
 	\chapter{Závěr\label{chapter:5-diploma_results}}
 	

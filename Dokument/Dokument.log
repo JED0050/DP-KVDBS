@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  28 JUN 2024 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 JUN 2024 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,25 +1025,33 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \sf@top=\skip90
 \sf@bottom=\skip91
 )
+(D:\Skola-SW\MikTex\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count441
+\float@exts=\toks50
+\float@box=\box62
+\@float@everytoks=\toks51
+\@floatcapt=\box63
+)
 (D:\Skola-SW\MikTex\tex/latex/listings\listings.sty
-\lst@mode=\count441
-\lst@gtempboxa=\box62
-\lst@token=\toks50
-\lst@length=\count442
+\lst@mode=\count442
+\lst@gtempboxa=\box64
+\lst@token=\toks52
+\lst@length=\count443
 \lst@currlwidth=\dimen191
-\lst@column=\count443
-\lst@pos=\count444
+\lst@column=\count444
+\lst@pos=\count445
 \lst@lostspace=\dimen192
 \lst@width=\dimen193
-\lst@newlines=\count445
-\lst@lineno=\count446
+\lst@newlines=\count446
+\lst@lineno=\count447
 \lst@maxwidth=\dimen194
 
 (D:\Skola-SW\MikTex\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count447
-\lst@skipnumbers=\count448
-\lst@framebox=\box63
+\c@lstnumber=\count448
+\lst@skipnumbers=\count449
+\lst@framebox=\box65
 )
 (D:\Skola-SW\MikTex\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1054,13 +1062,13 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 (D:\Skola-SW\MikTex\tex/latex/pgf/basiclayer\pgf.sty
 (D:\Skola-SW\MikTex\tex/latex/pgf/utilities\pgfrcs.sty
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks51
+\pgfutil@everybye=\toks53
 \pgfutil@tempdima=\dimen195
 \pgfutil@tempdimb=\dimen196
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-common-lists.tex))
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box64
+\pgfutil@abb=\box66
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfrcs.code.tex
 (D:\Skola-SW\MikTex\tex/generic/pgf\pgf.revision.tex)
@@ -1074,11 +1082,11 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks52
-\pgfkeys@temptoks=\toks53
+\pgfkeys@pathtoks=\toks54
+\pgfkeys@temptoks=\toks55
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks54
+\pgfkeys@tmptoks=\toks56
 ))
 \pgf@x=\dimen197
 \pgf@y=\dimen198
@@ -1092,14 +1100,14 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@yd=\dimen262
 \w@pgf@writea=\write5
 \r@pgf@reada=\read5
-\c@pgf@counta=\count449
-\c@pgf@countb=\count450
-\c@pgf@countc=\count451
-\c@pgf@countd=\count452
-\t@pgf@toka=\toks55
-\t@pgf@tokb=\toks56
-\t@pgf@tokc=\toks57
-\pgf@sys@id@count=\count453
+\c@pgf@counta=\count450
+\c@pgf@countb=\count451
+\c@pgf@countc=\count452
+\c@pgf@countd=\count453
+\t@pgf@toka=\toks57
+\t@pgf@tokb=\toks58
+\t@pgf@tokc=\toks59
+\pgf@sys@id@count=\count454
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
@@ -1114,8 +1122,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count454
-\pgfsyssoftpath@bigbuffer@items=\count455
+\pgfsyssoftpath@smallbuffer@items=\count455
+\pgfsyssoftpath@bigbuffer@items=\count456
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -1128,11 +1136,11 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathutil.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathparser.code.tex
 \pgfmath@dimen=\dimen263
-\pgfmath@count=\count456
-\pgfmath@box=\box65
-\pgfmath@toks=\toks58
-\pgfmath@stack@operand=\toks59
-\pgfmath@stack@operation=\toks60
+\pgfmath@count=\count457
+\pgfmath@box=\box67
+\pgfmath@toks=\toks60
+\pgfmath@stack@operand=\toks61
+\pgfmath@stack@operation=\toks62
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.code.tex
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
@@ -1144,7 +1152,7 @@ x) (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.co
 de.tex))) (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count457
+\c@pgfmathroundto@lastzeros=\count458
 ))
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfint.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -1176,10 +1184,10 @@ File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfpic=\box66
-\pgf@hbox=\box67
-\pgf@layerbox@main=\box68
-\pgf@picture@serial@count=\count458
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count459
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -1206,15 +1214,15 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen287
-\pgf@sys@shading@range@num=\count459
-\pgf@shadingcount=\count460
+\pgf@sys@shading@range@num=\count460
+\pgf@shadingcount=\count461
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfexternal@startupbox=\box69
+\pgfexternal@startupbox=\box71
 ))
 (D:\Skola-SW\MikTex\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -1230,7 +1238,7 @@ File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 (D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfnodeparttextbox=\box70
+\pgfnodeparttextbox=\box72
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
@@ -1254,15 +1262,15 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 (D:\Skola-SW\MikTex\tex/generic/pgf/math\pgfmath.code.tex)
 \pgffor@iter=\dimen290
 \pgffor@skip=\dimen291
-\pgffor@stack=\toks61
-\pgffor@toks=\toks62
+\pgffor@stack=\toks63
+\pgffor@toks=\toks64
 ))
 (D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count461
+\pgf@plot@mark@count=\count462
 \pgfplotmarksize=\dimen292
 )
 \tikz@lastx=\dimen293
@@ -1273,22 +1281,22 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@lastmovetoy=\dimen298
 \tikzleveldistance=\dimen299
 \tikzsiblingdistance=\dimen300
-\tikz@figbox=\box71
-\tikz@figbox@bg=\box72
-\tikz@tempbox=\box73
-\tikz@tempbox@bg=\box74
-\tikztreelevel=\count462
-\tikznumberofchildren=\count463
-\tikznumberofcurrentchild=\count464
-\tikz@fig@count=\count465
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count463
+\tikznumberofchildren=\count464
+\tikznumberofcurrentchild=\count465
+\tikz@fig@count=\count466
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count466
-\pgfmatrixcurrentcolumn=\count467
-\pgf@matrix@numberofcolumns=\count468
+\pgfmatrixcurrentrow=\count467
+\pgfmatrixcurrentcolumn=\count468
+\pgf@matrix@numberofcolumns=\count469
 )
-\tikz@expandcount=\count469
+\tikz@expandcount=\count470
 
 (D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytop
 aths.code.tex
@@ -1299,12 +1307,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 
 (D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplots.code.tex
 (D:\Skola-SW\MikTex\tex/generic/pgfplots\pgfplotscore.code.tex
-\t@pgfplots@toka=\toks63
-\t@pgfplots@tokb=\toks64
-\t@pgfplots@tokc=\toks65
+\t@pgfplots@toka=\toks65
+\t@pgfplots@tokb=\toks66
+\t@pgfplots@tokc=\toks67
 \pgfplots@tmpa=\dimen301
-\c@pgfplots@coordindex=\count470
-\c@pgfplots@scanlineindex=\count471
+\c@pgfplots@coordindex=\count471
+\c@pgfplots@scanlineindex=\count472
 
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex))
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex)
@@ -1317,19 +1325,19 @@ de.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsliststructureext
 .code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count472
+\c@pgfplotsarray@tmp=\count473
 )
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count473
-\t@pgfplotstable@a=\toks66
+\c@pgfplotstable@counta=\count474
+\t@pgfplotstable@a=\toks68
 ) (D:\Skola-SW\MikTex\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex
 ) (D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsbinary.code.tex
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex))
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex)
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.co
 de.tex
-\c@pgfplotslibrarysurf@no=\count474
+\c@pgfplotslibrarysurf@no=\count475
 
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgf
 sys-pdftex.def)))
@@ -1353,11 +1361,11 @@ orations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen304
 \pgfdecoratedinputsegmentremainingdistance=\dimen305
 \pgf@decorate@distancetomove=\dimen306
-\pgf@decorate@repeatstate=\count475
+\pgf@decorate@repeatstate=\count476
 \pgfdecorationsegmentamplitude=\dimen307
 \pgfdecorationsegmentlength=\dimen308
 )
-\tikz@lib@dec@box=\box75
+\tikz@lib@dec@box=\box77
 )
 (D:\Skola-SW\MikTex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydec
 orations.pathmorphing.code.tex
@@ -1369,7 +1377,7 @@ orations.pathreplacing.code.tex
 .pathreplacing.code.tex))
 (D:\Skola-SW\MikTex\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.co
 de.tex)
-\pgfplots@numplots=\count476
+\pgfplots@numplots=\count477
 \pgfplots@xmin@reg=\dimen309
 \pgfplots@xmax@reg=\dimen310
 \pgfplots@ymin@reg=\dimen311
@@ -1386,7 +1394,7 @@ File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 83
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 85
 .
 
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmr.fd
@@ -1394,24 +1402,24 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (Dokument.aux)
 \openout1 = `Dokument.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1449,17 +1457,17 @@ LaTeX Font Info:    ... okay on input line 83.
 
 (D:\Skola-SW\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count477
+\scratchcounter=\count478
 \scratchdimen=\dimen315
-\scratchbox=\box76
-\nofMPsegments=\count478
-\nofMParguments=\count479
-\everyMPshowfont=\toks67
-\MPscratchCnt=\count480
+\scratchbox=\box78
+\nofMPsegments=\count479
+\nofMParguments=\count480
+\everyMPshowfont=\toks69
+\MPscratchCnt=\count481
 \MPscratchDim=\dimen316
-\MPnumerator=\count481
-\makeMPintoPDFobject=\count482
-\everyMPtoPDFconversion=\toks68
+\MPnumerator=\count482
+\makeMPintoPDFobject=\count483
+\everyMPtoPDFconversion=\toks70
 ) (D:\Skola-SW\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1470,6 +1478,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
@@ -1487,7 +1496,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 83.
+Package hyperref Info: Link coloring ON on input line 85.
 
 (D:\Skola-SW\MikTex\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1498,11 +1507,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (D:\Skola-SW\MikTex\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count483
+\c@section@level=\count484
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (Dokument.out) (Dokument.out)
 \@outlinefile=\write6
@@ -1553,18 +1562,18 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Dokument.bbl' found.
  (Dokument.bbl)
-Package biblatex Info: Reference section=0 on input line 83.
-Package biblatex Info: Reference segment=0 on input line 83.
-\c@lstlisting=\count484
+Package biblatex Info: Reference section=0 on input line 85.
+Package biblatex Info: Reference segment=0 on input line 85.
+\c@lstlisting=\count485
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 83.
+ on input line 85.
 
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 8
-5.
+7.
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1574,37 +1583,37 @@ PDF version <1.6>, but at most version <1.5> allowed
 <Figures/FEI_CZ.pdf, id=97, 350.70023pt x 109.21pt>
 File: Figures/FEI_CZ.pdf Graphic file (type pdf)
 <use Figures/FEI_CZ.pdf>
-Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 85.
+Package pdftex.def Info: Figures/FEI_CZ.pdf  used on input line 87.
 (pdftex.def)             Requested size: 274.11765pt x 85.35826pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-5.
+7.
 (D:\Skola-SW\MikTex\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-5.
+7.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-85.
+87.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-85.
+87.
 
 (D:\Skola-SW\MikTex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 85.
+(Font)              <14.4> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 85.
+(Font)              <10> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 85.
+(Font)              <7> on input line 87.
  [1
 
 
@@ -1619,39 +1628,39 @@ pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 85.
+n input line 87.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 85.
+n input line 87.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 <ThesisSpecification_JED0050_vsboee2302B326.pdf, id=133, page=1, 597.23125pt x 
 845.1575pt>
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 85.
+ used on input line 87.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 85.
+ used on input line 87.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 85.
+ used on input line 87.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 85.
+ used on input line 87.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
 <use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
 Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 85.
+ used on input line 87.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 
 [2
@@ -1694,31 +1703,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 Kapitola 1.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-6.
+8.
 (D:\Skola-SW\MikTex\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [9
 
 ]
-<Data/db-engine-trend-dbs.PNG, id=309, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=313, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
-Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 119.
+Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 121.
 (pdftex.def)             Requested size: 481.00386pt x 269.12727pt.
 
-Overfull \hbox (8.97263pt too wide) in paragraph at lines 119--120
+Overfull \hbox (8.97263pt too wide) in paragraph at lines 121--122
  [][] 
  []
 
 [10]
-<Data/db-engine-trend-model.PNG, id=340, 786.68906pt x 359.84438pt>
+<Data/db-engine-trend-model.PNG, id=344, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
-Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 131
+Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 133
 .
 (pdftex.def)             Requested size: 511.34183pt x 233.89607pt.
 
-Overfull \hbox (39.3106pt too wide) in paragraph at lines 131--132
+Overfull \hbox (39.3106pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
@@ -1726,7 +1735,7 @@ Overfull \hbox (39.3106pt too wide) in paragraph at lines 131--132
 [13]
 Kapitola 2.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-54.
+56.
 (D:\Skola-SW\MikTex\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14
@@ -1742,7 +1751,7 @@ Underfull \vbox (badness 4353) has occurred while \output is active []
 [24] [25] [26]
 Kapitola 3.
 
-Overfull \hbox (0.12636pt too wide) in paragraph at lines 323--324
+Overfull \hbox (0.12636pt too wide) in paragraph at lines 325--326
 \T1/lmr/m/n/10.95 R·zné da-ta-bá-zové sys-témy mo-hou p°i-stu-po-vat k °e-²ení 
 jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
  []
@@ -1750,146 +1759,150 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [27
 
 ]
-<Data/ycsb-1.jpg, id=657, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=659, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
-Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 364.
+Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 337.
 (pdftex.def)             Requested size: 426.59575pt x 319.09363pt.
- [28] [29 <./Data/ycsb-1.jpg>]
+ [28 <./Data/ycsb-1.jpg>] [29]
 (D:\Skola-SW\MikTex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 389.
- [30] [31]
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 428.
+ [30] [31] [32]
 Kapitola 4.
 
-Overfull \hbox (47.95074pt too wide) in paragraph at lines 450--462
+Overfull \hbox (47.95074pt too wide) in paragraph at lines 489--501
  [][] 
  []
 
-[32
+[33
 
 ]
-Overfull \hbox (29.96753pt too wide) in paragraph at lines 474--475
+Overfull \hbox (29.96753pt too wide) in paragraph at lines 513--514
 []\T1/lmr/m/n/10.95 Ve²keré po-t°ebné po-u-ºité skripty jsou do-stupné v tex-to
--vém sou-boru "YCSB_Docker_Scripty.txt" [[][]125[][]].
+-vém sou-boru "YCSB_Docker_Scripty.txt" [[][]126[][]].
  []
 
-[33]
-Overfull \hbox (95.51947pt too wide) in paragraph at lines 498--499
+[34]
+Overfull \hbox (95.51947pt too wide) in paragraph at lines 537--538
 \T1/lmr/m/n/10.95 testy byly spou²-t¥ny pro-st°ed-nic-tvím námi vy-tvo-°e-ných 
-skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]125[][]])
+skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]126[][]])
  []
 
-[34] [35]
-Overfull \hbox (18.1056pt too wide) in paragraph at lines 637--638
+[35] [36]
+Overfull \hbox (18.1056pt too wide) in paragraph at lines 676--677
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]138[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]139[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
-[36] [37] [38] [39]
-Package pgfplots info on input line 677: Overriding colorspace to rgb due to xc
+[37] [38] [39]
+Package pgfplots info on input line 708: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.29631pt too wide) in paragraph at lines 684--685
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 715--716
  [][] 
  []
 
-Package pgfplots info on input line 718: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 749: Overriding colorspace to rgb due to xc
 olor configuration.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 724.
+(Font)              <9> on input line 755.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 724.
+(Font)              <5> on input line 755.
 
-Overfull \hbox (50.9971pt too wide) in paragraph at lines 725--726
+Overfull \hbox (50.9971pt too wide) in paragraph at lines 756--757
  [][] 
  []
 
 [40] [41]
-Package pgfplots info on input line 809: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 840: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.89632pt too wide) in paragraph at lines 816--817
+Overfull \hbox (50.89632pt too wide) in paragraph at lines 847--848
  [][] 
  []
 
-Package pgfplots info on input line 855: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 886: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 895: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 926: Overriding colorspace to rgb due to xc
 olor configuration.
+[42] [43] [44] [45]
+Package pgfplots info on input line 1023: Overriding colorspace to rgb due to x
+color configuration.
+Package pgfplots info on input line 1063: Overriding colorspace to rgb due to x
+color configuration.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-[43] [44]
-Package pgfplots info on input line 992: Overriding colorspace to rgb due to xc
-olor configuration.
-Package pgfplots info on input line 1032: Overriding colorspace to rgb due to x
+ [46]
+[47] [48]
+Package pgfplots info on input line 1144: Overriding colorspace to rgb due to x
 color configuration.
- [45] [46] [47]
-Package pgfplots info on input line 1113: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1184: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1153: Overriding colorspace to rgb due to x
-color configuration.
- [48] [49] [50]
-Package pgfplots info on input line 1236: Overriding colorspace to rgb due to x
-color configuration.
-Package pgfplots info on input line 1276: Overriding colorspace to rgb due to x
-color configuration.
- [51] [52]
-Kapitola 5.
-[53
 
-] [54]
-Overfull \hbox (4.80904pt too wide) in paragraph at lines 1302--1302
+Underfull \vbox (badness 2452) has occurred while \output is active []
+
+ [49]
+[50] [51]
+Package pgfplots info on input line 1265: Overriding colorspace to rgb due to x
+color configuration.
+Package pgfplots info on input line 1305: Overriding colorspace to rgb due to x
+color configuration.
+ [52] [53] [54]
+Kapitola 5.
+[55
+
+] [56]
+Overfull \hbox (4.80904pt too wide) in paragraph at lines 1345--1345
 []\T1/lmr/m/it/10.95 Relace [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]cit
 .[] []2024-04-23]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / por
 tal . matematickabiologie .
  []
 
 
-Overfull \hbox (28.5328pt too wide) in paragraph at lines 1302--1302
+Overfull \hbox (28.5328pt too wide) in paragraph at lines 1345--1345
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
 
-[55
+[57
 
-] [56]
-Overfull \hbox (29.36243pt too wide) in paragraph at lines 1302--1302
+] [58]
+Overfull \hbox (29.36243pt too wide) in paragraph at lines 1345--1345
 []\T1/lmr/m/it/10.95 Dostupnost (Avail-abil-ity) [][]\T1/lmr/m/n/10.95 [on-line
 ][][]. 2024. [[][]cit.[] []2024-06-10]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/
 10.95 https : / / managementmania .
  []
 
-[57]
-Overfull \hbox (29.78154pt too wide) in paragraph at lines 1302--1302
+[59]
+Overfull \hbox (29.78154pt too wide) in paragraph at lines 1345--1345
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
-[58] [59]
-Overfull \hbox (27.80927pt too wide) in paragraph at lines 1302--1302
+[60] [61]
+Overfull \hbox (27.80927pt too wide) in paragraph at lines 1345--1345
 []\T1/lmr/m/it/10.95 Introduction of B-Tree [][]\T1/lmr/m/n/10.95 [on-line][][]
 . 2024. [[][]cit.[] []2024-04-27]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95
  https : / / www . geeksforgeeks .
  []
 
-[60] [61]
-Overfull \hbox (77.41739pt too wide) in paragraph at lines 1302--1302
+[62] [63]
+Overfull \hbox (77.41739pt too wide) in paragraph at lines 1345--1345
 \T1/lmr/m/n/10.95 12]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / /
  www . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPU
 AKq -[]
  []
 
-[62] [63] [64] (Dokument.aux)
+[64] [65] [66] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: AF517E88ABA9ED8E32BC919481407395;3764.
+(rerunfilecheck)             Checksum: A89A9C525739866B512BF76B0B27F6BB;3764.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1900,10 +1913,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49482 strings out of 478552
- 1071714 string characters out of 2854123
- 1848006 words of memory out of 3000000
- 66538 multiletter control sequences out of 15000+600000
+ 49575 strings out of 478552
+ 1073304 string characters out of 2854123
+ 1853750 words of memory out of 3000000
+ 66602 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3274b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1921,9 +1934,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (64 pages, 1715168 bytes).
+Output written on Dokument.pdf (66 pages, 1723636 bytes).
 PDF statistics:
- 1466 PDF objects out of 1728 (max. 8388607)
- 378 named destinations out of 1000 (max. 500000)
+ 1510 PDF objects out of 1728 (max. 8388607)
+ 403 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
