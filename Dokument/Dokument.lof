@@ -21,16 +21,24 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces YCSB Redis, příkaz pro spuštění testů (run) \relax }}{42}{figure.caption.18}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Workload A, B, C + Insert only - Propustnost (kops/sec)\relax }}{43}{figure.caption.19}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Workload A, B, C + Insert only - Čas běhu (s)\relax }}{44}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Workload A, B, C + Insert only - Max Latence (ms)\relax }}{47}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Workload A - Min Avg Latence (ms)\relax }}{47}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Workload A - Percentil latence (ms)\relax }}{48}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Workload A, B, C + Insert only - Max Latence (ms)\relax }}{45}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Workload A - Min Avg Latence (ms)\relax }}{46}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Workload A - Percentil latence (ms)\relax }}{47}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Workload B - Min Avg Latence (ms)\relax }}{49}{figure.caption.26}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Workload B - Percentil latence (ms)\relax }}{50}{figure.caption.27}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Workload C - Min Avg Latence (ms)\relax }}{53}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Workload C - Min Avg Latence (ms)\relax }}{52}{figure.caption.29}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Workload C - Percentil latence (ms)\relax }}{53}{figure.caption.30}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Insert only - Min Avg Latence (ms)\relax }}{55}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Insert only - Percentil latence (ms)\relax }}{56}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Insert only - Percentil latence (ms)\relax }}{55}{figure.caption.33}%
 \addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

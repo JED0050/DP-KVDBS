@@ -33,15 +33,23 @@
 \contentsline {section}{\numberline {4.2}Zprovoznění testů}{35}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Popis parametrů testů}{37}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Spouštění testů}{38}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{42}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{43}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{45}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{49}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{47}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{48}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{52}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{56}{subsection.4.5.5}%
-\contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{57}{subsection.4.5.6}%
-\contentsline {chapter}{\numberline {5}Závěr}{58}{chapter.5}%
-\contentsline {chapter}{Literatura}{60}{chapter*.34}%
+\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{54}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{56}{subsection.4.5.6}%
+\contentsline {chapter}{\numberline {5}Závěr}{57}{chapter.5}%
+\contentsline {chapter}{Literatura}{59}{chapter*.34}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

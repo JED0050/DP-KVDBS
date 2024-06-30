@@ -251,9 +251,9 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	\subsection{Oracle NoSQL Database}
 	
-	Oracle NoSQL Database~\cite{oraclenosqldb} je databázová cloud služba vhodná pro práci s velkými objemy dat a nízkou odezvou. Služba je postavena na Oracle Berkeley DB~\cite{berkeleydb} (viz kapitola~\ref{lab-oracle-berkleydb}). Databáze je plně spravovatelná a škáluje horizontálně. Tato KDBS složí i jako úložiště pro dokumenty a data s pevně daným schématem. Databázový systém je vyvíjen společností Oracle, proto může být pro vývojáře snadné začít tuto službu využívat a soustředit se pouze na vývoj aplikací. Není pak potřeba se zabývat správou základní infrastruktury databáze, softwaru, zabezpečení atp. Jedná se o Single Master, Multi Replica grafový systém~\cite{oracle-singlemaster-multireplica}, což znamená, že má jeden hlavní uzel (Single Master), který je zodpovědný za zápis dat a řízení replikace, a více replik (Multi Replica), které obsahují kopie dat a jsou synchronizovány s hlavním uzlem. Pokud dojde k chybě na hlavním uzlu, je hlavní uzel automaticky nahrazen jednou z replik. Pro ukládání velkých dat využívá systém konfigurovatelné Storage uzly~\cite{oracle-storage-node}. Pro udržení konzistence jsou Storage uzly replikovány. Sdílený systém, uniformně alokuje data okolo ostatních částí skupin. DBS obsahuje i SQL jazyk pro import, export a přenos dat mezi Oracle NoSQL databázemi. Tento jazyk se nazývá SQL Shell~\cite{oracle-sql-shell}. Mimo jiné je zde podpora i pro Failover~\cite{failover}, SwitchOver~\cite{switchover}, Bulk Get API~\cite{oracle-bulkapi}, Off Heap Cache~\cite{offheapcache} a podpora Big Data SQL~\cite{oracle-big-data-sql}.
+	Oracle NoSQL Database~\cite{oraclenosqldb} je databázová cloud služba určená pro práci s velkým počtem různorodých dat. Služba je postavena na Oracle Berkeley DB~\cite{berkeleydb} (viz kapitola~\ref{lab-oracle-berkleydb}). Databáze je konfigurovatelná a dokáže škálovat horizontálně. Při nastavení může tato KDBS složit i jako úložiště pro dokumenty a data s pevně daným schématem. Databázový systém je vyvíjen společností Oracle, systém má rozsáhlou dokumentaci a zmiňuje se často na fórech. Uživatel není povinen se zabývat se zabývat správou základní infrastruktury databáze, softwaru, zabezpečení atp. Jedná se o Single Master, Multi Replica systém~\cite{oracle-singlemaster-multireplica}, což znamená, že má jeden hlavní uzel (Single Master), který je zodpovědný za zápis dat a řízení replikace, a více replik (Multi Replica), které obsahují kopie dat a jsou synchronizovány s hlavním uzlem. Pokud dojde k chybě na hlavním uzlu, je hlavní uzel automaticky nahrazen jednou z replik. Pro ukládání velkých dat využívá systém konfigurovatelné Storage uzly~\cite{oracle-storage-node}. Pro udržení dostupnosti jsou Storage uzly replikovány. DBS obsahuje i neúplný SQL jazyk pro import, export a přenos dat mezi Oracle NoSQL databázemi. Tento jazyk se nazývá SQL Shell~\cite{oracle-sql-shell}. Mimo jiné je zde podpora i pro Failover~\cite{failover}, SwitchOver~\cite{switchover}, Bulk Get API~\cite{oracle-bulkapi}, Off Heap Cache~\cite{offheapcache} a podpora Big Data SQL~\cite{oracle-big-data-sql}.
 	
-	Restové API je rozděleno do pěti částí. První částí je správa indexů~\cite{index}, pro vytváření a mazání vlastních indexů. Tato část API také umožňuje zobrazit všechny indexy, které jsou pro danou tabulku vytvořeny a společně s detailním popisem každého indexu. Druhá část API se věnuje dotazům, umožňuje tedy syntaktickou kontrolu daného SQL dotazu, před připravení a spuštění dotazu. Třetí část je zaměřena na správu záznamů, obsahuje tedy CRUD funkce pro jednotlivé záznamy. Tato část ale neobsahuje funkci pro aktualizaci existujícího záznamu a ani neumožňuje správu více než jednoho záznamu najednou, pro úpravu je tedy nutno provést funkci odstranění záznamu a vložení nového. Čtvrtá část je zaměřena správě tabulek, obsahuje možnost vytvoření, upravování, a mazání tabulek. Tato část také umožňuje výpis všech tabulek, informace o dané tabulce a využívání dané tabulky. Poslední část API se věnuje správě pracovních požadavků, lze zde zobrazit stav jednotlivých požadavků, mazat požadavky, získat chyby či log daného požadavku a seznam všech požadavků.
+	Restové API je rozděleno do pěti částí. První částí je správa indexů~\cite{index}, pro vytváření a mazání vlastních indexů. Tato část API také umožňuje zobrazit všechny indexy, které jsou pro danou tabulku vytvořeny a společně s detailním popisem každého indexu. Druhá část API se věnuje dotazům, umožňuje tedy syntaktickou kontrolu daného SQL dotazu, před připravení a spuštění dotazu. Třetí část je jazyk pro manipulaci s daty, obsahuje tedy CRUD funkce pro jednotlivé záznamy. Tato část ale neobsahuje funkci pro aktualizaci existujícího záznamu a ani neumožňuje správu více než jednoho záznamu najednou, pro úpravu je tedy nutno provést funkci odstranění záznamu a vložení nového. Čtvrtá část je zaměřena správě tabulek, obsahuje možnost vytvoření, upravování, a mazání tabulek. Tato část také umožňuje výpis všech tabulek, informace o dané tabulce a využívání dané tabulky. Poslední část API se věnuje správě pracovních požadavků (Work Requests~\cite{oracle-work-requests-xd}) pro administraci a správu databáze, lze zde zobrazit stav jednotlivých požadavků, mazat požadavky, získat chyby či log daného požadavku a seznam všech požadavků.
 		
 	\subsection{Redis} \label{lab-redis}
 	
@@ -576,7 +576,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Testovací prostředí YCSB je možné získat z oficiálního GitHub repozitáře Yahoo! Cloud Serving Benchmark~\cite{ycsb}. Pokud nechcete manuálně překládat zdrojové kódy projektu pro možnost nasazení vlastních změn, je vhodné stáhnout funkční verzi, která je k dispozici na odkazu uvedeném v README souboru~\cite{ycsb-download}. Pro úspěšné sestavení projektu ze zdrojových kódů je zapotřebí mít nainstalovaný Apache Maven~\cite{maven} ve verzi 3. Pokud je na stroji nainstalována verze Maven 2, může docházet k chybám (aktuální verzi Mavenu můžete zkontrolovat pomocí příkazu "mvn~-version"). Dále je zapotřebí mít nainstalované Java JDK ve verzi 8 (1.8)~\cite{java-jdk} a vyšší. Na operačním systému Windows doporučuji zkontrolovat hodnotu systémové proměnné "\%JAVA\_HOME\%", abyste se ujistili, že je nastavena správně. To můžete udělat pomocí příkazu "echo~\%JAVA\_HOME\%". Pokud tato systémová proměnná není nastavena správně, musíte ji manuálně změnit (správně nastavená proměnná by měla obsahovat cestu k nainstalovanému Java JDK s verzí minimálně 1.8, například  "C:$\backslash$Program Files$\backslash$Java$\backslash$jdk1.8.0\_231").
 	
-	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS v prostředí Docker, můžeme začít spouštět testy. Nejprve musíme do databáze vložit data a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím námi vytvořených skriptů (viz přiložený soubor "YCSB\_Docker\_Scripty.txt"~\cite{skripty-soubor}) vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}. Nicméně není problém tyto skripty spouštět i v obyčejném příkazovém řádku. Jen zde může nastat problém s čitelností příliš dlouhých výpisů kvůli omezení pohybu ve výpisech. Všechny příkazy byly spouštěny v adresáři "bin"~uvnitř kořenového adresáře projektu "ycsb-0.17.0".
+	Po úspěšném zprovoznění testovacího prostředí YCSB a nastavení DBS v prostředí Docker, můžeme začít spouštět testy. Nejprve musíme do databáze vložit data a následně spustit testy. Veškeré testy byly spouštěny prostřednictvím námi vytvořených skriptů (viz přiložený soubor se skripty~\cite{skripty-soubor}) vložených do příkazového prostředí Windows PowerShell~\cite{win-powershell}. Nicméně není problém tyto skripty spouštět i v obyčejném příkazovém řádku. Jen zde může nastat problém s čitelností příliš dlouhých výpisů kvůli omezení pohybu ve výpisech. Všechny příkazy byly spouštěny v adresáři "bin"~uvnitř kořenového adresáře projektu "ycsb-0.17.0".
 	
 	V první části testování spustíme příkaz "ycsb~load"~pro připojení k databázi a vložení dat do databáze. Nejprve musíme specifikovat název testovaného DBS a následně zvolený Workload~\cite{workloads}~(viz popis YCSB Workloads~\ref{lab-workloads}). Pomocí volitelných parametrů~\cite{ycsb-properties} na konci každého příkazu specifikujeme naše požadavky. Například počet záznamů, které chceme do databáze vložit, je určen parametrem "-p~recordcount=NUM", počet vláken parametrem "-p~threadcount=NUM", a nejčastěji IP adresa nebo port DBS příkazy "-p~DBS\_NAME.host=IP\_ADR~-p~DBS\_NAME.port=NUM"~pro spojení s DBS. Pomocí zadání vlastnosti "-s"~po názvu DBS dosáhneme podrobnějšího výstupu při testování včetně chybových hlášek a logů. Celý příkaz pro vložení dat do DBS pak vypadá takto: "ycsb~load~DBS\_NAME~-s~-P~WORKLOAD~[-p~PARAMETERS]". Po dokončení vkládání dat získáme kromě dat v databázi také textový výstup popisující průběh zápisu dat do databáze, kde je zahrnuta propustnost vkládání a čas latence operací rozdělený do sekcí minimum, průměr, maximum a percentily, konkrétně 95. a 99. percentil.
 	
@@ -606,7 +606,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		basicstyle=\scriptsize\color{white}\ttfamily
 	}
 	
-	\begin{figure}
+	\begin{figure}[H]
 	\centering
 	\begin{lstlisting}[style=DOS]
 	PS E:\ycsb-0.17.0\bin> docker pull redis:latest
@@ -628,7 +628,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	\label{ps-docker}}
 	\end{figure}
 	
-	\begin{figure}
+	\begin{figure}[H]
 	\centering
 	\begin{lstlisting}[style=DOS]
 	PS E:\ycsb-0.17.0\bin> .\ycsb load redis -P ..\workloads\workloada
@@ -666,7 +666,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	\label{ps-ycsb-load}}
 	\end{figure}
 
-	\begin{figure}
+	\begin{figure}[H]
 	\centering
 	\begin{lstlisting}[style=DOS]
 	PS E:\ycsb-0.17.0\bin> .\ycsb run redis -P ..\workloads\workloada
@@ -937,7 +937,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\label{graph_Workload A - Min Avg Latency (ms)}
 	\end{figure}
 	
-	\begin{figure}
+	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -1074,7 +1074,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\label{graph_Workload B - Min Avg Latency (ms)}
 	\end{figure}
 	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -1128,7 +1128,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Tento scénář ukázal dominanci KDBS Redis při operacích zaměřených čistě na čtení. Při porovnání propustnosti prvním scénářem (viz graf~\ref{graph_Workloads A, B, C + Insert only - Throughput (kiloops/sec)}) byla tato KDBS lepší přibližně o~67,3~operací za sekundu a o~141,34~operací za sekundu oproti druhému scénáři. Každopádně KDBS Aerospike a Memcached si opět vedly velice obstojně a zaostávaly pouze o desítky procent. Databáze Riak KV dokázala, že při čistém čtení si vede stejně dobře, jako když se ke čtení provádělo navíc~5~\% aktualizací v druhém scénáři. Při porovnání této KDBS s prvním scénářem byl nárůst propustnosti o~499,41~operací za sekundu, tedy o~38,86~\%.
 	
-	\begin{table}
+	\begin{table}[h]
 		\centering
 		\begin{tabular}{ l | l l l l }
 			\toprule
@@ -1149,7 +1149,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\caption{Naměřené výsledky testů pro Workload C\label{tab_workload_c}}
 	\end{table}
 	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -1195,7 +1195,7 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\label{graph_Workload C - Min Avg Latency (ms)}
 	\end{figure}
 	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\begin{tikzpicture}
 			\begin{axis}[

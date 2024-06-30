@@ -865,6 +865,20 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{multicluster}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Multi-cluster use cases}
+    \verb{url}
+    \verb https://cloud.google.com/kubernetes-engine/fleet-management/docs/mult
+    \verb i-cluster-use-cases
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{postgres-multimaster-replication}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Terms and Definitions for Database Replication}
@@ -960,11 +974,12 @@
     \field{urlyear}{2024}
   \endentry
 
-  \entry{what-is-sql}{online}{}
+  \entry{api-dynamodb}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{What is SQL (Structured Query Language)?}
+    \field{title}{DynamoDB API}
     \verb{url}
-    \verb https://aws.amazon.com/what-is/sql/
+    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowI
+    \verb tWorks.API.html#HowItWorks.API.ControlPlane
     \endverb
     \field{langid}{english}
     \field{year}{2024}
@@ -973,12 +988,11 @@
     \field{urlyear}{2024}
   \endentry
 
-  \entry{api-dynamodb}{online}{}
+  \entry{what-is-sql}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{DynamoDB API}
+    \field{title}{What is SQL (Structured Query Language)?}
     \verb{url}
-    \verb https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowI
-    \verb tWorks.API.html#HowItWorks.API.ControlPlane
+    \verb https://aws.amazon.com/what-is/sql/
     \endverb
     \field{langid}{english}
     \field{year}{2024}
@@ -1174,6 +1188,20 @@
     \field{year}{2024}
     \field{urlday}{27}
     \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-work-requests-xd}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Manage Work Requests REST Endpoints}
+    \verb{url}
+    \verb https://docs.oracle.com/en/cloud/paas/nosql-cloud/rest-api/api-manage
+    \verb -work-requests.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry
 
@@ -1493,20 +1521,6 @@
     \field{year}{2024}
     \field{urlday}{30}
     \field{urlmonth}{06}
-    \field{urlyear}{2024}
-  \endentry
-
-  \entry{multicluster}{online}{}
-    \field{labeltitlesource}{title}
-    \field{title}{Multi-cluster use cases}
-    \verb{url}
-    \verb https://cloud.google.com/kubernetes-engine/fleet-management/docs/mult
-    \verb i-cluster-use-cases
-    \endverb
-    \field{langid}{english}
-    \field{year}{2024}
-    \field{urlday}{27}
-    \field{urlmonth}{04}
     \field{urlyear}{2024}
   \endentry
 
