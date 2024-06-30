@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 22:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1766,7 +1766,7 @@ Underfull \vbox (badness 1377) has occurred while \output is active []
 
  [19]
 [20] [21] [22]
-Underfull \vbox (badness 3138) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
 [24] [25] [26] [27] [28]
@@ -1780,7 +1780,7 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [29
 
 ]
-<Data/ycsb-1.jpg, id=697, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=700, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 355.
@@ -1811,13 +1811,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [37]
 Overfull \hbox (95.51947pt too wide) in paragraph at lines 579--580
 \T1/lmr/m/n/10.95 testy byly spou²-t¥ny pro-st°ed-nic-tvím námi vy-tvo-°e-ných 
-skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]136[][]])
+skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]137[][]])
  []
 
 [38] [39] [40] [41] [42]
 Overfull \hbox (18.1056pt too wide) in paragraph at lines 718--719
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]150[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]151[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
 Package pgfplots info on input line 750: Overriding colorspace to rgb due to xc
@@ -1934,13 +1934,13 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49664 strings out of 478552
- 1075801 string characters out of 2854123
- 1851400 words of memory out of 3000000
- 66664 multiletter control sequences out of 15000+600000
+ 49672 strings out of 478552
+ 1076048 string characters out of 2854123
+ 1852805 words of memory out of 3000000
+ 66671 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,19n,93p,3268b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,19n,93p,3260b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{D:/Skola-SW/MikTex/fonts/e
 nc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{D:/
 Skola-SW/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{D:/Skola-SW/MikTex/fonts/enc/dvip
@@ -1955,9 +1955,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (69 pages, 2186988 bytes).
+Output written on Dokument.pdf (69 pages, 2188508 bytes).
 PDF statistics:
- 1598 PDF objects out of 1728 (max. 8388607)
- 430 named destinations out of 1000 (max. 500000)
+ 1604 PDF objects out of 1728 (max. 8388607)
+ 431 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

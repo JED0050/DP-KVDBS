@@ -851,6 +851,20 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{amazon-usecases}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Amazon DynamoDB - Use Cases}
+    \verb{url}
+    \verb https://docs.aws.amazon.com/whitepapers/latest/comparing-dynamodb-and
+    \verb -hbase-for-nosql/use-cases.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{postgres-multimaster-replication}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Terms and Definitions for Database Replication}
