@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1623,46 +1623,64 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
  <./Figures/FEI_CZ.pdf>]
-<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=130, 597.23125pt x 845.1575
-pt>
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 87.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
-n input line 87.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=133, page=1, 597.23125pt x 
-845.1575pt>
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 87.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 87.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 87.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 87.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
-File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
-<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
-Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
- used on input line 87.
-(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 
+pdfTeX warning: pdflatex.exe (file ./ThesisSpecification_JED0050_vsboee2302B326
+.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
+d
+<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=130, 597.55246pt x 845.0772
+4pt>
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
+n input line 87.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./ThesisSpecification_JED0050_vsboee2302B326
+.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
+d
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf  used o
+n input line 87.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./ThesisSpecification_JED0050_vsboee2302B326
+.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
+d
+
+
+pdfTeX warning: pdflatex.exe (file ./ThesisSpecification_JED0050_vsboee2302B326
+.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
+d
+<ThesisSpecification_JED0050_vsboee2302B326.pdf, id=133, page=1, 597.55246pt x 
+845.07724pt>
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
+ used on input line 87.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
+ used on input line 87.
+(pdftex.def)             Requested size: 562.1644pt x 795.03036pt.
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
+ used on input line 87.
+(pdftex.def)             Requested size: 562.1644pt x 795.03036pt.
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
+ used on input line 87.
+(pdftex.def)             Requested size: 562.1644pt x 795.03036pt.
+File: ThesisSpecification_JED0050_vsboee2302B326.pdf Graphic file (type pdf)
+<use ThesisSpecification_JED0050_vsboee2302B326.pdf, page 1>
+Package pdftex.def Info: ThesisSpecification_JED0050_vsboee2302B326.pdf , page1
+ used on input line 87.
+(pdftex.def)             Requested size: 562.1644pt x 795.03036pt.
 [2
 
 
@@ -1709,7 +1727,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [9
 
 ]
-<Data/db-engine-trend-dbs.PNG, id=315, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=328, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
 Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 121.
@@ -1720,7 +1738,7 @@ Overfull \hbox (8.97263pt too wide) in paragraph at lines 121--122
  []
 
 [10]
-<Data/db-engine-trend-model.PNG, id=346, 786.68906pt x 359.84438pt>
+<Data/db-engine-trend-model.PNG, id=358, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
 Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 133
@@ -1740,10 +1758,11 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14
 
-] [15] [16]
+] [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [16]
+[17]
 Underfull \vbox (badness 1377) has occurred while \output is active []
 
  [18]
@@ -1758,7 +1777,7 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [28
 
 ]
-<Data/ycsb-1.jpg, id=667, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=684, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 337.
@@ -1789,16 +1808,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [36]
 Overfull \hbox (95.51947pt too wide) in paragraph at lines 561--562
 \T1/lmr/m/n/10.95 testy byly spou²-t¥ny pro-st°ed-nic-tvím námi vy-tvo-°e-ných 
-skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]129[][]])
+skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]132[][]])
  []
 
-[37] [38]
+[37] [38] [39] [40] [41]
 Overfull \hbox (18.1056pt too wide) in paragraph at lines 700--701
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]143[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]146[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
-[39] [40] [41]
 Package pgfplots info on input line 732: Overriding colorspace to rgb due to xc
 olor configuration.
 
@@ -1834,25 +1852,17 @@ Package pgfplots info on input line 1047: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1087: Overriding colorspace to rgb due to x
 color configuration.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-[49] [50]
+ [48] [49] [50]
 Package pgfplots info on input line 1168: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1208: Overriding colorspace to rgb due to x
 color configuration.
-
-Underfull \vbox (badness 2452) has occurred while \output is active []
-
- [51]
-[52] [53]
+ [51] [52]
 Package pgfplots info on input line 1289: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1329: Overriding colorspace to rgb due to x
 color configuration.
- [54] [55] [56]
+ [53] [54] [55] [56]
 Kapitola 5.
 [57
 
@@ -1921,10 +1931,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49627 strings out of 478552
- 1074519 string characters out of 2854123
- 1850196 words of memory out of 3000000
- 66635 multiletter control sequences out of 15000+600000
+ 49642 strings out of 478552
+ 1075077 string characters out of 2854123
+ 1851197 words of memory out of 3000000
+ 66647 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3280b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1942,9 +1952,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (68 pages, 1735169 bytes).
+Output written on Dokument.pdf (68 pages, 2179458 bytes).
 PDF statistics:
- 1554 PDF objects out of 1728 (max. 8388607)
- 422 named destinations out of 1000 (max. 500000)
+ 1577 PDF objects out of 1728 (max. 8388607)
+ 425 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

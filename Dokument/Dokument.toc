@@ -10,7 +10,7 @@
 \contentsline {chapter}{\numberline {1}Úvod}{9}{chapter.1}%
 \contentsline {chapter}{\numberline {2}NoSQL, Key-value databázové systémy}{14}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Key-value databázové systémy}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Dokumentové databázové systémy}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Dokumentové databázové systémy}{17}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Sloupcové databázové systémy}{17}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Grafové databázové systémy}{17}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Významné Key-value databázové systémy}{18}{section.2.5}%
@@ -33,15 +33,39 @@
 \contentsline {section}{\numberline {4.2}Zprovoznění testů}{34}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Popis parametrů testů}{36}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Spouštění testů}{37}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{42}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{42}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{44}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{50}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{48}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{51}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{54}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{55}{subsection.4.5.5}%
 \contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{56}{subsection.4.5.6}%
 \contentsline {chapter}{\numberline {5}Závěr}{57}{chapter.5}%
 \contentsline {chapter}{Literatura}{59}{chapter*.34}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

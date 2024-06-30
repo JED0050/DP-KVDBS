@@ -57,6 +57,19 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{crud}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is CRUD?}
+    \verb{url}
+    \verb https://www.codecademy.com/article/what-is-crud
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{json}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introducing JSON}
@@ -1402,6 +1415,19 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{riakkv-crdt}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Riak KV - Data Types (CRDT)}
+    \verb{url}
+    \verb https://docs.riak.com/riak/kv/2.2.3/learn/concepts/crdts/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{multicluster}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Multi-cluster use cases}
@@ -1413,6 +1439,20 @@
     \field{year}{2024}
     \field{urlday}{27}
     \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{riakkv-multiclustr}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{BENEFITS OF MULTI-CLUSTER REPLICATION IN RIAK KV}
+    \verb{url}
+    \verb https://riak.com/products/riak-kv/multi-cluster-replication/index.htm
+    \verb l?p=10965.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry
 
