@@ -524,9 +524,9 @@
     \strng{fullhash}{KM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{title}{Pokrocilé databázové systémy - Vlastnosti BASE}
+    \field{title}{VSB - Pokrocilé databázové systémy}
     \verb{url}
-    \verb https://reference.wolfram.com/language/ref/ZipfDistribution.html
+    \verb https://dbedu.cs.vsb.cz/cs/SubjectsInYear/582/343
     \endverb
     \field{langid}{english}
     \field{year}{2024}
@@ -768,6 +768,19 @@
     \field{langid}{english}
     \field{year}{2024}
     \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{rle}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Metoda RLE}
+    \verb{url}
+    \verb https://www.cs.vsb.cz/benes/vyuka/pte/texty/komprese/ch02s01.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
     \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry

@@ -13,35 +13,43 @@
 \contentsline {section}{\numberline {2.2}Dokumentové databázové systémy}{17}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Sloupcové databázové systémy}{18}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Grafové databázové systémy}{18}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Významné Key-value databázové systémy}{18}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Amazon DynamoDB}{18}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}Významné Key-value databázové systémy}{19}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Amazon DynamoDB}{19}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Oracle NoSQL Database}{20}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Redis}{21}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Aerospike}{22}{subsection.2.5.4}%
 \contentsline {subsection}{\numberline {2.5.5}Oracle Berkeley DB}{23}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}Riak KV}{23}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.6}Riak KV}{24}{subsection.2.5.6}%
 \contentsline {subsection}{\numberline {2.5.7}Voldemort}{24}{subsection.2.5.7}%
 \contentsline {subsection}{\numberline {2.5.8}InfinityDB}{25}{subsection.2.5.8}%
 \contentsline {subsection}{\numberline {2.5.9}Memcached}{26}{subsection.2.5.9}%
-\contentsline {subsection}{\numberline {2.5.10}Nezmíněné významné NoSQL databáze}{26}{subsection.2.5.10}%
-\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{28}{chapter.3}%
-\contentsline {section}{\numberline {3.1}YCSB}{28}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TPC}{31}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{33}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{34}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Testovací stroj}{34}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Zprovoznění testů}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Popis parametrů testů}{36}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Spouštění testů}{37}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{42}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{42}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{44}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{48}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{51}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{55}{subsection.4.5.5}%
-\contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{56}{subsection.4.5.6}%
-\contentsline {chapter}{\numberline {5}Závěr}{57}{chapter.5}%
-\contentsline {chapter}{Literatura}{59}{chapter*.34}%
+\contentsline {subsection}{\numberline {2.5.10}Nezmíněné významné NoSQL databáze}{28}{subsection.2.5.10}%
+\contentsline {chapter}{\numberline {3}Prostředí pro testování databázových systémů}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}YCSB}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TPC}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Relevance TPC a YCSB pro měření KDBS}{34}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Vyhodnocení výsledků testů}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Testovací stroj}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Zprovoznění testů}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Popis parametrů testů}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Spouštění testů}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Vyhodnocení výsledků testů}{43}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Testový scénář 1 - Workload A}{43}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Testový scénář 2 - Workload B}{45}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Testový scénář 3 - Workload C}{49}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Testový scénář 4 - Insert only}{52}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{56}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{57}{subsection.4.5.6}%
+\contentsline {chapter}{\numberline {5}Závěr}{58}{chapter.5}%
+\contentsline {chapter}{Literatura}{60}{chapter*.34}%
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
