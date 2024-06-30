@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  29 JUN 2024 03:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 03:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1740,15 +1740,14 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [14
 
-] [15] [16] [17]
-Underfull \vbox (badness 5756) has occurred while \output is active []
+] [15] [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 1377) has occurred while \output is active []
 
  [18]
-[19] [20] [21] [22]
-Underfull \vbox (badness 4353) has occurred while \output is active []
-
- [23]
-[24] [25] [26]
+[19] [20] [21] [22] [23] [24] [25] [26] [27]
 Kapitola 3.
 
 Overfull \hbox (0.12636pt too wide) in paragraph at lines 325--326
@@ -1756,15 +1755,15 @@ Overfull \hbox (0.12636pt too wide) in paragraph at lines 325--326
 jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
  []
 
-[27
+[28
 
 ]
-<Data/ycsb-1.jpg, id=659, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=665, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 337.
 (pdftex.def)             Requested size: 426.59575pt x 319.09363pt.
- [28 <./Data/ycsb-1.jpg>] [29] [30]
+ [29 <./Data/ycsb-1.jpg>] [30] [31]
 (D:\Skola-SW\MikTex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -1773,35 +1772,35 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-[32]
+ [32]
+[33]
 Kapitola 4.
 
 Overfull \hbox (47.95074pt too wide) in paragraph at lines 491--503
  [][] 
  []
 
-[33
+[34
 
 ]
 Overfull \hbox (29.96753pt too wide) in paragraph at lines 515--516
 []\T1/lmr/m/n/10.95 Ve²keré po-t°ebné po-u-ºité skripty jsou do-stupné v tex-to
--vém sou-boru "YCSB_Docker_Scripty.txt" [[][]126[][]].
+-vém sou-boru "YCSB_Docker_Scripty.txt" [[][]127[][]].
  []
 
-[34]
+[35]
 Overfull \hbox (95.51947pt too wide) in paragraph at lines 539--540
 \T1/lmr/m/n/10.95 testy byly spou²-t¥ny pro-st°ed-nic-tvím námi vy-tvo-°e-ných 
-skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]126[][]])
+skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]127[][]])
  []
 
-[35] [36]
+[36] [37]
 Overfull \hbox (18.1056pt too wide) in paragraph at lines 678--679
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]139[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]140[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
-[37] [38] [39]
+[38] [39] [40]
 Package pgfplots info on input line 710: Overriding colorspace to rgb due to xc
 olor configuration.
 
@@ -1820,7 +1819,7 @@ Overfull \hbox (50.9971pt too wide) in paragraph at lines 758--759
  [][] 
  []
 
-[40] [41]
+[41] [42]
 Package pgfplots info on input line 842: Overriding colorspace to rgb due to xc
 olor configuration.
 
@@ -1832,7 +1831,7 @@ Package pgfplots info on input line 888: Overriding colorspace to rgb due to xc
 olor configuration.
 Package pgfplots info on input line 928: Overriding colorspace to rgb due to xc
 olor configuration.
-[42] [43] [44] [45]
+[43] [44] [45] [46]
 Package pgfplots info on input line 1025: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1065: Overriding colorspace to rgb due to x
@@ -1840,8 +1839,8 @@ color configuration.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-[47] [48]
+ [47]
+[48] [49]
 Package pgfplots info on input line 1146: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1186: Overriding colorspace to rgb due to x
@@ -1849,17 +1848,17 @@ color configuration.
 
 Underfull \vbox (badness 2452) has occurred while \output is active []
 
- [49]
-[50] [51]
+ [50]
+[51] [52]
 Package pgfplots info on input line 1267: Overriding colorspace to rgb due to x
 color configuration.
 Package pgfplots info on input line 1307: Overriding colorspace to rgb due to x
 color configuration.
- [52] [53] [54]
+ [53] [54] [55]
 Kapitola 5.
-[55
+[56
 
-] [56]
+] [57]
 Overfull \hbox (4.80904pt too wide) in paragraph at lines 1347--1347
 []\T1/lmr/m/it/10.95 Relace [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]cit
 .[] []2024-04-23]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / por
@@ -1872,36 +1871,36 @@ Overfull \hbox (28.5328pt too wide) in paragraph at lines 1347--1347
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
 
-[57
+[58
 
-] [58]
+] [59]
 Overfull \hbox (29.36243pt too wide) in paragraph at lines 1347--1347
 []\T1/lmr/m/it/10.95 Dostupnost (Avail-abil-ity) [][]\T1/lmr/m/n/10.95 [on-line
 ][][]. 2024. [[][]cit.[] []2024-06-10]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/
 10.95 https : / / managementmania .
  []
 
-[59]
+[60]
 Overfull \hbox (29.78154pt too wide) in paragraph at lines 1347--1347
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
-[60] [61]
+[61] [62]
 Overfull \hbox (27.80927pt too wide) in paragraph at lines 1347--1347
 []\T1/lmr/m/it/10.95 Introduction of B-Tree [][]\T1/lmr/m/n/10.95 [on-line][][]
 . 2024. [[][]cit.[] []2024-04-27]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95
  https : / / www . geeksforgeeks .
  []
 
-[62] [63]
+[63] [64]
 Overfull \hbox (77.41739pt too wide) in paragraph at lines 1347--1347
 \T1/lmr/m/n/10.95 12]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / /
  www . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPU
 AKq -[]
  []
 
-[64] [65] [66] (Dokument.aux)
+[65] [66] [67] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1917,13 +1916,13 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49576 strings out of 478552
- 1073317 string characters out of 2854123
- 1848772 words of memory out of 3000000
- 66603 multiletter control sequences out of 15000+600000
+ 49582 strings out of 478552
+ 1073495 string characters out of 2854123
+ 1849204 words of memory out of 3000000
+ 66607 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,19n,93p,3274b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 92i,19n,93p,3280b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}{D:/Skola-SW/MikTex/fonts/e
 nc/dvips/lm/lm-ec.enc}{D:/Skola-SW/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{D:/
 Skola-SW/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{D:/Skola-SW/MikTex/fonts/enc/dvip
@@ -1938,9 +1937,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (66 pages, 1724015 bytes).
+Output written on Dokument.pdf (67 pages, 1726268 bytes).
 PDF statistics:
- 1510 PDF objects out of 1728 (max. 8388607)
- 403 named destinations out of 1000 (max. 500000)
+ 1519 PDF objects out of 1728 (max. 8388607)
+ 405 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

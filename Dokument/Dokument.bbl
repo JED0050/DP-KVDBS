@@ -498,6 +498,30 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{base-vsb}{online}{}
+    \name{author}{1}{}{%
+      {{hash=KM}{%
+         family={Krátký},
+         familyi={K\bibinitperiod},
+         given={Michal},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KM1}
+    \strng{fullhash}{KM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Pokrocilé databázové systémy - Vlastnosti BASE}
+    \verb{url}
+    \verb https://reference.wolfram.com/language/ref/ZipfDistribution.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{29}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{kdbs-oracle}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introduction to Oracle NoSQL Database}

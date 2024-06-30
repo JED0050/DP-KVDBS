@@ -10,26 +10,34 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Graf změn hodnot popularity RDBS a KDBS~\blx@tocontentsinit {0}\cite {dbranking-trend-by-model}\relax }}{12}{figure.caption.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces YCSB rámec testování funkčnosti \blx@tocontentsinit {0}\cite {ycsb-parallel-data-lab}\relax }}{28}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces YCSB - příklad čtení záznamu\relax }}{30}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces YCSB - příklad vložení záznamu\relax }}{30}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces TPC-H, SQL Test Q1~\blx@tocontentsinit {0}\cite {tpc-h-sql, tpc-h-index} \relax }}{31}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces YCSB rámec testování funkčnosti \blx@tocontentsinit {0}\cite {ycsb-parallel-data-lab}\relax }}{29}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces YCSB - příklad čtení záznamu\relax }}{31}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces YCSB - příklad vložení záznamu\relax }}{31}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces TPC-H, SQL Test Q1~\blx@tocontentsinit {0}\cite {tpc-h-sql, tpc-h-index} \relax }}{32}{figure.caption.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Docker Redis, příkazy pro stažení, spuštění, zastavení a odstranění DBS \relax }}{37}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces YCSB Redis, příkaz pro vložení dat (load) \relax }}{38}{figure.caption.16}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces YCSB Redis, příkaz pro spuštění testů (run) \relax }}{39}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Workload A, B, C + Insert only - Propustnost (kops/sec)\relax }}{40}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Workload A, B, C + Insert only - Čas běhu (s)\relax }}{41}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Workload A, B, C + Insert only - Max Latence (ms)\relax }}{44}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Workload A - Min Avg Latence (ms)\relax }}{44}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Workload A - Percentil latence (ms)\relax }}{45}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Workload B - Min Avg Latence (ms)\relax }}{47}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Workload B - Percentil latence (ms)\relax }}{47}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Workload C - Min Avg Latence (ms)\relax }}{50}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Workload C - Percentil latence (ms)\relax }}{50}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Insert only - Min Avg Latence (ms)\relax }}{53}{figure.caption.31}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Insert only - Percentil latence (ms)\relax }}{53}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Docker Redis, příkazy pro stažení, spuštění, zastavení a odstranění DBS \relax }}{38}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces YCSB Redis, příkaz pro vložení dat (load) \relax }}{39}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces YCSB Redis, příkaz pro spuštění testů (run) \relax }}{40}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Workload A, B, C + Insert only - Propustnost (kops/sec)\relax }}{41}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Workload A, B, C + Insert only - Čas běhu (s)\relax }}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Workload A, B, C + Insert only - Max Latence (ms)\relax }}{45}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Workload A - Min Avg Latence (ms)\relax }}{45}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Workload A - Percentil latence (ms)\relax }}{46}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Workload B - Min Avg Latence (ms)\relax }}{48}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Workload B - Percentil latence (ms)\relax }}{48}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Workload C - Min Avg Latence (ms)\relax }}{51}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Workload C - Percentil latence (ms)\relax }}{51}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Insert only - Min Avg Latence (ms)\relax }}{54}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Insert only - Percentil latence (ms)\relax }}{54}{figure.caption.32}%
 \addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 
