@@ -1871,6 +1871,32 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{stackoverflow-ycsb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{StackOverflow - Questions tagged [ycsb]}
+    \verb{url}
+    \verb https://stackoverflow.com/tags/ycsb/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{wsl-microsoft}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is the Windows Subsystem for Linux (WSL)?}
+    \verb{url}
+    \verb https://learn.microsoft.com/en-us/windows/wsl/about
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{skripty-soubor}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Soubor se skripty pro nastavení DBS a spuštění testů -
@@ -1882,6 +1908,19 @@
     \field{langid}{english}
     \field{year}{2024}
     \field{urlday}{27}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{overhead-pcmag}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Overhead}
+    \verb{url}
+    \verb https://www.pcmag.com/encyclopedia/term/overhead
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
     \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry

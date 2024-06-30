@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 03:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  30 JUN 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1709,7 +1709,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [9
 
 ]
-<Data/db-engine-trend-dbs.PNG, id=313, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=315, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
 Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 121.
@@ -1720,7 +1720,7 @@ Overfull \hbox (8.97263pt too wide) in paragraph at lines 121--122
  []
 
 [10]
-<Data/db-engine-trend-model.PNG, id=344, 786.68906pt x 359.84438pt>
+<Data/db-engine-trend-model.PNG, id=346, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
 Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 133
@@ -1758,7 +1758,7 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [28
 
 ]
-<Data/ycsb-1.jpg, id=665, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=667, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 337.
@@ -1768,7 +1768,7 @@ Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 337.
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 430.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 429.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1776,136 +1776,141 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [33]
 Kapitola 4.
 
-Overfull \hbox (47.95074pt too wide) in paragraph at lines 491--503
+Overfull \hbox (47.95074pt too wide) in paragraph at lines 490--502
  [][] 
  []
 
 [34
 
 ]
-Overfull \hbox (29.96753pt too wide) in paragraph at lines 515--516
-[]\T1/lmr/m/n/10.95 Ve²keré po-t°ebné po-u-ºité skripty jsou do-stupné v tex-to
--vém sou-boru "YCSB_Docker_Scripty.txt" [[][]127[][]].
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[35]
-Overfull \hbox (95.51947pt too wide) in paragraph at lines 539--540
+ [35]
+[36]
+Overfull \hbox (95.51947pt too wide) in paragraph at lines 561--562
 \T1/lmr/m/n/10.95 testy byly spou²-t¥ny pro-st°ed-nic-tvím námi vy-tvo-°e-ných 
-skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]127[][]])
+skript· (viz p°i-lo-ºený sou-bor "YCSB_Docker_Scripty.txt" [[][]129[][]])
  []
 
-[36] [37]
-Overfull \hbox (18.1056pt too wide) in paragraph at lines 678--679
+[37] [38]
+Overfull \hbox (18.1056pt too wide) in paragraph at lines 700--701
 []\T1/lmr/m/n/10.95 Ve²keré hod-noty z test· byly za-zna-me-nány do Ex-cel do-k
-u-mentu [[][]140[][]] "KDBS_Vysledky_testu.xlsx".
+u-mentu [[][]143[][]] "KDBS_Vysledky_testu.xlsx".
  []
 
-[38] [39] [40]
-Package pgfplots info on input line 710: Overriding colorspace to rgb due to xc
+[39] [40] [41]
+Package pgfplots info on input line 732: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.29631pt too wide) in paragraph at lines 717--718
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 739--740
  [][] 
  []
 
-Package pgfplots info on input line 751: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 773: Overriding colorspace to rgb due to xc
 olor configuration.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 757.
+(Font)              <9> on input line 779.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 757.
+(Font)              <5> on input line 779.
 
-Overfull \hbox (50.9971pt too wide) in paragraph at lines 758--759
+Overfull \hbox (50.9971pt too wide) in paragraph at lines 780--781
  [][] 
  []
 
-[41] [42]
-Package pgfplots info on input line 842: Overriding colorspace to rgb due to xc
+[42] [43]
+Package pgfplots info on input line 864: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (50.89632pt too wide) in paragraph at lines 849--850
+Overfull \hbox (50.89632pt too wide) in paragraph at lines 871--872
  [][] 
  []
 
-Package pgfplots info on input line 888: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 910: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 928: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 950: Overriding colorspace to rgb due to xc
 olor configuration.
-[43] [44] [45] [46]
-Package pgfplots info on input line 1025: Overriding colorspace to rgb due to x
+[44] [45] [46] [47]
+Package pgfplots info on input line 1047: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1065: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1087: Overriding colorspace to rgb due to x
 color configuration.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-[48] [49]
-Package pgfplots info on input line 1146: Overriding colorspace to rgb due to x
+ [48]
+[49] [50]
+Package pgfplots info on input line 1168: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1186: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1208: Overriding colorspace to rgb due to x
 color configuration.
 
 Underfull \vbox (badness 2452) has occurred while \output is active []
 
- [50]
-[51] [52]
-Package pgfplots info on input line 1267: Overriding colorspace to rgb due to x
+ [51]
+[52] [53]
+Package pgfplots info on input line 1289: Overriding colorspace to rgb due to x
 color configuration.
-Package pgfplots info on input line 1307: Overriding colorspace to rgb due to x
+Package pgfplots info on input line 1329: Overriding colorspace to rgb due to x
 color configuration.
- [53] [54] [55]
+ [54] [55] [56]
 Kapitola 5.
-[56
+[57
 
-] [57]
-Overfull \hbox (4.80904pt too wide) in paragraph at lines 1347--1347
+] [58]
+Overfull \hbox (4.80904pt too wide) in paragraph at lines 1369--1369
 []\T1/lmr/m/it/10.95 Relace [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]cit
 .[] []2024-04-23]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / por
 tal . matematickabiologie .
  []
 
 
-Overfull \hbox (28.5328pt too wide) in paragraph at lines 1347--1347
+Overfull \hbox (28.5328pt too wide) in paragraph at lines 1369--1369
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
 
-[58
+[59
 
-] [59]
-Overfull \hbox (29.36243pt too wide) in paragraph at lines 1347--1347
+] [60]
+Overfull \hbox (29.36243pt too wide) in paragraph at lines 1369--1369
 []\T1/lmr/m/it/10.95 Dostupnost (Avail-abil-ity) [][]\T1/lmr/m/n/10.95 [on-line
 ][][]. 2024. [[][]cit.[] []2024-06-10]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/
 10.95 https : / / managementmania .
  []
 
-[60]
-Overfull \hbox (29.78154pt too wide) in paragraph at lines 1347--1347
+[61]
+Overfull \hbox (29.78154pt too wide) in paragraph at lines 1369--1369
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
-[61] [62]
-Overfull \hbox (27.80927pt too wide) in paragraph at lines 1347--1347
+[62] [63]
+Overfull \hbox (27.80927pt too wide) in paragraph at lines 1369--1369
 []\T1/lmr/m/it/10.95 Introduction of B-Tree [][]\T1/lmr/m/n/10.95 [on-line][][]
 . 2024. [[][]cit.[] []2024-04-27]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95
  https : / / www . geeksforgeeks .
  []
 
-[63] [64]
-Overfull \hbox (77.41739pt too wide) in paragraph at lines 1347--1347
+[64] [65]
+Overfull \hbox (77.41739pt too wide) in paragraph at lines 1369--1369
 \T1/lmr/m/n/10.95 12]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / /
  www . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPU
 AKq -[]
  []
 
-[65] [66] [67] (Dokument.aux)
+[66]
+Overfull \hbox (19.23631pt too wide) in paragraph at lines 1369--1369
+[]\T1/lmr/m/it/10.95 Overhead [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]c
+it.[] []2024-06-30]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / w
+ww . pcmag . com / encyclopedia /
+ []
+
+[67] [68] (Dokument.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: A89A9C525739866B512BF76B0B27F6BB;3764.
+(rerunfilecheck)             Checksum: ED5655259D91B35A3AF4DFD2B343C451;3764.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1916,10 +1921,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49582 strings out of 478552
- 1073495 string characters out of 2854123
- 1849204 words of memory out of 3000000
- 66607 multiletter control sequences out of 15000+600000
+ 49627 strings out of 478552
+ 1074519 string characters out of 2854123
+ 1850196 words of memory out of 3000000
+ 66635 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3280b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1937,9 +1942,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (67 pages, 1726268 bytes).
+Output written on Dokument.pdf (68 pages, 1735169 bytes).
 PDF statistics:
- 1519 PDF objects out of 1728 (max. 8388607)
- 405 named destinations out of 1000 (max. 500000)
+ 1554 PDF objects out of 1728 (max. 8388607)
+ 422 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

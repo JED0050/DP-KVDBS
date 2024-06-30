@@ -405,7 +405,6 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 		\label{json-ycsb-operace-insert}
 	\end{figure}	
 	
-	
 	\section{TPC}
 	
 	Transaction Processing Performance Council~\cite{tpc}, dále jen TPC, je společnost spravující software pro vytváření benchmarků výkonnosti systémů pro online zpracování transakcí (OLTP)~\cite{oltp} a možnosti jejich následného monitoringu a porovnávání. TPC benchmarky využívají firmy s velkými data a přiměřenou zátěží, výsledkem benchmarků je počet transakcí za minutu (tpm).
@@ -510,17 +509,40 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Veškeré testy byly vytvářeny a spouštěny pomocí frameworku YCSB (\ref{lab-ycsb}). YCSB framework v první části, Load, do databáze vložil data, a následně v druhé části, Run, spustil testy a vrátil hodnoty výsledků. Pomocí přidání volitelných parametrů~\cite{ycsb-properties} bylo možné testy upravit podle vlastních potřeb.
 	
-	Po spuštění databáze v prostředí Docker se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky.
+	Po spuštění databáze v prostředí Docker se k ní připojil YCSB framework, který následně prováděl testování nad zvolenou připojenou databází. Pro možnost komunikace bylo zapotřebí zprovoznit YCSB binding pro každou z databází, aby YCSB framework mohl úspěšně komunikovat se zvolenou databází, vložit data, spustit testy a vrátit patřičné výsledky. 
 	
-	Veškeré potřebné použité skripty jsou dostupné v textovém souboru "YCSB\_Docker\_Scripty.txt"~\cite{skripty-soubor}. Tento soubor je součástí příloh odevzdaných k diplomové práci. Začátek souboru obsahuje odkazy pro získání potřebného softwaru k spuštění testů. Následuje stručný popis testových scénářů Workload~A~-~F. Poté následují skripty pro spuštění zkušební verze, která nevyžaduje nastavení vlastního DBS. Místo toho se spustí ukázkové testy, jejichž výsledek je vypsán do konzole pro možnost kontroly korektního nastavení YCSB. Soubor je zakončen čtyřmi kategoriemi pro každou z testovaných KDBS. Součástí testovacích skriptů každé KDBS jsou dvě sekce zaměřené na příkazy potřebné pro prostředí Docker a YCSB. Docker část obsahuje skripty pro stažení, spuštění, zastavení a odstranění jednotlivých KDBS prostřednictvím prostředí Docker. YCSB část poskytuje skripty pro naplnění KDBS daty a spuštění testů vybraných scénářů v prostředí YCSB.
+	Pro každý KDBS bylo nutné najít funkční a kompatibilní verzi, kterou podporuje YCSB. K tomuto výběru pomohly chybové hlášky, které YCSB poskytuje při pokusu o připojení k dané KDBS. Spousta problémů se dala dohledat v sekci nahlášených chyb na oficiálním GitHubu~\cite{ycsb} projektu YCSB nebo na fórech, jako je například StackOverflow~\cite{stackoverflow-ycsb}. Nejprve se pracovalo s OS Linux kvůli větší podpoře YCSB projektu na této platformě. Následně se přešlo na OS Windows kvůli neschopnosti zprovoznění celého projektu na Linuxu. Na OS Windows se projekt nejprve spouštěl prostřednictvím WSL~\cite{wsl-microsoft}, převážně kvůli KDBS Redis, která nepodporuje Windows. Bylo tedy zapotřebí nastavit a zprovoznit WSL. Nakonec po úspěšném zprovoznění se přešlo na Docker, kde bylo několik problémů. Nejprve docházelo k pádům prostředí Docker po připojení KDBS k YCSB. Následně docházelo k chybám způsobeným špatnou verzí Javy a chybějícímu nastavení systémových proměnných Windows. Nakonec bylo zapotřebí vyřešit problém s nemožností komunikace s některými KDBS. Tento problém byl vyřešen po přenastavení portů v prostředí Docker. Tyto porty byly nalezeny v dokumentaci YCSB v sekci popisu vybraných KDBS a jejich zprovoznění. U některých KDBS bylo ještě zapotřebí přenastavit jejich konfigurace, zejména u KDBS Riak KV, kde se musela změnit úroveň konzistence a typ úložiště. U KDBS Memcached docházelo k přerušení komunikace během dlouhých testů, takže se musel zvýšit čas vypnutí této KDBS.
+	
+	Skripty potřebné k nastavení KDBS v prostředí Docker, zprovoznění a připojení k YCSB a následnému spuštění testů jsou dostupné v textovém souboru "YCSB\_Docker\_Scripty.txt"~\cite{skripty-soubor}. Tento soubor je součástí příloh odevzdaných k diplomové práci. Začátek souboru obsahuje odkazy pro získání potřebného softwaru k spuštění testů. Následuje stručný popis testových scénářů Workload~A~-~F. Poté následují skripty pro spuštění zkušební verze, která nevyžaduje nastavení vlastního DBS. Místo toho se spustí ukázkové testy, jejichž výsledek je vypsán do konzole pro možnost kontroly korektního nastavení YCSB. Soubor je zakončen čtyřmi kategoriemi pro každou z testovaných KDBS. Součástí testovacích skriptů každé KDBS jsou dvě sekce zaměřené na příkazy potřebné pro prostředí Docker a YCSB. Docker část obsahuje skripty pro stažení, spuštění, zastavení a odstranění jednotlivých KDBS prostřednictvím prostředí Docker. YCSB část poskytuje skripty pro naplnění KDBS daty a spuštění testů vybraných scénářů v prostředí YCSB.
 	
 	\section{Popis parametrů testů}\label{test-param}
 	
 	Veškeré testy pro každou z testovaných databází byly spuštěny třikrát, a finální výsledek byl tedy průměrem ze všech tří testů pro každou databázi v dané testovací kategorii. Každý test byl spouštěn paralelně na čtyřech vláknech.
 	
-	Do databáze bylo vždy vloženo 100~000 záznamů a následující test prováděl 1~000~000 dotazů. Následně po dokončení testů byla databáze smazána, aby bylo možné naplnit ji novými, neaktualizovanými daty, a celý proces se opakoval ještě dvakrát.
+	Do databáze bylo vždy vloženo 100~000 záznamů a následující test prováděl 1~000~000 dotazů (viz kapitola~\ref{lab-ycsb}). Následně po dokončení testů byla databáze smazána, aby bylo možné naplnit ji novými, neaktualizovanými daty, a celý proces se opakoval ještě dvakrát. Každý záznam se skládá z klíče a hodnoty, které jsou uloženy v tabulce s názvem "usertable". Klíč je řetězec v podobě "userX", kde X reprezentuje unikátní číslo daného záznamu. Hodnota každého záznamu je v podobě JSON dokumentu s 10 poli pojmenovanými jako "field0"~až "field9", kde každé pole obsahuje jeden řetězec s podobou "value0"~až "value9". Celková velikost všech záznamů je 101~MB (a například při použití KDBS je overhead~\cite{overhead-pcmag} přibližně 10~\% a celková velikost dat pak činí přibližně 111~MB).
 	
 	Testy byly prováděny ve třech YCSB kategoriích (tzv. YCSB Workload~\cite{workloads}). Workload A (Update-heavy: 50\% čtení, 50\% aktualizace), Workload B (Read-mostly: 95\% čtení, 5\% aktualizace) a Workload C (Read-only) (viz kapitola~\ref{lab-workloads}).
+	
+	Při aktualizacích dojde ke změně hodnot všech 10 polí vybraného záznamu. Definice aktualizace je uvedena v ukázce na obrázku~\ref{json-ycsb-operace-update}. Přistoupí se k tabulce "usertable"~a pomocí klíče "user1474"~se aktualizují všechny hodnoty v polích "field0"~až "field9"~na hodnoty "new\_value0"~až "new\_value9".
+	
+	\begin{figure}[H]
+	\centering
+	\begin{lstlisting}[language=json,firstnumber=1]
+{
+  "operation": "update",
+  "table": "usertable",
+  "key": "user1474",
+  "values": {
+    "field0": "new_value0",
+    "field1": "new_value1",
+    ...
+    "field9": "new_value9"
+  }
+}
+	\end{lstlisting}
+	\caption{YCSB - příklad aktualizace záznamu}
+	\label{json-ycsb-operace-update}
+	\end{figure}
 	
 	Pro každý Workload a jednotlivé databáze byla vytvořena tabulka výsledků jednotlivých testů a výsledný průměr těchto testů. Mezi nejdůležitější výsledky testů patří celková doba trvání testu, propustnost a percentily latence operací, konkrétně 95. a 99. percentil. V tabulce jsou také data o počtu provedených operací, průměrné latenci operací, a také minimální, průměrná a maximální latence operací.
 	
