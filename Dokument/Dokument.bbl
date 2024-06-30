@@ -535,6 +535,19 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{cap-theorem}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{CAP Theorem Definition}
+    \verb{url}
+    \verb https://www.scylladb.com/glossary/cap-theorem/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{kdbs-oracle}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Introduction to Oracle NoSQL Database}
@@ -1370,6 +1383,34 @@
     \field{year}{2024}
     \field{urlday}{08}
     \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{oracle-immediate}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle - IMMEDIATE}
+    \verb{url}
+    \verb https://docs.oracle.com/cd/B13789_01/appdev.101/b10807/13_elems017.ht
+    \verb m
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{pl-sql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{PL-SQL Inherits Database Robustness, Security, and
+  Portability}
+    \verb{url}
+    \verb https://www.oracle.com/cz/database/technologies/appdev/plsql.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
     \field{urlyear}{2024}
   \endentry
 
