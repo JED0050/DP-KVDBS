@@ -1,0 +1,102 @@
+YCSB Project Git: https://github.com/brianfrankcooper/YCSB
+YCSB Project download: https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
+Docker: https://docs.docker.com/get-docker/
+Docker Desktop: https://www.docker.com/products/docker-desktop/
+Apache Maven: https://maven.apache.org/download.cgi
+Java: https://www.oracle.com/java/technologies/downloads/
+
+
+Workloads
+	A - Update-heavy: 50% read, 50% update, distribution zipfian
+	B - Read-mostly: 95% read, 5% update, distribution zipfian
+	C - Read-only: 100% read, distribution zipfian
+	D - Read latest: 95% read, 5% insert, distribution latest
+	E - Short ranges: 95% scan, 5% insert, distribution zipfian
+	F - Read-modify-write: 50% read, 50% read-modify-write, distribution zipfian
+
+
+Pro funkčnost YCSB skriptů je nutné být ve složce bin uvnitř kořenové složky ycsb-0.17.0 (c:\...\ycsb-0.17.0\bin)
+
+cd C:\Users\jedlicka\Desktop\YCSB\ycsb-0.17.0\bin
+
+TESTING-DEMO
+.\ycsb load basic -P ..\workloads\workloada
+.\ycsb run basic -P ..\workloads\workloada
+
+
+Redis
+	Docker
+		před testem
+			docker pull redis:latest
+			docker run --name my-redis -p 6379:6379 -d redis:latest
+		po testu
+			docker stop CONTAINER_ID
+			docker rm CONTAINER_ID
+	Workload A
+		.\ycsb load redis -P ..\workloads\workloada -p redis.host=127.0.0.1 -p redis.port=6379 -p recordcount=100000 -p threadcount=4
+		.\ycsb run redis -P ..\workloads\workloada -p redis.host=127.0.0.1 -p redis.port=6379 -p operationcount=1000000 -p threadcount=4
+	Workload B
+		.\ycsb load redis -P ..\workloads\workloadb -p redis.host=127.0.0.1 -p redis.port=6379 -p recordcount=100000 -p threadcount=4
+		.\ycsb run redis -P ..\workloads\workloadb -p redis.host=127.0.0.1 -p redis.port=6379 -p operationcount=1000000 -p threadcount=4
+	Workload C
+		.\ycsb load redis -P ..\workloads\workloadc -p redis.host=127.0.0.1 -p redis.port=6379 -p recordcount=100000 -p threadcount=4
+		.\ycsb run redis -P ..\workloads\workloadc -p redis.host=127.0.0.1 -p redis.port=6379 -p operationcount=1000000 -p threadcount=4
+
+Aeorspike
+	Docker
+		před testem
+			docker pull aerospike:ee-7.0.0.3_1
+			docker run --name my_aerospike -p 3000:3000 -d aerospike:ee-7.0.0.3_1
+		po testu
+			docker stop CONTAINER_ID
+			docker rm CONTAINER_ID
+	Workload A
+		.\ycsb load aerospike -P ..\workloads\workloada -p as.namespace=test -p recordcount=100000 -p threadcount=4
+		.\ycsb run aerospike -P ..\workloads\workloada -p as.namespace=test -p operationcount=1000000 -p threadcount=4
+	Workload B
+		.\ycsb load aerospike -P ..\workloads\workloadb -p as.namespace=test -p recordcount=100000 -p threadcount=4
+		.\ycsb run aerospike -P ..\workloads\workloadb -p as.namespace=test -p operationcount=1000000 -p threadcount=4
+	Workload C
+		.\ycsb load aerospike -P ..\workloads\workloadc -p as.namespace=test -p recordcount=100000 -p threadcount=4
+		.\ycsb run aerospike -P ..\workloads\workloadc -p as.namespace=test -p operationcount=1000000 -p threadcount=4
+
+Memcached
+	Docker
+		před testem
+			docker pull memcached:latest
+			docker run --name my-memcached -p 11211:11211 -d memcached:latest
+		po testu
+			docker stop CONTAINER_ID
+			docker rm CONTAINER_ID
+	Workload A
+		.\ycsb load memcached -P ..\workloads\workloada -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p recordcount=100000 -p threadcount=4
+		.\ycsb run memcached -P ..\workloads\workloada -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p operationcount=1000000 -p threadcount=4
+	Workload B
+		.\ycsb load memcached -P ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p recordcount=100000 -p threadcount=4
+		.\ycsb run memcached -P ..\workloads\workloadb -p memcached.hosts=127.0.0.1 -p memcached.shutdownTimeoutMillis=99999999 -p operationcount=1000000 -p threadcount=4
+	Workload C
+		.\ycsb load memcached -P ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p recordcount=100000 -p threadcount=4
+		.\ycsb run memcached -P ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p operationcount=1000000 -p threadcount=4
+
+Riak
+	Docker
+		před testem
+			docker pull basho/riak-kv:latest
+			docker run --name my-riak -p 8087:8087 -p 8098:8098 -d basho/riak-kv:latest
+			// vhodný Docker Desktop pro přístup k riak.conf souboru, Docker Desktop -> Containers -> my-riak -> Files -> etc/riak/riak.conf
+			// v riak.conf souboru (etc/riak/riak.conf, řádek 334) nastavit storage_backend = leveldb
+			// v riak.conf souboru (etc/riak/riak.conf, řádek 276) odkomentovat strong_consistency=on
+			docker exec my-riak riak-admin bucket-type create ycsb
+			docker exec my-riak riak-admin bucket-type activate ycsb
+		po testu
+			docker stop CONTAINER_ID
+			docker rm CONTAINER_ID
+	Workload A
+		.\ycsb load riak -P ..\workloads\workloada -p recordcount=100000 -p threadcount=4
+		.\ycsb run riak -P ..\workloads\workloada -p operationcount=1000000 -p threadcount=4
+	Workload B
+		.\ycsb load riak -P ..\workloads\workloadb -p recordcount=100000 -p threadcount=4
+		.\ycsb run riak -P ..\workloads\workloadb -p operationcount=1000000 -p threadcount=4
+	Workload C
+		.\ycsb load riak -P ..\workloads\workloadc -p recordcount=100000 -p threadcount=4
+		.\ycsb run riak -P ..\workloads\workloadc -p operationcount=1000000 -p threadcount=4
