@@ -13,7 +13,7 @@ Po spuštění skriptu je po uživateli požadováno, aby do konzole zadal něko
 - Nejprve název DBS (redis, aerospike, memcached, riak), kterou chce testovat.
 - Následně testový scénář (Workload a, b, c).
 - Poté určí potřebu provádět pouze testování vkládání dat do DBS (insertonly, 0 = ne, 1 = ano).
-- Nakonec zadá počet vložených záznamů do DBS (recordcount = 1000-1000000) a počet prováděných operací (operationscount = 1000-1000000) definovaných vybraným scénářem.
+- Nakonec zadá počet vložených záznamů do DBS (recordcount = 100-1000000) a počet prováděných operací (operationscount = 100-1000000) definovaných vybraným scénářem.
 
 Skript pro vybraný DBS stáhne Docker image, spustí a nastaví Docker container. Následně spustí příkazy "ycsb load" pro vložení dat do DBS a "ycsb run" pro spuštění testů.
 Výsledek testů se zobrazí v konzoli ve formě tabulek. Veškeré výsledky se také ukládají do souborů umístěných ve složce "Results".
@@ -21,7 +21,7 @@ Jsou vytvořeny dva soubory: jeden pro fázi vkládání dat do DBS a druhý pro
 Po dokončení testů se spuštěný Docker container zastaví a vymaže.
 Docker container je přístupný na základě jeho unikátního token_id, které je vypsáno na začátku testů ve výstupu "Docker Container token: 'docker_token'".
 
-Při spouštění skriptu v jiném adresáři než je jeho výchozí umístění je zapotřebí změnit cestu k projektu YCSB (řádek 100) a služce s výsledky (řádek 110).
+Při spouštění skriptu v jiném adresáři než je jeho výchozí umístění je zapotřebí změnit cestu k projektu YCSB (řádek 114) a služce s výsledky (řádek 124).
 
 
 2.)

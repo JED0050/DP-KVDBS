@@ -1,4 +1,12 @@
-﻿$dbs_name = Read-Host "Choose DBS [redis | aerospike | memcached | riak]"
+﻿$docker_server_os = docker version -f "{{.Server.Os}}"
+if (-not ($docker_server_os -eq "linux")) {
+    "Docker Engine (server side) is not running"
+    "Start Docker Desktop aplication (if this error still persists then restart the computer)"
+    "Wait until Docker Desktop is in running state"
+    pause
+}
+
+$dbs_name = Read-Host "Choose DBS [redis | aerospike | memcached | riak]"
 $dbs_name = $dbs_name.ToString().ToLower()
 if (-not (($dbs_name -eq "redis") -or ($dbs_name -eq "aerospike") -or ($dbs_name -eq "memcached") -or ($dbs_name -eq "riak"))) {
     "`tChosen DBS $dbs_name was not found, only [redis | aerospike | memcached | riak] are acceptable"
@@ -22,18 +30,18 @@ if ($insertonly -eq "yes" -or $insertonly -eq "y") {
     "`tDefault option 0 (no) was chosen"
     $insertonly = "0"
 }
-$recordcount = Read-Host "Choose number of records [1000-1000000]"
+$recordcount = Read-Host "Choose number of records [100-1000000]"
 $recordcount = [int]$recordcount
-if ((-not ($recordcount -is [int])) -or $recordcount -lt 10 -or $recordcount -gt 10000000) {
+if ((-not ($recordcount -is [int])) -or $recordcount -lt 100 -or $recordcount -gt 1000000) {
     "`tNumber of records is not int, too small or too large"
     "`tNumber of records was set to default value 10000"
     $recordcount = 10000
 }
 $operationcount = ""
 if ($insertonly -eq "0"){
-    $operationcount = Read-Host "Choose number of tests [1000-1000000]"
+    $operationcount = Read-Host "Choose number of tests [100-1000000]"
     $operationcount = [int]$operationcount
-    if ((-not ($operationcount -is [int])) -or $operationcount -lt 100 -or $operationcount -gt 10000000) {
+    if ((-not ($operationcount -is [int])) -or $operationcount -lt 100 -or $operationcount -gt 1000000) {
         "`tNumber of operations is not int, too small or too large"
         "`tNumber of operations was set to default value 10000"
         $operationcount = 10000
@@ -76,8 +84,14 @@ if ($dbs_name -eq "redis") {
     exit 1
 }
 
+"`n`nRemoving unremoved Docker containers and volumes"
+docker ps -q | % { docker stop $_ }  # Stop all old running docker containers
+docker ps -aq | % { docker rm $_ }  # Remove all old unremoved docker containers
+docker volume prune -f
+Start-Sleep -Seconds 5
+
 $docker_token
-"Pulling and starting latest docker image of " + $dbs_name
+"`n`nPulling and starting latest docker image of " + $dbs_name
 docker pull $image_name
 $docker_token = Invoke-Expression -Command "docker run $image_config -d $image_name"
 "Docker Container token: " + $docker_token
