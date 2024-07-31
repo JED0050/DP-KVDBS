@@ -1,0 +1,54 @@
+\documentclass{beamer}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage[backend=bibtex, style=iso-numeric, alldates=iso]{biblatex}
+
+\usetheme{Madrid}
+\definecolor{UBCblue}{rgb}{0, 0.698, 0.674}
+\usecolortheme[named=UBCblue]{structure}
+
+\title[Diplomová práce - KDBS]{Key-value databázové systémy}
+\subtitle{Key-Value Database Management Systems}
+\author[Bc. Jan Jedlička, JED0050]{Bc. Jan Jedlička \\ {\footnotesize Vedoucí: prof. Ing. Michal Krátký, Ph.D.}}
+\institute[]{FEI, VŠB-TUO}
+\date{2024}
+
+\titlegraphic{\includegraphics[scale=0.2]{figures/vsb logo.jpg}}
+
+\addbibresource{citace.bib}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	
+	\begin{frame}
+		\frametitle{Úvod}
+		
+		\begin{itemize}
+			\item Studium problematiky key-value databázových systémů (KDBS~\cite{amaz-key-value-db})
+			\item Návrh a implementace testovací prostředí pro porovnání KDBS s ostatními DBS (YCSB~\cite{ycsb})
+			\item Otestování vybraných KDBS a vyhodnocení výsledků experimentů (Redis~\cite{redis}, Aerospike~\cite{aerospike}, Memcached~\cite{memcached}, Riak KV~\cite{riak})
+		\end{itemize}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Poděkování}
+		
+		\begin{center}
+			\Huge
+			Děkuji za pozornost
+		\end{center}
+		
+	\end{frame}
+
+	\begin{frame}[noframenumbering,allowframebreaks]
+		\frametitle{Citace}
+		
+		\printbibliography
+		
+	\end{frame}
+	
+\end{document}
