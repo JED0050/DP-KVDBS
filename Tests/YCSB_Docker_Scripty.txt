@@ -76,6 +76,8 @@ Memcached
 		.\ycsb load memcached -P ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p recordcount=100000 -p threadcount=4
 		.\ycsb run memcached -P ..\workloads\workloadc -p memcached.hosts=127.0.0.1 -p operationcount=1000000 -p threadcount=4
 
+E:\Diploma\YCSB\ycsb-0.17.0\bin
+
 Riak
 	Docker
 		před testem
@@ -84,14 +86,16 @@ Riak
 			// vhodný Docker Desktop pro přístup k riak.conf souboru, Docker Desktop -> Containers -> my-riak -> Files -> etc/riak/riak.conf
 			// v riak.conf souboru (etc/riak/riak.conf, řádek 334) nastavit storage_backend = leveldb
 			// v riak.conf souboru (etc/riak/riak.conf, řádek 276) odkomentovat strong_consistency=on
-			docker exec my-riak riak-admin bucket-type create ycsb
+			docker exec my-riak riak-admin bucket-type create ycsb '{\"props\":{\"allow_mult\":false}}'
 			docker exec my-riak riak-admin bucket-type activate ycsb
+			docker exec my-riak riak-admin bucket-type create fakeBucketType '{\"props\":{\"allow_mult\":false,\"n_val\":1,\"dvv_enabled\":false,\"last_write_wins\":true}}'
+			docker exec my-riak riak-admin bucket-type activate fakeBucketType
 		po testu
 			docker stop CONTAINER_ID
 			docker rm CONTAINER_ID
 	Workload A
 		.\ycsb load riak -P ..\workloads\workloada -p recordcount=100000 -p threadcount=4
-		.\ycsb run riak -P ..\workloads\workloada -p operationcount=1000000 -p threadcount=4
+		.\ycsb run riak -P ..\workloads\workloada -p operationcount=1000000 -p riak.strong_consistency=false -p threadcount=4
 	Workload B
 		.\ycsb load riak -P ..\workloads\workloadb -p recordcount=100000 -p threadcount=4
 		.\ycsb run riak -P ..\workloads\workloadb -p operationcount=1000000 -p threadcount=4

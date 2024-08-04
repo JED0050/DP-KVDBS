@@ -5,6 +5,13 @@
 \usepackage{multicol}
 \usepackage[backend=bibtex, style=iso-numeric, alldates=iso]{biblatex}
 
+\usepackage{subfig} % makra pro "podobrazky" a "podtabulky"
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{graphicx}
+
 \usetheme{Madrid}
 \definecolor{UBCblue}{rgb}{0, 0.698, 0.674}
 \usecolortheme[named=UBCblue]{structure}
@@ -33,7 +40,209 @@
 		\end{itemize}
 		
 	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Not Only SQL (NoSQL)}
+		\begin{itemize}
+			\item Data nezávislá na schématu (schema-less)
+			\item Zpracování velkých objemů vzájemně nesouvisejících nebo rychle se měnících dat~\cite{mic-nosql}
+			\item Vyžadujeme výkon a dostupnost oproti silné konzistenci
+			\item Distribuované (sdílené) úložiště
+			\item Horizontální škálovatelnost
+		\end{itemize}	
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Not Only SQL (NoSQL)}
+		\begin{itemize}
+			\item Klíč-hodnota DBS {\footnotesize(Redis~\cite{redis}, Aerospike~\cite{aerospike})}
+			\item Dokumentové DBS {\footnotesize(MongoDB~\cite{mongodb}, CouchDB~\cite{couchdb})}
+			\item Sloupcové DBS {\footnotesize(Apache Cassandra~\cite{cassandra}, Apache HBase~\cite{hbase})}
+			\item Grafové DBS {\footnotesize(Neo4J~\cite{neo4j}, Azure Cosmos DB~\cite{azure-cosmos-db})}
+		\end{itemize}	
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{RDBS Oracle vs KDBS Redis}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{Figures/db-engine-trend-dbs.PNG}
+			\caption{Graf hodnot popularity RDBS Oracle a KDBS Redis~\cite{dbranking-trend-by-dbs}\label{graf-dbranking-trend-dbs}}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{RDBS vs KDBS}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{Figures/db-engine-trend-model.PNG}
+			\caption{Graf změn hodnot popularity RDBS a KDBS~\cite{dbranking-trend-by-model}}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{KDBS}
+		\begin{itemize}
+			\item Databáze párů klíč-hodnota libovolného formátu
+			\item Klíč je unikátní identifikátor umožňující rychlý přístup k hodnotám
+			\item Základní operace (get(k), insert(k,h), delete(k), update(k,h))~\cite{vsb-nerelacni-db}
+		\end{itemize}	
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{KDBS - hodnota}		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.53]{Figures/hodnota_json.PNG}
+			\caption{Hodnota (JSON dokument) uložená pro klíč "userid\_135"}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{TPC}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{TPC-H - SQL Test Q1}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{Figures/tpc_test.PNG}
+			\caption{TPC-H, SQL Test Q1~\cite{tpc-h-sql, tpc-h-index}}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{YCSB}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{YCSB - operace vložení}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.53]{Figures/ycsb_insert.PNG}
+			\caption{YCSB - příklad definice operace vložení záznamu}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Zprovoznění testů}
+		\begin{itemize}
+			\item Java JDK 8 (1.8)~{\footnotesize\cite{java-jdk}}
+			\item Nastavení \%JAVA\_HOME\% systémové proměnné~{\footnotesize\cite{win-env-var}} {\footnotesize(OS Windows)}
+			\item Docker~{\footnotesize\cite{docker}}
+			\item YCSB 0.17~{\footnotesize\cite{ycsb-download}}
+			\item Apache Maven 3~{\footnotesize\cite{maven}}
+			
+		\end{itemize}
+	\end{frame}
 
+	\begin{frame}
+		\frametitle{Zprovoznění testů - Docker}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.37]{Figures/docker_commands.PNG}
+			\caption{Docker - příkazy pro stažení, spuštění, zastavení a odstranění DBS Redis}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Zprovoznění testů - YCSB Load (1/2)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{Figures/ycsb_load_1.PNG}
+			\caption{YCSB Redis, příkaz pro vložení dat (load) - 1/2}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Zprovoznění testů - YCSB Load (2/2)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.4]{Figures/ycsb_load_2.PNG}
+			\caption{YCSB Redis, příkaz pro vložení dat (load) - 2/2}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Zprovoznění testů - YCSB Run (1/2)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.35]{Figures/ycsb_run_1.PNG}
+			\caption{YCSB Redis, příkaz pro spuštění testů (run) - 1/2}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Zprovoznění testů - YCSB Run (2/2)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.35]{Figures/ycsb_run_2.PNG}
+			\caption{YCSB Redis, příkaz pro spuštění testů (run) - 2/2}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Parametry testů}
+		\begin{itemize}
+			\item Počet záznamů v databázi (recordcount)
+			\item Počet testovaných operací (operationcount)
+			\item Název DBS
+			\item Workload (A-C)
+			\item Případná konzistence (Riak KV měl chybně nastavenou silnou konzistenci)
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Vyhodnocení testů}
+		\begin{table}
+			\centering
+			\begin{tabular}{ l | c c c c }
+				\hline
+				Propustnost & 1. & 2. & 3. & 4. \\
+				\hline
+				Průměr všech & Aerospike & Redis & Memcached & Riak KV \\
+				operací & 4,9 kops/s & 4,2 kops/s & 4,1 kops/s & 1,5 kops/s\\
+				Vkládání & Aerospike & Memcached & Redis & Riak KV \\
+				Aktualizace & Aerospike & Redis & Memcached & Riak KV \\
+				Čtení & Redis & Aerospike & Memcached & Riak KV \\
+				\hline
+				\multicolumn{5}{c}{\tiny Na třetím řádku je uvedena průměrná propustnost všech testů (tisíce operací za sekundu) pro výše vypsaný KDBS} \\
+			\end{tabular}
+			\caption{Porovnání propustnosti výsledků testů}
+		\end{table}
+	
+		\begin{itemize}
+			\item Po překonfigurování KDBS Riak KV na případnou konzistenci (namísto silné konzistence) dosahoval systém průměrné propustnosti 
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Vyhodnocení testů - Propustnost (kops/sec)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.43]{Figures/graf_prop.PNG}
+			\caption{Workload A, B, C + Insert only - Propustnost (kops/sec)}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Vyhodnocení testů - Workload A (50\% čtení, 50\% aktualizace)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.5]{Figures/graf_wa_min_avg.PNG}
+			\caption{Workload A - Min Avg Latence (ms)}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Vyhodnocení testů - Workload A (50\% čtení, 50\% aktualizace)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.5]{Figures/graf_perc.PNG}
+			\caption{Workload A - Percentil latence (ms)}
+		\end{figure}
+	\end{frame}
+	
 	\begin{frame}
 		\frametitle{Poděkování}
 		
@@ -41,6 +250,11 @@
 			\Huge
 			Děkuji za pozornost
 		\end{center}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Připomínky}
 		
 	\end{frame}
 

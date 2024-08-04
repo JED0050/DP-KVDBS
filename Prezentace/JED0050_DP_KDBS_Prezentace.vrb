@@ -1,0 +1,6 @@
+\frametitle{KDBS - hodnota}		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.53]{Figures/hodnota_json.PNG}
+			\caption{Hodnota (JSON dokument) uložená pro klíč "userid\_135"}
+		\end{figure}

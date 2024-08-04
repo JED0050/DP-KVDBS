@@ -94,5 +94,239 @@
     \field{urlmonth}{11}
     \field{urlyear}{2022}
   \endentry
+
+  \entry{mic-nosql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Databáze NoSQL}
+    \verb{url}
+    \verb https://azure.microsoft.com/cs-cz/resources/cloud-computing-dictionar
+    \verb y/what-is-nosql-database
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{03}
+    \field{urlmonth}{08}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{mongodb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{MongoDB}
+    \verb{url}
+    \verb https://www.mongodb.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{couchdb}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{CouchDB}
+    \verb{url}
+    \verb https://couchdb.apache.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{cassandra}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Cassandra}
+    \verb{url}
+    \verb https://cassandra.apache.org/_/index.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{hbase}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Welcome to Apache HBase}
+    \verb{url}
+    \verb https://hbase.apache.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{neo4j}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Neo4j}
+    \verb{url}
+    \verb https://neo4j.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{10}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{azure-cosmos-db}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Azure Cosmos DB}
+    \verb{url}
+    \verb https://azure.microsoft.com/cs-cz/products/cosmos-db
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{22}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-trend-by-dbs}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DB-Engines Ranking - Trend Popularity}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking_trend
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{dbranking-trend-by-model}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{DBMS popularity broken down by database model}
+    \verb{url}
+    \verb https://db-engines.com/en/ranking_categories
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{23}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{vsb-nerelacni-db}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={Bača},
+         familyi={B\bibinitperiod},
+         given={Radim},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Nerelační distribuované databáze}
+    \verb{url}
+    \verb https://db.cs.vsb.cz/Download.ashx?id=6
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{03}
+    \field{urlmonth}{08}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{tpc-h-sql}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC-H Benchmark - Test SQL}
+    \verb{url}
+    \verb https://docs.starrocks.io/docs/benchmarking/TPC-H_Benchmarking/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{tpc-h-index}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC-H Vesion 2 and Version 3}
+    \verb{url}
+    \verb https://www.tpc.org/tpch/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{java-jdk}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Oracle - Java Downloads}
+    \verb{url}
+    \verb https://www.oracle.com/java/technologies/downloads/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{win-env-var}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Windows Environment Variables}
+    \verb{url}
+    \verb https://ss64.com/nt/syntax-variables.html
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{26}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{docker}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Docker Builds: Now Lightning Fast}
+    \verb{url}
+    \verb https://www.docker.com/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{19}
+    \field{urlmonth}{03}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{ycsb-download}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Download the latest release of YCSB}
+    \verb{url}
+    \verb https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycs
+    \verb b-0.17.0.tar.gz
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{maven}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Apache Maven Project}
+    \verb{url}
+    \verb https://maven.apache.org/download.cgi
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
 \enddatalist
 \endinput
