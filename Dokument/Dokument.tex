@@ -1381,6 +1381,45 @@ and comparing them with other DBSs. The thesis describes two prominent represent
 	
 	Při vytváření této práce se autor seznámil s řadou nových pojmů a systémů, ať už jde o práci s prostředím Docker~\cite{docker}, YCSB nebo konkrétně popisovanými databázemi. Z hlediska práce s testovacím prostředí YCSB a testování vybraných KDBS v něm, byla pro autora práce obohacující a naučná.
 	
+		\begin{figure}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				ylabel={Propustnost (kops/sec)},
+				legend style={at={(0.5,-0.2)},
+					anchor=north,legend columns=-1},
+				every axis plot post/.style={/pgf/number format/fixed},
+				ybar=5pt,
+				bar width=15pt,
+				x=4cm,
+				%y=1.5cm,
+				ymin=0,
+				axis on top,
+				%ymax=5.5,
+				xtick=data,
+				enlarge x limits=0.2,
+				symbolic x coords={Average, Update, Read, Insert},
+				%restrict y to domain*=0:6, % Cut values off at 3
+				visualization depends on=rawy\as\rawy, % Save the unclipped values
+				%after end axis/.code={ % Draw line indicating break
+					%	\draw [ultra thick, white, decoration={snake, amplitude=1pt}, decorate] (rel axis cs:0,1.05) -- (rel axis %cs:1,1.05);
+					%},
+				nodes near coords={%
+					\pgfmathprintnumber{\rawy}% Print unclipped values
+				},
+				axis lines*=left,
+				clip=false
+				]
+				\addplot coordinates {(Average,1.37) (Update,1.28) (Read,1.78) (Insert,1.05)};
+				\addplot coordinates {(Average,1.68) (Update,1.59) (Read,1.98) (Insert,1.47)};
+				\addplot coordinates {(Average,4.19) (Update,4.11) (Read,4.52) (Insert,3.94)};
+				\legend{Riak KV (SC),Riak KV (EC), Memcached}
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Riak KV - Propustnost (kops/sec) Avg, Update, Read, Insert}
+		\label{graph_riak}
+	\end{figure}
+	
 	\nocite{*}
 	
 	\printbibliography[title={Literatura}, heading=bibintoc]

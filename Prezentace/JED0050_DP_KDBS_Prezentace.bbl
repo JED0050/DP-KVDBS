@@ -237,6 +237,32 @@
     \field{urlyear}{2024}
   \endentry
 
+  \entry{dbs-testing-tools}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Top 10 Database Testing Tools With Features, Cons and Pros}
+    \verb{url}
+    \verb https://testsigma.com/blog/database-testing-tools/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2024}
+    \field{urlday}{27}
+    \field{urlmonth}{04}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{tpc}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TPC}
+    \verb{url}
+    \verb https://www.tpc.org/
+    \endverb
+    \field{langid}{english}
+    \field{year}{2023}
+    \field{urlday}{11}
+    \field{urlmonth}{02}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{tpc-h-sql}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{TPC-H Benchmark - Test SQL}

@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {4.5.5}Porovnání výsledků testů}{55}{subsection.4.5.5}%
 \contentsline {subsection}{\numberline {4.5.6}Vizualizace do grafů}{56}{subsection.4.5.6}%
 \contentsline {chapter}{\numberline {5}Závěr}{57}{chapter.5}%
-\contentsline {chapter}{Literatura}{59}{chapter*.34}%
+\contentsline {chapter}{Literatura}{59}{chapter*.35}%
 \babel@toc {english}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {english}{}\relax 

@@ -30,7 +30,7 @@
 	
 	\frame{\titlepage}
 	
-	\begin{frame}
+	\begin{frame}[noframenumbering]
 		\frametitle{Úvod}
 		
 		\begin{itemize}
@@ -44,11 +44,11 @@
 	\begin{frame}
 		\frametitle{Not Only SQL (NoSQL)}
 		\begin{itemize}
-			\item Data nezávislá na schématu (schema-less)
-			\item Zpracování velkých objemů vzájemně nesouvisejících nebo rychle se měnících dat~\cite{mic-nosql}
+			\item Data nezávislá na schématu (schema-less), schéma je možné využít
+			\item Zpracování nesouvisejících nebo rychle se měnících dat~\cite{mic-nosql}
 			\item Vyžadujeme výkon a dostupnost oproti silné konzistenci
 			\item Distribuované (sdílené) úložiště
-			\item Horizontální škálovatelnost
+			\item Horizontální škálovatelnost (paralelní přidávání nezávislých výpočetních kapacit, rozkládání zátěže mezi tyto kapacity)
 		\end{itemize}	
 	\end{frame}
 	
@@ -99,7 +99,24 @@
 	\end{frame}
 	
 	\begin{frame}
+		\frametitle{Testovací prostředí}
+		\begin{itemize}
+			\item Porovnání vlastností systémů (propustnost, bezpečnost, škálovatelnost)
+			\item Nástroj pro nastavitelné a opakovatelné testy
+			\item Řada nástrojů pro různorodé využití
+			\item ApexSQL Diff, Apache JMeter, QuerySurge, Redgate SQL Test~\cite{dbs-testing-tools}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
 		\frametitle{TPC}
+		\begin{itemize}
+			\item Transaction Processing Performance Council (TPC)~\cite{tpc}
+			\item Relační DBS
+			\item Komplexní testování, náročné operace (agregace, seřazení, průměr, spojení) nad velkými daty
+			\item Počet transakcí za minutu (tpm)
+			\item TPC-C, TPC-H, TPCx-AI, TPCx-IoT, TPCx-BB
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
@@ -113,6 +130,13 @@
 	
 	\begin{frame}
 		\frametitle{YCSB}
+		\begin{itemize}
+			\item Yahoo! Cloud Serving Benchmark (YCSB)~\cite{ycsb}
+			\item Porovnávání výkonu NoSQL DBS (KDBS)
+			\item Scénáře využití (Workload A-F)
+			\item Klíč - řetězec 'user\_id'
+			\item Hodnota - JSON dokument s poli ('field0'-'fieldN')
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
@@ -146,39 +170,29 @@
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Zprovoznění testů - YCSB Load (1/2)}
+		\frametitle{Zprovoznění testů - YCSB Load}
 		\begin{figure}
 			\centering
-			\includegraphics[scale=0.4]{Figures/ycsb_load_1.PNG}
-			\caption{YCSB Redis, příkaz pro vložení dat (load) - 1/2}
+			\includegraphics[scale=0.5]{Figures/ycsb_load_cut.PNG}
+			\caption{YCSB Redis, příkaz pro vložení dat (load)}
 		\end{figure}
 	\end{frame}
 
 	\begin{frame}
-		\frametitle{Zprovoznění testů - YCSB Load (2/2)}
+		\frametitle{Zprovoznění testů - YCSB Run}
 		\begin{figure}
 			\centering
-			\includegraphics[scale=0.4]{Figures/ycsb_load_2.PNG}
-			\caption{YCSB Redis, příkaz pro vložení dat (load) - 2/2}
+			\includegraphics[scale=0.53]{Figures/ycsb_run_cut.PNG}
+			\caption{YCSB Redis, příkaz pro spuštění testů (run)}
 		\end{figure}
 	\end{frame}
-
+	
 	\begin{frame}
-		\frametitle{Zprovoznění testů - YCSB Run (1/2)}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.35]{Figures/ycsb_run_1.PNG}
-			\caption{YCSB Redis, příkaz pro spuštění testů (run) - 1/2}
-		\end{figure}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Zprovoznění testů - YCSB Run (2/2)}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.35]{Figures/ycsb_run_2.PNG}
-			\caption{YCSB Redis, příkaz pro spuštění testů (run) - 2/2}
-		\end{figure}
+		\frametitle{Zprovoznění testů - Spouštěcí skript}
+		\begin{itemize}
+			\item Windows PowerShell ISE (Integrované skriptovací prostředí)
+			\item Automatizace, nahrazení ruční manipulace se skripty
+		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
@@ -193,7 +207,33 @@
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Vyhodnocení testů}
+		\frametitle{Vyhodnocení testů - Workload A (50\% čtení, 50\% aktualizace)}
+		\begin{figure}
+			\begin{minipage}[b]{0.45\linewidth}
+				\centering
+				\includegraphics[width=\textwidth]{Figures/graf_wa_min_avg.PNG}
+				\caption{Min a Avg latence (ms)}
+			\end{minipage}
+			\hspace{0.5cm}
+			\begin{minipage}[b]{0.45\linewidth}
+				\centering
+				\includegraphics[width=\textwidth]{Figures/graf_perc.PNG}
+				\caption{Percentil latence (ms)}
+			\end{minipage}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Vyhodnocení testů - Propustnost (kops/sec)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.43]{Figures/graf_prop.PNG}
+			\caption{Workload A, B, C + Insert only - Propustnost (kops/sec)}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Vyhodnocení testů - Souhrn}
 		\begin{table}
 			\centering
 			\begin{tabular}{ l | c c c c }
@@ -210,52 +250,85 @@
 			\end{tabular}
 			\caption{Porovnání propustnosti výsledků testů}
 		\end{table}
+	\end{frame}
 	
+	\begin{frame}
+		\frametitle{Riak KV, Silná konzistence (SC) vs Případná konzistence (EC)}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.44]{Figures/riak_sc_ec.PNG}
+			\caption{Riak KV SC vs EC - Propustnost (kops/sec), zlepšení o 22,6 \%}
+		\end{figure}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Riak KV, Nízká propustnost}
 		\begin{itemize}
-			\item Po překonfigurování KDBS Riak KV na případnou konzistenci (namísto silné konzistence) dosahoval systém průměrné propustnosti 
+			\item Přenastavení z SC na EC zvýšilo průměrnou propustnost o $\sim$310 operací za sekundu (22,6 \%), KDBS Memcached je stále rychlejší o 2,51 kops/sec (149,41 \%)
+			\item Úplné vyřešení problému s chybou u aktualizačních operací ($\sim$5 \%) přechodem na EC, nedochází ke konfliktům a operace nejsou zrušeny
+			\item MapReduce je určen pro dávkové zpracování, nikoli pro dotazy v reálném čase
 		\end{itemize}
 	\end{frame}
-
-	\begin{frame}
-		\frametitle{Vyhodnocení testů - Propustnost (kops/sec)}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.43]{Figures/graf_prop.PNG}
-			\caption{Workload A, B, C + Insert only - Propustnost (kops/sec)}
-		\end{figure}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Vyhodnocení testů - Workload A (50\% čtení, 50\% aktualizace)}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.5]{Figures/graf_wa_min_avg.PNG}
-			\caption{Workload A - Min Avg Latence (ms)}
-		\end{figure}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Vyhodnocení testů - Workload A (50\% čtení, 50\% aktualizace)}
-		\begin{figure}
-			\centering
-			\includegraphics[scale=0.5]{Figures/graf_perc.PNG}
-			\caption{Workload A - Percentil latence (ms)}
-		\end{figure}
-	\end{frame}
 	
-	\begin{frame}
+	\begin{frame}[noframenumbering]
 		\frametitle{Poděkování}
-		
 		\begin{center}
 			\Huge
 			Děkuji za pozornost
 		\end{center}
-		
 	\end{frame}
 
-	\begin{frame}
+	\begin{frame}[noframenumbering]
 		\frametitle{Připomínky}
-		
+		\begin{itemize}
+			\item Využití 4 vláken?
+			\begin{itemize}
+				\item Simulace paralelního provádění operací 4 klientů současně
+				\item Více vláken nebylo použito skrz HW omezení stroje
+			\end{itemize}
+			\item Amazon DynamoDB úrovně izolace
+			\begin{itemize}
+				\item Podpora Read Uncommitted, Read Committed a Repeatable Reads
+				\item Nepodporuje úroveň izolace Serializable
+			\end{itemize}
+			\item Redis datová struktura hash
+			\begin{itemize}
+				\item Redis hash - Hashovací tabulka
+				\item Ideální pro objekty s řadou vlastností
+			\end{itemize}
+			\item Aerospike Hybrid-memory
+			\begin{itemize}
+				\item Index je v paměti, data na disku (nejedná se o In-memory)
+				\item Při změně dat dojde k aktualizaci indexu v paměti a následně k zápisu změn na disk
+				\item Index pro klíč uchovává metadata o lokaci záznamu na disku pro získání chybějících hodnot
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[noframenumbering]
+		\frametitle{Připomínky}
+		\begin{itemize}
+			\item Server-side clustering
+			\begin{itemize}
+				\item Dynamické nahrazení nedostupných serverů v rámci clusteru
+				\item Horizontální škálovatelnost přidáním serverů do clusteru
+			\end{itemize}
+			\item Customer deployment
+			\begin{itemize}
+				\item Instalace, konfigurace a spuštění systému pro koncové uživatele
+				\item Plánování, testování, implementace a podpora
+			\end{itemize}
+			\item Fail-over
+			\begin{itemize}
+				\item Dostupnost služeb při výpadku primárního serveru
+				\item Přesun na záložní server či repliku při nedostupnosti primárního serveru
+			\end{itemize}
+			\item Hot-standby
+			\begin{itemize}
+				\item Poskytuje rychlý přechod a minimální dobu výpadku
+				\item Hot-standby server je v reálném čase synchronizován s primárním serverem (okamžité replikování dat, dostupnost náhradní aktualizované kopie)
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 
 	\begin{frame}[noframenumbering,allowframebreaks]

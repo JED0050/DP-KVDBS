@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  1 JUL 2024 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  4 AUG 2024 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1709,7 +1709,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [9
 
 ]
-<Data/db-engine-trend-dbs.PNG, id=317, 740.0147pt x 414.04688pt>
+<Data/db-engine-trend-dbs.PNG, id=319, 740.0147pt x 414.04688pt>
 File: Data/db-engine-trend-dbs.PNG Graphic file (type png)
 <use Data/db-engine-trend-dbs.PNG>
 Package pdftex.def Info: Data/db-engine-trend-dbs.PNG  used on input line 123.
@@ -1720,7 +1720,7 @@ Overfull \hbox (8.97263pt too wide) in paragraph at lines 123--124
  []
 
 [10]
-<Data/db-engine-trend-model.PNG, id=347, 786.68906pt x 359.84438pt>
+<Data/db-engine-trend-model.PNG, id=349, 786.68906pt x 359.84438pt>
 File: Data/db-engine-trend-model.PNG Graphic file (type png)
 <use Data/db-engine-trend-model.PNG>
 Package pdftex.def Info: Data/db-engine-trend-model.PNG  used on input line 135
@@ -1762,7 +1762,7 @@ jed-not-li-vých pro-blém· od-li²n¥. Po-kud chceme
 [29
 
 ]
-<Data/ycsb-1.jpg, id=691, 501.875pt x 375.4025pt>
+<Data/ycsb-1.jpg, id=693, 501.875pt x 375.4025pt>
 File: Data/ycsb-1.jpg Graphic file (type jpg)
 <use Data/ycsb-1.jpg>
 Package pdftex.def Info: Data/ycsb-1.jpg  used on input line 354.
@@ -1857,15 +1857,23 @@ color configuration.
 Kapitola 5.
 [57
 
-] [58]
-Overfull \hbox (4.80904pt too wide) in paragraph at lines 1386--1386
+]
+Package pgfplots info on input line 1412: Overriding colorspace to rgb due to x
+color configuration.
+
+Overfull \hbox (50.29631pt too wide) in paragraph at lines 1418--1419
+ [][] 
+ []
+
+[58]
+Overfull \hbox (4.80904pt too wide) in paragraph at lines 1425--1425
 []\T1/lmr/m/it/10.95 Relace [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]cit
 .[] []2024-04-23]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / por
 tal . matematickabiologie .
  []
 
 
-Overfull \hbox (28.5328pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (28.5328pt too wide) in paragraph at lines 1425--1425
 \T1/lmtt/m/n/10.95 cz / index . php ? pg = zaklady -[] informatiky -[] pro -[] 
 biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
  []
@@ -1873,34 +1881,34 @@ biology -[]-[] teoreticke -[] zaklady -[] informatiky -[]-[]
 [59
 
 ] [60]
-Overfull \hbox (29.36243pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (29.36243pt too wide) in paragraph at lines 1425--1425
 []\T1/lmr/m/it/10.95 Dostupnost (Avail-abil-ity) [][]\T1/lmr/m/n/10.95 [on-line
 ][][]. 2024. [[][]cit.[] []2024-06-10]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/
 10.95 https : / / managementmania .
  []
 
 [61]
-Overfull \hbox (29.78154pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (29.78154pt too wide) in paragraph at lines 1425--1425
 [][]$\T1/lmtt/m/n/10.95 https : / / docs . aws . amazon . com / amazondynamodb 
 / latest / developerguide / SecondaryIndexes .
  []
 
 [62] [63] [64]
-Overfull \hbox (27.80927pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (27.80927pt too wide) in paragraph at lines 1425--1425
 []\T1/lmr/m/it/10.95 Introduction of B-Tree [][]\T1/lmr/m/n/10.95 [on-line][][]
 . 2024. [[][]cit.[] []2024-04-27]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95
  https : / / www . geeksforgeeks .
  []
 
 [65]
-Overfull \hbox (77.41739pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (77.41739pt too wide) in paragraph at lines 1425--1425
 \T1/lmr/m/n/10.95 12]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / /
  www . youtube . com / watch ? v = ZJPTgzFXTKo & list = PL9Bv8oH2HsjyOnAOYYLEPU
 AKq -[]
  []
 
 [66]
-Overfull \hbox (19.23631pt too wide) in paragraph at lines 1386--1386
+Overfull \hbox (19.23631pt too wide) in paragraph at lines 1425--1425
 []\T1/lmr/m/it/10.95 Overhead [][]\T1/lmr/m/n/10.95 [on-line][][]. 2024. [[][]c
 it.[] []2024-06-30]. [][]Do-stupné z[][]: [][]$\T1/lmtt/m/n/10.95 https : / / w
 ww . pcmag . com / encyclopedia /
@@ -1911,7 +1919,7 @@ ww . pcmag . com / encyclopedia /
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Dokument.out' has not changed.
-(rerunfilecheck)             Checksum: ED5655259D91B35A3AF4DFD2B343C451;3764.
+(rerunfilecheck)             Checksum: 2B4AF7F5DB0F736467B5E42C72D736E5;3764.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                Dokument
@@ -1922,10 +1930,10 @@ Package logreq Info: Writing requests to 'Dokument.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49676 strings out of 478552
- 1076287 string characters out of 2854123
- 1847284 words of memory out of 3000000
- 66675 multiletter control sequences out of 15000+600000
+ 49695 strings out of 478552
+ 1076658 string characters out of 2854123
+ 1848377 words of memory out of 3000000
+ 66693 multiletter control sequences out of 15000+600000
  545529 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,19n,93p,3260b,4681s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1943,9 +1951,9 @@ lm/lmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmss17.pfb><D:/Skola-SW
 ic/lm/lmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/lm/lmtk10.pfb><D:/Skola
 -SW/MikTex/fonts/type1/public/lm/lmtt10.pfb><D:/Skola-SW/MikTex/fonts/type1/pub
 lic/lm/lmtt8.pfb>
-Output written on Dokument.pdf (68 pages, 1750492 bytes).
+Output written on Dokument.pdf (68 pages, 1752779 bytes).
 PDF statistics:
- 1594 PDF objects out of 1728 (max. 8388607)
- 431 named destinations out of 1000 (max. 500000)
+ 1596 PDF objects out of 1728 (max. 8388607)
+ 432 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

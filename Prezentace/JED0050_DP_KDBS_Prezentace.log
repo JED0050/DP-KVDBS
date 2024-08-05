@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  4 AUG 2024 03:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.13)  5 AUG 2024 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1428,133 +1428,137 @@ Package pdftex.def Info: Figures/hodnota_json.PNG  used on input line 99.
 
  <./Figures/hodnota_json.PNG>] [9
 
+] [10
+
 ]
-<Figures/tpc_test.PNG, id=318, 834.86906pt x 411.03563pt>
+<Figures/tpc_test.PNG, id=348, 834.86906pt x 411.03563pt>
 File: Figures/tpc_test.PNG Graphic file (type png)
 <use Figures/tpc_test.PNG>
-Package pdftex.def Info: Figures/tpc_test.PNG  used on input line 112.
+Package pdftex.def Info: Figures/tpc_test.PNG  used on input line 129.
 (pdftex.def)             Requested size: 333.94171pt x 164.41133pt.
- [10
+ [11
 
- <./Figures/tpc_test.PNG>] [11
+ <./Figures/tpc_test.PNG>] [12
 
 ]
-<Figures/ycsb_insert.PNG, id=378, 470.50781pt x 325.96782pt>
+<Figures/ycsb_insert.PNG, id=409, 470.50781pt x 325.96782pt>
 File: Figures/ycsb_insert.PNG Graphic file (type png)
 <use Figures/ycsb_insert.PNG>
-Package pdftex.def Info: Figures/ycsb_insert.PNG  used on input line 125.
+Package pdftex.def Info: Figures/ycsb_insert.PNG  used on input line 149.
 (pdftex.def)             Requested size: 249.36795pt x 172.76212pt.
- [12
+ [13
 
- <./Figures/ycsb_insert.PNG>] [13
+ <./Figures/ycsb_insert.PNG>] [14
 
 ]
-<Figures/docker_commands.PNG, id=443, 939.51pt x 368.87813pt>
+<Figures/docker_commands.PNG, id=474, 939.51pt x 368.87813pt>
 File: Figures/docker_commands.PNG Graphic file (type png)
 <use Figures/docker_commands.PNG>
-Package pdftex.def Info: Figures/docker_commands.PNG  used on input line 146.
+Package pdftex.def Info: Figures/docker_commands.PNG  used on input line 170.
 (pdftex.def)             Requested size: 347.61325pt x 136.48276pt.
 
-Overfull \hbox (5.31795pt too wide) in paragraph at lines 146--146
+Overfull \hbox (5.31795pt too wide) in paragraph at lines 170--170
  [] 
  []
 
-[14
+[15
 
  <./Figures/docker_commands.PNG>]
-<Figures/ycsb_load_1.PNG, id=471, 855.94781pt x 398.99063pt>
-File: Figures/ycsb_load_1.PNG Graphic file (type png)
-<use Figures/ycsb_load_1.PNG>
-Package pdftex.def Info: Figures/ycsb_load_1.PNG  used on input line 155.
-(pdftex.def)             Requested size: 342.37306pt x 159.59341pt.
- [15
-
- <./Figures/ycsb_load_1.PNG>]
-<Figures/ycsb_load_2.PNG, id=499, 731.73375pt x 396.7322pt>
-File: Figures/ycsb_load_2.PNG Graphic file (type png)
-<use Figures/ycsb_load_2.PNG>
-Package pdftex.def Info: Figures/ycsb_load_2.PNG  used on input line 164.
-(pdftex.def)             Requested size: 292.68831pt x 158.69006pt.
+<Figures/ycsb_load_cut.PNG, id=502, 675.27281pt x 254.45062pt>
+File: Figures/ycsb_load_cut.PNG Graphic file (type png)
+<use Figures/ycsb_load_cut.PNG>
+Package pdftex.def Info: Figures/ycsb_load_cut.PNG  used on input line 179.
+(pdftex.def)             Requested size: 337.63557pt x 127.22499pt.
  [16
 
- <./Figures/ycsb_load_2.PNG>]
-<Figures/ycsb_run_1.PNG, id=527, 887.56593pt x 447.92343pt>
-File: Figures/ycsb_run_1.PNG Graphic file (type png)
-<use Figures/ycsb_run_1.PNG>
-Package pdftex.def Info: Figures/ycsb_run_1.PNG  used on input line 173.
-(pdftex.def)             Requested size: 310.65273pt x 156.77554pt.
- [17
+ <./Figures/ycsb_load_cut.PNG>]
+<Figures/ycsb_run_cut.PNG, id=530, 592.46344pt x 331.99031pt>
+File: Figures/ycsb_run_cut.PNG Graphic file (type png)
+<use Figures/ycsb_run_cut.PNG>
+Package pdftex.def Info: Figures/ycsb_run_cut.PNG  used on input line 188.
+(pdftex.def)             Requested size: 314.00412pt x 175.95401pt.
 
- <./Figures/ycsb_run_1.PNG>]
-<Figures/ycsb_run_2.PNG, id=555, 639.89063pt x 527.72156pt>
-File: Figures/ycsb_run_2.PNG Graphic file (type png)
-<use Figures/ycsb_run_2.PNG>
-Package pdftex.def Info: Figures/ycsb_run_2.PNG  used on input line 182.
-(pdftex.def)             Requested size: 223.96507pt x 184.7053pt.
- [18
+[17
 
- <./Figures/ycsb_run_2.PNG>] [19
+ <./Figures/ycsb_run_cut.PNG>] [18
+
+] [19
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 217
+<Figures/graf_wa_min_avg.PNG, id=611, 450.9347pt x 307.1475pt>
+File: Figures/graf_wa_min_avg.PNG Graphic file (type png)
+<use Figures/graf_wa_min_avg.PNG>
+Package pdftex.def Info: Figures/graf_wa_min_avg.PNG  used on input line 224.
+(pdftex.def)             Requested size: 154.03183pt x 104.91618pt.
+<Figures/graf_perc.PNG, id=612, 437.38406pt x 281.55188pt>
+File: Figures/graf_perc.PNG Graphic file (type png)
+<use Figures/graf_perc.PNG>
+Package pdftex.def Info: Figures/graf_perc.PNG  used on input line 224.
+(pdftex.def)             Requested size: 154.03183pt x 99.15468pt.
+ [20
+
+ <./Figures/graf_wa_min_avg.PNG> <./Figures/graf_perc.PNG>]
+<Figures/graf_prop.PNG, id=641, 773.13844pt x 351.56343pt>
+File: Figures/graf_prop.PNG Graphic file (type png)
+<use Figures/graf_prop.PNG>
+Package pdftex.def Info: Figures/graf_prop.PNG  used on input line 233.
+(pdftex.def)             Requested size: 332.44305pt x 151.16931pt.
+ [21
+
+ <./Figures/graf_prop.PNG>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 253
 .
- (D:\Skola-SW\MikTex\tex/latex/amsfonts\umsa.fd
+
+(D:\Skola-SW\MikTex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 217
+LaTeX Font Info:    Trying to load font information for U+msb on input line 253
 .
 
 (D:\Skola-SW\MikTex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 217.
+ut line 253.
 
 (D:\Skola-SW\MikTex\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) [20
+) [22
 
 ]
-<Figures/graf_prop.PNG, id=636, 773.13844pt x 351.56343pt>
-File: Figures/graf_prop.PNG Graphic file (type png)
-<use Figures/graf_prop.PNG>
-Package pdftex.def Info: Figures/graf_prop.PNG  used on input line 226.
-(pdftex.def)             Requested size: 332.44305pt x 151.16931pt.
- [21
+<Figures/riak_sc_ec.PNG, id=695, 779.16093pt x 341.02406pt>
+File: Figures/riak_sc_ec.PNG Graphic file (type png)
+<use Figures/riak_sc_ec.PNG>
+Package pdftex.def Info: Figures/riak_sc_ec.PNG  used on input line 262.
+(pdftex.def)             Requested size: 342.83186pt x 150.05104pt.
 
- <./Figures/graf_prop.PNG>]
-<Figures/graf_wa_min_avg.PNG, id=664, 450.9347pt x 322.20375pt>
-File: Figures/graf_wa_min_avg.PNG Graphic file (type png)
-<use Figures/graf_wa_min_avg.PNG>
-Package pdftex.def Info: Figures/graf_wa_min_avg.PNG  used on input line 235.
-(pdftex.def)             Requested size: 225.4668pt x 161.10147pt.
- [22
+Overfull \hbox (0.53656pt too wide) in paragraph at lines 262--262
+ [] 
+ []
 
- <./Figures/graf_wa_min_avg.PNG>]
-<Figures/graf_perc.PNG, id=692, 437.38406pt x 281.55188pt>
-File: Figures/graf_perc.PNG Graphic file (type png)
-<use Figures/graf_perc.PNG>
-Package pdftex.def Info: Figures/graf_perc.PNG  used on input line 244.
-(pdftex.def)             Requested size: 218.69148pt x 140.77559pt.
- [23
+[23
 
- <./Figures/graf_perc.PNG>] [24
+ <./Figures/riak_sc_ec.PNG>] [24
 
 ] [25
 
 ] [26
 
- <D:/Skola-SW/MikTex/tex/latex/beamer/beamericonarticle.pdf>] [27
-
+] [27
 
 ] [28
 
-
-] [29
+ <D:/Skola-SW/MikTex/tex/latex/beamer/beamericonarticle.pdf>] [29
 
 
 ] [30
+
+
+] [31
+
+
+] [32
 
 
 ]
@@ -1567,7 +1571,8 @@ Package pdftex.def Info: Figures/graf_perc.PNG  used on input line 244.
 \tf@snm=\write9
 \openout9 = `JED0050_DP_KDBS_Prezentace.snm'.
 
- (JED0050_DP_KDBS_Prezentace.aux)
+
+(JED0050_DP_KDBS_Prezentace.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1584,10 +1589,10 @@ Package logreq Info: Writing requests to 'JED0050_DP_KDBS_Prezentace.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33781 strings out of 478552
- 656953 string characters out of 2854123
- 1149833 words of memory out of 3000000
- 51290 multiletter control sequences out of 15000+600000
+ 33826 strings out of 478552
+ 658269 string characters out of 2854123
+ 1151938 words of memory out of 3000000
+ 51330 multiletter control sequences out of 15000+600000
  477450 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,1842b,4766s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1596,10 +1601,11 @@ kTex/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Skola-SW/MikTex/fonts/type1/
 public/amsfonts/cm/cmss17.pfb><D:/Skola-SW/MikTex/fonts/type1/public/amsfonts/c
 m/cmss8.pfb><D:/Skola-SW/MikTex/fonts/type1/public/amsfonts/cm/cmss9.pfb><D:/Sk
 ola-SW/MikTex/fonts/type1/public/amsfonts/cm/cmssi10.pfb><D:/Skola-SW/MikTex/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on JED0050_DP_KDBS_Prezentace.pdf (30 pages, 909626 bytes).
+nts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Skola-SW/MikTex/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb>
+Output written on JED0050_DP_KDBS_Prezentace.pdf (32 pages, 742732 bytes).
 PDF statistics:
- 988 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1054 PDF objects out of 1200 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
