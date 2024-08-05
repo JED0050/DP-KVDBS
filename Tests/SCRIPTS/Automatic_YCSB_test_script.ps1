@@ -111,7 +111,7 @@ if ($dbs_name -eq "riak"){
 
 "`n`nRunning YCSB tests of " + $dbs_name
 "Inserting data"
-cd C:\Users\jedlicka\Desktop\YCSB\ycsb-0.17.0\bin  # path to ycsb bin folder
+cd E:\Diploma\YCSB\ycsb-0.17.0\bin  # path to ycsb bin folder
 $load = Invoke-Expression -Command ".\ycsb load $dbs_name -P ..\workloads\workload$workload $ycsb_properties -p recordcount=$recordcount -p threadcount=4"
 $load
 $load | Out-File -FilePath "output.txt"
@@ -121,7 +121,7 @@ if ($insertonly -eq "0"){
     $run
 }
 
-cd C:\Users\jedlicka\Desktop\SCRIPTS\Results  # path for test results files
+cd D:\HDD_VSB\Git VŠB - StandAlones\DP-KVDBS\Tests\SCRIPTS\Results  # path for test results files
 "`n`nSaving test output files to results folder"
 $currentDateTime = Get-Date -Format "yyyy_MM_dd_HH_mm_ss"
 $load_file_name = ("load_" + $dbs_name + "_" + $currentDateTime + ".txt")

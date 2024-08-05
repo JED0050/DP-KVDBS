@@ -188,22 +188,32 @@
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Zprovoznění testů - Spouštěcí skript}
-		\begin{itemize}
-			\item Windows PowerShell ISE (Integrované skriptovací prostředí)
-			\item Automatizace, nahrazení ruční manipulace se skripty
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}
 		\frametitle{Parametry testů}
 		\begin{itemize}
 			\item Počet záznamů v databázi (recordcount)
 			\item Počet testovaných operací (operationcount)
-			\item Název DBS
-			\item Workload (A-C)
+			\item Název DBS (Redis, Aerospike, Memcached, Riak KV)
+			\item Workload A-C (readonly on/off)
 			\item Případná konzistence (Riak KV měl chybně nastavenou silnou konzistenci)
 		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Spouštěcí skript}
+		\begin{itemize}
+			\item Windows PowerShell ISE (Integrované skriptovací prostředí)
+			\item Automatizace, nahrazení ruční manipulace se skripty
+			\item Docker, YCSB (specifikace cesty k bin adresáři)
+			\item Výpis výsledků v příkazové řádce + textový soubor (složka Results)
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Spouštěcí skript - Ukázka}
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.5]{Figures/tp_init.PNG}
+		\end{figure}
 	\end{frame}
 	
 	\begin{frame}
@@ -265,7 +275,7 @@
 		\frametitle{Riak KV, Nízká propustnost}
 		\begin{itemize}
 			\item Přenastavení z SC na EC zvýšilo průměrnou propustnost o $\sim$310 operací za sekundu (22,6 \%), KDBS Memcached je stále rychlejší o 2,51 kops/sec (149,41 \%)
-			\item Úplné vyřešení problému s chybou u aktualizačních operací ($\sim$5 \%) přechodem na EC, nedochází ke konfliktům a operace nejsou zrušeny
+			\item Úplné vyřešení problému s chybou u operací aktualizace ($\sim$5 \%) přechodem na EC, nedochází ke konfliktům a operace nejsou zrušeny
 			\item MapReduce je určen pro dávkové zpracování, nikoli pro dotazy v reálném čase
 		\end{itemize}
 	\end{frame}
