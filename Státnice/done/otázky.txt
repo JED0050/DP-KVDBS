@@ -1,0 +1,2 @@
+1. Správa paměti, virtuální stroj, paralelismus, vlákna
+2. SQL, Vnitřní vs vnější spojení -> (co a k čemu je sql obecně, inner vs outer join, left/right join taky ok)
